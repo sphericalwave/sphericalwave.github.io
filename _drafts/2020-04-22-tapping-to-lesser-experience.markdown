@@ -2,7 +2,8 @@
 layout: post
 title:  "Submitting to Lesser Experience"
 date:   2020-11-22 17:46:03 -0300
-categories: jekyll update
+categories: jiujitsu
+permalink: "/:categories/submitting_to_lesser_experience"
 ---
 
 Tapping to lower ranked training partners is a skill.
@@ -25,4 +26,4 @@ in the big picture both parties improve and newer training partners need wins to
 
 it costs you nothing to tap out and often save you a sore neck or an injury.
 
-The Ego (hyperlink to ego post) wants to win at all costs. Jits offers you practice in surrendering the need to win.
+The [Ego](https://http://127.0.0.1:4000/jekyll/update/2020/11/22/what-is-ego.html) wants to win at all costs. Jits offers you practice in surrendering the need to win.
