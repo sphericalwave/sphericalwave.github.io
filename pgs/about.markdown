@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+order: 5
 ---
 
 SphericalWave is a concept that has been with Aaron for some time.
