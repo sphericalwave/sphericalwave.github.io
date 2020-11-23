@@ -3,6 +3,7 @@ layout: post
 title:  "No Gi Grips"
 date:   2020-11-22 17:46:03 -0300
 categories: jekyll update
+tag: jiujitsu
 ---
 
 Whether you prefer Gi or NoGi jits you're hands will surely be better off if you prefer NoGi grips. Here's a list to get you started.
