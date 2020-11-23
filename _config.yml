@@ -19,10 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: SphericalWave
-email: aaron@sphericalwave.com
+email: hello@sphericalwave.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Supporting the evolution of consciousness via the pathway of jiujitsu,
-  philosophy, engineering, software and art.
+  The Evolution of Consciousness
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: sphericalwave9
