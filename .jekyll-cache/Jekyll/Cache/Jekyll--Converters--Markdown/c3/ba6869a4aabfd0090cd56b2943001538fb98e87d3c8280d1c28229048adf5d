@@ -1,4 +1,4 @@
-I"³<ul class="tags">
+I"@<ul class="tags">
 
   
   
@@ -6,11 +6,19 @@
 
   
   
-  <li>jiujitsu, has 1 posts</li>
+  <li>website has 1 posts</li>
+
+  
+  
+  <li>jiujitsu has 1 posts</li>
 
   
   
   <li>yoga has 1 posts</li>
+
+  
+  
+  <li>mobility has 1 posts</li>
 
 </ul>
 
@@ -26,12 +34,24 @@
 
 </ul>
 
-<p>jiujitsu,</p>
+<p>website</p>
 <ul>
 
   
   <li>
-    <a href="/jiujitsu/2020/11/22/base-posture-structure-breathing.html">Base, Posture, Structure &amp; Breathing</a>
+    <a href="/jekyll/update/2020/11/22/website-resources.html">Website Resources</a>
+    <span class="date">November 22, 2020</span>
+  </li>
+  
+
+</ul>
+
+<p>jiujitsu</p>
+<ul>
+
+  
+  <li>
+    <a href="/jiujitsu/2020/11/22/base-posture-structure.html">Base, Posture, Structure</a>
     <span class="date">November 22, 2020</span>
   </li>
   
@@ -43,7 +63,19 @@
 
   
   <li>
-    <a href="/jiujitsu/2020/11/22/base-posture-structure-breathing.html">Base, Posture, Structure &amp; Breathing</a>
+    <a href="/jiujitsu/2020/11/22/base-posture-structure.html">Base, Posture, Structure</a>
+    <span class="date">November 22, 2020</span>
+  </li>
+  
+
+</ul>
+
+<p>mobility</p>
+<ul>
+
+  
+  <li>
+    <a href="/jiujitsu/2020/11/22/base-posture-structure.html">Base, Posture, Structure</a>
     <span class="date">November 22, 2020</span>
   </li>
   
