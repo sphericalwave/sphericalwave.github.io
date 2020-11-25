@@ -31,7 +31,7 @@ instagram: sphericalwave
 youtube: sphericalwave
 
 # Build settings
-theme: minima
+#theme: minima
 plugins:
   - jekyll-feed
 
