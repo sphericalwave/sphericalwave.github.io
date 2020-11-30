@@ -12,7 +12,7 @@ tags: JiuJitsu Philosophy
 
 My coach awarded me my purple belt last night. They say the purple belt is the first advanced belt. Very few survive to purple belt because there are many obstacles on the path. Seems to be because jiujitsu is very complex. There are many positions, hundreds of submissions and many, many concepts and principles to learn. One has to take extreme ownership of their practice long term to get results.
 
-Perhaps the biggest obstacle is the sense of Egoity. The conviction that you are your body and that you must fight to survive. The ego thinks it must win, when it does it's silent and you feel happy. When it loses all kinds of craziness can erupt in your mind. Jiujitsu rolling offers you an opportunity to transcend the Ego by surrendering the need to win while at the same trying to win.
+Perhaps the biggest obstacle is the sense of Egoity. The conviction that you are your body and that you must fight to survive. The ego thinks it must win, when it does it's silent and you feel happy. When it loses all kinds of craziness can erupt in your mind. Jiujitsu rolling offers you an opportunity to transcend the Ego by surrendering the need to win while at the same trying to win. 
 
 * Getting squashed in a cross side pin and having a panic attack? Tap out and review your elbow and knee escapes. Ask a more senior ninja how to resolve the situation.
 

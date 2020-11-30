@@ -4,7 +4,7 @@ title:  "What is the Ego?"
 date:   2020-11-22 17:46:03 -0300
 categories: jekyll update
 ---
-![Philadelphia's Magic Gardens. This place was so cool!](/assets/img/map_of_consciousness.jpg "Philadelphia's Magic Gardens")
+![Map of Consciousness]/assets/img/map_of_consciousness.jpg( "David Hawkins Map of Consciousness")
 
 - Ego is the body.
 
