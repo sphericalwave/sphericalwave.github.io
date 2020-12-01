@@ -1,9 +1,13 @@
 <!-- post list -->
 {% for post in paginator.posts %}
   <li>
+    <!-- Post Summary -->
     <a href="{{post.url | prepend: site.baseurl}}">
       <h3>{{post.title}}</h3>
     </a>
+
+    <!--TODO {%- include post-summary.html -%} -->
+
   </li>
 {% endfor %}
 
