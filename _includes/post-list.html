@@ -1,9 +1,9 @@
 <!-- post list -->
 {% for post in paginator.posts %}
-  <li>
+
     {% capture post %} {% endcapture %}
     {% include post-summary.html post=post %}
-  </li>
+
 {% endfor %}
 
 
