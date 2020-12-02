@@ -8,7 +8,7 @@ order: 1
 {% for tag in site.tags %}
   {% assign t = tag | first %}
   {% assign posts = tag | last %}
-  <li>{{t | downcase | replace:" ","-" }} has {{ posts | size }} posts</li>
+  <li>{{t | downcase | replace:" ","-" }}</li>
 {% endfor %}
 </ul>
 
