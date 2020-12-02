@@ -9,22 +9,17 @@
 
     <div class="container">
       <div class="row">
-        <div class="col text-left">
+        <div class="col text-left pt-3">
 
+          <main aria-label="Content">
+            {{ content }}
+          </main>
 
+          {%- include footer.html -%}
+          {%- include bootstrap-includes.html -%}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
-
-    {%- include footer.html -%}
-
-    {%- include bootstrap-includes.html -%}
-
-</div> <!-- col -->
-</div> <!-- row -->
+        </div> <!-- col -->
+      </div> <!-- row -->
 
     </div> <!-- container-fluid -->
 
