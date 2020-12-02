@@ -6,6 +6,9 @@
   <body>
 
     {%- include header.html -%}
+    <!-- <div class="social-links"> -->
+      {%- include social.html -%}
+    <!-- </div> -->
 
     <div class="container">
       <div class="row">
@@ -15,13 +18,20 @@
             {{ content }}
           </main>
 
-          {%- include footer.html -%}
-          {%- include bootstrap-includes.html -%}
+
 
         </div> <!-- col -->
-      </div> <!-- row -->
+      </div>  <!-- row -->
 
-    </div> <!-- container-fluid -->
+      <div class="row">
+        <div class="col text-center">
+          {%- include footer.html -%}
+        </div> <!-- col -->
+      </div>  <!-- row -->
+
+      {%- include bootstrap-includes.html -%}
+
+    </div>    <!-- container -->
 
   </body>
 

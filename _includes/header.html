@@ -1,7 +1,8 @@
 
   <header class="navbar navbar-expand-lg navbar-light bg-light">
 
-        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <a class="site-title ml-lg-3" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
 
         <button class="navbar-toggler"
                 type="button"
@@ -15,7 +16,7 @@
 
         <!-- <div class="navbar-nav-scroll"> -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto mr-3">
             {% assign sorted_pages = site.pages | sort:"order" %}
             {% for page in sorted_pages %}
             <li class="nav-item">
