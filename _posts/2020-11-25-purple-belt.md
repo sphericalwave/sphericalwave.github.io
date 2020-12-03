@@ -1,18 +1,23 @@
 ---
 layout: post
-title:  "The Purple Belt"
+title:  "Purple Belt"
 date:   2020-11-25 03:33:03 -0300
 categories: jiujitsu
 tags: JiuJitsu Philosophy
+permalink: Purple_Belt
 ---
 
-![Purple Belt]/assets/img/jits_purple_belt.JPG( "Jits Purple Belt")
+<div class='pixels-photo'>
+<a href='https://500px.com/photo/1025389804/PurpleBeltandStripes-by-Aaron-Anthony' alt='PurpleBelt_and_Stripes by Aaron Anthony on 500px.com'>
+  <img src='https://drscdn.500px.org/photo/1025389804/m%3D900/v2?sig=ecce63d32b37069927d3d82ab571bfb6b7531c58fcfe1bbf4449715ec1bf339e' alt='PurpleBelt_and_Stripes by Aaron Anthony on 500px.com' />
+</a>
+</div>
 
-![Map of Consciousness]/assets/img/map_of_consciousness.jpg( "David Hawkins Map of Consciousness")
+<script type='text/javascript' src='https://500px.com/embed.js'></script>
 
 My coach awarded me my purple belt last night. They say the purple belt is the first advanced belt. Very few survive to purple belt because there are many obstacles on the path. Seems to be because jiujitsu is very complex. There are many positions, hundreds of submissions and many, many concepts and principles to learn. One has to take extreme ownership of their practice long term to get results.
 
-Perhaps the biggest obstacle is the sense of Egoity. The conviction that you are your body and that you must fight to survive. The ego thinks it must win, when it does it's silent and you feel happy. When it loses all kinds of craziness can erupt in your mind. Jiujitsu rolling offers you an opportunity to transcend the Ego by surrendering the need to win while at the same trying to win. 
+Perhaps the biggest obstacle is the sense of Egoity. The conviction that you are your body and that you must fight to survive. The ego thinks it must win, when it does it's silent and you feel happy. When it loses all kinds of craziness can erupt in your mind. Jiujitsu rolling offers you an opportunity to transcend the Ego by surrendering the need to win while at the same trying to win.
 
 * Getting squashed in a cross side pin and having a panic attack? Tap out and review your elbow and knee escapes. Ask a more senior ninja how to resolve the situation.
 
