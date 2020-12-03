@@ -1,9 +1,6 @@
 <!-- Post Summary -->
 <small>
-  <!-- {{post.date | date: "%-m/%-d/%Y" }} -->
-  {{ post.date | date_to_string: "ordinal", "US" }}
-  <!-- categories: {{post.categories}} -->
-  <!-- <ul class="tags">{{post.tags}} </ul> -->
+    {{ post.date | date_to_string: "ordinal", "US" }}
 </small>
 
 <a href="{{post.url | prepend: site.baseurl}}">

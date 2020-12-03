@@ -1,8 +1,15 @@
+<header class="navbar navbar-expand-lg navbar-light bg-light">
 
-  <header class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="site-title ml-lg-4" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
 
-        <a class="site-title ml-lg-3" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <div class="d-block p-2">
+          <a class="site-title ml-lg-4" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        </div>
+        <div class="d-block p-2 text-white">
+          {%- include social.html -%}
+        </div>
 
+        <!-- {%- include social.html -%} -->
 
         <button class="navbar-toggler"
                 type="button"
@@ -16,7 +23,7 @@
 
         <!-- <div class="navbar-nav-scroll"> -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto mr-3">
+          <ul class="navbar-nav ">
             {% assign sorted_pages = site.pages | sort:"order" %}
             {% for page in sorted_pages %}
             <li class="nav-item">

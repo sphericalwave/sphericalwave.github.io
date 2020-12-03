@@ -8,9 +8,9 @@ permalink: Purple_Belt
 ---
 
 <div class='pixels-photo'>
-<a href='https://500px.com/photo/1025389804/PurpleBeltandStripes-by-Aaron-Anthony' alt='PurpleBelt_and_Stripes by Aaron Anthony on 500px.com'>
+  <a href='https://500px.com/photo/1025389804/PurpleBeltandStripes-by-Aaron-Anthony' alt='PurpleBelt_and_Stripes by Aaron Anthony on 500px.com'>
   <img src='https://drscdn.500px.org/photo/1025389804/m%3D900/v2?sig=ecce63d32b37069927d3d82ab571bfb6b7531c58fcfe1bbf4449715ec1bf339e' alt='PurpleBelt_and_Stripes by Aaron Anthony on 500px.com' />
-</a>
+  </a>
 </div>
 
 <script type='text/javascript' src='https://500px.com/embed.js'></script>
