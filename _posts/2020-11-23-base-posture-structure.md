@@ -4,18 +4,14 @@ title:  "Base, Posture, Structure"
 date:   2020-11-22 17:46:03 -0300
 categories: jiujitsu
 tags: JiuJitsu Yoga Mobility
+food: turttle
+image: /assets/img/biernacki_base_posture_structure.png
 ---
 
-Here it is from the legend of Biernacki.
+Most of us have heard of base, posture and structure in jiujitsu.
+But did you know that there are precise definitions for these concepts.
+And that one of the best strategies for safety and effectiveness on the mats is to integrate and disintegration of base, posture and structure.
 
-Rob & Stephan do a phenomenal job of teaching conceptual jiujitsu.
-
-Rob's assertion is base, posture, structure is the most important concept in Jiujitsu.
-
-Base is a platform to deliver and absorb force.
-
-Posture is the alignment of your spinal alignment.
-
-Structure is the most efficient use of your limbs.
-
-[![Everything Is AWESOME](/assets/img/biernacki_base_posture_structure.png)](https://youtu.be/j5RaxEV9fx8 "Everything Is AWESOME")
+<div class="d-flex justify-content-center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/j5RaxEV9fx8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+</div>
