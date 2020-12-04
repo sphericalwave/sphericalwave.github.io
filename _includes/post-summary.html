@@ -4,11 +4,11 @@
 </small>
 
 <a href="{{post.url | prepend: site.baseurl}}">
-  <h3>{{post.title}}</h3>
+  <h3 class="m-0">{{post.title}}</h3>
 </a>
 
 <!--  Show Formatted Tags -->
-<ul class="tags ">
+<ul class="tags p-0">
   {% for tag in post.tags %}
     <li>{{tag | downcase | replace:" ","-" }}</li>
   {% endfor %}

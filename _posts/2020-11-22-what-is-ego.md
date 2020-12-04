@@ -3,8 +3,10 @@ layout: post
 title:  "What is the Ego?"
 date:   2020-11-22 17:46:03 -0300
 categories: jekyll update
+image: /assets/img/map_of_consciousness.jpg
+tags: philosophy mysticism
 ---
-![Map of Consciousness]/assets/img/map_of_consciousness.jpg( "David Hawkins Map of Consciousness")
+<!-- ![Map of Consciousness]/assets/img/map_of_consciousness.jpg( "David Hawkins Map of Consciousness") -->
 
 - Ego is the body.
 
