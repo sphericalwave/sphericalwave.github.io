@@ -1,12 +1,18 @@
 <!-- post list -->
+
+<div class="row mt-3">
 {% for post in paginator.posts %}
 
     {% capture post %} {% endcapture %}
-    <div >
-    {% include post-summary.html post=post %}
-    </div>
+
+      <div class="col-lg-4 ">
+          {% include post-summary.html post=post %}
+      </div> <!--col-->
 
 {% endfor %}
+
+</div> <!--row-->
+
 
 
 <!-- pagination -->

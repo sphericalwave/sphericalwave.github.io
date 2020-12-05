@@ -3,6 +3,7 @@ layout: post
 title:  "Jits Position Checklist"
 date:   2020-11-22 17:46:03 -0300
 categories: jekyll update
+image: /assets/img/biernacki_base_posture_structure.png
 ---
 
 Whether you prefer Gi or NoGi jits you're hands will surely be better off if you prefer NoGi grips. Here's a list to get you started.

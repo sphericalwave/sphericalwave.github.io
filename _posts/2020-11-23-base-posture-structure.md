@@ -4,8 +4,8 @@ title:  "Base, Posture, Structure"
 date:   2020-11-22 17:46:03 -0300
 categories: jiujitsu
 tags: JiuJitsu Yoga Mobility
-food: turttle
 image: /assets/img/biernacki_base_posture_structure.png
+permalink: base_posture_structure
 ---
 
 Most of us have heard of base, posture and structure in jiujitsu.

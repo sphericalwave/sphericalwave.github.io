@@ -4,6 +4,7 @@ title:  "Submitting to Lesser Experience"
 date:   2020-11-22 17:46:03 -0300
 categories: jiujitsu
 permalink: "/:categories/submitting_to_lesser_experience"
+image: /assets/img/biernacki_base_posture_structure.png
 ---
 
 Tapping to lower ranked training partners is a skill.
