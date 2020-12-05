@@ -5,6 +5,7 @@ date:   2020-11-25 03:33:03 -0300
 categories: jiujitsu
 tags: JiuJitsu Philosophy
 permalink: Purple_Belt
+image: https://drscdn.500px.org/photo/1025389804/m%3D900/v2?sig=ecce63d32b37069927d3d82ab571bfb6b7531c58fcfe1bbf4449715ec1bf339e
 ---
 
 Coach Scott Maclean awarded me the purple belt last night. They say the purple belt is the first advanced belt. Very few survive to purple belt because there are many obstacles on the path. Seems to be because jiujitsu is very complex. There are many positions, hundreds of submissions and many, many concepts and principles to learn. One has to take extreme ownership of their practice long term to get results.

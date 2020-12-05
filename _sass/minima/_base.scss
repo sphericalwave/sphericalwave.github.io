@@ -110,27 +110,7 @@
 /**
  * Links
  */
-a {
-  color: $link-base-color;
-  text-decoration: none;
 
-  &:visited {
-    color: $link-visited-color;
-  }
-
-  &:hover {
-    color: $link-hover-color;
-    text-decoration: underline;
-  }
-
-  .social-media-list &:hover {
-    text-decoration: none;
-
-    .username {
-      text-decoration: underline;
-    }
-  }
-}
 
 
 /**

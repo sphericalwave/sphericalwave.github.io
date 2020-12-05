@@ -131,9 +131,9 @@
   margin-bottom: $spacing-unit / 2;
 }
 
-.feed-subscribe .svg-icon {
-  padding: 5px 5px 2px 0
-}
+// .feed-subscribe .svg-icon {
+//   padding: 5px 5px 2px 0
+// }
 
 .contact-list,
 .social-media-list {
@@ -141,11 +141,11 @@
   margin-left: 0;
 }
 
-.footer-col-wrapper,
-.social-links {
-  @include relative-font-size(0.9375);
-  color: $brand-color;
-}
+// .footer-col-wrapper,
+// social-links. {
+//   @include relative-font-size(0.9375);
+//   color: $brand-color;
+// }
 
 .footer-col {
   margin-bottom: $spacing-unit / 2;
