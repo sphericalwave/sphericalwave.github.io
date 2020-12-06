@@ -1,47 +1,29 @@
-<header class="navbar navbar-expand navbar-light bg-light">
+<header class="row bg-light pt-3">
 
-        <div class="d-block">
-          <a class="site-title ml-lg-4" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-        </div>
-        <div class="d-block">
+        <div class="col-12 text-center">
+
+          <h1>
+            <a class="mb-0" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+          </h1>
+
+          <img src="/assets/img/SphericalWave_500px.png" class="img-responsive " height=99 width=99>
+
           {%- include social.html -%}
-        </div>
 
-        <button class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-        </button>
+              <a class="nav-link d-inline" href="/about.html"> About </a>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav ">
+              <a class="nav-link d-inline" href="/shop.html"> Shop </a>
 
-            <li class="nav-item">
-              <a class="nav-link" href="/about.html"> About </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/shop.html"> Shop </a>
-            </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class=" d-inline nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Hardware
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="#">Aquatron</a>
                 <a class="dropdown-item" href="#">Bedini Generator</a>
-                <!-- <div class="dropdown-divider"></div> -->
                 <a class="dropdown-item" href="#">Fretlights</a>
               </div>
-            </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="d-inline nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Software
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -49,10 +31,7 @@
                 <a class="dropdown-item" href="#">ZeroPoint</a>
                 <a class="dropdown-item" href="#">SWVideo</a>
               </div>
-            </li>
 
-          </ul>
           </div>
-        <!-- </div> <!--navbar-nav-scroll-->
 
 </header>
