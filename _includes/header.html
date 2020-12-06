@@ -1,15 +1,11 @@
-<header class="navbar navbar-expand-lg navbar-light bg-light">
-
-        <!-- <a class="site-title ml-lg-4" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a> -->
+<header class="navbar navbar-expand navbar-light bg-light">
 
         <div class="d-block">
           <a class="site-title ml-lg-4" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         </div>
-        <div class="d-block text-white">
+        <div class="d-block">
           {%- include social.html -%}
         </div>
-
-        <!-- {%- include social.html -%} -->
 
         <button class="navbar-toggler"
                 type="button"
@@ -21,18 +17,40 @@
                 <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- <div class="navbar-nav-scroll"> -->
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav ">
-            {% assign sorted_pages = site.pages | sort:"order" %}
-            {% for page in sorted_pages %}
+
             <li class="nav-item">
-              <a class="nav-link" href="{{page.url}}"> {{page.title}} </a>
+              <a class="nav-link" href="/about.html"> About </a>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link " href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Home</a>
-            </li> -->
-            {% endfor %}
+
+            <li class="nav-item">
+              <a class="nav-link" href="/shop.html"> Shop </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Hardware
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Aquatron</a>
+                <a class="dropdown-item" href="#">Bedini Generator</a>
+                <!-- <div class="dropdown-divider"></div> -->
+                <a class="dropdown-item" href="#">Fretlights</a>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Software
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">AudioWave</a>
+                <a class="dropdown-item" href="#">ZeroPoint</a>
+                <a class="dropdown-item" href="#">SWVideo</a>
+              </div>
+            </li>
+
           </ul>
           </div>
         <!-- </div> <!--navbar-nav-scroll-->
