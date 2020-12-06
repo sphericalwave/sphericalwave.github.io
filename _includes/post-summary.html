@@ -1,5 +1,5 @@
 
-
+<a href="{{post.url | prepend: site.baseurl}}">
 <div class="card mb-3">
   <img class="card-img-top" src="{{post.image}}" alt="Card image cap">
   <div class="card-body py-1 px-2">
@@ -18,3 +18,4 @@
     <p class="card-text"><small class="text-muted">{{ post.date | date_to_string: "ordinal", "US" }}</small></p>
   </div>
 </div>
+</a>

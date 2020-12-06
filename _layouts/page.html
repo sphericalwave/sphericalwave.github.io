@@ -1,14 +1,12 @@
 ---
 layout: default
 ---
-<article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
+<div class="py-3">
+  <!-- Title -->
+  <a href="{{post.url | prepend: site.baseurl}}">
+    <h1 class="mb-0">{{page.title}}</h1>
+  </a>
+</div>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</article>
+{{ content }}
