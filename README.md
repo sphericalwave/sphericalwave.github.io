@@ -24,4 +24,4 @@ something *italicized*
 
 [sphericalwave.com](https://sphericalwave.com)
 
-![antares](https://upload.wikimedia.org/wikipedia/commons/e/e5/Infrared_Rho_Ophiuchi_Complex.jpg)
+![antares](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Infrared_Rho_Ophiuchi_Complex.jpg/713px-Infrared_Rho_Ophiuchi_Complex.jpg)
