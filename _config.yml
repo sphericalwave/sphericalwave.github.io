@@ -1,16 +1,38 @@
+#https://jekyllrb.com/docs/step-by-step/09-collections/
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+
 # Global Variables
 
-title: SphericalWave
-email: hello@sphericalwave.com
-description: >- # this means to ignore newlines until "baseurl:"
-  The Evolution of Consciousness
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+#title: SphericalWave
+#email: hello@sphericalwave.com
+#description: >- # this means to ignore newlines until "baseurl:"
+#  The Evolution of Consciousness
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
-plugins:
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-sitemap
+#plugins:
+#  - jekyll-paginate
+#  - jekyll-feed
+#  - jekyll-sitemap
 
-paginate: 18
-paginate_path: "/page:num/"
+#paginate: 18
+#paginate_path: "/page:num/"
