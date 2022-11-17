@@ -1,44 +1,7 @@
 ---
 layout: default
 ---
+<h1>{{ page.title }}</h1>
+<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
 
-<div class="py-3">
-  <!-- Title -->
-  <a href="{{post.url | prepend: site.baseurl}}">
-    <h1 class="mb-0">{{page.title}}</h1>
-  </a>
-
-
-
-  <!--Tags -->
-  <ul class="tags p-0 m-0">
-    {% for tag in page.tags %}
-
-      <a class="btn btn-outline-secondary btn-sm py-0 text-small" href="{{page.permalink}}" role="button">
-        {{tag | downcase | replace:" ","-" }}
-      </a>
-
-    {% endfor %}
-  </ul>
-
-  <!-- date -->
-  <small class="text-left font-italic">
-      {{ page.date | date_to_string: "ordinal", "US" }}
-  </small>
-
-  <hr class="m-0">
-
-  </div>
-
-  <!-- Content -->
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <!-- <a class="u-url" href="{{ page.url | relative_url }}" hidden> </a> -->
-
-<!-- </article> -->
+{{ content }}
