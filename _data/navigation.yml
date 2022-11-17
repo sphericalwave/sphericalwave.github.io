@@ -1,0 +1,7 @@
+# array of navigation items
+# Jekyll makes this data file available at `site.data.navigation`
+# feeds navbar
+- name: Home
+  link: /
+- name: About
+  link: /about.html
