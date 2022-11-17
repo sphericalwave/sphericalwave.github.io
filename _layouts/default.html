@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  {%- include head.html -%}
-
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
   <body>
-
-<div class="container-fluid">
-    {%- include header.html -%}
-
-
-
-      {{ content }}
-
-
-      <div class="row">
-        <div class="col text-center">
-          {%- include footer.html -%}
-        </div> <!-- col -->
-      </div>  <!-- row -->
-
-      {%- include bootstrap-includes.html -%}
-
-    </div>    <!-- container -->
-
+    {% include navigation.html %}
+    {{ content }}
   </body>
-
 </html>
