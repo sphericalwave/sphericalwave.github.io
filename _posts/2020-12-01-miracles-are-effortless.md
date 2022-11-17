@@ -1,10 +1,7 @@
 ---
 layout: post
 title:  "Miracles are Effortless"
-date:   2020-11-30 17:46:03 -0300
-categories: mystical
-tags: miracles philosophy freedom
-image: https://live.staticflickr.com/65535/50683239672_9110978069_z.jpg
+author: aaron
 ---
 
 <blockquote class="blockquote">

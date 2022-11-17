@@ -6,3 +6,5 @@ categories: jekyll update
 tags: mindfulness jiujitsu discipline breathing
 image: /assets/img/biernacki_base_posture_structure.png
 ---
+
+Watch it go!
