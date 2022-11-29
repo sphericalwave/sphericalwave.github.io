@@ -1,41 +1,61 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
-  <head>
+  {% include head.html %}
 
-    <meta charset="utf-8">
+  <body>
 
-    <!--bootstrap-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <div class="container content">
+      <header class="masthead">
+        <nav>
+          <h1 class="masthead-title">
+            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+          </h1>
+          <div>
+            <a href="/categories" title="Categories">Categories</a>
+            <a href="/archive" title="Archive">Archive</a>
+            <!-- <a href="/feed.xml" title="Feed">Feed</a>
+            <a href="http://weekly.swiftwithmajid.com" title="SwiftUI Weekly">SwiftUI Weekly</a>
+            <a href="/sponsorship" title="Sponsorship">Sponsorship</a> -->
+          </div>
+        </nav>
+      </header>
 
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
+      <main>
+        {{ content }}
+      </main>
 
-    <script src="https://kit.fontawesome.com/1b735903d0.js" crossorigin="anonymous"></script>
+      <footer class="footer">
+          {% avatar sphericalwave size=100 %}
+          <small>Hi there! My name is Aaron.</small>
+          <small>I'm Swift developer 👨🏻‍💻SwiftUI addicted 🚀</small>
+          <small>Creator of
+            <a href="https://cardiobot.swiftwithmajid.com">fu3l</a>,
+            <a href="https://napbot.swiftwithmajid.com">audiowave</a>,
+            <!-- <a href="https://fastbot.swiftwithmajid.com">w3ight</a> -->
+            and
+            <a href="https://sugarbot.swiftwithmajid.com">dwellify</a>.</small>
+          <small>
+            Feel free to follow me on
+            <a href="https://stackoverflow.com/users/519493/aaronium112">stackOverflow</a>
+            or
+            <a href="https://github.com/sphericalwave">github</a>.
+          </small>
+        <small>
+          Aaron Anthony &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. All rights reserved.
+        </small>
+      </footer>
+    </div>
 
-    <title>{{ page.title }}</title>
-
-    <!--rss feed-->
-    {% feed_meta %}
-
-    <!--seo-tags-->
-    {% seo %}
-
-    <!--TODO analytics: https://jekyllrb.com/docs/step-by-step/10-deployment/-->
-    {% if jekyll.environment == "production" %}
-      <script src="my-analytics-script.js"></script>
+    {% if site.analytics_id %}
+     <script>
+       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+       ga('create', '{{ site.analytics_id }}', 'auto');
+       ga('send', 'pageview');
+     </script>
     {% endif %}
-
-  </head>
-
-  <body class="container-fluid">
-    {% include navigation.html %}
-    {{ content }}
-    <!--bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-
   </body>
-
 </html>
