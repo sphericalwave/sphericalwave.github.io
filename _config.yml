@@ -1,38 +1,32 @@
-#https://jekyllrb.com/docs/step-by-step/09-collections/
-collections:
-  authors:
-    output: true
+repository:	     sphericalwave/sphericalwave.github.io
+# Permalinks
+permalink:           /:year/:month/:day/:title/
 
-defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
+# Setup
+#theme: minima
+title:               Spherical Wave
+url:                 https://sphericalwave.com
+paginate:            10
+baseurl:             ""
+analytics_id:        UA-18491817-18
 
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
 
-# Global Variables
+# About/contact
+author:
+  name:              Aaron Anthony
+#  url:               https://twitter.com/mecid
+  email:             aaron@sphericalwave.com
 
-#title: SphericalWave
-#email: hello@sphericalwave.com
-#description: >- # this means to ignore newlines until "baseurl:"
-#  The Evolution of Consciousness
-#baseurl: "" # the subpath of your site, e.g. /blog
-#url: "" # the base hostname & protocol for your site, e.g. http://example.com
-
-#plugins:
-#  - jekyll-paginate
-#  - jekyll-feed
-#  - jekyll-sitemap
-
-#paginate: 18
-#paginate_path: "/page:num/"
+# Gems
+plugins:
+  - jekyll-avatar
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
