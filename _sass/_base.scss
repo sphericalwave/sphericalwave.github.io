@@ -50,7 +50,8 @@ a {
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
+  margin-left: auto;  //centers all imgs
+  margin-right: auto; //centers all imgs
   border-radius: 5px;
 }
 
