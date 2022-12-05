@@ -6,22 +6,8 @@
   <body>
 
     <div class="container content">
-      <header class="masthead">
-        <nav>
-          <h1 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-          </h1>
-          <div>
-            <a href="/categories" title="Categories">Categories</a>
-            <a href="/archive" title="Archive">Archive</a>
-            <a href="https://sphericalwave.com/fu3l_landing/" title="fu3l">fu3l</a>
-            <!--  -->
-            <!-- <a href="/feed.xml" title="Feed">Feed</a>
-            <a href="http://weekly.swiftwithmajid.com" title="SwiftUI Weekly">SwiftUI Weekly</a>
-            <a href="/sponsorship" title="Sponsorship">Sponsorship</a> -->
-          </div>
-        </nav>
-      </header>
+
+      {% include navbar.html %}
 
       <main>
         {{ content }}
