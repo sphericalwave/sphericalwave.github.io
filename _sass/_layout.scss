@@ -10,16 +10,23 @@
   margin-right: auto;
 }
 
-footer {
-  margin-bottom: 2rem;
-	text-align: center;
-}
-
-footer img.avatar {
-	margin: 0 auto 1rem;
-  border-radius: 50%;
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: $swBlue; //red;
+  color: white;
+  text-align: center;
+  margin: 1 rem;
+  padding-block: 20px; /*vertical padding */
 }
 
 footer small {
-	display:block;
+  display:block;
+}
+
+footer img.avatar {
+  margin: 1 rem auto 1rem;
+  //border-radius: 50%;  //round border
 }
