@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
+![image](/public/SphericalWaveC60.png)
+
 <div class="posts">
   {% for post in paginator.posts %}
   <article class="post">
