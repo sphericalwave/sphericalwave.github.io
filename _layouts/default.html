@@ -5,16 +5,19 @@
 
   <body>
 
+    {% include navbar.html %}
+
     <div class="container content">
 
-      {% include navbar.html %}
-
-      <main>
+      
+      <main style="padding-bottom: 33px; padding-top: 33px;"> <!--TODO: move into css for bottom bar-->
         {{ content }}
       </main>
 
-      {% include footer.html %}
+      
     </div>
+
+    {% include footer.html %}
 
     {% if site.analytics_id %}
      <script>

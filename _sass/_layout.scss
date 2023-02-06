@@ -10,7 +10,7 @@
   margin-right: auto;
 }
 
-.footer {
+footer {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -29,4 +29,19 @@ footer small {
 footer img.avatar {
   margin: 1 rem auto 1rem;
   //border-radius: 50%;  //round border
+}
+
+header {
+  //background-color: $swBlue; //red;
+  background: $swBlue; //red;
+
+  //position: fixed;
+  //left: 0;
+  //bottom: 0;
+  width: 100%;
+
+  //color: white;
+  //text-align: center;
+  //margin: 1 rem;
+  //padding-block: 20px; /*vertical padding */
 }
