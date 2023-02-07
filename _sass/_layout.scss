@@ -18,12 +18,24 @@ footer {
   background-color: $swBlue; //red;
   color: white;
   text-align: center;
-  margin: 1 rem;
-  padding-block: 20px; /*vertical padding */
+  //margin: 0.5 rem;
+  padding-block: 9px; /*vertical padding */
+  line-height: 1rem;
 }
 
 footer small {
   display:block;
+  font-size: 12px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+footer a:hover {
+  //font-size: 2.5rem; doesn't look great makes the footer change size
+  color: white;
 }
 
 footer img.avatar {
