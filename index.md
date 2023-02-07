@@ -5,7 +5,7 @@ title: Home
 
 ![image](/public/SphericalWaveC60.png)
 
-<div class="posts">
+<!-- <div class="posts">
   {% for post in paginator.posts %}
   <article class="post">
     <h2 class="post-title">
@@ -32,4 +32,4 @@ title: Home
   {% else %}
     <span class="pagination-item newer">Newer</span>
   {% endif %}
-</div>
+</div> -->
