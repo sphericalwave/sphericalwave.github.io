@@ -6,7 +6,8 @@ permalink:           /:year/:month/:day/:title/
 #theme: minima
 title:               Spherical Wave
 url:                 https://sphericalwave.com
-paginate:            10
+paginate:            3
+paginate_path:    "/blog/page:num/"
 baseurl:             ""
 analytics_id:        
 

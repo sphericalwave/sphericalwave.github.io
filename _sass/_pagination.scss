@@ -5,9 +5,11 @@
 
 .pagination {
   overflow: hidden; // clearfix
-  margin: 0 -1.5rem 1rem;
   color: $gray-4;
   text-align: center;
+  //margin: 0 -1.5rem 1rem;
+  margin: 0;
+
 }
 
 // Pagination items can be `span`s or `a`s
@@ -29,7 +31,7 @@ a.pagination-item:hover {
 
 @media (min-width: 30em) {
   .pagination {
-    margin: 3rem 0;
+//    margin: 3rem 0; m
   }
 
   .pagination-item {

@@ -82,3 +82,15 @@ tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
+
+.button {
+  display: block;
+  padding: 1rem;
+  border: solid $gray-4;
+  border-width: 1px 0;
+}
+
+// Only provide a hover state for linked pagination items
+a.button:hover {
+  background-color: #f5f5f5;
+}
