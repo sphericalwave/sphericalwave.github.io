@@ -25,7 +25,7 @@ permalink: blog/index.html
   {% endfor %}
 </div>
 
-<div class="pagination">
+<div class="pagination" style="padding-bottom: 18px;">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
   {% else %}
