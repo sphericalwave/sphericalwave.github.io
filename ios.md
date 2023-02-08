@@ -39,4 +39,16 @@ AudioWave is an app I built that allows you to play two playlists at the same ti
 <br>  <!--not ideal-->
 <br>  <!--not ideal-->
 
+# Rick and Morty
+
+This is a code challenge that is interesting because of the requirement to cache photos from an api that are lazily loaded as well as implement an infinite list similar to twitter. 
+It's not on the app store because it's a technical demo and there are rules against using proprietary content.
+
+<a href="https://github.com/sphericalwave/rickandmorty" target="_blank">
+	<i class="fab fa-github" style="display: inline-block; margin-right: 9px;"></i>
+	Check Out the Project on Github
+</a>
+
+
+
 There's more on the way! Stay tuned for the latest and greatest in app development, as I continuously strive to bring new and exciting solutions to the table.
