@@ -5,19 +5,17 @@
 
   <body>
 
+<div class="wrapper">
+
     {% include navbar.html %}
 
-    <div class="container content">
-
-      
-      <main style="padding-bottom: 66px; padding-top: 33px;"> <!--TODO: move into css for bottom bar-->
-        {{ content }}
-      </main>
-
-      
-    </div>
+    <main class="content">
+      {{ content }}
+    </main>
 
     {% include footer.html %}
+
+</div>
 
     {% if site.analytics_id %}
      <script>
@@ -29,5 +27,7 @@
        ga('send', 'pageview');
      </script>
     {% endif %}
+
   </body>
+
 </html>
