@@ -1,19 +1,16 @@
 ---
 layout: default
 title: "iOS"
-permalink: ios.html
+permalink: ios
 image: /public/flowlayout.png
 ---
 
 Welcome to my portfolio of mobile applications, showcasing my expertise in the development of innovative and intuitive apps. Each project is a testament to my dedication to delivering high-quality solutions that meet the unique needs of my clients. From productivity tools to lifestyle enhancing experiences, my portfolio showcases a diverse range of capabilities and a passion for using technology to improve people's lives. Browse through my collection of apps and see how I can bring your vision to life with cutting-edge technology and a user-centered approach.
 
 
-
 # Dwellify
 
 Dwellify is a "one-stop-shop" home remodeling experience, guiding homeowners through a step-by-step process for turning design dreams into their dream home. Dwellify's turnkey technology and design-driven experience combines interior design, materials sourcing, contractor relations and project management, all with a commitment to transparency, reliability, and collaboration.
-
-<!-- <a href="https://apps.apple.com/us/app/dwellify/id1624547054">Check out Dwellify on the AppStore</a> -->
 
 <a href="https://apps.apple.com/us/app/dwellify/id1624547054" target="_blank" >
 	<img class="appStore" src="public/App_Store_Badge_US.svg" style="float: left; display: inline-block;">
@@ -21,7 +18,6 @@ Dwellify is a "one-stop-shop" home remodeling experience, guiding homeowners thr
 
 <br>  <!--not ideal-->
 <br>  <!--not ideal-->
-
 
 # AudioWave
 
@@ -48,7 +44,6 @@ It's not on the app store because it's a technical demo and there are rules agai
 	<i class="fab fa-github" style="display: inline-block; margin-right: 9px;"></i>
 	Check Out the Project on Github
 </a>
-
 
 
 There's more on the way! Stay tuned for the latest and greatest in app development, as I continuously strive to bring new and exciting solutions to the table.
