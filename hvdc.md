@@ -3,6 +3,7 @@ layout: default
 title: "HVDC"
 permalink: hvdc
 ---
+# HVDC Field Engineering
 
 As a field engineer during the construction phase of the Soldiers Pond HVDC (High Voltage Direct Current) converter station, I was a key member of the project team responsible for ensuring that the station was built to the highest standards and in accordance with the design specifications. My main focus was to monitor the construction activities on site, and ensure that the work was being done safely, efficiently, and to the required quality.
 
