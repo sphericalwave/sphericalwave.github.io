@@ -2,7 +2,6 @@
 //
 // Styles for managing the structural hierarchy of the site.
 
-
 .wrapper { 
   //key to get the footer where i wanted it
   display: flex;
@@ -17,8 +16,6 @@
   padding-right: 1.5rem;
   margin-left:  auto;
   margin-right: auto;
-  padding-top: 18px;
-  //text-align: left;
 }
 
 footer {
@@ -56,26 +53,12 @@ header {
 }
 
 .appStore {
-  height: 63px;
+  height: 54px;
 }
 
-.image-container {
-    height: 63%;
-    width: 63%; /* set the height of the container to 50% of its parent */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .center-image {
-    //height: 100%; /* set the height of the image to 100% of its container */
-    //width: 100%;
-
-      display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 90%;
-    height: 90%;
-  }
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
