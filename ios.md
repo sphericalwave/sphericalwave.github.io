@@ -3,6 +3,7 @@ layout: default
 title: "iOS"
 permalink: ios
 ---
+# iOS
 
 Welcome to my portfolio of mobile applications, showcasing my expertise in the development of innovative and intuitive apps. Each project is a testament to my dedication to delivering high-quality solutions that meet the unique needs of my clients. From productivity tools to lifestyle enhancing experiences, my portfolio showcases a diverse range of capabilities and a passion for using technology to improve people's lives. Browse through my collection of apps and see how I can bring your vision to life with cutting-edge technology and a user-centered approach.
 
