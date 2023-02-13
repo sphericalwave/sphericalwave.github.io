@@ -8,6 +8,8 @@ permalink: about
 
 Hi, I'm Aaron.
 
+![image](/public/aaron_sun_profile.png)
+
 I am a multi-faceted individual with a passion for life and a drive to succeed in all that I do. I have been working as a software developer since 2017, and my expertise in this field has provided me with a strong foundation of technical knowledge and problem-solving skills.
 
 In addition to my work as a software developer, I am also an electrical engineer. I bring a unique set of skills and knowledge to my work, and I have a strong foundation in electrical engineering principles and a passion for developing innovative solutions to complex problems. Throughout my career, I have taken on challenging projects and consistently delivered high-quality results.
