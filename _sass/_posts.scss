@@ -75,47 +75,34 @@
 .image {
     width: 250px;
     height: 250px;
-    border-radius: 3px;
+    border-radius: 9px;
     margin-right: 9px;
     margin-top: 9px;
+    background-color: #f1f1f1;
 }
 
 .flex-container {
   display: flex;
-  //background-color: DodgerBlue;
   border-radius: 3px;
-
 
   //flex-direction: row; //default
   //justify-content: flex-start; //default
   //align-items: center;
   //align-items: flex-start;
-
-
+  //background-color: DodgerBlue;
 }
 
 //descendent div get targeted
 .flex-container > div {
   //background-color: #f1f1f1;
-  //padding: 9px;
-  //margin: 6px;
-  //font-size: 18px;
   border-radius: 3px;
-   // display: flex;
-     //color: white;
-     //align-items: center
-    //vertical-align: middle;
-
 }
 
 .tag-cloud {
   display: inline-block;
   color: white;
   padding: 0px 6px;
-  //font-family: Arial;
-  border-radius: 6px;
-  //background-color: #2196F3;
+  border-radius: 3px;
   background-color: $swBlue;
-  
-  margin-bottom: 6px;
+  font-size: 14px;
 }
