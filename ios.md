@@ -12,28 +12,34 @@ Welcome to my portfolio of mobile applications, showcasing my expertise in devel
 <div class="flex-container">
 
   <div>
-  	<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
-
-  	  	<div>
-  			<a href="https://apps.apple.com/us/app/dwellify/id1624547054" target="_blank" >
-				<img class="appStore" src="public/App_Store_Badge_US.svg" style="float: center; display: inline-block;">
-			</a>
-  		</div>
-
+  	  	<img class="image">
   </div>
 
   <div>
   	<p>Dwellify is a "one-stop-shop" home remodelling experience, guiding homeowners through a step-by-step process for turning design dreams into their dream homes. Dwellify's turnkey technology and design-driven experience combines interior design, materials sourcing, contractor relations and project management, all committed to transparency, reliability, and collaboration.
   	</p>
 
-	<span class="tag-cloud">REST</span>
-	<span class="tag-cloud">Combine</span>
-	<span class="tag-cloud">Login</span>
-	<span class="tag-cloud">Account</span>
-	<span class="tag-cloud">Messaging</span>
-	<span class="tag-cloud">Animations</span>
-	<span class="tag-cloud">Image Caching</span>
+  </div>
 
+</div>
+
+<div class="flex-container">
+
+  <div>
+
+		<span class="tag-cloud">REST</span>
+		<span class="tag-cloud">Combine</span>
+		<span class="tag-cloud">Login</span>
+		<span class="tag-cloud">Account</span>
+		<span class="tag-cloud">Messaging</span>
+		<span class="tag-cloud">Animations</span>
+		<span class="tag-cloud">Image Caching</span>
+
+  	  	<div>
+  			<a href="https://apps.apple.com/us/app/dwellify/id1624547054" target="_blank" >
+				<img class="appStore" src="public/App_Store_Badge_US.svg" style="float: center; display: inline-block;">
+			</a>
+  		</div>
   </div>
 
 </div>
