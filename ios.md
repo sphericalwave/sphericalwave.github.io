@@ -12,6 +12,11 @@ permalink: ios
 	Welcome to my portfolio of mobile applications, showcasing my expertise in developing innovative and intuitive apps. Each project is a testament to my dedication to delivering high-quality solutions that meet the unique needs of my clients. From productivity tools to lifestyle-enhancing experiences, my portfolio showcases a diverse range of capabilities and a passion for using technology to improve people's lives. Browse through my collection of apps and see how I can bring your vision to life with cutting-edge technology and a user-centred approach.
 </div>
 
+<br>
+
+<a href="https://www.w3docs.com/learn-html/html-introduction.html">
+<div class="project_summary">
+
 <div class="row">
 	<h1>FitWrench</h1>
 </div>
@@ -47,6 +52,12 @@ permalink: ios
 	<img class="appStore" src="public/App_Store_Badge_US.svg" style="float: center; display: inline-block;">
 	</a>
 </div>
+
+ </div> <!-- class="project_summary" -->
+ 
+ </a>
+
+<br>
 
 <div class="row">
 	<h1>Dwellify</h1>
@@ -87,7 +98,6 @@ permalink: ios
 	<img class="appStore" src="public/App_Store_Badge_US.svg" style="float: center; display: inline-block;">
 	</a>
 </div>
- 
 
 <div class="row">
 	<h1>AudioWave</h1>
