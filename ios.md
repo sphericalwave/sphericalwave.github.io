@@ -51,13 +51,6 @@ Welcome to my portfolio of mobile applications, showcasing my expertise in devel
 
   <div>
   	<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
-
-  	  	<div>
-  			<a href="https://apps.apple.com/ca/app/audiowave/id1658347047" target="_blank" >
-				<img class="appStore" src="public/App_Store_Badge_US.svg" style="float: center; display: inline-block;">
-			</a>
-  		</div>
-
   </div>
 
   <div>
@@ -73,6 +66,27 @@ Welcome to my portfolio of mobile applications, showcasing my expertise in devel
 
 </div>
 
+<div class="flex-container">
+
+  <div>
+
+		<span class="tag-cloud">REST</span>
+		<span class="tag-cloud">Combine</span>
+		<span class="tag-cloud">Login</span>
+		<span class="tag-cloud">Account</span>
+		<span class="tag-cloud">Messaging</span>
+		<span class="tag-cloud">Animations</span>
+		<span class="tag-cloud">Image Caching</span>
+
+  	  	<div>
+  			<a href="https://apps.apple.com/ca/app/audiowave/id1658347047" target="_blank" >
+				<img class="appStore" src="public/App_Store_Badge_US.svg" style="float: center; display: inline-block;">
+			</a>
+  		</div>
+  </div>
+
+</div>
+
 
 # Rick and Morty
 
@@ -81,10 +95,7 @@ Welcome to my portfolio of mobile applications, showcasing my expertise in devel
   <div>
   	<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
 
-  	<a href="https://github.com/sphericalwave/rickandmorty" target="_blank">
-	<i class="fab fa-github" style="display: inline-block; margin-right: 9px;"></i>
-	Check Out the Project on Github
-</a>
+
 
   </div>
 
@@ -93,5 +104,32 @@ Welcome to my portfolio of mobile applications, showcasing my expertise in devel
 It's not on the app store because it's a technical demo, and there are rules against using proprietary content.
   	</p>
   </div>
+
+</div>
+
+<div class="flex-container">
+
+  <div>
+
+		<span class="tag-cloud">REST</span>
+		<span class="tag-cloud">Combine</span>
+		<span class="tag-cloud">Login</span>
+		<span class="tag-cloud">Account</span>
+		<span class="tag-cloud">Messaging</span>
+		<span class="tag-cloud">Animations</span>
+		<span class="tag-cloud">Image Caching</span>
+
+  	  	<div class="github-btn">
+
+			 <a href="https://github.com/sphericalwave/rickandmorty" target="_blank">
+
+				<i class="fab fa-github" style="display: inline-block; margin-right: 9px;"></i>
+
+				Github Repo
+			</a>
+  		</div>
+  </div>
+
+  <br>
 
 </div>
