@@ -29,11 +29,6 @@ h4, h5, h6 {
   font-size: 1rem;
 }
 
-p {
-  //margin-top: 0;
-  //margin-bottom: 1rem;
-}
-
 //overrides default given by safari and chrome
 p {
     display: block;
@@ -102,13 +97,13 @@ blockquote {
 // See the example content post for an example.
 
 // Footnote number within body text
-a[href^="#fn:"],
-// Back to footnote link
-a[href^="#fnref:"] {
-  display: inline-block;
-  margin-left: .1rem;
-  font-weight: bold;
-}
+// a[href^="#fn:"],
+// // Back to footnote link
+// a[href^="#fnref:"] {
+//   display: inline-block;
+//   margin-left: .1rem;
+//   font-weight: bold;
+// }
 
 // List of footnotes
 .footnotes {
