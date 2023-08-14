@@ -40,7 +40,7 @@ body {
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
-  color: $link-color;
+  //color: $link-color;
   text-decoration: none;
 
   // `:focus` is linked to `:hover` for basic accessibility
@@ -98,3 +98,17 @@ a.button:hover {
   background-color: #f5f5f5;
 }
 
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
