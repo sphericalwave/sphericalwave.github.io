@@ -16,6 +16,11 @@ html, body {
   width: 100%;
 }
 
+//Remove default margin
+* {  
+  margin: 0;
+}
+
 html {
   font-family: $root-font-family;
   font-size: $root-font-size;
@@ -104,6 +109,8 @@ a.button:hover {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  //align-items: center; //vertical align
+  align-items: flex-start
 }
 
 .column {
@@ -111,4 +118,7 @@ a.button:hover {
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+ // align-items: flex-start; //vertical align
+ // justify-content: flex-start
+
 }
