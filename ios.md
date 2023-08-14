@@ -4,38 +4,17 @@ title: "iOS"
 permalink: ios
 ---
 
-<div class="row">
-	<h1>iOS</h1>
-</div>
-
-<div class="row">
-	Welcome to my portfolio of mobile applications, showcasing my expertise in developing innovative and intuitive apps. Each project is a testament to my dedication to delivering high-quality solutions that meet the unique needs of my clients. From productivity tools to lifestyle-enhancing experiences, my portfolio showcases a diverse range of capabilities and a passion for using technology to improve people's lives. Browse through my collection of apps and see how I can bring your vision to life with cutting-edge technology and a user-centred approach.
-</div>
-
+<br>
+<h1>iOS Apps</h1>
 <br>
 
-<a href="https://www.w3docs.com/learn-html/html-introduction.html">
+<!-- need clickable div -->
 <div class="project_summary">
-
-<div class="row">
-	<h1>FitWrench</h1>
-</div>
-
-<div class="row">
-
-  <div>
-  	<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
-  </div>
-
   <div class="column">
-  	<p>FitWrench is an app for tracking food and workouts. My intention is to gradually develop a sophisticated fitness coach.
-  	</p>
+  	<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
+	<h2>FitWrench</h2>
 
-  </div>
-
-</div>
-
-<div class="row">
+	<!-- need  -->
 	<div>
 		<span class="tag-cloud">Login</span>
 		<span class="tag-cloud">Account</span>
@@ -45,17 +24,10 @@ permalink: ios
 		<span class="tag-cloud">UIKit</span>
 		<span class="tag-cloud">Combine</span>
 	</div>
-</div>
+  </div>
 
-<div class="row">
-	<a href="https://apps.apple.com/us/app/dwellify/id1624547054" target="_blank" >
-	<img class="appStore" src="public/App_Store_Badge_US.svg" style="float: center; display: inline-block;">
-	</a>
-</div>
-
- </div> <!-- class="project_summary" -->
+</div> 
  
- </a>
 
 <br>
 
