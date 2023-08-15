@@ -8,97 +8,23 @@ permalink: ios
 
 <div class="row">
 
-<a target="_blank" href="/swiftui_4.0_snap_carousel_feb23">
-	<div class="project_summary">
-		<div >
-			<img src="https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg" alt="Image" class="image">
+	{% for project in site.projects %}
+		<a target="_blank" href="{{ page.url | relative_url }}">
+			<div class="project_summary">
+			  <div>
+				<img src="{{project.image}}" alt="Image" class="image">
 
-			<div style="text-align: leading; padding: 1rem;">
-				<h2 style="margin: 0;">FitWrench</h2>
-
-				<!-- wrap to width of image  -->
-				<div>
-					<span class="tag-cloud">Login</span>
-					<span class="tag-cloud">Account</span>
-					<span class="tag-cloud">CoreData</span>
-					<span class="tag-cloud">Animations</span>
-					<span class="tag-cloud">SwiftUI</span>
-					<span class="tag-cloud">UIKit</span>
-					<span class="tag-cloud">Combine</span>
-				</div>
-			</div>
-		</div>
-	</div> 
-</a>	
- 
-	<!-- Dwellify -->
-
-	<a target="_blank" href="/swiftui_4.0_snap_carousel_feb23">
-		<div class="project_summary">
-			<div >
-				<img src="https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg" alt="Image" class="image">
-	
 				<div style="text-align: leading; padding: 1rem;">
-					<h2 style="margin: 0;">Dwellify</h2>
-	
-					<!-- wrap to width of image  -->
-					<div>
-						<span class="tag-cloud">REST</span>
-						<span class="tag-cloud">Combine</span>
-						<span class="tag-cloud">Login</span>
-						<span class="tag-cloud">Account</span>
-						<span class="tag-cloud">Messaging</span>
-						<span class="tag-cloud">Animations</span>
-						<span class="tag-cloud">Image Caching</span>
-						<span class="tag-cloud">SwiftUI</span>
-						<span class="tag-cloud">UIKit</span>
-						<span class="tag-cloud">Combine</span>
-						<span class="tag-cloud">OAuth</span>
-					</div>
+				  <h2 style="margin: 0;">{{project.title}}</h2>
+				  <div>
+					{% for tag in project.tags %}
+					  <span class="tag-cloud">{{tag}}</span>
+					{% endfor %}
+				  </div>
 				</div>
+			  </div>
 			</div>
-		</div> 
-	</a>		
-
-	<!-- AudioWave -->
-	<a target="_blank" href="/swiftui_4.0_snap_carousel_feb23">
-		<div class="project_summary">
-			<div >
-				<img src="https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg" alt="Image" class="image">
-	
-				<div style="text-align: leading; padding: 1rem;">
-					<h2 style="margin: 0;">AudioWave</h2>
-	
-					<!-- wrap to width of image  -->
-					<div>
-						<span class="tag-cloud">AVFoundation</span>
-						<span class="tag-cloud">SwiftUI</span>
-						<span class="tag-cloud">UIKit</span>
-						<span class="tag-cloud">MediaKit</span>
-					</div>
-				</div>
-			</div>
-		</div> 
-	</a>
-
-	<!-- Rick and Morty -->
-	<a target="_blank" href="/swiftui_4.0_snap_carousel_feb23">
-		<div class="project_summary">
-			<div >
-				<img src="https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg" alt="Image" class="image">
-	
-				<div style="text-align: leading; padding: 1rem;">
-					<h2 style="margin: 0;">Rick and Morty</h2>
-	
-					<!-- wrap to width of image  -->
-					<div>
-						<span class="tag-cloud">REST</span>
-						<span class="tag-cloud">Image Caching</span>
-						<span class="tag-cloud">Threading</span>
-					</div>
-				</div>
-			</div>
-		</div> 
-	</a>
+		  </a>
+  	{% endfor %}
 
 </div> <!--end row-->
