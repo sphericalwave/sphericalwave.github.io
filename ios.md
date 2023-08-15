@@ -4,41 +4,40 @@ title: "iOS"
 permalink: ios
 ---
 
-<br>
 <h1>iOS Apps</h1>
-<br>
 
 <div class="row">
 
-
 <!-- need clickable div -->
+<a target="_blank" href="/swiftui_4.0_snap_carousel_feb23">
 	<div class="project_summary">
-	<div class="column">
-		<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
-		<h2>FitWrench</h2>
+		<div >
+			<img src="https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg" alt="Image" class="image">
 
-		<!-- wrap to width of image  -->
-		<div>
-			<span class="tag-cloud">Login</span>
-			<span class="tag-cloud">Account</span>
-			<span class="tag-cloud">CoreData</span>
-			<span class="tag-cloud">Animations</span>
-			<span class="tag-cloud">SwiftUI</span>
-			<span class="tag-cloud">UIKit</span>
-			<span class="tag-cloud">Combine</span>
+			<div style="text-align: leading; padding: 1rem;">
+				<h2 style="margin: 0;">FitWrench</h2>
+
+				<!-- wrap to width of image  -->
+				<div>
+					<span class="tag-cloud">Login</span>
+					<span class="tag-cloud">Account</span>
+					<span class="tag-cloud">CoreData</span>
+					<span class="tag-cloud">Animations</span>
+					<span class="tag-cloud">SwiftUI</span>
+					<span class="tag-cloud">UIKit</span>
+					<span class="tag-cloud">Combine</span>
+				</div>
+			</div>
 		</div>
-	</div>
-
 	</div> 
+</a>	
  
-
 	<!-- Dwellify -->
 	<div class="project_summary">
-	<div class="column">
+	<div>
 		<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
 		<h2>Dwellify</h2>
 
-		<!-- wrap to width of image  -->
 		<div>
 			<span class="tag-cloud">REST</span>
 			<span class="tag-cloud">Combine</span>
@@ -58,11 +57,10 @@ permalink: ios
 
 	<!-- AudioWave -->
 	<div class="project_summary">
-	<div class="column">
+	<div >
 		<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
 		<h2>AudioWave</h2>
 
-		<!-- wrap to width of image  -->
 		<div>
 			<span class="tag-cloud">AVFoundation</span>
 			<span class="tag-cloud">SwiftUI</span>
@@ -75,11 +73,10 @@ permalink: ios
 
 	<!-- Rick and Morty -->
 	<div class="project_summary">
-		<div class="column">
+		<div>
 			<img src="https://via.placeholder.com/250x250" alt="Image" class="image">
 			<h2>Rick and Morty</h2>
 
-			<!-- wrap to width of image  -->
 			<div>
 				<span class="tag-cloud">REST</span>
 				<span class="tag-cloud">Image Caching</span>
@@ -88,6 +85,5 @@ permalink: ios
 		</div>
 
 	</div> 
-
 
 </div> <!--end row-->
