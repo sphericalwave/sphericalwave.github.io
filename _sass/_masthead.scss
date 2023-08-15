@@ -1,5 +1,10 @@
 // Masthead
 
+header {
+  background: $swBlue; //red;
+  width: 100%;
+}
+
 .masthead {
   padding-top:    1rem;
   padding-bottom: 1rem;
@@ -13,6 +18,11 @@
   a {
     color: inherit;
     margin-right: 1rem;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
   }
 
   nav {

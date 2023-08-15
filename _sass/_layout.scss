@@ -2,11 +2,25 @@
 //
 // Styles for managing the structural hierarchy of the site.
 
-.wrapper { 
-  //key to get the footer where i wanted it
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  //width: 100%;
+  //align-items: center; //vertical align
+  align-items: space-between; //flex-start;
+  justify-content: space-around;
+
+  row-gap: 1rem;
+}
+
+.column {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  flex-basis: 100%;
+  flex: 1;
+// align-items: flex-start; //vertical align
+// justify-content: flex-start
 }
 
 .content {
@@ -25,31 +39,21 @@ footer {
   text-align: center;
   padding-block: 9px; /*vertical padding */
   line-height: 1rem;
-}
 
-footer small {
-  display:block;
-  font-size: 12px;
-}
+  small {
+    display:block;
+    font-size: 12px;
+  }
 
-footer a {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-}
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
 
-footer a:hover {
-  color: white;
-}
-
-footer img.avatar {
-  margin: 1 rem auto 1rem;
-  //border-radius: 50%;  //round border
-}
-
-header {
-  background: $swBlue; //red;
-  width: 100%;
+    &:hover {
+      color: black; //TODO: scale up
+    }
+  }
 }
 
 .appStore {
@@ -57,9 +61,11 @@ header {
   margin-top: 9px;
 }
 
+//used for landing page image
 .center-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 80%;
+  height: auto;
 }
