@@ -31,3 +31,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
+
+collections:
+  projects:
+    output: true
+
+github:
+  none: true
