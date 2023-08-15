@@ -10,7 +10,6 @@
   //align-items: center; //vertical align
   align-items: space-between; //flex-start;
   justify-content: space-around;
-
   row-gap: 1rem;
 }
 
@@ -26,8 +25,9 @@
 .content {
   flex-grow: 1; //key to get the footer where i wanted it
   max-width: 38rem;
-  padding-left:  1.5rem;
-  padding-right: 1.5rem;
+  // padding-left:  1.5rem;
+  // padding-right: 1.5rem;
+  padding: 1rem;
   margin-left:  auto;
   margin-right: auto;
 }

@@ -1,12 +1,13 @@
-.apps {
+// .apps {
 
-}
+// }
 
   //thumbnail img
 .image {
-  //width: 250px;
+  width: 100%; //100% of div?
   //height: 250px;
-  border-radius: 9px;
+  border-radius: 9px 9px 0px 0px;
+  object-fit: fill;
   //margin-right: 9px;
   //margin-top: 9px;
   //background-color: #f1f1f1;
@@ -15,14 +16,16 @@
 .project_summary {
   background-color: rgb(40, 38, 38);
   transition: transform .2s; /* Animation */
-  padding: 1rem;
+  //padding: 1rem;
   border-radius: 6px;
   //margin: 1rem;
   //width: 300px;  /* Or whatever */
   //height: 300px; /* Or whatever */
   //margin: auto;  /* Magic! */
 
-  flex: 3;//0 0 33.333333%;
+  //flex: 0 0 33.333333%;
+  flex-basis: 50%; // For 3 items in a row.
+
   //justify-content: space-between;
   column-gap: 9px;
 
