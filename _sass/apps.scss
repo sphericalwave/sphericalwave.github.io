@@ -24,10 +24,10 @@
   //margin: auto;  /* Magic! */
 
   //flex: 0 0 33.333333%;
-  flex-basis: 50%; // For 3 items in a row.
+  flex-basis: 31%; // For 3 items in a row.
 
   //justify-content: space-between;
-  column-gap: 9px;
+  //column-gap: 9px;
 
   &:hover {
     transform: scale(1.03);
