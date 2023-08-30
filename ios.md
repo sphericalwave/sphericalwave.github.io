@@ -3,29 +3,35 @@ layout: default
 title: "iOS"
 permalink: ios
 ---
+<div class="container">
 
-<h1>iOS Apps</h1>
+	<h1>iOS Apps</h1>
 
-<div class="row">
+	<div class="row">
 
-	{% for project in site.projects %}
-		<a target="_blank" href="{{ project.permalink | relative_url }}" class="project_summary">
+		{% for project in site.projects %}
 
-			<img src="{{project.image}}" alt="Image" class="image">
+		<div class="col-4 text-center">
+			<a target="_blank" href="{{ project.permalink | relative_url }}" class="project_summary">
 
-			<!-- text section -->
-			<div style="text-align: leading; padding: 0 1rem 1rem 1rem;">
-				<h4 style="margin: 0;">{{project.title}}</h4>
+				<img src="{{project.image}}" alt="Image" class="img-thumbnail">
 
-				<!-- tag cloud -->
-				<div>
-				{% for tag in project.tags %}
-					<span class="tag-cloud">{{tag}}</span>
-				{% endfor %}
+				<!-- text section -->
+				<div style="text-align: leading; padding: 0 1rem 1rem 1rem;">
+					<h4 style="margin: 0;">{{project.title}}</h4>
+
+					<!-- tag cloud -->
+					<div>
+						{% for tag in project.tags %}
+						<span class="tag-cloud">{{tag}}</span>
+						{% endfor %}
+					</div>
+
 				</div>
+			</a>
+		</div>
+		
+		{% endfor %}
 
-			</div>
-		  </a>
-  	{% endfor %}
-
+	</div>
 </div>
