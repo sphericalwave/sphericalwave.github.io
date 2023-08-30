@@ -1,19 +1,58 @@
-<header >
+<header>
 
-  <div class="masthead">
 
-    <h1 class="masthead-title">
-      <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-    </h1>
+  <nav class="navbar navbar-expand-lg" style="background-color: #1C57C9;">
 
-    <nav>
-        <a href="{{ site.baseurl }}/ios" title="iOS Apps">iOS Apps</a>
-        <a href="{{ site.baseurl }}/engineering">Engineering</a>
-        <a href="{{ site.baseurl }}/jiujitsu">Jiujitsu</a>
-        <a href="{{ site.baseurl }}/about">About</a>
-        <a href="/blog" title="Blog">Blog</a>
-    </nav> 
+    <div class="container">
 
-  </div>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">SphericalWave</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a href="{{ site.baseurl }}/ios" title="iOS Apps" class="nav-link">iOS Apps</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ site.baseurl }}/engineering" class="nav-link">Engineering</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ site.baseurl }}/jiujitsu" class="nav-link">Jiujitsu</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ site.baseurl }}/about" class="nav-link">About</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/blog" class="nav-link">Blog</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Skills
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">CAD</a></li>
+              <li><a class="dropdown-item" href="#">Coding</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Databases</a></li>
+              <li><a class="dropdown-item" href="#">Web</a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
 
 </header>
