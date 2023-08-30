@@ -36,3 +36,14 @@ $small-font-size: 16px;
 
 $code-font-family: Menlo, Monaco, "Courier New", monospace;
 $code-color: $swift;
+
+//bootstrap customizations
+$navbar-light-color:                $gray-1;
+$navbar-light-hover-color:          $gray-1;
+$navbar-light-active-color:         $gray-1;
+$navbar-light-disabled-color:       $gray-1;
+$navbar-light-icon-color:           $gray-1;
+//$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-light-toggler-border-color: $gray-1;
+$navbar-light-brand-color:          white;
+$navbar-light-brand-hover-color:    $gray-1;
