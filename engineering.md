@@ -12,8 +12,8 @@ This is a work in progress…check back soon.
 
 - <a href="{{ site.baseurl }}/hvdc" title="HVDC">HVDC Field Engineer</a>
 - Surmont SAGD
-- Aquatron Lab
-- Fretlight
+- <a href="{{ site.baseurl }}/aquatron" title="Aquatron">Aquatron Lab</a>
+- Fretlights
 - Primer cube
 - Searl Generator
 - Bedini Energizer
