@@ -4,26 +4,25 @@ title: "Blog"
 permalink: blog/index.html
 ---
 
-<div class="container">
-  <h1>Blog</h1>
+<h1>Blog</h1>
 
-  <div class="posts">
-    {% for post in paginator.posts %}
-    <article class="post">
-      <h2 class="post-title">
-        <a title="{{ post.title }}" href="{{ site.baseurl }}{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </h2>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <article class="post">
+    <h2 class="post-title">
+      <a title="{{ post.title }}" href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
 
-      <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 
-      {{ post.excerpt }}
-    </article>
-    {% endfor %}
-  </div>
+    {{ post.excerpt }}
+  </article>
+  {% endfor %}
+</div>
 
-  <!-- <div class="pagination" style="padding-bottom: 18px;">
+<!-- <div class="pagination" style="padding-bottom: 18px;">
     {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
     {% else %}
@@ -42,5 +41,3 @@ permalink: blog/index.html
     <a href="/categories" title="Categories" class="pagination-item older">Categories</a>
     <a href="/archive" title="Archive" class="pagination-item newer">Archive</a>
   </div> -->
-
-</div>
