@@ -16,7 +16,7 @@ permalink: Aquatron
 	</div>
 
 	<div class="col text-center">
-		<img src="/public/SphericalWaveC60.png" class="img-thumbnail" alt="...">
+		<img src="/public/aaron_sun_profile.png" class="img-thumbnail" alt="...">
 		<h2>Aaron</h2>
 
 	</div>
@@ -42,5 +42,7 @@ permalink: Aquatron
 </div>
 
 <div class="row">
-	<p>Final Report <a href="/public/aquatron_report.pdf">example</a>.</p>
+	<p>Final Report 
+	<a href="/public/aquatron/aquatron_report.pdf">example</a>.
+	</p>
 </div>
