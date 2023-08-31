@@ -11,13 +11,13 @@ permalink: ios
 
 		{% for project in site.projects %}
 
-		<div class="col-4 text-center">
+		<div class="col-4">
 			<a target="_blank" href="{{ project.permalink | relative_url }}" class="project_summary">
 
 				<img src="{{project.image}}" alt="Image" class="img-thumbnail">
 
 				<!-- text section -->
-				<div style="text-align: leading; padding: 0 1rem 1rem 1rem;">
+				<div style="text-align: leading; padding: 0 0 1rem 0;">
 					<h4 style="margin: 0;">{{project.title}}</h4>
 
 					<!-- tag cloud -->
@@ -30,8 +30,7 @@ permalink: ios
 				</div>
 			</a>
 		</div>
-		
-		{% endfor %}
 
+		{% endfor %}
 	</div>
 </div>
