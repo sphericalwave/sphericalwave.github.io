@@ -25,6 +25,11 @@ a {
     //text-decoration: underline;
     color: $gray-1;
   }
+
+  &:active {
+    //text-decoration: underline;
+    color: yellow;
+  }
 }
 
 //bootstrap customizations
