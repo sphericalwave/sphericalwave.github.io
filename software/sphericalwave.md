@@ -1,11 +1,10 @@
 ---
 layout: default
-title: "FitWrench"
-permalink: fitwrench
-#http://127.0.0.1:4000/software/fitwrench/ is generated link
+title: "SphericalWave.com"
+permalink: sphericalwave
 ---
 
-<h1>FitWrench</h1>
+<h1>SphericalWave.com</h1>
 
 <div class="row">
 

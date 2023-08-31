@@ -9,5 +9,5 @@ tags:
   - Messaging
   - Image Caching
   - OAuth
-permalink: /projects/dwellify/
+link: dwellify
 ---

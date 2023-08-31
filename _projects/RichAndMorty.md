@@ -8,5 +8,5 @@ tags:
   - Threading
   - SwiftUI
   - Combine
-permalink: /projects/rickAndMorty/
+link: rickandmorty
 ---

@@ -1,16 +1,16 @@
 ---
 layout: default
 title: "Software"
-permalink: ios
+permalink: software
 ---
-<h1>iOS Apps</h1>
+<h1>Software</h1>
 
 <div class="row">
 
 	{% for project in site.projects %}
 
 	<div class="col-4">
-		<a target="_blank" href="{{ project.permalink | relative_url }}" class="project_summary">
+		<a  href="{{ project.link | relative_url }}" class="project_summary">
 
 			<img src="{{project.image}}" alt="Image" class="img-thumbnail">
 
