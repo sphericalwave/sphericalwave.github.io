@@ -35,6 +35,8 @@ plugins:
 collections:
   projects:
     output: true
+  engineering:
+    output: true
 
 github:
   none: true

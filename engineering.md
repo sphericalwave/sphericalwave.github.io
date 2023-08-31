@@ -1,10 +1,40 @@
 ---
 layout: default
-title: "engineering"
+title: "Hardware"
 permalink: engineering
 ---
 
-<h1>Engineering</h1>
+<h1>Hardware</h1>
+
+<div class="row">
+
+	{% for project in site.engineering %}
+
+	<div class="col-4">
+		<a  href="{{ project.link | relative_url }}" class="project_summary">
+
+			<img src="{{project.image}}" alt="Image" class="img-thumbnail">
+
+			<!-- text section -->
+			<div style="text-align: leading; padding: 0 0 1rem 0;">
+				<h4 style="margin: 0;">{{project.title}}</h4>
+
+				<!-- tag cloud -->
+				<div>
+					{% for tag in project.tags %}
+					<span class="tag-cloud">{{tag}}</span>
+					{% endfor %}
+				</div>
+
+			</div>
+		</a>
+	</div>
+
+	{% endfor %}
+</div>
+
+
+<!-- <h1>Engineering</h1>
 
 <div class="row">
     <div class="col ">
@@ -29,4 +59,4 @@ permalink: engineering
             <li>bitcoin</li>
         </ul>
     </div>
-</div>
+</div> -->
