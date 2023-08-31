@@ -1,6 +1,6 @@
 ---
 title: Dwellify
-image: https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg
+image: /public/dwellify/DwellifyAppIcon_512x512_2x.png
 tags:
   - REST
   - Combine

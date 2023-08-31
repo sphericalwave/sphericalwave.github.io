@@ -1,6 +1,6 @@
 ---
 title: AudioWave
-image: https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg
+image: /public/audiowave/app_icon.png
 tags:
   - AVFoundation
   - MediaKit
