@@ -1,11 +1,10 @@
 ---
 layout: default
-title: "FitWrench"
-permalink: fitwrench
-#http://127.0.0.1:4000/software/fitwrench/ is generated link
+title: "Dwellify"
+permalink: dwellify
 ---
 
-<h1>FitWrench</h1>
+<h1>Dwellify</h1>
 
 <div class="row">
 

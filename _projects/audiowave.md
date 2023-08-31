@@ -7,5 +7,5 @@ tags:
   - UIKit
   - SwiftUI
   - User Defaults
-permalink: /projects/audiowave/
+link: audiowave
 ---

@@ -1,11 +1,10 @@
 ---
 layout: default
-title: "FitWrench"
-permalink: fitwrench
-#http://127.0.0.1:4000/software/fitwrench/ is generated link
+title: "Audiowave"
+permalink: audiowave
 ---
 
-<h1>FitWrench</h1>
+<h1>Audiowave</h1>
 
 <div class="row">
 

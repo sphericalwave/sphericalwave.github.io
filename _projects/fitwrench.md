@@ -1,6 +1,6 @@
 ---
 title: FitWrench
-image: https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg
+image: /public/fitwrench/Cuboctahedron_1080.png
 tags:
   - Login
   - Account
@@ -9,7 +9,9 @@ tags:
   - SwiftUI
   - UIKit
   - Combine
-permalink: /projects/fitwrench/
+  - HealthKit
+  - CloudKit
+link: fitwrench #using permalink here collides with the actual fitwrench page
 ---
 
 <!-- Add any additional content for the project here -->
