@@ -1,6 +1,6 @@
 ---
 title: FitWrench
-image: /public/fitwrench/Cuboctahedron_1080.png
+image: /public/fitwrench/1024_Icon.png
 tags:
   - Login
   - Account

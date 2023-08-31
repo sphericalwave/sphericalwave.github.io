@@ -1,6 +1,6 @@
 ---
 title: Rick & Morty
-image: https://i.ytimg.com/vi/ZiDVbDlHDF0/maxresdefault.jpg
+image: /public/rickandmorty/rick_and_morty_icon_1024.png
 tags:
   - REST
   - Image Caching
