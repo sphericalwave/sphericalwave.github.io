@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "iOS"
+title: "Software"
 permalink: ios
 ---
 <h1>iOS Apps</h1>
