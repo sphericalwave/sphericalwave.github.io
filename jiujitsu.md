@@ -6,21 +6,30 @@ permalink: jiujitsu
 
 <h1>JiuJitsu</h1>
 
-<div class="row">
-    <div class="col ">
-        <p>As a dedicated practitioner of Brazilian Jiu-Jitsu, I have been training and competing for several years. My
-            love for the sport and my unwavering commitment to self-improvement have driven me to pursue my training
-            with passion and dedication. Over the years, I have honed my skills through rigorous training and
-            competition, and I am proud of my progress. This web page allows me to share my journey in the sport and
-            showcase my achievements as a jiujitsu practitioner. Whether detailing my training routine, showcasing my
-            competition results, or sharing my insights on the sport, I hope to offer valuable information and
-            inspiration to fellow jiujitsu enthusiasts. Through this web page, I aim to demonstrate my commitment to the
-            sport and to spread my love and appreciation for Brazilian Jiu-Jitsu.</p>
-        <ul>
-            <li>brown</li>
-            <li>purple</li>
-            <li>blue</li>
-            <li>white</li>
-        </ul>
-    </div>
+<div class="row align-items-top pb-3">
+
+	{% for project in site.jits %}
+
+	<div class="col-4">
+		<a  href="{{ project.link | relative_url }}" class="project_summary">
+
+			<img src="{{project.image}}" alt="Image" class="img-thumbnail">
+            <!-- <img src="{{project.image}}" alt="Image" class="img-fluid ratio ratio-1x1"> -->
+
+			<!-- text section -->
+			<div style="text-align: leading; padding: 0 0 1rem 0;">
+				<h4 style="margin: 0;">{{project.title}}</h4>
+
+				<!-- tag cloud -->
+				<div>
+					{% for tag in project.tags %}
+					<span class="tag-cloud">{{tag}}</span>
+					{% endfor %}
+				</div>
+
+			</div>
+		</a>
+	</div>
+
+	{% endfor %}
 </div>

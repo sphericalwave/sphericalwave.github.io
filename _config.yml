@@ -37,6 +37,8 @@ collections:
     output: true
   engineering:
     output: true
+  jits:
+    output: true
 
 github:
   none: true
