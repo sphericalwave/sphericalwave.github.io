@@ -6,7 +6,7 @@ permalink: engineering
 
 <h1>Hardware</h1>
 
-<div class="row">
+<div class="row align-items-top pb-3">
 
 	{% for project in site.engineering %}
 
@@ -14,6 +14,7 @@ permalink: engineering
 		<a  href="{{ project.link | relative_url }}" class="project_summary">
 
 			<img src="{{project.image}}" alt="Image" class="img-thumbnail">
+            <!-- <img src="{{project.image}}" alt="Image" class="img-fluid ratio ratio-1x1"> -->
 
 			<!-- text section -->
 			<div style="text-align: leading; padding: 0 0 1rem 0;">

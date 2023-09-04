@@ -1,15 +1,16 @@
 ---
-title: Aquatron
-image: /public/aquatron/CAD_section.PNG
+title: Pegasus
+image: /public/pegasus/Pegasus.jpg
 tags:
   - CAD
-  - Design
+  - Circuit Design
   - Presentation Skills
   - Report Writing
+  - DC Motor Controllers
   - Teamwork
   - Mechanics
   - Electronics
   - Gantt Chart
   - Project Management
-link: aquatron
+link: pegasus
 ---
