@@ -2,14 +2,6 @@
 title: White Belt
 image: /public/jits/white/whitebelt.JPG
 tags:
-  - CAD
-  - Design
-  - Presentation Skills
-  - Report Writing
-  - Teamwork
-  - Mechanics
-  - Electronics
-  - Gantt Chart
-  - Project Management
+  - 2018
 link: whitebelt
 ---

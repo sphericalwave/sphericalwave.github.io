@@ -11,7 +11,7 @@ title: Home
 <div col-2>
 </div>
     <div class="col text-center">
-      <img src="/public/SphericalWaveC60.png" alt="Your Image" class="img-thumbnail w-75">
+      <img src="/public/SphericalWaveC60.png" alt="Your Image" class="img-thumbnail w-50">
     </div>
 
     <!-- <div class="col text-center">
