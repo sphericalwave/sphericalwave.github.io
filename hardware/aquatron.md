@@ -6,6 +6,10 @@ permalink: Aquatron
 
 <h1>Aquatron Project</h1>
 
+<div class="row">
+		<a href="/public/aquatron/aquatron_report.pdf">Final Report</a>
+</div>
+
 <div class="row align-items-center pb-3">
 
 	<h2>The Team</h2>
@@ -62,10 +66,4 @@ permalink: Aquatron
 		<img src="/public/aquatron/atmega328w.png" class="img-thumbnail" alt="...">
 	</div>
 
-</div>
-
-<div class="row">
-	<p>Final Report
-		<a href="/public/aquatron/aquatron_report.pdf">example</a>.
-	</p>
 </div>

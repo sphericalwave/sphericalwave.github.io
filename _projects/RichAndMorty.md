@@ -8,5 +8,6 @@ tags:
   - Threading
   - SwiftUI
   - Combine
-link: rickandmorty
+link:
+absoluteLink: /github.com/sphericalwave/rickandmorty
 ---
