@@ -9,8 +9,14 @@ permalink: software
 
 	{% for project in site.projects %}
 
-	<div class="col-4">
-		<a  href="{{ project.link | relative_url }}" class="project_summary">
+	<div class="col-lg-4 col-md-6 col-sm-12">
+
+
+		{% if project.link == blank %}
+			<a  href="{{ project.absoluteLink | absolute_url }}" class="project_summary">
+		{% else %}
+			<a  href="{{ project.link | relative_url }}" class="project_summary">
+		{% endif %}
 
 			<img src="{{project.image}}" alt="Image" class="img-thumbnail">
 
