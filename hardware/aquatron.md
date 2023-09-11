@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Aquatron Lab"
-permalink: Aquatron
+permalink: aquatron
 ---
 
 <h1>Aquatron Project</h1>
