@@ -4,32 +4,116 @@ title: "HVDC"
 permalink: hvdc
 ---
 
+<h1>HVDC Converter Station</h1>
+
+<p>Worked as a field engineer outside St John's, NL.</p>
+
 <div class="row">
-    <div class="col">
-        <h1>HVDC Field Engineering</h1>
 
+    <div class="col-4">
+        <img src="/public/hvdc/aaron.jpg" alt="image" class="img-thumbnail">
+        Front gate
+    </div>
 
-        <p>As a field engineer during the construction phase of the Soldiers Pond HVDC (High Voltage Direct Current)
-        converter station, I was a key member of the project team responsible for ensuring that the station was built to
-        the highest standards and in accordance with the design specifications. My main focus was to monitor the
-        construction activities on site, and ensure that the work was being done safely, efficiently, and to the
-        required quality.</p>
+    <div class="col-4">
+        <img src="/public/hvdc/aaron_hoth.jpg" alt="image" class="img-thumbnail">
+        It's cold
+    </div>
 
-        <p>I worked closely with the contractors and other engineers, to resolve any technical issues that arose during the
-        construction phase, and to ensure that the project was delivered on time and within budget. I also had to
-        maintain a detailed knowledge of the construction schedule, so I could plan and coordinate the installation of
-        the HVDC equipment and systems.</p>
+    <div class="col-4">
+        <img src="/public/hvdc/tony2.jpg" alt="image" class="img-thumbnail">
+        Tony and Tony!
+    </div>
 
-        <p> a field engineer, I had to have a strong understanding of electrical engineering principles, HVDC technology,
-        and construction practices. I also had to be able to work effectively in a fast-paced, dynamic environment, and
-        be able to manage multiple tasks and priorities. Strong communication and interpersonal skills were also
-        important, as I had to work closely with a wide range of stakeholders, including contractors, other engineers,
-        and project managers.</p>
+    <div class="col-4">
+        <img src="/public/hvdc/transformers.jpg" alt="image" class="img-thumbnail">
+        Tony and Tony!
+    </div>
 
-        <p>The construction of the Soldiers Pond HVDC converter station was a complex and challenging project, but it was
-        also extremely rewarding. I was able to use my skills and knowledge to make a real difference, and to contribute
-        to the successful delivery of a critical piece of infrastructure. I was proud to be part of a team that built a
-        station that will provide reliable, high-quality power transmission for many years to come.</p>
+    <div class="col-4">
+        <img src="/public/hvdc/torque_wrench.jpg" alt="image" class="img-thumbnail">
+        Giant Torque Wrench
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/sunrise.jpg" alt="image" class="img-thumbnail">
+        Early Mornings
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/midday.jpg" alt="image" class="img-thumbnail">
+        Switch Yard Construction
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/valve_hall.JPG" alt="image" class="img-thumbnail">
+        Valve Hall
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/sync_condenser.JPG" alt="image" class="img-thumbnail">
+        Synchronous Condenser
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/sync_condenser2.JPG" alt="image" class="img-thumbnail">
+        Synchronous Condenser
 
     </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/giant_cables.JPG" alt="image" class="img-thumbnail">
+        Giant Cables
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/cable_schedule.JPG" alt="image" class="img-thumbnail">
+        Cable Schedule
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/structural_steel.JPG" alt="image" class="img-thumbnail">
+        Structural Steel
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/helmet.JPG" alt="image" class="img-thumbnail">
+        Safety First!
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/more_steel.JPG" alt="image" class="img-thumbnail">
+        More Steel!
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/welding.JPG" alt="image" class="img-thumbnail">
+        Welding!
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/cats.JPG" alt="image" class="img-thumbnail">
+        Cats!
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/wrenches.JPG" alt="image" class="img-thumbnail">
+        Wrenches!
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/tony.JPG" alt="image" class="img-thumbnail">
+        Tony!
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/elevation.JPG" alt="image" class="img-thumbnail">
+        Tony!
+    </div>
+
+    <div class="col-4">
+        <img src="/public/hvdc/high_power.JPG" alt="image" class="img-thumbnail">
+        High Power!
+    </div>
+
 </div>
