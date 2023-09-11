@@ -16,32 +16,32 @@ permalink: hvdc
     </div>
 
     <div class="col-4">
-        <img src="/public/hvdc/aaron_hoth.jpg" alt="image" class="img-thumbnail">
+        <img src="/public/hvdc/aaron_hoth.JPG" alt="image" class="img-thumbnail">
         It's cold
     </div>
 
     <div class="col-4">
-        <img src="/public/hvdc/tony2.jpg" alt="image" class="img-thumbnail">
+        <img src="/public/hvdc/Tony2.JPG" alt="image" class="img-thumbnail">
         Tony and Tony!
     </div>
 
     <div class="col-4">
-        <img src="/public/hvdc/transformers.jpg" alt="image" class="img-thumbnail">
+        <img src="/public/hvdc/transformers.JPG" alt="image" class="img-thumbnail">
         Tony and Tony!
     </div>
 
     <div class="col-4">
-        <img src="/public/hvdc/torque_wrench.jpg" alt="image" class="img-thumbnail">
+        <img src="/public/hvdc/torque_wrench.JPG" alt="image" class="img-thumbnail">
         Giant Torque Wrench
     </div>
 
     <div class="col-4">
-        <img src="/public/hvdc/sunrise.jpg" alt="image" class="img-thumbnail">
+        <img src="/public/hvdc/sunrise.JPG" alt="image" class="img-thumbnail">
         Early Mornings
     </div>
 
     <div class="col-4">
-        <img src="/public/hvdc/midday.jpg" alt="image" class="img-thumbnail">
+        <img src="/public/hvdc/midday.JPG" alt="image" class="img-thumbnail">
         Switch Yard Construction
     </div>
 
