@@ -11,7 +11,7 @@ permalink: hvdc
 <div class="row">
 
     <div class="col-4">
-        <img src="/public/hvdc/aaron.jpg" alt="image" class="img-thumbnail">
+        <img src="/public/hvdc/aaron.JPG" alt="image" class="img-thumbnail">
         Front gate
     </div>
 
