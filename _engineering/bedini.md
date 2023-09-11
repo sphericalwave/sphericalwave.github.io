@@ -1,6 +1,6 @@
 ---
 title: Bedini Energizer
-image: /public/bedini/bedini.jpg
+image: /public/bedini/bedini.JPG
 tags:
   - Electronics
   - Electromechanics
