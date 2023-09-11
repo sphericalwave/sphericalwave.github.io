@@ -66,4 +66,52 @@ permalink: aquatron
 		<img src="/public/aquatron/atmega328w.png" class="img-thumbnail" alt="...">
 	</div>
 
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/DrumFilter2.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/DrumAssemblyRv2.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/DrumAssemblyExploded.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/DrumRearv2.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/DrumFrontv2.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/FilterIso.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/latest/DirectDriverv3Section.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/latest/AssTop.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/latest/AssRear.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/latest/AssSide.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/latest/AssSection.PNG" class="img-thumbnail" alt="...">
+	</div>
+
+	<div class="col-4 text-center">
+		<img src="/public/aquatron/cad/latest/DrumRv5.PNG" class="img-thumbnail" alt="...">
+	</div>
+	
 </div>
