@@ -14,6 +14,8 @@ permalink: dwellify
     <span class="tag-cloud">REST</span>
     <span class="tag-cloud">UIKit</span>
     <span class="tag-cloud">iOS</span>
+    <span class="tag-cloud">Jira</span>
+    <span class="tag-cloud">Git</span>
   </div>
 
   <p>Dwellify is actually a pair of apps, one customer facing and the other contractor facing. I was the lead iOS developer on both apps which formed the greater part of my work at immediaC over a year and a half. I worked in collaboration with an Android developer, a project manager and the clients backend team.</p>
@@ -42,6 +44,15 @@ permalink: dwellify
 
     <h4>Complex Navigation</h4>
     <img src="/public/dwellify/dw_screen_switching.png" alt="Your Image" class="img-thumbnail">
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col text-center">
+
+    <h4>REST API</h4>
+    <img src="/public/dwellify/model_layer.png" alt="Your Image" class="img-thumbnail">
   </div>
 
 </div>
