@@ -15,7 +15,7 @@ title: Home
       
       <img src="/public/SphericalWaveC60.png" alt="Your Image" class="img-thumbnail w-50">
       
-      <p class="pt-3">Welcome to my portfolio where you can see a little bit about me and my journey through space and time.</p>
+      <p class="pt-3">Welcome to my portfolio where you can see a little bit about my work. </p>
 
     </div>
 
