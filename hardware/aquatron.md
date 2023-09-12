@@ -4,15 +4,50 @@ title: "Aquatron Lab"
 permalink: aquatron
 ---
 
-<h1>Aquatron Project</h1>
+<!-- <h1>Aquatron Project</h1>
 
 <div class="row">
 		<a href="/public/aquatron/aquatron_report.pdf">Final Report</a>
+</div> -->
+
+<div class="row align-items-center pb-3">
+	<h1>Aquatron Aquaculture Filter</h1>
+
+	<div>
+		<span class="tag-cloud">CAD</span>
+		<span class="tag-cloud">Electronics</span>
+		<span class="tag-cloud">Electromechanics</span>
+		<span class="tag-cloud">Presentations</span>
+		<span class="tag-cloud">Reports</span>
+		<span class="tag-cloud">Project Management</span>
+		<span class="tag-cloud">Teamwork</span>
+	</div>
+
+	<p>Collaborating with two fellow engineers to develop an innovative aquaculture filter prototype was an exhilarating
+		and deeply rewarding experience. Taking the lead in producing three iterations of CAD prototypes in SolidWorks
+		allowed us to refine our design with precision and efficiency.</p>
+
 </div>
 
 <div class="row align-items-center pb-3">
 
-	<h2>The Team</h2>
+	<p>As I delved into coding the firmware that governed the machine's operations, I felt a profound sense of accomplishment, knowing that our prototype was
+		becoming increasingly functional and intelligent. In addition to my software contributions, I also handled
+		electronics assembly and design, ensuring that every component seamlessly integrated with the overall system.</p>
+</div>
+
+<div class="row align-items-center pb-3">
+
+	<p>This project underscored the value of interdisciplinary teamwork, as each of us brought our unique skills to the
+		table, resulting in a cutting-edge aquaculture filter prototype that held great promise for enhancing
+		sustainability in the industry</p>
+</div>
+
+
+<div class="row align-items-center pb-3">
+	<div class="col text-center">
+		<img src="/public/aquatron/nadav_aquatron.JPG" class="img-thumbnail" alt="...">
+	</div>
 
 	<div class="col">
 		<img src="/public/aquatron/aaron_aquatron.JPG" class="img-thumbnail" alt="...">
@@ -20,10 +55,6 @@ permalink: aquatron
 
 	<div class="col text-center">
 		<img src="/public/aquatron/aquatron_gao.png" class="img-thumbnail" alt="...">
-	</div>
-
-	<div class="col text-center">
-		<img src="/public/aquatron/nadav_aquatron.JPG" class="img-thumbnail" alt="...">
 	</div>
 
 </div>
@@ -113,5 +144,5 @@ permalink: aquatron
 	<div class="col-4 text-center">
 		<img src="/public/aquatron/cad/latest/DrumRv5.PNG" class="img-thumbnail" alt="...">
 	</div>
-	
+
 </div>

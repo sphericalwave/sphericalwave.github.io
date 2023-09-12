@@ -1,0 +1,89 @@
+---
+layout: default
+title: "Sigmast"
+permalink: sigmast
+---
+<div class="row align-items-center pb-3">
+    <h1>Sigmast</h1>
+
+    <div>
+        <span class="tag-cloud">Linux</span>
+        <span class="tag-cloud">C++</span>
+        <span class="tag-cloud">SQL</span>
+        <span class="tag-cloud">Telecomm</span>
+        <span class="tag-cloud">Testing</span>
+    </div>
+
+    <p>SigMast Communications Inc. develops Rich Communication Services (RCS) messaging solutions for mobile network operators globally. Recognized for its world-class product and substantial experience in developing telecommunications solutions, SigMast became a part of Samsung Electronics in 2016. Unfortunately the product failed to acheive it's market adoption because it was competing with Facebook messager, iMessage, Whatsapp and all the other web based messaging services and Samsung closed the company.</p>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+    <p>The scope of the project was impressive. There was a security group, database group, testing group, IT group, HR group as well as 2 development groups. I worked on the HUB team development group. Our work revolved around routing traffic between different providers, for example Telus and Rogers.</p>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+	<div class="col text-center">
+		<img src="/public/sigmast/sigmast_group.jpeg" class="img-thumbnail" alt="...">
+	</div>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+	<div class="col-4 text-center">
+		<img src="/public/sigmast/hub_team.JPG" class="img-thumbnail" alt="...">
+	</div>
+
+    <div class="col-4 text-center">
+		<img src="/public/sigmast/cake.jpeg" class="img-thumbnail" alt="...">
+	</div>
+
+    <div class="col-4 text-center">
+		<img src="/public/sigmast/work_term.jpeg" class="img-thumbnail" alt="...">
+	</div>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+	<div class="col text-center">
+		<img src="/public/sigmast/halloween.jpeg" class="img-thumbnail" alt="...">
+	</div>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+	<div class="col-4 text-center">
+		<img src="/public/sigmast/aaron_desk.JPG" class="img-thumbnail" alt="...">
+	</div>
+
+    <div class="col-4 text-center">
+		<img src="/public/sigmast/books.jpeg" class="img-thumbnail" alt="...">
+	</div>
+
+    <div class="col-4 text-center">
+		<img src="/public/sigmast/gargantua.jpg" class="img-thumbnail" alt="...">
+	</div>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+	<div class="col-4 text-center">
+		<img src="/public/sigmast/tesla.JPG" class="img-thumbnail" alt="...">
+	</div>
+
+    <div class="col-4 text-center">
+		<img src="/public/sigmast/pinky_brain.JPG" class="img-thumbnail" alt="...">
+	</div>
+
+    <div class="col-4 text-center">
+		<img src="/public/sigmast/logo2.png" class="img-thumbnail" alt="...">
+	</div>
+
+</div>
