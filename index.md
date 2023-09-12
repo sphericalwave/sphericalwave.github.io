@@ -6,17 +6,18 @@ title: Home
 <!-- <div class="container">
   <h1>Hello World!</h1> -->
 
-  <div class="row">
+<div class="row">
 
 <div col-2>
 </div>
     <div class="col text-center">
+      <h1>Hello World!</h1>
+      
       <img src="/public/SphericalWaveC60.png" alt="Your Image" class="img-thumbnail w-50">
-    </div>
+      
+      <p class="pt-3">Welcome to my portfolio where you can see a little bit about me and my journey through space and time.</p>
 
-    <!-- <div class="col text-center">
-      <img src="/public/SphericalWaveC60.png" alt="Your Image" class="img-thumbnail">
-    </div> -->
+    </div>
 
     <div col-2></div>
 
