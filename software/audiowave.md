@@ -4,59 +4,44 @@ title: "Audiowave"
 permalink: audiowave
 ---
 
-<h1>Audiowave</h1>
+<div class="row pb-3">
 
-<div class="row">
+  <h1>Audiowave</h1>
 
-    <div class="col-4">
-        <img src="/public/fitwrench/Cuboctahedron_1080.png" alt="image" class="img-fluid">
-    </div>
+  <div>
+    <span class="tag-cloud">SwiftUI</span>
+    <span class="tag-cloud">MediaKit</span>
+    <span class="tag-cloud">UIKit</span>
+    <span class="tag-cloud">iOS</span>
+  </div>
 
-    <div class="col">
-        FitWrench is an app to support a single user in the optimization of their nutrition.
-    </div>
+  <p>Audiowave is an app I built for spaced repetition learning. The idea is you have one audio stream with positive suggestions and a second audio stream with background music. I use it when I'm working out or out for a walk in an attempt to program my mind. I'm not convinced it's working but I does demonstrate initiative, technical ability and desire to evolve.</p>
 
-</div>
-
-<div class="row">
-
-    <div class="col-4">
-        <img src="/public/fitwrench/Cuboctahedron_1080.png" alt="image" class="img-fluid">
-    </div>
-
-    <div class="col">
-        Roadmap
-    </div>
-
-    <div class="col">
-        Roadmap
-    </div>
+  <a href="https://github.com/sphericalwave/AudioWave4" title="Audiowave Github" target="blank" class="pt-3 d-flex align-items-center">
+    <i class="fab fa-github fa-2x" style="display: inline-block; margin-right: 9px;"></i>
+    Check out the code here.
+  </a>
 
 </div>
 
-<!-- <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> -->
+<div class="row">
+
+  <div class="col-4 text-center">
+    <img src="/public/audiowave/player.PNG" alt="Your Image" class="img-thumbnail">
+  </div>
+
+    <div class="col-4 text-center">
+    <img src="/public/audiowave/playlist.PNG" alt="Your Image" class="img-thumbnail">
+  </div>
+
+    <div class="col-4 text-center">
+    <img src="/public/audiowave/playlists.PNG" alt="Your Image" class="img-thumbnail">
+  </div>
+
+</div>
+
+<div class="row pt-3">
+  <a href="https://apps.apple.com/sa/app/audiowave/id1658347047" title="Audiowave App Store" target="blank">
+    <img src="/public/appstore.png" alt="Your Image" class="img-thumbnail w-25">
+  </a>
+</div>

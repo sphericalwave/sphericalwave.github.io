@@ -4,59 +4,63 @@ title: "Dwellify"
 permalink: dwellify
 ---
 
-<h1>Dwellify</h1>
+<div class="row pb-3">
+
+  <h1>Dwellify</h1>
+
+<!-- match the thumbnail -->
+  <div>
+    <span class="tag-cloud">SwiftUI</span>
+    <span class="tag-cloud">REST</span>
+    <span class="tag-cloud">UIKit</span>
+    <span class="tag-cloud">iOS</span>
+  </div>
+
+  <p>Dwellify is actually a pair of apps, one customer facing and the other contractor facing. I was the lead iOS developer on both apps which formed the greater part of my work at immediaC over a year and a half. I worked in collaboration with an Android developer, a project manager and the clients backend team.</p>
+  
+  <p class="pt-3">After completing the project I was laid off, which was disapointing because I really enjoyed the work. For whatever reason the client has not released the apps to the app store. You can check out their website which is very similar to the customer facing app at <a href="https://dwellify.com" target="blank">dwellify.com</a></p>
+
+  <p class="pt-3">Obviously I can't share the source code but I think it's reasonable to show some screeshots that I took during the development process because I did a lot of work on this app and it was a great experience.</p>
+
+  <p class="pt-3">Some of the challenges with the app included working with a complex REST api with an unusual format. Building custom components the most challenging of which where some different custom calendars. The navigation flow was also complicated to say the least.</p>
+
+</div>
 
 <div class="row">
 
-    <div class="col-4">
-        <img src="/public/fitwrench/Cuboctahedron_1080.png" alt="image" class="img-fluid">
-    </div>
+  <div class="col-6 text-center">
+    <img src="/public/dwellify/DwellifyAppIcon_512x512_2x.png" alt="Your Image" class="img-thumbnail">
+  </div>
 
-    <div class="col">
-        FitWrench is an app to support a single user in the optimization of their nutrition.
-    </div>
+  <div class="col-6 text-center">
+    <img src="/public/dwellify/DwellifyContractorPortalIcon_512x512_2x.png" alt="Your Image" class="img-thumbnail">
+  </div>
+</div>
+    
+<div class="row">
+  <div class="col text-center">
+
+    <h4>Complex Navigation</h4>
+    <img src="/public/dwellify/dw_screen_switching.png" alt="Your Image" class="img-thumbnail">
+  </div>
 
 </div>
 
 <div class="row">
+<h2>Contractor App</h2>
+<div class="col-3 text-center">
+    <img src="/public/dwellify/contractor_iPhone12Max1.png" alt="Your Image" class="img-thumbnail">
+  </div>
 
-    <div class="col-4">
-        <img src="/public/fitwrench/Cuboctahedron_1080.png" alt="image" class="img-fluid">
-    </div>
+  <div class="col-3 text-center">
+    <img src="/public/dwellify/contractor_iPhone12Max2.png" alt="Your Image" class="img-thumbnail">
+  </div>
 
-    <div class="col">
-        Roadmap
-    </div>
+    <div class="col-3 text-center">
+    <img src="/public/dwellify/contractor_iPhone12Max3.png" alt="Your Image" class="img-thumbnail">
+  </div>
 
-    <div class="col">
-        Roadmap
-    </div>
-
+      <div class="col-3 text-center">
+    <img src="/public/dwellify/contractor_iPhone12Max4.png" alt="Your Image" class="img-thumbnail">
+  </div>
 </div>
-
-<!-- <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> -->
