@@ -3,12 +3,38 @@ layout: default
 title: "HVDC"
 permalink: hvdc
 ---
+<div class="row align-items-center pb-3">
+    <h1>HVDC Converter Station</h1>
 
-<h1>HVDC Converter Station</h1>
+    <div>
+        <span class="tag-cloud">Field Engineering</span>
+        <span class="tag-cloud">Teamwork</span>
+        <span class="tag-cloud">Safety</span>
+        <span class="tag-cloud">CAD</span>
+        <span class="tag-cloud">Change Management</span>
+        <span class="tag-cloud">Cable Schedule</span>
+        <span class="tag-cloud">Inventory</span>
+    </div>
 
-<p>Worked as a field engineer outside St John's, NL.</p>
+    <p>Working as a Field Engineer at the Soldiers Pond HVDC construction site was an exhilarating and multifaceted
+        experience. My role was characterized by its dynamic nature, as I assumed responsibility for various critical
+        aspects of the project. Managing inventory became a core facet of my daily routine, ensuring that essential
+        materials and equipment were readily available to support the seamless progress of construction activities.
+        </p>
 
-<div class="row">
+</div>
+
+<div class="row align-items-center pb-3">
+
+    <p>Additionally, I played a pivotal role in supporting the electrical, HVAC, and structural trades, collaborating
+        closely with skilled professionals to troubleshoot challenges, implement solutions, and maintain the highest
+        standards of safety and efficiency on the site. This multifunctional role not only honed my technical expertise
+        but also underscored the importance of teamwork in achieving the ambitious goals of the Soldiers Pond HVDC
+        project.</p>
+
+</div>
+
+<div class="row align-items-center pb-3">
 
     <div class="col-4">
         <img src="/public/hvdc/aaron.JPG" alt="image" class="img-thumbnail">
