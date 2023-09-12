@@ -5,59 +5,135 @@ permalink: fitwrench
 #http://127.0.0.1:4000/software/fitwrench/ is generated link
 ---
 
-<h1>FitWrench</h1>
+<div class="row align-items-center pb-3">
+  <h1>FitWrench</h1>
 
-<div class="row">
+  <div>
+    <span class="tag-cloud">SwiftUI</span>
+    <span class="tag-cloud">CoreData</span>
+  </div>
 
-    <div class="col-4">
-        <img src="/public/fitwrench/Cuboctahedron_1080.png" alt="image" class="img-fluid">
-    </div>
-
-    <div class="col">
-        FitWrench is an app to support a single user in the optimization of their nutrition.
-    </div>
-
-</div>
-
-<div class="row">
-
-    <div class="col-4">
-        <img src="/public/fitwrench/Cuboctahedron_1080.png" alt="image" class="img-fluid">
-    </div>
-
-    <div class="col">
-        Roadmap
-    </div>
-
-    <div class="col">
-        Roadmap
-    </div>
+  <p>FitWrench is an app I've been working on to support my nutrition and workouts. It's hilarious how much work I've
+    put into this app and it's still not ready. It looks so simple on the surface but the complexity is in the details I
+    assure you. I'm excited about where I can take this app.</p>
 
 </div>
 
-<!-- <div id="carouselExampleIndicators" class="carousel slide">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> -->
+<div class="row align-items-center pb-3">
+
+  <h2>Onboarding</h2>
+
+  <p>The first phase of the app is where we setup a user profile.</p>
+
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw3.png" alt="image" class="img-thumbnail">
+    Welcome
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw4.png" alt="image" class="img-thumbnail">
+    Create Avatar
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw1.png" alt="image" class="img-thumbnail">
+    HealthKit Permissions
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw5.png" alt="image" class="img-thumbnail">
+    Birthday, Sex, Height
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw6.png" alt="image" class="img-thumbnail">
+    Initial Measurements
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw7.png" alt="image" class="img-thumbnail">
+    Macro Target Intro
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw8.png" alt="image" class="img-thumbnail">
+    BMR Calculations
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw9.png" alt="image" class="img-thumbnail">
+    Activity Factor
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw10.png" alt="image" class="img-thumbnail">
+    Target Daily Energy
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw11.png" alt="image" class="img-thumbnail">
+    Macro Ratios
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw12.png" alt="image" class="img-thumbnail">
+    Completed Target
+  </div>
+</div>
+
+
+
+<div class="row align-items-center pb-3">
+
+  <h2>Food Module</h2>
+
+  <p>With onboarding complete we get into the core of the app.</p>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw15.png" alt="image" class="img-thumbnail">
+    Food Dash
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw13.png" alt="image" class="img-thumbnail">
+    Food Library
+  </div>
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw14.png" alt="image" class="img-thumbnail">
+    Add Food to Journal
+  </div>
+
+
+
+  <div class="col-4">
+    <img src="/public/fitwrench/fw16.png" alt="image" class="img-thumbnail">
+    Food Settings
+  </div>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+  <h2>Water Module</h2>
+
+  <p>Coming soon. Features.</p>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+  <h2>Workouts Module</h2>
+
+  <p>Coming soon. Features.</p>
+
+</div>
+
+<div class="row align-items-center pb-3">
+
+  <h2>Feedback Module</h2>
+
+  <p>Coming soon. Features.</p>
+
+</div>
