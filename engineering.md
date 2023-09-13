@@ -24,7 +24,7 @@ permalink: engineering
 
 		<a  href="{{ project.link | relative_url }}" class="project_summary">
 
-			<img src="{{project.image}}" alt="Image" class="img-thumbnail">
+			<img src="{{project.image}}" alt="Image" class="img-thumbnail project_summary">
             <!-- <img src="{{project.image}}" alt="Image" class="img-fluid ratio ratio-1x1"> -->
 
 			<!-- text section -->

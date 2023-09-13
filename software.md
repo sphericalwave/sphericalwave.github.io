@@ -48,7 +48,7 @@ permalink: software
 			<a href="{{ project.link | relative_url }}" class="project_summary">
 				{% endif %}
 
-				<img src="{{project.image}}" alt="Image" class="img-thumbnail">
+				<img src="{{project.image}}" alt="Image" class="img-thumbnail project_summary">
 
 				<!-- text section -->
 				<div style="text-align: leading; padding: 0 0 1rem 0;">
