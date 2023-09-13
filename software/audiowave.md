@@ -26,15 +26,15 @@ permalink: audiowave
 
 <div class="row">
 
-  <div class="col-4 text-center">
+<div class="col-lg-4 col-md-6 col-sm-12">
     <img src="/public/audiowave/player.PNG" alt="Your Image" class="img-thumbnail">
   </div>
 
-    <div class="col-4 text-center">
+  <div class="col-lg-4 col-md-6 col-sm-12">
     <img src="/public/audiowave/playlist.PNG" alt="Your Image" class="img-thumbnail">
   </div>
 
-    <div class="col-4 text-center">
+  <div class="col-lg-4 col-md-6 col-sm-12">
     <img src="/public/audiowave/playlists.PNG" alt="Your Image" class="img-thumbnail">
   </div>
 

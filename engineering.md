@@ -10,7 +10,9 @@ permalink: engineering
 
 	<p>I feel like I was born an engineer but I didn't know it. I've always been curious about how things work. I remember my first physics class in high school and thinking 'Aha, this is how it works'. Over the years I've read countless books, took a diversion into mathematics and geometry and eventually found my way into Engineering.</p>
 
-	<p class="pt-3">I got more than a little side tracked with software but my heart is still in Engineering. Take a look at some of the engineering projects I've been involved in and continue to explore.</p>
+	<p class="pt-3">I got more than a little side tracked with software but my heart is still in Engineering. Here's a look at some of the engineering projects I've been involved in and continue to explore.</p>
+
+	<p class="pt-3">There's a few missing while I search for old photos.</p>
 
 </div>
 
@@ -18,7 +20,8 @@ permalink: engineering
 
 	{% for project in site.engineering %}
 
-	<div class="col-4">
+	<div class="col-lg-4 col-md-6 col-sm-12">
+
 		<a  href="{{ project.link | relative_url }}" class="project_summary">
 
 			<img src="{{project.image}}" alt="Image" class="img-thumbnail">
