@@ -24,9 +24,9 @@ permalink: jiujitsu
 
 	    <div class="col-lg-4 col-md-6 col-sm-12">
 
-		<a href="{{ project.link | relative_url }}" class="project_summary">
+		<a href="{{ project.link | relative_url }}">
 
-			<img src="{{project.image}}" alt="Image" class="img-thumbnail">
+			<img src="{{project.image}}" alt="Image" class="img-thumbnail project_summary">
 			<!-- <img src="{{project.image}}" alt="Image" class="img-fluid ratio ratio-1x1"> -->
 
 			<!-- text section -->
