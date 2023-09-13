@@ -103,7 +103,7 @@ permalink: purplebelt
 
     <div class="col-lg-4 col-md-6 col-sm-12">
         <img src="/public/jits/purple/aug2022.jpg" alt="image" class="img-thumbnail">
-        Grants Purples
+        Grants Purples, double silver!
     </div>
 
     <div class="col-lg-4 col-md-6 col-sm-12">
