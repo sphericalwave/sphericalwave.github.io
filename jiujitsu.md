@@ -22,7 +22,8 @@ permalink: jiujitsu
 
 	{% for project in site.jits %}
 
-	<div class="col-4">
+	    <div class="col-lg-4 col-md-6 col-sm-12">
+
 		<a href="{{ project.link | relative_url }}" class="project_summary">
 
 			<img src="{{project.image}}" alt="Image" class="img-thumbnail">

@@ -30,12 +30,10 @@ permalink: dwellify
 
 <div class="row">
 
-  <div class="col-6 text-center">
-    <img src="/public/dwellify/DwellifyAppIcon_512x512_2x.png" alt="Your Image" class="img-thumbnail">
-  </div>
+<div class="col-lg-6 col-md-12 col-sm-12">
+<h2>Customer App</h2>
 
-  <div class="col-6 text-center">
-    <img src="/public/dwellify/DwellifyContractorPortalIcon_512x512_2x.png" alt="Your Image" class="img-thumbnail">
+    <img src="/public/dwellify/DwellifyAppIcon_512x512_2x.png" alt="Your Image" class="img-thumbnail">
   </div>
 </div>
     
@@ -59,19 +57,25 @@ permalink: dwellify
 
 <div class="row">
 <h2>Contractor App</h2>
-<div class="col-3 text-center">
+
+  <div class="col-lg-6 col-md-12 col-sm-12">
+
+    <img src="/public/dwellify/DwellifyContractorPortalIcon_512x512_2x.png" alt="Your Image" class="img-thumbnail">
+  </div>
+
+<div class="col-lg-4 col-md-6 col-sm-12">
     <img src="/public/dwellify/contractor_iPhone12Max1.png" alt="Your Image" class="img-thumbnail">
   </div>
 
-  <div class="col-3 text-center">
+<div class="col-lg-4 col-md-6 col-sm-12">
     <img src="/public/dwellify/contractor_iPhone12Max2.png" alt="Your Image" class="img-thumbnail">
   </div>
 
-    <div class="col-3 text-center">
+  <div class="col-lg-4 col-md-6 col-sm-12">
     <img src="/public/dwellify/contractor_iPhone12Max3.png" alt="Your Image" class="img-thumbnail">
   </div>
 
-      <div class="col-3 text-center">
+    <div class="col-lg-4 col-md-6 col-sm-12">
     <img src="/public/dwellify/contractor_iPhone12Max4.png" alt="Your Image" class="img-thumbnail">
   </div>
 </div>
