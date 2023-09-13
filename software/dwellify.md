@@ -18,7 +18,7 @@ permalink: dwellify
     <span class="tag-cloud">Git</span>
   </div>
 
-  <p>Dwellify is actually a pair of apps, one customer facing and the other contractor facing. I was the lead iOS developer on both apps which formed the greater part of my work at immediaC over a year and a half. I worked in collaboration with an Android developer, a project manager and the clients backend team.</p>
+  <p>Dwellify is actually a pair of apps, one customer facing and the other contractor facing. I was the lead iOS developer on both apps which formed the greater part of my work at <a href="/immediaC">immediaC</a> over a year and a half. I worked in collaboration with an Android developer, a project manager and the clients backend team.</p>
   
   <p class="pt-3">After completing the project I was laid off, which was disapointing because I really enjoyed the work. For whatever reason the client has not released the apps to the app store. You can check out their website which is very similar to the customer facing app at <a href="https://dwellify.com" target="blank">dwellify.com</a></p>
 
