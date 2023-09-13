@@ -14,7 +14,7 @@ permalink: sigmast
         <span class="tag-cloud">Testing</span>
     </div>
 
-    <p>SigMast Communications Inc. develops Rich Communication Services (RCS) messaging solutions for mobile network operators globally. Recognized for its world-class product and substantial experience in developing telecommunications solutions, SigMast became a part of Samsung Electronics in 2016. Unfortunately the product failed to acheive it's market adoption because it was competing with Facebook messager, iMessage, Whatsapp and all the other web based messaging services and Samsung closed the company.</p>
+    <p>SigMast Communications Inc. developed Rich Communication Services (RCS) messaging solutions for mobile network operators globally. Recognized for its world-class product and substantial experience in developing telecommunications solutions, SigMast became a part of Samsung Electronics in 2016. Unfortunately the product failed to acheive it's market adoption because it was competing with Facebook messager, iMessage, Whatsapp and all the other web based messaging services and Samsung closed the company in 2020.</p>
 
 </div>
 
