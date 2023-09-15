@@ -13,7 +13,7 @@ title: Home
     <div class="col text-center">
       <h1>Hello World!</h1>
       
-      <img src="/public/SphericalWaveC60.png" alt="Your Image" class="img-thumbnail w-50">
+      <img src="/public/aaron_sun_profile.png" alt="Your Image" class="img-thumbnail w-50">
       
       <p class="pt-3">Welcome to my portfolio where you can see a little bit about my work. </p>
 
