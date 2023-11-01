@@ -16,8 +16,8 @@ permalink: hvdc
         <span class="tag-cloud">Inventory</span>
     </div>
 
-    <p>Working as a Field Engineer at the Soldiers Pond HVDC construction site was an exhilarating and multifaceted
-        experience. My role was characterized by its dynamic nature, as I assumed responsibility for various critical
+    <p>Working as a Field Engineer at the Soldiers Pond HVDC construction site was a great experience. 
+        My role was characterized by its dynamic nature, as I assumed responsibility for various critical
         aspects of the project. Managing inventory became a core facet of my daily routine, ensuring that essential
         materials and equipment were readily available to support the seamless progress of construction activities.
         </p>
@@ -26,10 +26,10 @@ permalink: hvdc
 
 <div class="row align-items-center pb-3">
 
-    <p>Additionally, I played a pivotal role in supporting the electrical, HVAC, and structural trades, collaborating
+    <p>I played a pivotal role in supporting the electrical, HVAC, and structural trades, collaborating
         closely with skilled professionals to troubleshoot challenges, implement solutions, and maintain the highest
-        standards of safety and efficiency on the site. This multifunctional role not only honed my technical expertise
-        but also underscored the importance of teamwork in achieving the ambitious goals of the Soldiers Pond HVDC
+        standards of safety and efficiency on site. This multifunctional role honed my technical expertise
+        and underscored the importance of teamwork in achieving the ambitious goals.
         project.</p>
 
 </div>
@@ -38,12 +38,12 @@ permalink: hvdc
 
     <div class="col-lg-4 col-md-6 col-sm-12">
         <img src="/public/hvdc/aaron.JPG" alt="image" class="img-thumbnail">
-        Front gate
+        Solidier's Pond Front Gate
     </div>
 
     <div class="col-lg-4 col-md-6 col-sm-12">
         <img src="/public/hvdc/aaron_hoth.JPG" alt="image" class="img-thumbnail">
-        It's cold
+        Lot's of cold days on site.
     </div>
 
     <div class="col-lg-4 col-md-6 col-sm-12">
@@ -129,12 +129,12 @@ permalink: hvdc
 
     <div class="col-lg-4 col-md-6 col-sm-12">
         <img src="/public/hvdc/tony.JPG" alt="image" class="img-thumbnail">
-        Tony!
+        Cranes in the switch yard
     </div>
 
     <div class="col-lg-4 col-md-6 col-sm-12">
         <img src="/public/hvdc/elevation.JPG" alt="image" class="img-thumbnail">
-        Tony!
+        HVAC crew
     </div>
 
     <div class="col-lg-4 col-md-6 col-sm-12">
