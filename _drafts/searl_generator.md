@@ -10,5 +10,5 @@ tags:
   - Mechanics
   - Electronics
   - Project Management
-link: aquatron
+link: searl_generator
 ---

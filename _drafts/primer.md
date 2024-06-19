@@ -6,5 +6,5 @@ tags:
   - CAD
   - Circuit Design
   - Bluetooth
-link: primercube
+link: primer_cube
 ---

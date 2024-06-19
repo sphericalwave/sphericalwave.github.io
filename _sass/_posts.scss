@@ -64,3 +64,17 @@
 }
 
 
+.post-card {
+  cursor: pointer;
+  height: 100%;
+}
+.post-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+

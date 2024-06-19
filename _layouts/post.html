@@ -2,11 +2,30 @@
 layout: default
 ---
 
-<article class="post">
-  <h2 class="post-title">{{ page.title }}</h2>
-  <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-  {{ content }}
-</article>
+<div class="container">
+  <div class="row content-wrapper">
+    <div class="col-md-9">
+      <article>
+        <h1 class="post-title">{{ page.title }}</h1>
+        <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+        {% include share_buttons.html %}
+
+        {{ content }}
+        {% include share_buttons.html %}
+        {% include subscribe.html %}
+
+
+      </article>
+    </div>
+
+    <!-- sidebar -->
+    <div class="col-md-3">
+      {% include sidebar.html %}
+    </div>
+
+  </div>
+</div>
+
 
 {% if site.related_posts != empty %}
 <aside class="related">
