@@ -2,43 +2,32 @@
 layout: default
 ---
 
-<div class="container">
-  <div class="row content-wrapper">
-    <div class="col-md-9">
-      <article>
-        <h1 class="post-title">{{ page.title }}</h1>
-        <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-        {% include share_buttons.html %}
+<div class="row">
+  <div class="col-md-9">
+    <article>
+      <h1>{{ page.title }}</h1>
 
-        {{ content }}
-        {% include share_buttons.html %}
-        {% include subscribe.html %}
+      <!-- TODO: this is almost exactly the same as tagCloud.html -->
+      <div>
+        {% for tag in page.tags %}
+        <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="tag-cloud"><span>{{ tag }}</span></a>
+        {% endfor %}
+      </div>
+
+      {% include timeStamp.html %}
+      {% include share_buttons.html %}
+      {{ content }}
+      {% include share_buttons.html %}
+      {% include related_posts.html page=page%}
+      {% include subscribe.html %}
 
 
-      </article>
-    </div>
-
-    <!-- sidebar -->
-    <div class="col-md-3">
-      {% include sidebar.html %}
-    </div>
-
+    </article>
   </div>
+
+  <!-- sidebar -->
+  <div class="col-md-3">
+    {% include sidebar.html %}
+  </div>
+
 </div>
-
-
-{% if site.related_posts != empty %}
-<aside class="related">
-  <h4>Recent posts</h4>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-    <li>
-      <a title="{{ post.title }}" href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-        <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time></small>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-</aside>
-{% endif %}

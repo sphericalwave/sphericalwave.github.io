@@ -1,0 +1,32 @@
+<!-- inspiration https://nathan.gs/2024/01/05/tags-in-jekyll-related-posts/ -->
+
+{% assign page = include.page %}
+{% assign tags_match_min = include.tags_match_min | default: 3 %}
+{% assign related_post_count = 1 %}
+{% assign related_posts = "" | split: "|" %}
+{% assign max_posts = include.max_posts | default: 6 %}
+<!-- <<ul class="post-list"> -->
+<div class="row">
+    {% for min_tags in (1..tags_match_min) reversed %}
+    {% for post in site.posts %}
+    {% if related_post_count <= max_posts and post.url !=page.url %} {%- comment %}# Calculate related_tags {%
+        endcomment %} {% assign related_tags=0 %} {% for tag in page.tags %} {% if post.tags contains tag %} {% assign
+        related_tags=related_tags | plus: 1 %} {% endif %} {% endfor %} {% if related_tags>= min_tags %}
+        {% unless related_posts contains post.url %}
+        {%- assign related_post_count = related_post_count | plus: 1 -%}
+        {%- assign url_arr = post.url | split: "|" -%}
+        {%- assign related_posts = related_posts | concat: url_arr %}
+
+        <!-- <li> -->
+        <div class="col-4">
+            {% include postCard.html%}
+        </div>
+
+
+
+        {% endunless %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+</div>

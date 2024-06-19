@@ -3,40 +3,25 @@
 // Headings, body text, lists, and other misc typographic elements.
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: .5rem;
-  font-weight: 600;
-  line-height: 1.25;
+  // margin-bottom: .5rem;
+  // font-weight: 600;
+  // line-height: 1.25;
   color: $gray-1;
   text-rendering: optimizeLegibility;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-h3 {
-  margin-top: 1.5rem;
-  font-size: 1.25rem;
-}
-
-h4, h5, h6 {
-  margin-top: 1rem;
-  font-size: 1rem;
+time {
+  font-size: 0.7rem;
 }
 
 //overrides default given by safari and chrome
 p {
     font-size: 0.8rem;
-    display: block;
-    margin-block-start: 0.5rem;
-    margin-block-end: 0.5rem;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    // display: block;
+    // margin-block-start: 0.5rem;
+    // margin-block-end: 0.5rem;
+    // margin-inline-start: 0px;
+    // margin-inline-end: 0px;
 }
 
 small {
@@ -45,19 +30,6 @@ small {
 
 strong {
   color: $gray-1;
-}
-
-ul, ol, dl {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-
-dt {
-  font-weight: bold;
-}
-
-dd {
-  margin-bottom: .5rem;
 }
 
 hr {

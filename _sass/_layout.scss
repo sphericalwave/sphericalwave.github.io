@@ -2,53 +2,24 @@
 //
 // Styles for managing the structural hierarchy of the site.
 
-.row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  //width: 100%;
-  //align-items: center; //vertical align
-  align-items: space-between; //flex-start;
-  justify-content: space-between;
-  row-gap: 1rem;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-// align-items: flex-start; //vertical align
-// justify-content: flex-start
-}
-
-.content {
-  flex-grow: 1; //key to get the footer where i wanted it
-  max-width: 38rem;
-  // padding-left:  1.5rem;
-  // padding-right: 1.5rem;
-  padding: 1rem;
-  margin-left:  auto;
-  margin-right: auto;
-}
-
 footer {
-  width: 100%;
-  background-color: $swBlue; //red;
-  color: white;
-  text-align: center;
-  padding-block: 9px; /*vertical padding */
-  line-height: 1rem;
+  // width: 100%;
+  // background-color: $swBlue; //red;
+  // color: white;
+  // text-align: center;
+  // padding-block: 9px;
+  /*vertical padding */
+  // line-height: 1rem;
 
-  small {
-    display:block;
-    font-size: 12px;
-  }
+  // small {
+    // display: block;
+    // font-size: 12px;
+  // }
 
   a {
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
+    // color: white;
+    // text-decoration: none;
+    // font-size: 2rem;
 
     &:hover {
       color: black; //TODO: scale up
