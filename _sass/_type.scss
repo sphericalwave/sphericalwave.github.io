@@ -31,11 +31,16 @@ h4, h5, h6 {
 
 //overrides default given by safari and chrome
 p {
+    font-size: 0.8rem;
     display: block;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+small {
+  font-size: 0.6rem;
 }
 
 strong {

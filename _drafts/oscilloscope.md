@@ -4,5 +4,8 @@ image: /public/oscilloscope/scope1.jpeg
 tags:
   - Soldering
   - Ressourcefulness
-link: oscilloscope
+permalink: oscilloscope
 ---
+
+Testing 123
+

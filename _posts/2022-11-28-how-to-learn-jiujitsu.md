@@ -1,8 +1,9 @@
 ---
 title: how to learn jiujitsu
-layout: post
 image: /public/flowlayout.png
-category: jiujitsu
+tags:
+  - jiujitsu
+permalink: jiujitsu
 ---
 
 Came across some advice that seems valuable from Jon Thomas on youtube.

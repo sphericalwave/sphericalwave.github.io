@@ -1,0 +1,122 @@
+.card-custom {
+    background-color: #000;
+    /* Black background */
+    color: #fff;
+    /* White text */
+    border: 0.12rem solid #4169e1;
+    /* Royal blue border */
+}
+
+.card-custom .card-header,
+.card-custom .btn {
+    background-color: #4169e1;
+    /* Royal blue background for header and button */
+    color: #fff;
+    /* White text */
+}
+
+.card-custom .card-header {
+    border-bottom: 2px solid #4169e1;
+    /* Royal blue border for header */
+}
+
+.card-custom .btn:hover {
+    background-color: #27408b;
+    /* Darker royal blue for hover effect */
+    border-color: #27408b;
+}
+
+.card .card-title {
+    margin-bottom: 0;
+    /* Override the default margin-bottom */
+    margin-top: 0;
+    /* Override the default margin-bottom */
+}
+
+.card-text {
+    font-size: 0.6rem;
+}
+
+.card .card-body {
+    padding: 0.5rem;
+}
+
+//btn used in post card
+.custom-btn-blue {
+    background-color: #007bff;
+    /* Bootstrap's primary blue color */
+    color: #fff;
+    /* White text */
+    border-color: #007bff;
+    /* Matching border color */
+    font-size: 0.8rem;
+    padding: 0.3rem;
+}
+
+.custom-btn-blue:hover {
+    background-color: #0056b3;
+    /* Darker shade of blue on hover */
+    border-color: #0056b3;
+}
+
+.card .underline-text {
+    text-decoration: underline;
+    color: white;
+    font-size: 0.7rem;
+}
+
+
+.share-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.share-buttons a {
+    color: darkgray;
+}
+
+.share-buttons a:hover {
+    color: $swBlue;
+}
+
+.subscribe-form {
+    // max-width: 500px;
+    // margin: 0.5rem 0.5rem 0 0;
+    margin: .5rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    // background-color: #f9f9f9;
+    text-align: left;
+  }
+  .subscribe-form h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  .subscribe-form p {
+    font-size: 0.8rem;
+    // margin-bottom: 1rem;
+  }
+  .subscribe-form .form-group {
+    // margin-bottom: 1rem;
+  }
+  .subscribe-form input[type="email"] {
+    // width: 80%;
+    // padding: 0.5rem;
+    // padding: 0.1rem;
+
+    // margin-bottom: 1rem;
+  }
+  .subscribe-form button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: $swBlue;
+    color: white;
+    border: none;
+    // border-radius: 5px;
+    font-size: 1rem;
+  }
+  .subscribe-form button:hover {
+    background-color: #0056b3;
+  }
