@@ -2,15 +2,14 @@
 title: Conical Coil
 image: /public/conicalCoils/2024-06-19 conical coils.png
 tags:
-  - Electricity
   - Magnetism
-  - Tesla
-  - Walter Russell
 permalink: conical_coils
 ---
+
+Bench demo of Russell's conical coils focusing magnetic matter into a Sphere.
+
 <img src="{{ page.image | relative_url }}" class="img-fluid rounded w-50" alt="Responsive image">
 
-Interesting demo of Walter Russell's conical coils.
 They display some interesting magnetic effects that I'd like to look into.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8qeBRvgMKuA?si=1KXzPNfUdvARIObS&amp;start=371" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

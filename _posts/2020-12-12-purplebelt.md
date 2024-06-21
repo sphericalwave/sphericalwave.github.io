@@ -1,12 +1,12 @@
 ---
-layout: default
-title: "Purple Belt"
+title: Purple Belt
+image: /public/jits/purple/fresh_purple.jpg
+tags:
+  - AJJ
 permalink: purplebelt
 ---
 
 <div class="row align-items-center pb-3">
-
-    <h1>Purple Belt</h1>
 
     <p>Purple belt was a good time. Jiujitsu is getting fun at this point. Changed gyms. Competed a few times. Watched a
         lot of instructional videos. Finally started getting good at the mount. Really good defensively by the end of

@@ -1,0 +1,87 @@
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    margin: 1rem 0;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    /* Adjust the value as needed */
+}
+
+//landing page image
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+}
+
+//thumbnail img
+.image {
+    width: 100%; //100% of div?
+    //height: 250px;
+    border-radius: 9px 9px 0px 0px;
+    object-fit: fill;
+    //margin-right: 9px;
+    //margin-top: 9px;
+    //background-color: #f1f1f1;
+}
+
+
+
+
+//   .img-thumbnail {
+//     width: 100%;
+//     height: 0;
+//     padding-bottom: 100%;
+//     object-fit: cover;
+//     object-position: center;
+//     display: block;
+//     position: relative;
+// }
+.thumbnail-container {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    display: block;
+}
+.thumbnail-container img {
+    position: absolute; //Positions the image within the container, ensuring it covers the full area.
+    width: 100%;
+    height: 100%;
+    object-fit: cover; //ensure the image fills the square container while maintaining its aspect ratio.
+    object-position: center; //ensure the image fills the square container while maintaining its aspect ratio.
+
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0.6rem;
+  
+    &:hover {
+      border: $swBlue;
+    }
+}
+
+.background-c60 {
+    background-image: url('/public/SphericalWaveC60.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* height: 50vh; */
+    // display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.5;
+    /* Other styles can be added as needed */
+  }

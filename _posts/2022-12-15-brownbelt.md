@@ -1,12 +1,12 @@
 ---
-layout: default
-title: "Brown Belt"
+title: Brown Belt
+image: /public/jits/brown/brown_belt.jpeg
+tags:
+  - AJJ
 permalink: brownbelt
 ---
 
 <div class="row align-items-center pb-3">
-
-    <h1>Brown Belt</h1>
 
     <p>TJ and Alex promoted me to brown in December of 2022. It felt great to be bumped up. I remember I was super
         happy all day and then there was a Christmas party that night for the gym. I'm not sure where to go with my
