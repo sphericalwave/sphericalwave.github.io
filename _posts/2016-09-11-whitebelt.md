@@ -1,6 +1,8 @@
 ---
-layout: default
-title: "White Belt"
+title: White Belt
+image: /public/jits/white/whitebelt.JPG
+tags:
+  - AJJ
 permalink: whitebelt
 ---
 

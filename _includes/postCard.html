@@ -1,34 +1,26 @@
-      <!-- card -->
-      <!-- <div class="card card-custom" onclick="window.location='{{ post.url }}'"> -->
-      <div class="card card-custom">
+<!-- card for diplaying blog posts -->
 
+<div class="card card-custom">
 
+  {% if post.image %}
+  <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}">
+  {% endif %}
 
+  <div class="card-body">
 
+ 
 
+    <div class="d-flex flex-column">
+      <a href={{post.url}}><h6 class="card-title">{{ post.title }}</h6></a>
+      
+      <p class="card-text">{{ post.excerpt | strip_html | truncate: 123 }}</p>
+      {% include tagCloud.html%}
+      <a href={{post.url}} class="underline-text">Read Full Post</a>
+    <small>{{ post.date | date: "%B %d, %Y" }}</small>
+    <!-- <small>SphericalWave</small> -->
+    
+    </div>
 
-        {% if post.image %}
-        <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}">
-        {% endif %}
+  </div>
 
-        <div class="card-body">
-
-          <h5 class="card-title" style="margin-top=0;">{{ post.title }}</h5>
-          <!-- <p class="card-text"> -->
-
-          <p class="card-text">{{ post.excerpt | strip_html | truncate: 123 }}</p>
-
-
-          <!-- <a href={{post.url}} class="btn custom-btn-blue">Read Full Post</a> -->
-
-          <a href={{post.url}} class="underline-text">Read Full Post</a>
-
-          {% include tagCloud.html%}
-
-
-
-          <small>SphericalWave ∆ {{ post.date | date: "%B %d, %Y" }}</small>
-
-        </div>
-
-      </div>
+</div>

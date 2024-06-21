@@ -3,7 +3,7 @@
 // Headings, body text, lists, and other misc typographic elements.
 
 h1, h2, h3, h4, h5, h6 {
-  // margin-bottom: .5rem;
+  margin-bottom: 0rem;
   // font-weight: 600;
   // line-height: 1.25;
   color: $gray-1;
@@ -16,7 +16,7 @@ time {
 
 //overrides default given by safari and chrome
 p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     // display: block;
     // margin-block-start: 0.5rem;
     // margin-block-end: 0.5rem;
@@ -86,13 +86,4 @@ blockquote {
 .footnotes {
   margin-top: 2rem;
   font-size: 85%;
-}
-
-// Custom type
-//
-// Extend paragraphs with `.lead` for larger introductory text.
-
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
 }
