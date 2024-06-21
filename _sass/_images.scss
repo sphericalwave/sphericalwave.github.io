@@ -85,3 +85,30 @@
     opacity: 0.5;
     /* Other styles can be added as needed */
   }
+
+  .hoverImg {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-img, .hidden-image {
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidden-image {
+    opacity: 0;
+}
+
+.hoverImg:hover .profile-img {
+    opacity: 0;
+}
+
+.hoverImg:hover .hidden-image {
+    opacity: 1;
+}

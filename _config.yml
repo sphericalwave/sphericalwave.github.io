@@ -39,6 +39,8 @@ collections:
     output: true
   jits:
     output: true
+  tag:
+    output: true
 
 github:
   none: true
