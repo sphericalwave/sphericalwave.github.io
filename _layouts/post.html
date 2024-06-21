@@ -2,31 +2,31 @@
 layout: default
 ---
 
+<div class="row justify-content-between">
+
+  <div class="col-auto">
+    {% include timeStamp.html %}
+    {% include share_buttons.html %}
+
+  </div>
+
+  <div class="col-auto">
+
+    <!-- TODO: this is almost exactly the same as tagCloud.html -->
+    <div>
+      {% for tag in page.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="tag-cloud"><span>{{ tag }}</span></a>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
 <div class="row">
-  <div class="col-md-9">
+  <div class="col-auto">
     <article>
 
-      <div class="row justify-content-between">
 
-        <div class="col-auto">
-          {% include timeStamp.html %}
-          {% include share_buttons.html %}
-
-        </div>
-
-        <div class="col-auto">
-
-          <!-- TODO: this is almost exactly the same as tagCloud.html -->
-          <div>
-            {% for tag in page.tags %}
-            <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="tag-cloud"><span>{{ tag }}</span></a>
-            {% endfor %}
-          </div>
-        </div>
-
-
-
-      </div>
 
       <h1>{{ page.title }}</h1>
 
