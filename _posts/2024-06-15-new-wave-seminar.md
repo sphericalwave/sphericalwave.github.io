@@ -4,6 +4,7 @@ image: /public/2024-06-15_grants_florzack_seminar.jpg
 tags:
   - AJJ
 permalink: florzackReturns
+layout: post
 ---
 
 AJJ with Cam Florzack, ADCC competitor and Danaher blackbelt.

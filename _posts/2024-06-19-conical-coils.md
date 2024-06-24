@@ -4,6 +4,7 @@ image: /public/conicalCoils/2024-06-19 conical coils.png
 tags:
   - Magnetism
 permalink: conical_coils
+layout: post
 ---
 
 Bench demo of Russell's conical coils focusing magnetic matter into a Sphere.
