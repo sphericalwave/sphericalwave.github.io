@@ -1,4 +1,5 @@
 ---
+layout: post
 title: Florzack Returns
 image: /public/2024-06-15_grants_florzack_seminar.jpg
 tags:
