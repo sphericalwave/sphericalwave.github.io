@@ -5,30 +5,42 @@
 {% assign related_post_count = 1 %}
 {% assign related_posts = "" | split: "|" %}
 {% assign max_posts = include.max_posts | default: 6 %}
-<!-- <<ul class="post-list"> -->
+
 <div class="row g-2">
-
+    {% if related_posts.size > 0 %}
     <h4 class="pt-3">Related Posts</h4>
+    {% endif %}
+    {% comment %} Loop through different tag matches {% endcomment %}
     {% for min_tags in (1..tags_match_min) reversed %}
-    {% for post in site.posts %}
-    {% if related_post_count <= max_posts and post.url !=page.url %} {%- comment %}# Calculate related_tags {%
-        endcomment %} {% assign related_tags=0 %} {% for tag in page.tags %} {% if post.tags contains tag %} {% assign
-        related_tags=related_tags | plus: 1 %} {% endif %} {% endfor %} {% if related_tags>= min_tags %}
-        {% unless related_posts contains post.url %}
-        {%- assign related_post_count = related_post_count | plus: 1 -%}
-        {%- assign url_arr = post.url | split: "|" -%}
-        {%- assign related_posts = related_posts | concat: url_arr %}
-
-        <!-- <li> -->
-        <div class="col-4">
-            {% include postCard.html%}
-        </div>
-
-
-
-        {% endunless %}
-        {% endif %}
-        {% endif %}
+        {% for post in site.posts %}
+            {% if related_post_count <= max_posts and post.url != page.url %}
+                {% assign related_tags = 0 %}
+                {% for tag in page.tags %}
+                    {% if post.tags contains tag %}
+                        {% assign related_tags = related_tags | plus: 1 %}
+                    {% endif %}
+                {% endfor %}
+                
+                {% if related_tags >= min_tags %}
+                    {% unless related_posts contains post.url %}
+                        {% assign related_post_count = related_post_count | plus: 1 %}
+                        {% assign url_arr = post.url | split: "|" %}
+                        {% assign related_posts = related_posts | concat: url_arr %}
+                        
+                        <!-- Show related post -->
+                        <div class="col-4">
+                            {% include postCard.html %}
+                        </div>
+                    {% endunless %}
+                {% endif %}
+            {% endif %}
         {% endfor %}
-        {% endfor %}
+    {% endfor %}
+    
+    {% comment %} Hide everything if no related posts found {% endcomment %}
+    <!-- {% unless related_posts.size > 0 %}
+        <h4>No related posts found.</h4>
+    {% endunless %} -->
 </div>
+
+
