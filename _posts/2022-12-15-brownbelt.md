@@ -1,8 +1,7 @@
 ---
 title: Brown Belt
 image: /public/jits/brown/brown_belt.jpeg
-tags:
-  - AJJ
+tags: AJJ
 permalink: brownbelt
 ---
 
