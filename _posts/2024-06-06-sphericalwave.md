@@ -1,7 +1,10 @@
 ---
-layout: default
+layout: post
 title: "SphericalWave.com"
 permalink: sphericalwave
+image: /public/SphericalWaveC60.png
+tags:
+- Web
 ---
 <div class="row pb-3">
 

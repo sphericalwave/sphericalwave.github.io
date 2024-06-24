@@ -3,6 +3,10 @@ layout: default
 title: "FitWrench"
 permalink: fitwrench
 #http://127.0.0.1:4000/software/fitwrench/ is generated link
+image: /public/fitwrench/fw_dev_map_sep20/onboarding.png
+tags:
+ - iOS
+ - BioElectricity
 ---
 
 <div class="row align-items-center pb-3">
