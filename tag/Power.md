@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-title: "Tag: Teamwork"
-tag: Teamwork
+title: "Tag: Power"
+tag: Power
 robots: noindex
 ---
