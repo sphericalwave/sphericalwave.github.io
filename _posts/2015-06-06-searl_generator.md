@@ -1,6 +1,6 @@
 ---
 title: Searl Generator
-image: /public/aquatron/CAD_section.PNG
+image: /public/fitwrench/Cuboctahedron_1080.png
 tags:
   - Magnetism
   - Materials Science
@@ -12,3 +12,5 @@ tags:
   - Project Management
 link: searl_generator
 ---
+
+testing

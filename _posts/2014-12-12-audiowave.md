@@ -1,7 +1,11 @@
 ---
-layout: default
+layout: post
 title: "Audiowave"
 permalink: audiowave
+tags: 
+ - iOS
+ - Acoustics
+image: /public/fitwrench/Cuboctahedron_1080.png
 ---
 
 <div class="row pb-3">
