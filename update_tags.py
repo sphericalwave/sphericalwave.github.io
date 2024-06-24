@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# python3 update_tags.py      
 
 """
 update_tags.py
