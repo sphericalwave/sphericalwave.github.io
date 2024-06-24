@@ -21,6 +21,7 @@ group :jekyll_plugins do
     gem "jekyll-paginate", "~> 1.1.0"
     # gem 'wdm', '>= 0.1.0' windows thing
     gem "webrick", "~> 1.7"
+    gem 'faraday-retry'
 end
 
 # source "https://rubygems.org"
