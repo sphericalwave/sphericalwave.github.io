@@ -2,10 +2,7 @@
 title: Oscilloscope
 image: /public/oscilloscope/scope1.jpeg
 tags:
-  - Soldering
-  - Ressourcefulness
+- Engineering
 permalink: oscilloscope
 ---
-
-Testing 123
-
+<img src="{{ page.image | relative_url }}" class="img-fluid rounded w-50" alt="Responsive image">
