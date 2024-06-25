@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-title: "Tag: Aesthetics"
-tag: Aesthetics
+title: "Tag: Art"
+tag: Art
 robots: noindex
 ---

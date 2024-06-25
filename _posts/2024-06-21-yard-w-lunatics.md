@@ -3,9 +3,11 @@ title: Yard with Lunatics
 image: https://upload.wikimedia.org/wikipedia/commons/8/87/Courtyard_with_Lunatics_by_Goya_1794.jpg
 tags:
   - AJJ
-  - Aesthetics
-permalink: yard_w_lunatics
+  - Art
 ---
+
+permalink: yard_w_lunatics
+
 Weak body lock ya loon. Hike up and shoot in. Take him down.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Courtyard_with_Lunatics_by_Goya_1794.jpg" class="img-fluid rounded w-50" alt="Responsive image">
