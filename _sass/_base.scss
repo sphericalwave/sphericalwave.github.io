@@ -34,7 +34,7 @@ a {
 
 //bootstrap customizations
 .nav-link {
-  
+
   &:hover {
     // text-decoration: underline;
     color: $gray-1;
@@ -56,24 +56,13 @@ a {
 .blockquote {
   padding: 1rem;
   background-color: lightgray;
-  border: 1px solid #007bff; /* Bootstrap primary color */
-  border-left: 5px solid #007bff; /* Bootstrap primary color */
+  border: 1px solid #007bff;
+  /* Bootstrap primary color */
+  border-left: 5px solid #007bff;
+  /* Bootstrap primary color */
 }
 
 .blockquote p {
-  margin-bottom: 1rem; /* Remove default margin */
-}
-
-.appstore-link {
-  display: inline-block;
-}
-
-.appstore-image {
-  transition: border 0.3s ease;
-  border: 0px solid transparent;
-  border-radius: 0.6rem; /* Add rounded corners */
-}
-
-.appstore-link:hover .appstore-image {
-  border: 3px solid $swBlue; /* Add the swBlue border on hover */
+  margin-bottom: 1rem;
+  /* Remove default margin */
 }
