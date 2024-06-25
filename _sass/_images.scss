@@ -123,23 +123,55 @@
     }
 }
 
-  /* CSS class for the profile picture */
-  .profilePic {
+/* CSS class for the profile picture */
+.profilePic {
     width: 100%;
     border: 2px solid #007bff;
     border-radius: 1rem;
     display: block;
-    margin-bottom: 0.5rem; /* equivalent to mb-2 */
+    margin-bottom: 0.5rem;
+    /* equivalent to mb-2 */
     max-width: 100%;
-  }
+}
 
-  .profilePic.rounded-circle {
+.profilePic.rounded-circle {
     border-radius: 50%;
-  }
+}
 
-  /* Media query for mobile screens */
-  @media (max-width: 576px) {
+/* Media query for mobile screens */
+@media (max-width: 576px) {
     .profilePic {
-      width: 50% !important;
+        width: 50% !important;
     }
-  }
+}
+
+// .appstore-link {
+//   display: inline-block;
+// }
+
+.appstore-image {
+    transition: border 0.3s ease;
+    border: 0px solid transparent;
+    border-radius: 0.6rem;
+    /* Add rounded corners */
+    margin: 0.5rem 0 0 0;
+}
+
+.appstore-link:hover .appstore-image {
+    border: 3px solid $swBlue;
+    /* Add the swBlue border on hover */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 576px) {
+    .appstore-image {
+        width: 50% !important;
+    }
+}
+
+.card-img-top {
+    object-fit: cover;
+    object-position: center;
+    // width: 100%;
+    // height: 200px; /* Adjust height as needed */
+}
