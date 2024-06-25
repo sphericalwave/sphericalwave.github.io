@@ -57,6 +57,7 @@
     height: 0;
     display: block;
 }
+
 .thumbnail-container img {
     position: absolute; //Positions the image within the container, ensuring it covers the full area.
     width: 100%;
@@ -67,9 +68,9 @@
     background-color: transparent;
     border-color: transparent;
     border-radius: 0.6rem;
-  
+
     &:hover {
-      border: $swBlue;
+        border: $swBlue;
     }
 }
 
@@ -84,14 +85,15 @@
     align-items: center;
     opacity: 0.5;
     /* Other styles can be added as needed */
-  }
+}
 
-  .hoverImg {
+.hoverImg {
     position: relative;
     display: inline-block;
 }
 
-.profile-img, .hidden-image {
+.profile-img,
+.hidden-image {
     border: 2px solid #007bff;
     border-radius: 4px;
     position: absolute;
@@ -111,4 +113,12 @@
 
 .hoverImg:hover .hidden-image {
     opacity: 1;
+}
+
+/* Custom CSS for 50% width on mobile screens */
+@media (max-width: 576px) {
+    .img-mobile-50 {
+        // width: 50%;
+        width: 50% !important;
+    }
 }
