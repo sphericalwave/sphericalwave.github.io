@@ -1,3 +1,19 @@
+/* CSS for .card-img-top */
+.card-img-top {
+    object-fit: cover;
+    object-position: center;
+    height: calc(33.33vh - 2rem);
+    /* 1/3 of viewport height minus padding */
+}
+
+/* Adjust padding for mobile spacing */
+@media (max-width: 576px) {
+    .card-img-top {
+        height: calc(33.33vh - 1rem);
+        /* Adjusted for smaller screens */
+    }
+}
+
 .card-custom {
     background-color: #000;
     /* Black background */
