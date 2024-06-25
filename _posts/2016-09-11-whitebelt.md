@@ -3,8 +3,9 @@ title: White Belt
 image: /public/jits/white/whitebelt.JPG
 tags:
   - AJJ
-permalink: whitebelt
 ---
+
+permalink: whitebelt
 
 <div class="row align-items-center pb-3">
 

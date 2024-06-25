@@ -3,8 +3,9 @@ title: Gi Free Ho Down
 image: /public/2024-06-21 gifree ho down.png
 tags:
   - AJJ
-permalink: nogi_2024-06-20
 ---
+
+permalink: nogi_2024-06-20
 
 Another succesful ho down at 
 <a href="https://www.instagram.com/grantsmartialarts/" target="_blank">Grants Martial Arts</a>

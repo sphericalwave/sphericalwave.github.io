@@ -5,8 +5,8 @@ permalink: rickandmorty
 tag:
 - iOS
 - Web
-image: /public/fitwrench/Cuboctahedron_1080.png
 ---
+# image: /public/fitwrench/Cuboctahedron_1080.png
 
 <h1>Rick and Morty</h1>
 

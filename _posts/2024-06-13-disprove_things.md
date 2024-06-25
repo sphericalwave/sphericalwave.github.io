@@ -3,8 +3,8 @@ title: disprove things
 image: /public/2024-06-18-prove-it.jpeg
 tags:
   - epistemology
-permalink: disprove_things
 ---
+permalink: disprove_things
 
 try to disprove things because you can never truly prove anything
 

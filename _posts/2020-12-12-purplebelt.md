@@ -3,8 +3,10 @@ title: Purple Belt
 image: /public/jits/purple/fresh_purple.jpg
 tags:
   - AJJ
-permalink: purplebelt
 ---
+
+permalink: purplebelt
+
 
 <div class="row align-items-center pb-3">
 

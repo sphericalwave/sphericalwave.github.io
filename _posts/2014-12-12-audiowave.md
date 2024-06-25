@@ -5,9 +5,9 @@ permalink: audiowave
 tags: 
  - iOS
  - Acoustics
-image: /public/fitwrench/Cuboctahedron_1080.png
 ---
 
+<!-- # image: /public/fitwrench/Cuboctahedron_1080.png -->
 <div class="row pb-3">
 
   <h1>Audiowave</h1>
