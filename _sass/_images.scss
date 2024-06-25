@@ -122,3 +122,24 @@
         width: 50% !important;
     }
 }
+
+  /* CSS class for the profile picture */
+  .profilePic {
+    width: 100%;
+    border: 2px solid #007bff;
+    border-radius: 1rem;
+    display: block;
+    margin-bottom: 0.5rem; /* equivalent to mb-2 */
+    max-width: 100%;
+  }
+
+  .profilePic.rounded-circle {
+    border-radius: 50%;
+  }
+
+  /* Media query for mobile screens */
+  @media (max-width: 576px) {
+    .profilePic {
+      width: 50% !important;
+    }
+  }
