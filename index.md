@@ -1,28 +1,39 @@
 ---
-layout: default
-title: Posts
+layout: page
+title: Home
 ---
 
-<!-- <img src="/public/aaron_sun_profile.png" alt="Your Image" class="img-thumbnail center-image w-50">
-<p class="pt-3">Welcome to my portfolio where you can see a little bit about my work. </p> -->
+##### Spherical Wave
+## Less is More
 
-<h1>Posts</h1>
+{% include subscribe.html %}
 
-{% include share_buttons.html %}
+<h3>Ressources</h3>
+<h1>Join the New 1%</h1>
+<h5>Energy, Aesthetics, & Performance</h5>
 
 <div class="row">
-  <div class="col-auto">
-    <div class="row g-2">
-      {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-      {% for post in sorted_posts %}
-      <div class="col-3">
-        {% include postCard.html %}
-      </div>
-      {% endfor %}
-    </div>
+
+  <div class="col-6">
+
+    <img src="/public/2024-06-18-blue-journal.jpeg" alt="Profile Picture" class="img-fluid rounded">
+
+    <p>
+      <strong>Find meaning, reinvent yourself, and create your ideal future.</strong>
+      Now available on Amazon.
+    </p>
+
   </div>
 
-  <!-- <div class="col-3">
-    {% include sidebar.html %}
-  </div> -->
-</div>
+  <div class="col-6">
+
+    <img src="/public/2024-06-18-blue-journal.jpeg" alt="Profile Picture" class="img-fluid rounded">
+
+    <p>
+      <strong>Find meaning, reinvent yourself, and create your ideal future.</strong>
+      Now available on Amazon.
+    </p>
+
+  </div>
+ 
+<div>
