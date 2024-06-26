@@ -2,17 +2,11 @@
 title: Searl Generator
 tags:
   - Magnetism
-  - Materials Science
-  - Machinning
+  - Power
   - CAD
-  - Teamwork
-  - Mechanics
-  - Electronics
-  - Project Management
 ---
 
 link: searl_generator
-
 
 testing
 
