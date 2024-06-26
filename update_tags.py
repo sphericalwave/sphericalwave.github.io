@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-# python3 update_tags.py      
+# python3 update_tags.py    
+# https://arturomoncadatorres.com/automatically-generating-tag-posts-for-github-pages-using-jekyll/  
+# https://github.com/arturomoncadatorres/arturomoncadatorres.github.io/blob/main/_layouts/post.html
 
 """
 update_tags.py
