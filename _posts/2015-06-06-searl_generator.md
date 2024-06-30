@@ -1,5 +1,6 @@
 ---
 title: Searl Generator
+image: /public/fitwrench/Cuboctahedron_1080.png
 tags:
   - Magnetism
   - Power
@@ -9,5 +10,3 @@ tags:
 link: searl_generator
 
 testing
-
-# image: /public/fitwrench/Cuboctahedron_1080.png

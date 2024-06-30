@@ -1,13 +1,11 @@
 ---
+layout: post
 title: Brown Belt
-tags: 
- -AJJ
----
-
-permalink: brownbelt
 image: /public/jits/brown/brown_belt.jpeg
-
-
+permalink: brown_belt
+tags: 
+ - AJJ
+---
 
 <div class="row align-items-center pb-3">
 
