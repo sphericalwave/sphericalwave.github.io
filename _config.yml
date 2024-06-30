@@ -3,7 +3,6 @@ repository:	     sphericalwave/sphericalwave.github.io
 permalink:           /:year/:month/:day/:title/
 
 # Setup
-#theme: minima
 title:               Spherical Wave
 url:                 https://sphericalwave.com
 paginate:            3
@@ -31,15 +30,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-tagging #not sure if need
-
-collections:
-  projects:
-    output: true
-  engineering:
-    output: true
-  jits:
-    output: true
 
 tag_page_layout: tag_page
 tag_page_dir: tag
