@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "Rick and Morty"
-permalink: rickandmorty
+image: /public/fitwrench/Cuboctahedron_1080.png
 tag:
 - iOS
 - Web
 ---
-# image: /public/fitwrench/Cuboctahedron_1080.png
 
 <h1>Rick and Morty</h1>
 

@@ -169,23 +169,23 @@ if __name__ == '__main__':
     create_tags_posts(tag_dir, tags)
 
     # For Git.
-    repo = git.Repo(os.getcwd())
+    # repo = git.Repo(os.getcwd())
 
-    # Add files for commit.
-    try:
-        repo.git.add(tag_dir)
-    except:
-        print("Error ocurred while adding files to Git.")
+    # # Add files for commit.
+    # try:
+    #     repo.git.add(tag_dir)
+    # except:
+    #     print("Error ocurred while adding files to Git.")
 
-    # Commit changes.    
-    try:
-        repo.git.commit('-m', 'Updated tags and created corresponding posts', author='arturomoncadatorres@gmail.com')    
-    except:
-        print("Error occurred while commiting.")
+    # # Commit changes.    
+    # try:
+    #     repo.git.commit('-m', 'Updated tags and created corresponding posts', author='arturomoncadatorres@gmail.com')    
+    # except:
+    #     print("Error occurred while commiting.")
     
-    # Push commit.
-    try:
-        origin = repo.remote(name='origin')
-        origin.push()
-    except:
-        print("Error occurred while pushing.")
+    # # Push commit.
+    # try:
+    #     origin = repo.remote(name='origin')
+    #     origin.push()
+    # except:
+    #     print("Error occurred while pushing.")

@@ -2,8 +2,7 @@
 title: how to learn jiujitsu
 image: /public/flowlayout.png
 tags:
-  - jiujitsu
-permalink: jiujitsu
+  - AJJ
 ---
 
 Came across some advice that seems valuable from Jon Thomas on youtube.

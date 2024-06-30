@@ -3,6 +3,8 @@ title: SwiftUi Charts
 layout: post
 image: /public/flowlayout.png
 category: swiftUi
+tags:
+ - iOS
 ---
 
 At WWDC 2022 Apple released a new charts framework.

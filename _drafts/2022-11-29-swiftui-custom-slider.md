@@ -3,6 +3,8 @@ title: SwiftUi Custom Slider
 layout: post
 image: /public/flowlayout.png
 category: swiftUi
+tags:
+ - iOS
 ---
 
 Needed a custom slider for a crossfader in a project I was updating from UIKit

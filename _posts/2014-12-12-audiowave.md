@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Audiowave"
-permalink: audiowave
+image: /public/fitwrench/Cuboctahedron_1080.png
 tags: 
  - iOS
  - Acoustics
 ---
 
-<!-- # image: /public/fitwrench/Cuboctahedron_1080.png -->
+<!-- #  -->
 <div class="row pb-3">
 
   <h1>Audiowave</h1>
