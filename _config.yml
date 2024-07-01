@@ -1,6 +1,9 @@
 repository:	     sphericalwave/sphericalwave.github.io
 # Permalinks
-permalink:           /:year/:month/:day/:title/
+#permalink:           /:year/:month/:day/:title/
+permalink: /:categories/:title 
+# might want to copy 
+# https://github.com/arturomoncadatorres/arturomoncadatorres.github.io/blob/main/_config.yml
 
 # Setup
 title:               Spherical Wave
