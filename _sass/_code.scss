@@ -77,3 +77,16 @@ pre code {
   background-color: transparent;
   border-radius: 0;
 }
+
+
+//physics equations
+.equation {
+  margin-bottom: 20px;
+}
+.equation code {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 1.1em;
+}
