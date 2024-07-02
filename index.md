@@ -3,19 +3,11 @@ layout: page
 title: Home
 ---
 
-## Think Global, Act Local
-
-<img src="public/SphericalWaveC60.png" class="img-fluid rounded w-25 mx-auto" alt="Responsive image">
-
-{% include subscribe.html %}
-
 <h3>Ressources</h3>
 <h1>Join the New 1%</h1>
 <h5>Energy, Aesthetics, & Performance</h5>
 
-<!-- <hr width="100%" size="2"> -->
-<hr class="blue1">
-<!-- <hr width="100%;" color="red" size="5"> -->
+<hr class="blue1 mb-3 mt-1">
 
 <div class="row">
 
@@ -25,6 +17,7 @@ title: Home
     </a>
         <strong>BioMechanical Invincibility</strong>
         <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
+        <a href="/pressure-cooked-yams" class="underline-text">Learn More</a>
 </div>
 
 <div class="col-3">
@@ -35,55 +28,50 @@ title: Home
         <p>Modern medicine and diets are dog water. Test out BioElectric nutrition and discover abundant energy, wolverine level regeneration, loss weight effortlessly and manifest impressive strength and endurance.</p>
 </div>
 
-{% include promo.html
-     title="Find meaning, reinvent yourself, and create your ideal future."
-     image="/public/2024-06-18-blue-journal.jpeg"
-     description="Now available on Amazon."
-     link="https://www.amazon.com/"
-  %}
+<div class="col-3">
+    <a href="">
+        <img src="public/SphericalWaveC60.png" alt="" class="img-fluid rounded">
+    </a>
+        <strong>Mentorship</strong>
+        <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
+        I have 20 years of experience with things that don't work. 
+        Let's get you some impressive results.</p>
+</div>
 
 {% include promo.html
-     title="Another Great Book"
-     image="/public/2024-06-18-blue-journal.jpeg"
-     description="Available now."
-     link="https://www.amazon.com/another-book"
-  %}
-
-{% include promo.html
-     title="Another Great Book"
-     image="/public/2024-06-18-blue-journal.jpeg"
-     description="Available now."
-     link="https://www.amazon.com/another-book"
-  %}
-
-{% include promo.html
-     title="Another Great Book"
-     image="/public/2024-06-18-blue-journal.jpeg"
-     description="Available now."
-     link="https://www.amazon.com/another-book"
-  %}
-
-    {% include promo.html
-     title="Another Great Book"
-     image="/public/2024-06-18-blue-journal.jpeg"
-     description="Available now."
-     link="https://www.amazon.com/another-book"
-
+    title="Find meaning, reinvent yourself, and create your ideal future."
+    image="/public/2024-06-18-blue-journal.jpeg"
+    description="Now available on Amazon."
+    link="https://www.amazon.com/"
 %}
 
-{% include promo.html
-     title="Another Great Book"
-     image="/public/2024-06-18-blue-journal.jpeg"
-     description="Available now."
-     link="https://www.amazon.com/another-book"
-  %}
+</div>
 
-<div>
+<div class="row">
 
-<!-- # The blog -->
+## Think Global, Act Local
+
+<hr class="blue1 mb-3">
+
+<div class="col-3">
+<img src="public/SphericalWaveC60.png" class="img-fluid rounded w-100 mx-auto" alt="Responsive image">
+</div>
+
+<div class="col-9">
+{% include subscribe.html %}
+</div>
+
+</div>
+
+# Recent Posts
+
+<hr class="blue1 mb-3">
+
+Show Most Recent Here
 
 <div class="row">
 ABOUT ME
+<hr class="blue1">
 
 <!-- Who Is Dan Koe?
 
@@ -108,7 +96,3 @@ I help them systemize their workflow, marketing, and content so they can work fo
 As a freelancer turned consultant turned creator, I’ve developed effective systems with time, skin in the game, and experience with 20,000+ students and clients.
 I am not taking on any consulting or advising at this time. -->
 </div>
-
-</div>
-
-{% include subscribe.html %}
