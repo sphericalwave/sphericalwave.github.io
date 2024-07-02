@@ -14,3 +14,15 @@ permalink: 404.html
   <p class="lead"><a href="{{ site.baseurl }}/">Head back home</a> to try finding it again.</p>
 
 </div>
+
+<!-- handle case sensitive 404s -->
+<!-- https://stackoverflow.com/questions/48388057/how-to-make-github-pages-url-case-insensitive -->
+<script>
+  window.onload = () => {
+      currentURL = window.location.href;
+      lowerCaseURL = currentURL.toLowerCase();
+      if (currentURL != lowerCaseURL) {
+          location.replace(lowerCaseURL);
+      }
+  };
+</script>
