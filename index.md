@@ -65,7 +65,7 @@ title: Home
 
 <hr class="blue1 mb-3 mt-1">
 
-<div class="row g-2">
+<div class="row g-2 mb-3">
   {% assign sorted_posts = site.posts | sort: 'date' | reverse | slice: 0, 4 %}
   {% for post in sorted_posts %}
   <div class="col-lg-3">
@@ -74,15 +74,10 @@ title: Home
   {% endfor %}
 </div>
 
-
 <div class="row">
-ABOUT ME
-<hr class="blue1">
 
-<!-- Who Is Dan Koe?
-
-Just a human obsessed with humans. -->
-</div>
+<h5>What is SphericalWave?</h5>
+<hr class="blue1 mb-3">
 
 <div class="row">
 
@@ -93,5 +88,21 @@ Just a human obsessed with humans. -->
 </div>
 
 <div class="col-8">
-Hi, I'm Aaron.
+<p>
+SphericalWave is a ressource for upgrading your suit electro-mechanically.<br>
+Auras, sound waves, light waves, magnetic fields, the rings of Saturn. Spherical Waves are everywhere.<br>
+Thinking global and acting local is a philosophical spherical wave. Omni-directional.<br>
+It's an engineering approach to solving problems by scientific means.<br>
+</p>
+
+<p>
+All that to say, my name is Aaron.<br>
+Im an electrical engineer fascinated with optimizing suit pursuits.<br>
+I use the demanding sport of AJJ to pressure test theories that make humans work better mechanically and electrically<br>
+</p>
+
+<p>Check out the blog, the offering and get in touch on social media</p>
+
+</div>
+
 </div>
