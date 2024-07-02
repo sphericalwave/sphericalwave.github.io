@@ -51,11 +51,11 @@ title: Home
 
 <div class="row">
 
-<div class="col-3">
-<img src="public/SphericalWaveC60.png" class="img-fluid rounded w-100 mx-auto" alt="Responsive image">
+<div class="col-6">
+<img src="public/SphericalWaveC60.png" class="img-fluid rounded w-50 mx-auto" alt="Responsive image">
 </div>
 
-<div class="col-9 mb-3 d-flex align-items-center">
+<div class="col-6 mb-3 d-flex align-items-center align-items-start">
 {% include subscribe.html %}
 </div>
 
