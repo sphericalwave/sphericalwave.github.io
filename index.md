@@ -5,13 +5,35 @@ title: Home
 
 ## Think Global, Act Local
 
+<img src="public/SphericalWaveC60.png" class="img-fluid rounded w-25 mx-auto" alt="Responsive image">
+
 {% include subscribe.html %}
 
 <h3>Ressources</h3>
 <h1>Join the New 1%</h1>
 <h5>Energy, Aesthetics, & Performance</h5>
 
+<!-- <hr width="100%" size="2"> -->
+<hr class="blue1">
+<!-- <hr width="100%;" color="red" size="5"> -->
+
 <div class="row">
+
+<div class="col-3">
+    <a href="">
+        <img src="public/SphericalWaveC60.png" alt="" class="img-fluid rounded">
+    </a>
+        <strong>BioMechanical Invincibility</strong>
+        <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
+</div>
+
+<div class="col-3">
+    <a href="">
+        <img src="public/SphericalWaveC60.png" alt="" class="img-fluid rounded">
+    </a>
+        <strong>BioElectric Nutrition</strong>
+        <p>Modern medicine and diets are dog water. Test out BioElectric nutrition and discover abundant energy, wolverine level regeneration, loss weight effortlessly and manifest impressive strength and endurance.</p>
+</div>
 
 {% include promo.html
      title="Find meaning, reinvent yourself, and create your ideal future."
@@ -58,14 +80,14 @@ title: Home
 
 <div>
 
-# The blog
+<!-- # The blog -->
 
 <div class="row">
 ABOUT ME
 
-Who Is Dan Koe?
+<!-- Who Is Dan Koe?
 
-Just a human obsessed with humans.
+Just a human obsessed with humans. -->
 </div>
 
 <div class="row">
@@ -77,12 +99,14 @@ Just a human obsessed with humans.
 </div>
 
 <div class="col-8">
-Hey, I'm Dan.
+Hi, I'm Aaron.
+
+<!-- Hey, I'm Dan.
 I’m a brand advisor for 7-8 figure creators, influencers, and social media brands.
 I’m the guy they come to when they feel the lack of authenticity in their messaging, vision, and lifestyle. No fancy sales funnels and pushy marketing in this household.
 I help them systemize their workflow, marketing, and content so they can work for 2 hours a day, charge more, and sell their products & services without manual effort.
 As a freelancer turned consultant turned creator, I’ve developed effective systems with time, skin in the game, and experience with 20,000+ students and clients.
-I am not taking on any consulting or advising at this time.
+I am not taking on any consulting or advising at this time. -->
 </div>
 
 </div>

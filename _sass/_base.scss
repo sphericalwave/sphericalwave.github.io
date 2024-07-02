@@ -66,3 +66,11 @@ a {
   margin-bottom: 1rem;
   /* Remove default margin */
 }
+
+/* Large rounded green border */
+hr.blue1 {
+  border: 3px solid $swBlue;
+  border-radius: 1px;
+  opacity: 1; /* Ensure opacity is fully opaque */
+  width: 100%;
+}
