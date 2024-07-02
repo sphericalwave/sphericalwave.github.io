@@ -3,8 +3,7 @@ layout: page
 title: Home
 ---
 
-<h3>Ressources</h3>
-<h1>Join the New 1%</h1>
+<h1>Become Invincible</h1>
 <h5>Energy, Aesthetics, & Performance</h5>
 
 <hr class="blue1 mb-3 mt-1">
@@ -47,27 +46,34 @@ title: Home
 
 </div>
 
+<h5>Think Global, Act Local</h5>
+<hr class="blue1 mb-3 mt-1">
+
 <div class="row">
-
-## Think Global, Act Local
-
-<hr class="blue1 mb-3">
 
 <div class="col-3">
 <img src="public/SphericalWaveC60.png" class="img-fluid rounded w-100 mx-auto" alt="Responsive image">
 </div>
 
-<div class="col-9">
+<div class="col-9 mb-3 d-flex align-items-center">
 {% include subscribe.html %}
 </div>
 
 </div>
 
-# Recent Posts
+<h5>Recently</h5>
 
-<hr class="blue1 mb-3">
+<hr class="blue1 mb-3 mt-1">
 
-Show Most Recent Here
+<div class="row g-2">
+  {% assign sorted_posts = site.posts | sort: 'date' | reverse | slice: 0, 4 %}
+  {% for post in sorted_posts %}
+  <div class="col-lg-3">
+    {% include postCard.html %}
+  </div>
+  {% endfor %}
+</div>
+
 
 <div class="row">
 ABOUT ME
@@ -88,11 +94,4 @@ Just a human obsessed with humans. -->
 
 <div class="col-8">
 Hi, I'm Aaron.
-
-<!-- Hey, I'm Dan.
-I’m a brand advisor for 7-8 figure creators, influencers, and social media brands.
-I’m the guy they come to when they feel the lack of authenticity in their messaging, vision, and lifestyle. No fancy sales funnels and pushy marketing in this household.
-I help them systemize their workflow, marketing, and content so they can work for 2 hours a day, charge more, and sell their products & services without manual effort.
-As a freelancer turned consultant turned creator, I’ve developed effective systems with time, skin in the game, and experience with 20,000+ students and clients.
-I am not taking on any consulting or advising at this time. -->
 </div>

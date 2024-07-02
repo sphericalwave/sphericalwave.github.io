@@ -38,3 +38,14 @@
   .subscribe-form button:hover {
     background-color: #0056b3;
   }
+
+  .subscribe-form .input-group {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe-form .form-control {
+    margin-right: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
