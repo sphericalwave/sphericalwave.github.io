@@ -150,8 +150,15 @@ def create_tags_posts(tag_dir=tag_dir, total_tags=set(), verbose=True):
         if not os.path.exists(tag_dir):
             os.makedirs(tag_dir)
         
+        # for tag in total_tags:
+        #     tag_filename = tag_dir + tag + '.md'
+        #     f = open(tag_filename, 'a')
+        #     write_str = '---\nlayout: tag_page\ntitle: \"Tag: ' + tag + '\"\ntag: ' + tag + '\nrobots: noindex\n---\n'
+        #     f.write(write_str)
+        #     f.close()
+
         for tag in total_tags:
-            tag_filename = tag_dir + tag + '.md'
+            tag_filename = tag_dir + tag.lower() + '.md'
             f = open(tag_filename, 'a')
             write_str = '---\nlayout: tag_page\ntitle: \"Tag: ' + tag + '\"\ntag: ' + tag + '\nrobots: noindex\n---\n'
             f.write(write_str)
