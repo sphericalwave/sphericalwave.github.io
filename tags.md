@@ -12,7 +12,7 @@ permalink: tags
 {% for tag in tags %}
 
 <div class="col-4">
-    <a href="/tag/{{ tag | first }}/" class="tag-cloud">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
+    <a href="/tag/{{ tag | first }}" class="tag-cloud">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a>
 
     <!-- <a href="/tag/{{ tag | first | slugify }}/" class="tag-cloud">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a> -->
         <!-- <a href="/tag/{{ tag | first | slugify: 'pretty' }}/" class="tag-cloud">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})</a> -->
