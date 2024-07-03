@@ -12,7 +12,7 @@ permalink: blog/index.html
 <div class="row g-2">
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
   {% for post in sorted_posts %}
-  <div class="col-lg-3">
+  <div class="col-lg-3 d-flex">
     {% include postCard.html %}
   </div>
   {% endfor %}

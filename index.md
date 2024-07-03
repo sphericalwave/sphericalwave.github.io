@@ -68,7 +68,7 @@ title: Home
 <div class="row g-2 mb-3">
   {% assign sorted_posts = site.posts | sort: 'date' | reverse | slice: 0, 4 %}
   {% for post in sorted_posts %}
-  <div class="col-lg-3">
+  <div class="col-lg-3 d-flex">
     {% include postCard.html %}
   </div>
   {% endfor %}
@@ -101,7 +101,7 @@ Im an electrical engineer fascinated with optimizing suit pursuits.<br>
 I use the demanding sport of AJJ to pressure test theories that make humans work better mechanically and electrically<br>
 </p>
 
-<p>Check out the blog, the offering and get in touch on social media</p>
+<p>Check out the blog, products and services and get in touch on social media</p>
 
 </div>
 
