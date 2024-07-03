@@ -9,7 +9,7 @@
   <div class="card-body">
 
     <div class="d-flex flex-column">
-      <a href={{post.url}}>
+      <a href="{{post.url}}">
         <h6 class="card-title">{{ post.title }}</h6>
         
       </a>
@@ -18,7 +18,7 @@
       {% include tagCloud.html%}
 
       <p class="card-text">{{ post.excerpt | strip_html | truncate: 123 }}</p>
-      <a href={{post.url}} class="underline-text">Read Full Post</a>
+      <a href="{{post.url}}" class="underline-text">Read Full Post</a>
 
     </div>
 
