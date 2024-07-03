@@ -55,25 +55,13 @@ title: Home
 <img src="public/SphericalWaveC60.png" class="img-fluid rounded w-50 mx-auto" alt="Responsive image">
 </div> -->
 
-  <div class="col-12 mb-3 d-flex align-items-center align-items-start">
+  <!-- <div class="col-12 mb-3 d-flex align-items-center align-items-start"> -->
     {% include subscribe.html %}
-  </div>
+  <!-- </div> -->
 </div>
 
-<div class="row desktop-only">
-  <h5>Recently</h5>
 
-  <hr class="blue1 mb-3 mt-1">
-
-  <div class="row g-2 mb-3">
-    {% assign sorted_posts = site.posts | sort: 'date' | reverse | slice: 0, 4 %}
-    {% for post in sorted_posts %}
-      <div class="col-lg-3 d-flex">
-        {% include postCard.html %}
-      </div>
-    {% endfor %}
-  </div>
-</div>
+{% include recentPosts.html %}
 
 
 
