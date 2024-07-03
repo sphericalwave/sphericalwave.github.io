@@ -88,3 +88,10 @@ hr.blue1 {
       display: none; /* Hide the element on smaller screens */
     }
   }
+
+  @media (max-width: 767px) {
+    .center-mobile {
+      justify-content: center !important;
+      text-align: center;
+    }
+  }
