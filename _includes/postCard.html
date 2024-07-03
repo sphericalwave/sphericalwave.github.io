@@ -11,13 +11,14 @@
     <div class="d-flex flex-column">
       <a href={{post.url}}>
         <h6 class="card-title">{{ post.title }}</h6>
+        
       </a>
+      <small>{{ post.date | date: "%B %d, %Y" }}</small>
+
+      {% include tagCloud.html%}
 
       <p class="card-text">{{ post.excerpt | strip_html | truncate: 123 }}</p>
-      {% include tagCloud.html%}
       <a href={{post.url}} class="underline-text">Read Full Post</a>
-      <small>{{ post.date | date: "%B %d, %Y" }}</small>
-      <!-- <small>SphericalWave</small> -->
 
     </div>
 
