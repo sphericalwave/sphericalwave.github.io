@@ -1,19 +1,22 @@
 <hr class="blue1 mb-3">
 
-<footer class="d-flex justify-content-between align-items-center mb-3">
+<footer class="mb-3">
 
-  <div class="col-md-4 d-flex align-items-center">
-    <h5>
-    <a href="/">SphericalWave </a> 
-    
-    <!-- <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time> -->
-    </h5>
-    <h6> &copy </h6>
+  <div class="row">
 
-    <h6 datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</h6>
+    <div class="col-12 col-lg-8 d-flex justify-content-start align-items-center center-mobile">
+      {% include myAccounts.html%}
+    </div>
+
+    <div class="col-12 col-lg-4 d-flex align-items-center justify-content-end center-mobile">
+      <h5>
+        <a href="/">SphericalWave</a> 
+      </h5>
+      <h6 class="mx-1"><i class="far fa-copyright"></i></h6>
+
+      <h6 datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</h6>
+    </div>
+
   </div>
-  
-
-  {% include myAccounts.html%}
 
 </footer>
