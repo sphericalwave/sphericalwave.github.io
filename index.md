@@ -46,19 +46,11 @@ title: Home
 
 </div>
 
+
 <h5>Think Global, Act Local</h5>
-<hr class="blue1 mb-3 mt-1">
+<hr class="blue1 mb-1 mt-1">
 
-<div class="row">
-
-<!-- <div class="col-lg-6 desktop-only">
-<img src="public/SphericalWaveC60.png" class="img-fluid rounded w-50 mx-auto" alt="Responsive image">
-</div> -->
-
-  <!-- <div class="col-12 mb-3 d-flex align-items-center align-items-start"> -->
-    {% include subscribe.html %}
-  <!-- </div> -->
-</div>
+{% include subscribe.html %}
 
 
 {% include recentPosts.html %}

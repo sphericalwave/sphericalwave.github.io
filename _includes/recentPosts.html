@@ -1,12 +1,12 @@
 <div class="row desktop-only">
+    
   <h5>Recently</h5>
-
-  <hr class="blue1 mb-3 mt-1">
+  <hr class="blue1 mb-1 mt-1">
 
   <div class="row g-2 mb-3">
     {% assign sorted_posts = site.posts | sort: 'date' | reverse | slice: 0, 4 %}
     {% for post in sorted_posts %}
-      <div class="col-lg-3 d-flex">
+      <div class="col-lg-3 col-6 d-flex">
         {% include postCard.html %}
       </div>
     {% endfor %}
