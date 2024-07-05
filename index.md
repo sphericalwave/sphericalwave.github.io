@@ -37,12 +37,15 @@ title: Home
           Let's get you some impressive results.</p>
   </div>
 
-  {% include promo.html
+
+{% include leadMagnet.html %}
+
+  <!-- {% include promo.html
       title="Find meaning, reinvent yourself, and create your ideal future."
       image="/public/2024-06-18-blue-journal.jpeg"
       description="Now available on Amazon."
       link="https://www.amazon.com/"
-  %}
+  %} -->
 
 </div>
 
@@ -62,15 +65,13 @@ title: Home
 
 <div class="row">
 
-
-
-  <div class="col-lg-4 col-12">
+  <div class="col-lg-4 col-6">
     <a href="/about">
-      <img src="/public/aaron/2023-12-12 small_headshot.JPG" alt="Profile Picture" class="img-fluid rounded mx-auto">
+      <img src="/public/aaron/2023-12-12 small_headshot.JPG" alt="Profile Picture" class="profilePic">
     </a>
   </div>
 
-  <div class="col-lg-8 col-12">
+  <div class="col-lg-8 col-6">
 
     <p>
     SphericalWave is a ressource for upgrading your suit electro-mechanically.<br>
