@@ -1,25 +1,114 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="swift ios development apple watch iphone ipad swiftui macos uikit dev wwdc tutorial guide redux tea state container" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="keywords"
+    content="swift ios development apple watch iphone ipad swiftui macos uikit dev wwdc tutorial guide redux tea state container"
+  />
 
   {% seo %}
 
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css" />
+  <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico" />
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="{{ site.title }}"
+    href="{{ site.baseurl }}/feed.xml"
+  />
+
+  <script
+    src="https://kit.fontawesome.com/1b735903d0.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <script>
+    //load TrackerJS...moosend.com
+    !(function (t, n, e, o, a) {
+      function d(t) {
+        var n = ~~(Date.now() / 3e5),
+          o = document.createElement(e);
+        (o.async = !0), (o.src = t + "?ts=" + n);
+        var a = document.getElementsByTagName(e)[0];
+        a.parentNode.insertBefore(o, a);
+      }
+      (t.MooTrackerObject = a),
+        (t[a] =
+          t[a] ||
+          function () {
+            return t[a].q
+              ? void t[a].q.push(arguments)
+              : void (t[a].q = [arguments]);
+          }),
+        window.attachEvent
+          ? window.attachEvent("onload", d.bind(this, o))
+          : window.addEventListener("load", d.bind(this, o), !1);
+    })(
+      window,
+      document,
+      "script",
+      "//cdn.stat-track.com/statics/moosend-tracking.min.js",
+      "mootrack"
+    );
+    //tracker has to be initialized otherwise it will generate warnings and wont sendtracking events
+    mootrack("init", "21cb0024-f56b-42d6-b642-7e1e17d941a5");
+
+    // track a view of the current page
+    mootrack("trackPageView");
+  </script>
+
   
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico">
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
+  <script>
+    // pop up subscribe
+    if (!window.mootrack) {
+      !(function (t, n, e, o, a) {
+        function d(t) {
+          var n = ~~(Date.now() / 3e5),
+            o = document.createElement(e);
+          (o.async = !0), (o.src = t + "?ts=" + n);
+          var a = document.getElementsByTagName(e)[0];
+          a.parentNode.insertBefore(o, a);
+        }
+        (t.MooTrackerObject = a),
+          (t[a] =
+            t[a] ||
+            function () {
+              return t[a].q
+                ? void t[a].q.push(arguments)
+                : void (t[a].q = [arguments]);
+            }),
+          window.attachEvent
+            ? window.attachEvent("onload", d.bind(this, o))
+            : window.addEventListener("load", d.bind(this, o), !1);
+      })(
+        window,
+        document,
+        "script",
+        "https://cdn.stat-track.com/statics/moosend-tracking.min.js",
+        "mootrack"
+      );
+    }
+    mootrack("loadForm", "bcda03a9ac284fde92ac139b86df0ea0");
+  </script>
 
-  <script src="https://kit.fontawesome.com/1b735903d0.js" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-2H0TE0WHS9"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-2H0TE0WHS9");
+  </script>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2H0TE0WHS9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2H0TE0WHS9');
-</script>
