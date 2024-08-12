@@ -1,31 +1,41 @@
 ---
-title: Life is Easy
+title: Life is Easy Because...
 image: /public/life-is-easy.webp
 tags:
   - Mentalism
   - Mysticism
 ---
-<img src="public/life-is-easy.webp" class="img-fluid rounded w-50" alt="Responsive image">
+<div class="row mt-1">
+
+<div class="col-12">
+
+<img src="public/life-is-easy.webp" class="img-fluid rounded mb-3" alt="Responsive image">
 
 
-# Life is easy because
-1. the internet is full of useful ideas
-2. i am a son of God, and God made his son infinitiely creative
-3. because i get up at 5am, there's power to starting early, daily
-4. i work on my self image 3x a day which leverages my creative ability
-5. because i am the dreamer and the dream
-6. i am rich from selling solutions to pain on the internet
-7. i AM disciplined
-8. i AM a genius
-9. i AM a blackbelt in life
-10. i AM the source of life
-11. God gave me the power of belief & imagination
-12. i AM courageous, rational, productive, proud
-13. i AM strong mentally and physically
-14. i release 2 pages of thinking each day
-15. i fast and drink pH 9.5 water so i am energized & ressourceful
-16. i AM powerful
-17. i AM a king
-18. i AM what i choose to be
-19. i accept that i AM the greatest
-20. whether i think it is or i think it isn't either way i AM correct
+<ul>
+    <li><strong>The internet is a treasure trove of useful ideas</strong> – I can access endless resources to fuel my creativity and growth.</li>
+    <li><strong>I am a son of God</strong> – I am divinely inspired and infinitely creative, reflecting the greatness of my Creator.</li>
+    <li><strong>I rise at 5 AM</strong> – There is undeniable power in starting each day early, setting the tone for success.</li>
+    <li><strong>I nurture my self-image daily</strong> – I focus on improving myself three times a day, unlocking my full creative potential.</li>
+    <li><strong>I am both the dreamer and the dream</strong> – I shape my reality with the visions I hold in my mind.</li>
+    <li><strong>I am wealthy</strong> – My riches come from solving real pain points on the internet, transforming challenges into opportunities.</li>
+    <li><strong>I am disciplined</strong> – My consistency and dedication fuel my progress.</li>
+    <li><strong>I am a genius</strong> – My mind is sharp, and my ideas are profound.</li>
+    <li><strong>I am a blackbelt in life</strong> – I masterfully navigate challenges with skill and wisdom.</li>
+    <li><strong>I am the source of life</strong> – My energy and spirit bring vitality to everything I do.</li>
+    <li><strong>God gave me the power of belief and imagination</strong> – I create my world with these divine gifts.</li>
+    <li><strong>I am courageous, rational, productive, and proud</strong> – My character is the foundation of my success.</li>
+    <li><strong>I am strong, mentally and physically</strong> – My strength empowers me to overcome any obstacle.</li>
+    <li><strong>I release two pages of thoughts daily</strong> – Writing keeps my mind clear and my ideas flowing.</li>
+    <li><strong>I fast and drink pH 9.5 water</strong> – These practices keep me energized, resourceful, and in peak health.</li>
+    <li><strong>I am powerful</strong> – My influence and impact are undeniable.</li>
+    <li><strong>I am a king</strong> – I reign over my life with authority and grace.</li>
+    <li><strong>I am what I choose to be</strong> – My identity is shaped by my decisions and beliefs.</li>
+    <li><strong>I accept that I am the greatest</strong> – My confidence is unshakeable, rooted in my knowledge and abilities.</li>
+    <li><strong>Whether I think it is or isn't, I am correct</strong> – My mindset determines my reality.</li>
+</ul>
+
+</div>
+</div>
+
+<!-- <img src="public/life-is-easy2.webp" class="img-fluid rounded w-50" alt="Responsive image"> -->
