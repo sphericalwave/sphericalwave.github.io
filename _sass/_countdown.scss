@@ -1,0 +1,28 @@
+
+// body {
+//     font-family: Arial, sans-serif;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     margin: 0;
+//     background-color: #f0f0f0;
+// }
+
+#countdown {
+    font-size: 45px;
+    color: $gray-1;
+}
+
+.countdown-container {
+    font-family: Arial, sans-serif;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    //height: 100vh;
+    //margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: $swBlue;
+    display: inline-block;
+    border-radius: 0.33rem;
+}

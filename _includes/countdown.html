@@ -1,0 +1,36 @@
+<p>If you sign up today, I can get you in with our next group that kicks off on Monday, otherwise you’ll have to wait until our next kickoff date.</p>
+
+<div class="countdown-container">
+    <div id="countdown"></div>
+</div>
+
+<script>
+    function getNextSundayMidnight() {
+        const now = new Date();
+        const dayOfWeek = now.getDay();
+        const daysUntilSunday = (7 - dayOfWeek) % 7;
+        const sundayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + daysUntilSunday + 1, 0, 0, 0);
+        return sundayMidnight;
+    }
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const countdownDate = getNextSundayMidnight().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = 
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        if (distance < 0) {
+            clearInterval(interval);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+</script>
