@@ -1,10 +1,46 @@
 ---
-title: 5AM Keystone
+title: Up and Atom 🪐
 image: /public/5amRise.webp
 tags:
   - Habit
 ---
-<img src="public/5amRise.webp" class="img-fluid rounded w-50" alt="Responsive image">
+<img src="public/5amRise.webp" class="img-fluid rounded w-50 d-block mx-auto" alt="Responsive image">
+
+<div>
+    <p><strong>I am up and atom 🪐 before 5 AM because:</strong></p>
+    <ul>
+        <li><strong>I love sunrises -</strong> I get to see the sunrise every day, adding beauty to my mornings.</li>
+        <li><strong>I enjoy peaceful, quiet time -</strong> The early hours provide a serene environment before the world wakes up.</li>
+        <li><strong>I get to start my day with meditation -</strong> Morning meditation or mindfulness sets a positive tone for the day.</li>
+        <li><strong>I get to exercise early -</strong> Working out before dawn boosts my energy and mood for the day ahead.</li>
+        <li><strong>It boosts my productivity -</strong> Early hours are usually the most productive, with fewer distractions.</li>
+        <li><strong>I have a plan my day -</strong> I planned my day before bed and I'm excited to get after it.</li>
+        <li><strong>I benefit from morning sunlight -</strong> Early sunlight helps regulate my circadian rhythm and boosts my mood.</li>
+        <li><strong>Morning coffee with Alfred -</strong> Nothing quite like a coffee and rip with Alfred at sunrise.</li>
+        <li><strong>I get to focus on personal development -</strong> Mornings are perfect for reading, learning, or working on a personal project.</li>
+        <li><strong>It builds mental clarity -</strong> The quiet of the morning provides clarity for problem-solving and creative thinking.</li>
+        <li><strong>It increases flow -</strong> Starting my day makes the day superfluid. 🌊</li>
+        <li><strong>It improves my sleep -</strong> Waking up early reinforces my sleep routine.</li>
+        <li><strong>It strengthens my self-discipline -</strong> Consistently waking up early builds my self-discipline and willpower.</li>
+        <li><strong>It promotes a better work-life balance -</strong> Finishing work earlier gives me more leisure time in the evening.</li>
+        <li><strong>It beats the traffic -</strong> Commuting early helps me avoid traffic and reduces travel time.</li>
+        <li><strong>It gives me time for reflection -</strong> The early morning hours are ideal for self-reflection or journaling.</li>
+        <li><strong>I connect with nature -</strong> Morning walks allow me to connect with nature, promoting relaxation and well-being.</li>
+        <li><strong>I accomplish more -</strong> Starting early gives me more hours to achieve my goals, leading to a sense of accomplishment.</li>
+        <li><strong>I work on my most important projects -</strong> Early mornings are perfect for dedicating time to side projects or hobbies.</li>
+        <li><strong>I feel a sense of achievement -</strong> Waking up early and using the time well gives me a strong sense of accomplishment.</li>
+        <li><strong>It's proactive -</strong> Being part of the 5 AM club puts me among the proactive and successful.</li>
+        <li><strong>I enjoy peaceful surroundings -</strong> The dog park and roads are peaceful at 5 AM.</li>
+        <li><strong>I avoid disturbances -</strong> I enjoy the quiet before others in the household wake up.</li>
+        <li><strong>I reinforce keystone habits -</strong> Early rising is a keystone habit that positively influences other behaviors.</li>
+        <li><strong>I avoid early interactions -</strong> I don’t have to deal with people for the first two hours of my day.</li>
+        <li><strong>I lift weights -</strong> Weights don't life themselves.</li>
+    </ul>
+</div>
+
+
+Embracing the early hours can make a significant difference in various aspects of life, from productivity to mental well-being.
+
 
 Waking up early has never been my strong suit  
 In fact I suck at it  
@@ -18,49 +54,16 @@ The idea is that starting your day with intentional, productive activities sets 
 
 What's great about being up at 5am?
 
-5am people are the proactive, winners  
-dog park and roads are peaceful at 5am  
 
-no one around dog walking
-avoid mom and dad thumping overhead
-keystone habits
 
-dont have to deal with people for first two hours
-lift a few weights without mom and dad overhead
-
-Waking up at 5 AM can be transformative. Here are 21 reasons why it might be worth it:
-
-1. **Peaceful Quiet Time:** Enjoy a serene and quiet environment before the world wakes up.
-2. **Time for Meditation:** Start your day with meditation or mindfulness, setting a positive tone for the day.
-3. **Exercise:** Get your workout done early, boosting energy and mood for the day.
-4. **Enhanced Productivity:** Early hours are often the most productive, with fewer distractions.
-5. **Time for Planning:** Plan your day or week ahead, setting clear intentions and goals.
-6. **Morning Sunlight:** Enjoy the benefits of early morning sunlight, which helps regulate your circadian rhythm.
-7. **Healthy Breakfast:** Prepare and enjoy a nutritious breakfast without rushing.
-8. **Personal Development:** Dedicate time to reading, learning, or working on a personal project.
-9. **Mental Clarity:** Mornings offer mental clarity, ideal for problem-solving or creative thinking.
-10. **Stress Reduction:** Starting your day early can reduce the stress of rushing or being late.
-11. **Improved Sleep:** Waking up early helps reinforce a healthy sleep routine.
-12. **Self-Discipline:** Consistently waking up early strengthens self-discipline and willpower.
-13. **Quality Family Time:** If others in your household are early risers, it can be a time for bonding.
-14. **Better Work-Life Balance:** Early risers often finish their work earlier, allowing more leisure time in the evening.
-15. **Beat the Traffic:** If you commute, leaving early can help you avoid traffic and reduce travel time.
-16. **Reflective Time:** Use the quiet morning hours for self-reflection or journaling.
-17. **Connection with Nature:** Morning walks can connect you with nature, promoting relaxation and well-being.
-18. **Accomplish More:** You’ll have more hours in the day to accomplish tasks, leading to a sense of achievement.
-19. **Reduced Anxiety:** A slow, peaceful start can reduce anxiety and set a positive tone for the day.
-20. **Opportunities for Side Projects:** Early mornings can be dedicated to side projects or hobbies.
-21. **A Sense of Achievement:** Waking up early and using the time well can provide a strong sense of accomplishment.
-
-Embracing the early hours can make a significant difference in various aspects of life, from productivity to mental well-being.
-
-Wake Up Strategy
-1. visualize inverted before bed
-2. inversion table before bed
-3. sleep inverted
-4. weigh in
-5. shower
-6. coffee
-7. walk
-8. incantations
-9. job w dog
+# Wake Up Strategy
+1. plan day before bed
+2. visualize inverted before bed
+3. inversion table before bed
+4. sleep inverted
+5. weigh in
+6. shower
+7. coffee
+8. walk
+9. incantations
+10. jog with dog

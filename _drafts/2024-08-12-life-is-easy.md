@@ -5,11 +5,8 @@ tags:
   - Mentalism
   - Mysticism
 ---
-<div class="row mt-1">
 
-<div class="col-12">
-
-<img src="public/life-is-easy.webp" class="img-fluid rounded mb-3" alt="Responsive image">
+<img src="public/life-is-easy.webp" class="img-fluid rounded my-3 w-50 d-block mx-auto" alt="Responsive image">
 
 
 <ul>
@@ -34,8 +31,3 @@ tags:
     <li><strong>I accept that I am the greatest</strong> – My confidence is unshakeable, rooted in my knowledge and abilities.</li>
     <li><strong>Whether I think it is or isn't, I am correct</strong> – My mindset determines my reality.</li>
 </ul>
-
-</div>
-</div>
-
-<!-- <img src="public/life-is-easy2.webp" class="img-fluid rounded w-50" alt="Responsive image"> -->
