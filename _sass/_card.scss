@@ -19,25 +19,25 @@
     /* Black background */
     color: #fff;
     /* White text */
-    border: 0.12rem solid #4169e1;
+    border: 0.12rem solid $swBlue;
     /* Royal blue border */
 }
 
 .card-custom .card-header,
 .card-custom .btn {
-    background-color: #4169e1;
+    background-color: $swBlue;
     /* Royal blue background for header and button */
     color: #fff;
     /* White text */
 }
 
 .card-custom .card-header {
-    border-bottom: 2px solid #4169e1;
+    border-bottom: 2px solid $swBlue;
     /* Royal blue border for header */
 }
 
 .card-custom .btn:hover {
-    background-color: #27408b;
+    background-color: $swBlue;
     /* Darker royal blue for hover effect */
     border-color: #27408b;
 }

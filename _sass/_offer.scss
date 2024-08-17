@@ -1,0 +1,67 @@
+.offer-block {
+    background-color: $gray-1;
+    border: 1px solid $swBlue;
+    border-top-width: 18px;
+    border-radius: 0.5rem;
+
+    h2 {
+        color: $gray-4;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+        line-height: 1.5;
+        font-weight: 900;
+    }
+
+    h3 {
+        font-family: 'Montserrat', sans-serif;
+        color: $swBlue;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        font-weight: 900;
+    }
+
+    p {
+        color: $gray-5;
+        font-size: 0.63rem;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        background-color: $swBlue;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      
+    .btn:hover {
+        background-color: darkblue;
+    }
+
+    .checkmark {
+        color: $swBlue;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .checkmark-gray {
+        color: $gray-3;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    strong {
+        color: $gray-4;
+    }
+
+    .blue-line {
+        width: 100%;
+        height: 1px;
+        background-color: $swBlue;
+    }
+}
