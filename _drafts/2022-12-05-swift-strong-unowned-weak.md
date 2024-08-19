@@ -1,7 +1,7 @@
 ---
 title: SwiftUi Charts
 layout: post
-image: /public/flowlayout.png
+image: /public/neo-bullets.jpeg
 category: swiftUi
 tags: 
  - iOS

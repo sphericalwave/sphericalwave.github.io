@@ -1,6 +1,6 @@
 ---
 title: how to learn jiujitsu
-image: /public/flowlayout.png
+image: /public/neo-bullets.jpeg
 tags:
   - AJJ
 ---
