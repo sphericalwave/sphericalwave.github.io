@@ -1,24 +1,17 @@
 ---
+title: TestPage
 layout: default
 ---
 
-<!-- <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-<script>
-  hbspt.forms.create({
-    region: "na1",
-    portalId: "46688902",
-    formId: "92290755-a40e-424b-8901-4f3e40a53ded"
-  });
-</script> -->
-
 <div class="row justify-content-between">
 
-  <div class="col-12">
+  <div class="col-auto">
     {% include timeStamp.html %}
     {% include share_buttons.html %}
   </div>
 
-  <div class="col-12">
+  <!-- TODO: this is almost exactly the same as tagCloud.html -->
+  <div class="col-auto">
     <div>
       {% for tag in page.tags %}
         <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="tag-cloud"><span>{{ tag }}</span></a>
@@ -26,6 +19,9 @@ layout: default
     </div>
   </div>
 
+</div>
+
+<div class="row">
   
   <div class="col-12">
     <article>

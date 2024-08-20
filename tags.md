@@ -5,7 +5,6 @@ permalink: tags
 ---
 
 <h1>Tags</h1>
-
 <hr class="blue1 mb-3 mt-1">
 
 {% assign tags = site.tags | sort %}
