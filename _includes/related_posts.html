@@ -5,10 +5,10 @@
 {% assign related_post_count = 1 %}
 {% assign related_posts = "" | split: "|" %}
 {% assign max_posts = include.max_posts | default: 6 %}
-<h4>Related Posts</h4>
-{% if related_posts.size > 0 %}
 
 <div class="row g-2">
+    <h4 class="pt-3">Related Posts</h4>
+    {% if related_posts.size > 0 %}
     
     {% endif %}
     {% comment %} Loop through different tag matches {% endcomment %}
