@@ -3,9 +3,9 @@ layout: page
 title: Home
 ---
 
-<h1>Think Global, Act Local</h1>
+<!-- <h1>Think Global, Act Local</h1>
 <p>Engineering, Jiujitsu, BioElectricity, BioMechanics & Philosophy</p>
-<hr class="blue1 mb-3 mt-1">
+<hr class="blue1 mb-3 mt-1"> -->
 
 <!-- <h5>Think Global, Act Local</h5>
 <hr class="blue1 mb-1 mt-1"> -->
