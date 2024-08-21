@@ -18,21 +18,29 @@ title: Home
 <!-- offers -->
 <div class="row">
 
-<div class="col-12 text-center my-3">
-  <h5>RESOURCES</h5>
-  <h2>Join the New 1%</h2>
-  <p>Curiosity exploration, 4-hour workdays, & digital real estate.</p>
+  <div class="col-12 text-center my-3">
+    <h5>RESOURCES</h5>
+    <h2>Join the New 1%</h2>
+    <p>Curiosity exploration, 4-hour workdays, & digital real estate.</p>
+  </div>
+
 </div>
 
-  <div class="col-lg-3 col-6">
+<div class="row">
+  <div class="col-6">
       <a href="/biomechanics">
           <img src="public/bioMechanicsBook1.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
       </a>
-          <strong>BioMechanical Invincibility</strong>
-          <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
-          <a href="/biomechanics" class="underline-text">Learn More</a>
   </div>
 
+  <div class="col-6">
+    <h3>BioMechanical Invincibility</h3>
+    <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
+    <a href="/biomechanics" class="">Get the Book</a>
+  </div>
+</div>
+
+<div class="row">
   <div class="col-lg-3 col-6">
       <a href="bioelectricity" >
           <img src="public/bioElectricityBook1.webp" alt="" class="img-fluid rounded blue-shadow-hover">
@@ -40,7 +48,9 @@ title: Home
           <strong>BioElectric Nutrition</strong>
           <p>Modern medicine and diets are dog water. Test out BioElectric nutrition and discover abundant energy, wolverine level regeneration, loss weight effortlessly and manifest impressive strength and endurance.</p>
   </div>
+</div>
 
+<div class="row">
   <div class="col-lg-3 col-6">
       <a href="coaching">
           <img src="public/coaching.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
