@@ -26,7 +26,7 @@ title: Home
 
 </div>
 
-<div class="row">
+<div class="row g-3 mb-3">
   <div class="col-6">
       <a href="/biomechanics">
           <img src="public/bioMechanicsBook1.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
@@ -38,40 +38,56 @@ title: Home
     <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
     <a href="/biomechanics" class="">Get the Book</a>
   </div>
-</div>
 
-<div class="row">
-  <div class="col-lg-3 col-6">
-      <a href="bioelectricity" >
-          <img src="public/bioElectricityBook1.webp" alt="" class="img-fluid rounded blue-shadow-hover">
+
+  <div class="col-6">
+      <a href="/bioelectricity">
+          <img src="public/bioElectricityBook1.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
       </a>
+  </div>
+
+  <div class="col-6">
+    <!-- <h3>BioMechanical Invincibility</h3>
+    <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
+    <a href="/biomechanics" class="">Get the Book</a> -->
+
           <strong>BioElectric Nutrition</strong>
           <p>Modern medicine and diets are dog water. Test out BioElectric nutrition and discover abundant energy, wolverine level regeneration, loss weight effortlessly and manifest impressive strength and endurance.</p>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-lg-3 col-6">
+  </div>
+
+  <div class="col-6">
       <a href="coaching">
           <img src="public/coaching.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
       </a>
+  </div>
+
+  <div class="col-6">
           <strong>Coaching</strong>
           <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
           I have 20 years of experience with things that don't work. 
           Let's get you some impressive results.</p>
   </div>
 
-</div>
+  <div class="col-12 text-center my-3">
+    <h5>The Blog</h5>
+    <h2>Explore Your Curiosity</h2>
+    <p>Deep dives on human potential, lifestyle design, & digital business.</p>
+  </div>
 
+</div>
 
 {% include recentPosts.html %}
 
+  <div class="col-12 text-center my-3">
+    <h5>About Me</h5>
+    <h2>Who is SphericalWave?</h2>
+    <p>Engineer, Architect, AJJ Black Belt</p>
+  </div>
 
-
-<h5>Who is SphericalWave?</h5>
 <hr class="blue1 mb-3 mt-1">
 
-<div class="row">
+<div class="row align-items-center">
 
   <div class="col-lg-4 col-6">
     <a href="/about">
