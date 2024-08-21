@@ -1,0 +1,21 @@
+/* Custom Navbar Styles */
+.navbar-custom {
+    background-color: $swBlue;
+    padding: 0;
+  }
+  
+  .navbar-custom .navbar-nav {
+    align-items: flex-start; /* Aligns nav-items to the top */
+    height: 100px; /* Set a specific height for the navbar */
+  }
+  
+  .navbar-custom .nav-item {
+    display: flex;
+    align-items: flex-start; /* Ensure nav-items align to the top */
+  }
+  
+  .navbar-custom .navbar-brand img {
+    max-height: 100px;
+  }
+  
+  
