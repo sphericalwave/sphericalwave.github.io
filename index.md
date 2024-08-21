@@ -4,7 +4,7 @@ title: Home
 ---
 
 <h1>Think Global, Act Local</h1>
-<h5>Engineering, Jiujitsu, BioElectricity, BioMechanics & Philosophy</h5>
+<p>Engineering, Jiujitsu, BioElectricity, BioMechanics & Philosophy</p>
 <hr class="blue1 mb-3 mt-1">
 
 <!-- <h5>Think Global, Act Local</h5>
@@ -19,9 +19,9 @@ title: Home
 <div class="row">
 
 <div class="col-12 text-center my-3">
-  <h5 style="text-align: center; color: #fff; font-family: montserrat, Sans-serif; font-size: 18px; font-weight: 300; text-transform: uppercase; letter-spacing: 12px; padding: 0; margin: 0;">RESOURCES</h5>
-  <h2 style="text-align: center; color: #efefef; font-size: 52px; font-weight: 900; line-height: 1.2em; letter-spacing: -1.1px; padding: 0; margin: 0;">Join the New 1%</h2>
-  <p style="text-align: center; color: #efefef; font-size: 18px; font-weight: 400; line-height: 2em; font-family: poppins, Sans-serif; padding: 0; margin: 0;">Curiosity exploration, 4-hour workdays, & digital real estate.</p>
+  <h5>RESOURCES</h5>
+  <h2>Join the New 1%</h2>
+  <p>Curiosity exploration, 4-hour workdays, & digital real estate.</p>
 </div>
 
   <div class="col-lg-3 col-6">
