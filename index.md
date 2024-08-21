@@ -3,17 +3,8 @@ layout: page
 title: Home
 ---
 
-<!-- <h1>Think Global, Act Local</h1>
-<p>Engineering, Jiujitsu, BioElectricity, BioMechanics & Philosophy</p>
-<hr class="blue1 mb-3 mt-1"> -->
-
-<!-- <h5>Think Global, Act Local</h5>
-<hr class="blue1 mb-1 mt-1"> -->
-
 <!-- {% include subscribe.html %} -->
-<!-- <div class="col-3"> -->
 {% include leadMagnet.html %}
-<!-- </div> -->
 
 <!-- offers -->
 <div class="row">
@@ -27,26 +18,27 @@ title: Home
 </div>
 
 <div class="row g-3 mb-3">
-  <div class="col-6">
+  <div class="col-lg-6 col-12">
       <a href="/biomechanics">
-          <img src="public/bioMechanicsBook1.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
+          <img src="public/bioMechanicsBook1.webp" alt="" 
+          class="img-fluid rounded blue-shadow-hover img-mobile">
       </a>
   </div>
 
-  <div class="col-6">
+  <div class="col-lg-6 col-12">
     <h3>BioMechanical Invincibility</h3>
     <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
     <a href="/biomechanics" class="">Get the Book</a>
   </div>
 
 
-  <div class="col-6">
+  <div class="col-lg-6 col-12">
       <a href="/bioelectricity">
           <img src="public/bioElectricityBook1.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
       </a>
   </div>
 
-  <div class="col-6">
+  <div class="col-lg-6 col-12">
     <!-- <h3>BioMechanical Invincibility</h3>
     <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
     <a href="/biomechanics" class="">Get the Book</a> -->
@@ -56,13 +48,13 @@ title: Home
 
   </div>
 
-  <div class="col-6">
+  <div class="col-lg-6 col-12">
       <a href="coaching">
           <img src="public/coaching.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
       </a>
   </div>
 
-  <div class="col-6">
+  <div class="col-lg-6 col-12">
           <strong>Coaching</strong>
           <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
           I have 20 years of experience with things that don't work. 
@@ -89,13 +81,13 @@ title: Home
 
 <div class="row align-items-center">
 
-  <div class="col-lg-4 col-6">
+  <div class="col-lg-4 col-12">
     <a href="/about">
       <img src="/public/aaron/2023-12-12 small_headshot.JPG" alt="Profile Picture" class="profilePic rounded blue-shadow-hover">
     </a>
   </div>
 
-  <div class="col-lg-8 col-6">
+  <div class="col-lg-8 col-12">
 
     <p>SphericalWave explores the fascinating intersections of engineering, jiujitsu, bioelectricity, biomechanics, and philosophy. Founded by an electrical engineer with a passion for both the physical and metaphysical aspects of life, SphericalWave delves into the science behind human movement, the intricacies of martial arts, and the profound impact of bioelectricity on our bodies.</p>
 

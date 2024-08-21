@@ -169,3 +169,16 @@
 
 
 
+
+.img-mobile {
+    // display: block; /* Removes any inline spacing */
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    // height: auto; /* Maintains the aspect ratio */
+  }
+  
+  @media (max-width: 767px) {
+    .img-mobile {
+      width: 50%; /* Forces the image to shrink to the full width of its container on mobile */
+    }
+  }
+  
