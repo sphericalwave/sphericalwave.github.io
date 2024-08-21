@@ -16,15 +16,16 @@ layout: default
   <div class="col-12">
     {% include timeStamp.html %}
     {% include share_buttons.html %}
-  </div>
-
-  <div class="col-12">
     <div>
       {% for tag in page.tags %}
         <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="tag-cloud"><span>{{ tag }}</span></a>
       {% endfor %}
     </div>
   </div>
+
+  <!-- <div class="col-12">
+
+  </div> -->
 
   
   <div class="col-12">
