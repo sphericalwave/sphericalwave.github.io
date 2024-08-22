@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-title: "Tag: Recipes"
-tag: Recipes
+title: "Tag: Video"
+tag: Video
 robots: noindex
 ---

@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-title: "Tag: Mysticism"
-tag: Mysticism
+title: "Tag: Soap"
+tag: Soap
 robots: noindex
 ---
