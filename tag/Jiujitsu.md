@@ -1,6 +1,6 @@
 ---
 layout: tag_page
-title: "Tag: Bluetooth"
-tag: Bluetooth
+title: "Tag: Jiujitsu"
+tag: Jiujitsu
 robots: noindex
 ---
