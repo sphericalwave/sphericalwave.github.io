@@ -35,9 +35,12 @@ a {
 //bootstrap customizations
 .nav-link {
 
+  color: $gray-1;
+
   &:hover {
     // text-decoration: underline;
-    color: $gray-1;
+    color: $gray-5;
+    font-size: 1.1em;
   }
 }
 
@@ -45,13 +48,17 @@ a {
   color: white;
 }
 
-//blog btn
-// .button {
-//   display: block;
-//   padding: 1rem;
-//   border: solid $gray-4;
-//   border-width: 1px 0;
-// }
+button {
+  background-color: $swBlue !important; 
+  border-color: $swBlue !important; 
+  color: white !important;
+  font-size: 1rem !important;
+
+  &:hover {
+    background-color: $gray-5 !important;
+    // font-size: 1.1rem !important;
+  }
+}
 
 .blockquote {
   padding: 1rem;

@@ -63,8 +63,8 @@ title: Home
 
   <div class="col-12 text-center my-3">
     <h5>The Blog</h5>
-    <h2>Explore Your Curiosity</h2>
-    <p>Deep dives on human potential, lifestyle design, & digital business.</p>
+    <h2>Think Global, Act Local</h2>
+    <p>Explore Jiujitsu, Engineering, Philosophy, the Suit & more</p>
   </div>
 
 </div>
