@@ -61,6 +61,32 @@ title: Home
           Let's get you some impressive results.</p>
   </div>
 
+
+  <div class="col-lg-6 col-12">
+      <a href="fitwrench">
+          <img src="/public/fitwrench/Cuboctahedron_1080.png" alt="" class="img-fluid rounded rounded blue-shadow-hover">
+      </a>
+  </div>
+
+  <div class="col-lg-6 col-12">
+          <strong>FitWrench</strong>
+          <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
+          I have 20 years of experience with things that don't work. 
+          Let's get you some impressive results.</p>
+  </div>
+
+    <div class="col-lg-6 col-12">
+      <a href="audiowave">
+          <img src="/public/audiowave/app_icon.png" alt="" class="img-fluid rounded rounded blue-shadow-hover">
+      </a>
+  </div>
+
+  <div class="col-lg-6 col-12">
+      <strong>AudioWave</strong>
+      <p>It's cool to listen to audiobooks and affirmations with background music. Check out the app.</p>
+  </div>
+
+
   <div class="col-12 text-center my-3">
     <h5>The Blog</h5>
     <h2>Think Global, Act Local</h2>
