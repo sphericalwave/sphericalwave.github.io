@@ -53,7 +53,7 @@ using their legs as levers and your figure four leg position as a fulcrum.
 I made that name up because this is a critical detail.
 Whether you go with the straight ankle lock or the inside heel hook 
 Butterfly Clamp, Cross Ashi amplifies the breaking power of your chosen footlock.
-If it can get a reaction of of top uke <a href="https://www.instagram.com/tjgrant316/" target="_blank">TJ Grant</a>
+If it can get a reaction of of topG <a href="https://www.instagram.com/tjgrant316/" target="_blank">TJ Grant</a>
 you can be sure it's a powerful lock.
 
 ***Back Heel/Shrimp to Bend the Leg and Control the Knee Line*** 

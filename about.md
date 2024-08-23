@@ -37,4 +37,7 @@ permalink: about
             <img src="/public/aaron/aaron_grey.jpeg" alt="image" class="img-thumbnail">
         </div>
     </div>
+
+    <hr class="blue1 my-3">
+    {% include leadMagnet.html %}
 </div>
