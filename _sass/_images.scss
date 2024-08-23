@@ -87,60 +87,26 @@
     /* Other styles can be added as needed */
 }
 
-.hoverImg {
-    position: relative;
-    display: inline-block;
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.profile-img,
-.hidden-image {
-    border: 2px solid #007bff;
-    border-radius: 4px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.hidden-image {
-    opacity: 0;
-}
-
-.hoverImg:hover .profile-img {
-    opacity: 0;
-}
-
-.hoverImg:hover .hidden-image {
-    opacity: 1;
-}
-
-/* Custom CSS for 50% width on mobile screens */
-@media (max-width: 576px) {
-    .img-mobile-50 {
-        // width: 50%;
-        width: 50% !important;
-    }
-}
-
-/* CSS class for the profile picture */
-.profilePic {
+.profile-pic {
     width: 100%;
-    // border: 2px solid #007bff;
-    border-radius: 50%;
-    display: block;
-    //margin-bottom: 0.5rem;
-    max-width: 100%;
-}
+    height: auto; /* Maintain the aspect ratio */
+    border: 6px solid $swBlue;
+    border-radius: 50%; /* Make the image a circle */
+    object-fit: cover; /* Ensure the image covers the entire container */
 
-.profilePic:hover {
-    border: 3px solid $swBlue;
-}
-
-@media (max-width: 576px) {
-    .profilePic {
-        width: 50% !important;
+    @media (max-width: 900px) {
+        width: 50%;
     }
+
+    // &:hover {
+    //     border: 3px solid $swBlue;
+    // }
 }
 
 // .appstore-link {
