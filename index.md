@@ -16,6 +16,7 @@ title: Home
 
 </div>
 
+
 <div class="row g-3 mb-3">
   <div class="col-lg-6 col-12">
       <a href="/biomechanics">
@@ -139,11 +140,6 @@ title: Home
       class="profile-pic">
       <!-- </a> -->
       </div>
-
-      <!-- <div class="mt-3 d-flex justify-content-between"> -->
-        {% include myAccounts.html %}
-      <!-- </div> -->
-
     
   </div>
 
