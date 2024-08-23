@@ -147,11 +147,18 @@ title: Home
 
   <div class="col-lg-8 col-12">
 
-    <p>SphericalWave explores the fascinating intersections of engineering, jiujitsu, bioelectricity, biomechanics, and philosophy. Founded by an electrical engineer with a passion for both the physical and metaphysical aspects of life, SphericalWave delves into the science behind human movement, the intricacies of martial arts, and the profound impact of bioelectricity on our bodies.</p>
+    <h3>Hey, I'm Aaron.</h3>
 
-    <p>At SphericalWave, readers will find a unique blend of technical insights and philosophical musings. Whether you’re interested in optimizing your performance on the mat through the principles of biomechanics, understanding the role of bioelectricity in health and wellness, or exploring how engineering principles apply to everyday life, this blog offers a holistic perspective.</p>
+    <p class="mb-2">I'm the author of <em>Pysop Yourself</em>, <em>BioElectricity</em> and <em>BioMechanics</em>. As well as <em>FitWrench</em> & <em>AudioWave</em> apps for iOS. I'm an Electrical Engineer obssesed with the mind, the suit, the internet & the future.</p>
 
-    <p>With a focus on continuous learning and self-improvement, SphericalWave encourages readers to think globally and act locally, applying scientific methods to both personal development and broader societal challenges. Join the conversation and explore how the convergence of these diverse fields can lead to a deeper understanding of ourselves and the world around us.</p>
+    <p class="mb-2">Previously, I worked designing residential, commercial and industrial projects. As well as building apps & webpages.</p>
+
+    <!-- <p class="mb-2">I've spent over a decade pressure testing strategies for nutrition & conditioning through the crucible of jiujitsu. And one of the things I'm most passionate about is helping people get to the next level. Everyone is unique and yet there are many things I've learned over the years that contradict conventional thinking. Things that will help you shed the last 15ibs and access gymnast level strength, flexibility and speed.</p> -->
+
+    <p class="mb-2">I've spent over a decade pressure-testing strategies for nutrition and conditioning in the crucible of jiu-jitsu. One of my greatest passions is helping people reach the next level. While everyone is unique, I've discovered many principles over the years that challenge conventional thinking—principles that can help you shed those last 15 pounds and achieve gymnast-level strength, flexibility, and speed.</p>
+
+
+    <p class="mb-2">A core tenets for me is <em>Think Global, Act Local</em> which drives my advocacy for interdisciplinary thinking. Engineering is my powerhouse approach to making a difference.</p>
 
   </div>
 
