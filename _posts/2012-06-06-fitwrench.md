@@ -9,12 +9,6 @@ tags:
 ---
 
 <div class="row align-items-center pb-3">
-  <h1>FitWrench</h1>
-
-  <div>
-    <span class="tag-cloud">SwiftUI</span>
-    <span class="tag-cloud">CoreData</span>
-  </div>
 
   <p>FitWrench is an app I've been working on to support my nutrition and workouts. It's hilarious how much work I've
     put into this app. It looks so simple on the surface but the complexity is in the details. I'm excited about where I can take this app. Will it become a commercial success, dunno. Will it be a useful app for me personally...I'm going to keep going until it is!</p>
@@ -22,7 +16,6 @@ tags:
 </div>
 
 <div class="row align-items-center pb-3">
-  <h2>Onboarding Module</h2>
 
   <div class="col">
   <h3>Map of Onboarding Module</h3>
