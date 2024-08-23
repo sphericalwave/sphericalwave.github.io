@@ -4,7 +4,7 @@ title: "Tags"
 permalink: tags
 ---
 
-<h1>Topics</h1>
+<h1>Themes</h1>
 <hr class="blue1 mb-3 mt-1">
 
 {% assign tags = site.tags | sort %}
