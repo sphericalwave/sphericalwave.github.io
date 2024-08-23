@@ -21,9 +21,11 @@ title: Home
   <div class="col-lg-6 col-12">
       <a href="/biomechanics">
       <div class="widescreen-container">
+      <!-- <div class="p-3"> -->
           <img src="public/bioMechanicsBook1.webp" alt="" 
           class="rounded centered-image">
       </div>
+      <!-- </div> -->
       </a>
   </div>
 
