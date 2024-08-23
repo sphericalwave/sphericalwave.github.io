@@ -20,21 +20,26 @@ title: Home
 <div class="row g-3 mb-3">
   <div class="col-lg-6 col-12">
       <a href="/biomechanics">
+      <div class="widescreen-container">
           <img src="public/bioMechanicsBook1.webp" alt="" 
-          class="img-fluid rounded blue-shadow-hover img-mobile">
+          class="rounded centered-image">
+      </div>
       </a>
   </div>
 
   <div class="col-lg-6 col-12">
     <h3>BioMechanical Invincibility</h3>
     <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
-    <a href="/biomechanics" class="">Get the Book</a>
+    <a href="/biomechanics" class="btn">Get the Book</a>
   </div>
 
 
   <div class="col-lg-6 col-12">
       <a href="/bioelectricity">
-          <img src="public/bioElectricityBook1.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
+        <div class="widescreen-container">
+          <img src="public/bioElectricityBook1.webp"
+          class="rounded centered-image">
+        </div>
       </a>
   </div>
 
@@ -46,11 +51,16 @@ title: Home
           <strong>BioElectric Nutrition</strong>
           <p>Modern medicine and diets are dog water. Test out BioElectric nutrition and discover abundant energy, wolverine level regeneration, loss weight effortlessly and manifest impressive strength and endurance.</p>
 
+          <a href="/bioelectricity" class="btn">Get the Book</a>
+
   </div>
 
   <div class="col-lg-6 col-12">
-      <a href="coaching">
-          <img src="public/coaching.webp" alt="" class="img-fluid rounded rounded blue-shadow-hover">
+      <a href="/coaching">
+        <div class="widescreen-container">
+          <img src="public/coaching.webp"
+          class="rounded centered-image">
+        </div>
       </a>
   </div>
 
@@ -59,12 +69,18 @@ title: Home
           <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
           I have 20 years of experience with things that don't work. 
           Let's get you some impressive results.</p>
+
+          <a href="/coaching" class="btn">Learn More</a>
+
   </div>
 
 
   <div class="col-lg-6 col-12">
-      <a href="fitwrench">
-          <img src="/public/fitwrench/Cuboctahedron_1080.png" alt="" class="img-fluid rounded rounded blue-shadow-hover">
+      <a href="/fitwrench">
+        <div class="widescreen-container">
+          <img src="/public/fitwrench/Cuboctahedron_1080.png"
+          class="rounded centered-image">
+        </div>
       </a>
   </div>
 
@@ -73,17 +89,24 @@ title: Home
           <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
           I have 20 years of experience with things that don't work. 
           Let's get you some impressive results.</p>
+
+          <a href="/fitwrench" class="btn">Learn More</a>
   </div>
 
     <div class="col-lg-6 col-12">
-      <a href="audiowave">
-          <img src="/public/audiowave/app_icon.png" alt="" class="img-fluid rounded rounded blue-shadow-hover">
+      <a href="/audiowave">
+        <div class="widescreen-container">
+          <img src="/public/audiowave/app_icon.png"
+          class="rounded centered-image">
+        </div>
       </a>
   </div>
 
   <div class="col-lg-6 col-12">
       <strong>AudioWave</strong>
       <p>It's cool to listen to audiobooks and affirmations with background music. Check out the app.</p>
+
+      <a href="/audiowave" class="btn">Learn More</a>
   </div>
 
 
@@ -109,7 +132,8 @@ title: Home
 
   <div class="col-lg-4 col-12">
     <a href="/about">
-      <img src="/public/aaron/2023-12-12 small_headshot.JPG" alt="Profile Picture" class="profilePic rounded blue-shadow-hover">
+      <img src="/public/aaron/2023-12-12 small_headshot.JPG"
+      class="rounded centered-image">
     </a>
   </div>
 
