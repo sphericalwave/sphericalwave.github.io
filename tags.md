@@ -21,9 +21,3 @@ permalink: tags
 </div>
 
 {% include recentPosts.html %}
-
-<!-- TODO: appears in two places index.md as well-->
-<h5>Think Global, Act Local</h5>
-<hr class="blue1 mb-3 mt-1">
-
-{% include leadMagnet.html %}

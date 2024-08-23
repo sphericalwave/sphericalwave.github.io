@@ -38,6 +38,4 @@ permalink: about
         </div>
     </div>
 
-    <hr class="blue1 my-3">
-    {% include leadMagnet.html %}
 </div>
