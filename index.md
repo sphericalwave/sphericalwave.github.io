@@ -9,7 +9,7 @@ title: Home
 <!-- offers -->
 <div class="row">
 
-  <div class="col-12 text-center my-3">
+  <div class="col-12 text-center my-4">
     <h5>RESOURCES</h5>
     <h2>Join the New 1%</h2>
     <p>Curiosity exploration, 4-hour workdays, & digital real estate.</p>
@@ -110,17 +110,20 @@ title: Home
   </div>
 
 
-  <div class="col-12 text-center my-3">
+  <div class="col-12 text-center mt-4">
     <h5>The Blog</h5>
     <h2>Think Global, Act Local</h2>
     <p>Explore Jiujitsu, Engineering, Philosophy, the Suit & more</p>
   </div>
 
+
+
+
 </div>
 
 {% include recentPosts.html %}
 
-  <div class="col-12 text-center my-3">
+  <div class="col-12 text-center my-4">
     <h5>About Me</h5>
     <h2>Who is SphericalWave?</h2>
     <p>Engineer, Architect, AJJ Black Belt</p>
