@@ -27,10 +27,10 @@ title: Home
       </a>
   </div>
 
-  <div class="col-lg-6 col-12">
-    <h3>BioMechanical Invincibility</h3>
+  <div class="col-lg-6 col-12 d-flex flex-column">
+    <h5>BioMechanics</h5>
     <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
-    <a href="/biomechanics" class="btn">Get the Book</a>
+    <a href="/biomechanics" class="btn mt-auto">Get the Book</a>
   </div>
 
 
@@ -43,15 +43,15 @@ title: Home
       </a>
   </div>
 
-  <div class="col-lg-6 col-12">
+  <div class="col-lg-6 col-12 d-flex flex-column">
     <!-- <h3>BioMechanical Invincibility</h3>
     <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
     <a href="/biomechanics" class="">Get the Book</a> -->
 
-          <strong>BioElectric Nutrition</strong>
+          <h5>BioElectricity</h5>
           <p>Modern medicine and diets are dog water. Test out BioElectric nutrition and discover abundant energy, wolverine level regeneration, loss weight effortlessly and manifest impressive strength and endurance.</p>
 
-          <a href="/bioelectricity" class="btn">Get the Book</a>
+          <a href="/bioelectricity" class="btn mt-auto">Get the Book</a>
 
   </div>
 
@@ -64,13 +64,13 @@ title: Home
       </a>
   </div>
 
-  <div class="col-lg-6 col-12">
-          <strong>Coaching</strong>
-          <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
-          I have 20 years of experience with things that don't work. 
-          Let's get you some impressive results.</p>
+  <div class="col-lg-6 col-12 d-flex flex-column">
+    <h5>Coaching</h5>
+    <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
+    I have 20 years of experience with things that don't work. 
+    Let's get you some impressive results.</p>
 
-          <a href="/coaching" class="btn">Learn More</a>
+    <a href="/coaching" class="btn mt-auto">Learn More</a>
 
   </div>
 
@@ -84,16 +84,16 @@ title: Home
       </a>
   </div>
 
-  <div class="col-lg-6 col-12">
-          <strong>FitWrench</strong>
+  <div class="col-lg-6 col-12 d-flex flex-column">
+          <h5>FitWrench</h5>
           <p>The fastest way to revolutionize your health is coaching from someone who has the results you seek. 
           I have 20 years of experience with things that don't work. 
           Let's get you some impressive results.</p>
 
-          <a href="/fitwrench" class="btn">Learn More</a>
+          <a href="/fitwrench" class="btn mt-auto">Learn More</a>
   </div>
 
-    <div class="col-lg-6 col-12">
+    <div class="col-lg-6 col-12 ">
       <a href="/audiowave">
         <div class="widescreen-container">
           <img src="/public/audiowave/app_icon.png"
@@ -102,11 +102,11 @@ title: Home
       </a>
   </div>
 
-  <div class="col-lg-6 col-12">
-      <strong>AudioWave</strong>
+  <div class="col-lg-6 col-12 d-flex flex-column">
+      <h5>AudioWave</h5>
       <p>It's cool to listen to audiobooks and affirmations with background music. Check out the app.</p>
 
-      <a href="/audiowave" class="btn">Learn More</a>
+      <a href="/audiowave" class="btn mt-auto">Learn More</a>
   </div>
 
 
@@ -133,7 +133,7 @@ title: Home
   <div class="col-lg-4 col-12">
     <a href="/about">
       <img src="/public/aaron/2023-12-12 small_headshot.JPG"
-      class="rounded centered-image">
+      class="rounded img-fluid blue-shadow-hover">
     </a>
   </div>
 
