@@ -33,19 +33,6 @@
   border-radius: 3px;
   background-color: $swBlue;
   font-size: 14px;
-}
-
-.btn {
-  display: block;
-  //width: 100%;
-  background-color: $swBlue;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  border: none;
-  //cursor: pointer;
-  font-size: 1rem;
-  //margin-top: 20px;
 
   &:hover {
     background-color: darkblue;
@@ -53,18 +40,15 @@
   }
 }
 
-/* Style buttons */
-//github repo is example
-// .btn {
-//   background-color: white;
-//   border: none;
-//   //color: royalblue; /* White text */
-//   padding: 12px 16px; /* Some padding */
-//   font-size: 18px; /* Set a font size */
-//   cursor: pointer; /* Mouse pointer on hover */
-//   border-radius: 3px;
+.btn {
+  display: block;
+  background-color: $swBlue;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
 
-//   &:hover {
-//     background-color: RoyalBlue;
-//   }
-// }
+  &:hover {
+    background-color: darkblue;
+    box-shadow: 0 0 10px 5px white;
+  }
+}
