@@ -14,25 +14,35 @@ layout: default
 <div class="row justify-content-between">
 
   <div class="col-12">
-    {% include timeStamp.html %}
-    {% include share_buttons.html %}
-    <div>
-      {% for tag in page.tags %}
-        <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="tag-cloud"><span>{{ tag }}</span></a>
-      {% endfor %}
+
+    <div class="row align-items-center">
+      <div class="col-6">
+        {% include timeStamp.html %}
+        <h1>{{ page.title }}</h1>
+      </div>
+    
+      <div class="col-6 text-end">
+        <div>
+          <!-- Tags section -->
+          {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="tag-cloud"><span>{{ tag }}</span></a>
+          {% endfor %}
+        </div>
+        <div class="mt-2">
+          <!-- Share buttons section -->
+          {% include share_buttons.html %}
+        </div>
+      </div>
     </div>
-  </div>
+    
+    
 
-  <!-- <div class="col-12">
+  <hr class="blue1 mb-3 mt-1">
 
-  </div> -->
 
-  
-  <div class="col-12">
+
     <article>
 
-      <h1>{{ page.title }}</h1>
-      <hr class="blue1 mb-3 mt-1">
 
       {{ content }}
       <hr class="blue1 mb-3 mt-1">
