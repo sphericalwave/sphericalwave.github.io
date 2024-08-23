@@ -133,10 +133,18 @@ title: Home
 <div class="row align-items-center">
 
   <div class="col-lg-4 col-12">
-    <a href="/about">
+  <div class="profile-container">
+    <!-- <a href="/about"> -->
       <img src="/public/aaron/2023-12-12 small_headshot.JPG"
-      class="rounded img-fluid blue-shadow-hover">
-    </a>
+      class="profile-pic">
+      <!-- </a> -->
+      </div>
+
+      <!-- <div class="mt-3 d-flex justify-content-between"> -->
+        {% include myAccounts.html %}
+      <!-- </div> -->
+
+    
   </div>
 
   <div class="col-lg-8 col-12">

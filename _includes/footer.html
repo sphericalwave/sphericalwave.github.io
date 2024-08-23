@@ -1,20 +1,21 @@
-<hr class="blue1 mb-3">
+<hr class="blue1">
 
 <footer class="mb-3">
 
-  <div class="row">
+  <div class="row g-2">
 
-    <div class="col-12 col-lg-8 d-flex justify-content-start align-items-center center-mobile">
+    <div class="col-12">
       {% include myAccounts.html%}
     </div>
 
-    <div class="col-12 col-lg-4 d-flex align-items-center justify-content-end center-mobile">
-      <h5>
-        <a href="/">SphericalWave</a> 
-      </h5>
-      <h6 class="mx-1"><i class="far fa-copyright"></i></h6>
+    <div class="col-12 text-center">
 
-      <h6 datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</h6>
+      <h5 style="color: #1C57C9;">
+        SphericalWave
+        <i class="far fa-copyright"></i>
+        {{ site.time | date: '%Y' }}
+      </h5>
+      
     </div>
 
   </div>
