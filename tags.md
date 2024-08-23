@@ -4,7 +4,7 @@ title: "Tags"
 permalink: tags
 ---
 
-<h1>Tags</h1>
+<h1>Topics</h1>
 <hr class="blue1 mb-3 mt-1">
 
 {% assign tags = site.tags | sort %}
@@ -26,4 +26,4 @@ permalink: tags
 <h5>Think Global, Act Local</h5>
 <hr class="blue1 mb-3 mt-1">
 
-{% include subscribe.html %}
+{% include leadMagnet.html %}
