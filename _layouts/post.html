@@ -12,22 +12,23 @@ layout: default
 </script> -->
 
 <div class="row justify-content-between">
-  <div class="col-12">
-    <div class="row align-items-start">
-      <div class="col-12">
-        <h1>{{ page.title }}</h1>
-        <hr class="blue1" />
-        {% include timeStamp.html %}
+  <div class="col-12 d-flex justify-content-between align-items-end">
+    <div>
+      <h1>{{ page.title }}</h1>
+      
+    </div>
 
-        <div>
+    <div class="d-flex flex-column align-items-end">
+      <div>
+        {% include timeStamp.html %}
+      </div>
+
+      <div>
         <!-- Tags section -->
         {% for tag in page.tags %}
         <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}" class="tag-cloud"
-          ><span>{{ tag }}</span></a
-        >
+          ><span>{{ tag }}</span></a>
         {% endfor %}
-      </div>
-      
       </div>
       <div>
         {% include share_buttons.html %}
@@ -35,12 +36,13 @@ layout: default
     </div>
   </div>
 </div>
+<hr class="blue1 mb-3"/>
+
 
 
 
 <article>
   {{ content }}
   <hr class="blue1 mb-3 mt-1" />
-  {% include share_buttons.html %} {% include related_posts.html page=page%} {%
-  include leadMagnet.html %}
+  {% include share_buttons.html %} {% include related_posts.html page=page%} 
 </article>
