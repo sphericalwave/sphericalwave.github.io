@@ -3,7 +3,6 @@ layout: page
 title: Home
 ---
 
-<!-- {% include subscribe.html %} -->
 {% include leadMagnet.html %}
 
 <!-- offers -->

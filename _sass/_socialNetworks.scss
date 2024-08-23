@@ -1,8 +1,11 @@
 .social-link {
-  margin-right: 15px; /* Adjust as needed */
-  color: $gray-3; /* Optional: Change icon color */
+  margin-right: 1rem;
+  color: $gray-3;
+
+  &:hover {
+    color: $swBlue; /* Optional: Change icon color on hover */
+    //text-shadow: 0 0 3px $gray-1;
+  }
 }
 
-.social-link:hover {
-  color: $swBlue; /* Optional: Change icon color on hover */
-}
+
