@@ -24,15 +24,15 @@ offering a fresh perspective on new wave jiujitsu.
 
 <div class="row">
   <div class="col-md-6">
-    <div class="video-container">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/l8GTz9NHcRU?si=F5T-6jXs4Zsek57q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+
+    {% include video.html url="https://www.youtube.com/embed/l8GTz9NHcRU?si=F5T-6jXs4Zsek57q" %}
+
   </div>
   
   <div class="col-md-6">
-    <div class="video-container">
-      <iframe width="100%" height="315" src="https://www.youtube.com/embed/Vrus-J_Fgx4?si=VGDqRKPBtkDFM0DI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+
+  {% include video.html url="https://www.youtube.com/embed/Vrus-J_Fgx4?si=VGDqRKPBtkDFM0DI" %}
+  
   </div>
 </div>
 
