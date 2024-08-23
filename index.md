@@ -133,33 +133,6 @@ title: Home
 
 <hr class="blue1 mb-3 mt-1">
 
-<div class="row align-items-center">
+{% include about.html %}
 
-  <div class="col-lg-4 col-12">
-  <div class="profile-container">
-    <!-- <a href="/about"> -->
-      <img src="/public/aaron/2023-12-12 small_headshot.JPG"
-      class="profile-pic">
-      <!-- </a> -->
-      </div>
-    
-  </div>
-
-  <div class="col-lg-8 col-12">
-
-    <h3>Hey, I'm Aaron.</h3>
-
-    <p class="mb-2">I'm the author of <em>Pysop Yourself</em>, <em>BioElectricity</em> and <em>BioMechanics</em>. As well as <em>FitWrench</em> & <em>AudioWave</em> apps for iOS. I'm an Electrical Engineer obssesed with the mind, the suit, the internet & the future.</p>
-
-    <p class="mb-2">Previously, I worked designing residential, commercial and industrial projects. As well as building apps & webpages.</p>
-
-    <!-- <p class="mb-2">I've spent over a decade pressure testing strategies for nutrition & conditioning through the crucible of jiujitsu. And one of the things I'm most passionate about is helping people get to the next level. Everyone is unique and yet there are many things I've learned over the years that contradict conventional thinking. Things that will help you shed the last 15ibs and access gymnast level strength, flexibility and speed.</p> -->
-
-    <p class="mb-2">I've spent over a decade pressure-testing strategies for nutrition and conditioning in the crucible of jiu-jitsu. One of my greatest passions is helping people reach the next level. While everyone is unique, I've discovered many principles over the years that challenge conventional thinking—principles that can help you shed those last 15 pounds and achieve gymnast-level strength, flexibility, and speed.</p>
-
-
-    <p class="mb-2">A core tenets for me is <em>Think Global, Act Local</em> which drives my advocacy for interdisciplinary thinking. Engineering is my powerhouse approach to making a difference.</p>
-
-  </div>
-
-</div>
+<hr class="blue1">
