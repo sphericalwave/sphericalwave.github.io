@@ -3,8 +3,6 @@ title: BioElectricity
 layout: post
 ---
 
-<h1>BioElectricity</h1>
-
 <p>Working on it</p>
 
 <a href="https://sphericalwave.gumroad.com/l/xxfoyx">
