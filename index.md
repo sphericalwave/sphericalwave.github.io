@@ -23,7 +23,8 @@ title: Home
       <div class="widescreen-container">
       <!-- <div class="p-3"> -->
           <img src="public/bioMechanicsBook1.webp" alt="" 
-          class="rounded centered-image">
+          class="rounded centered-image"
+          loading="lazy">
       </div>
       <!-- </div> -->
       </a>
@@ -40,7 +41,8 @@ title: Home
       <a href="/bioelectricity">
         <div class="widescreen-container">
           <img src="public/bioElectricityBook1.webp"
-          class="rounded centered-image">
+          class="rounded centered-image"
+          loading="lazy">
         </div>
       </a>
   </div>
@@ -61,7 +63,8 @@ title: Home
       <a href="/coaching">
         <div class="widescreen-container">
           <img src="public/coaching.webp"
-          class="rounded centered-image">
+          class="rounded centered-image"
+          loading="lazy">
         </div>
       </a>
   </div>
@@ -81,7 +84,8 @@ title: Home
       <a href="/fitwrench">
         <div class="widescreen-container">
           <img src="/public/fitwrench/Cuboctahedron_1080.png"
-          class="rounded centered-image">
+          class="rounded centered-image"
+          loading="lazy">
         </div>
       </a>
   </div>
@@ -99,7 +103,8 @@ title: Home
       <a href="/audiowave">
         <div class="widescreen-container">
           <img src="/public/audiowave/app_icon.png"
-          class="rounded centered-image">
+          class="rounded centered-image"
+          loading="lazy">
         </div>
       </a>
   </div>

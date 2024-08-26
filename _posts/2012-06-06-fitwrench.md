@@ -19,7 +19,7 @@ tags:
 
   <div class="col">
   <h3>Map of Onboarding Module</h3>
-    <img src="/public/fitwrench/fw_dev_map_sep20/onboarding.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw_dev_map_sep20/onboarding.png" alt="image" class="img-thumbnail" loading="lazy">
   </div>
 </div>
 
@@ -31,7 +31,7 @@ tags:
 
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw3.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw3.png" alt="image" class="img-thumbnail" loading="lazy">
     Welcome
   </div>
 
@@ -41,17 +41,17 @@ tags:
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw1.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw1.png" alt="image" class="img-thumbnail" loading="lazy">
     HealthKit Permissions
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw5.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw5.png" alt="image" class="img-thumbnail" loading="lazy">
     Birthday, Sex, Height
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw6.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw6.png" alt="image" class="img-thumbnail" loading="lazy">
     Initial Measurements
   </div>
 
@@ -61,12 +61,12 @@ tags:
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw8.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw8.png" alt="image" class="img-thumbnail" loading="lazy">
     BMR Calculations
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw9.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw9.png" alt="image" class="img-thumbnail" loading="lazy">
     Activity Factor
   </div>
 
@@ -76,12 +76,12 @@ tags:
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw11.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw11.png" alt="image" class="img-thumbnail" loading="lazy">
     Macro Ratios
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw12.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw12.png" alt="image" class="img-thumbnail" loading="lazy">
     Completed Target
   </div>
 </div>
@@ -90,7 +90,7 @@ tags:
 <h2>Food Module</h2>
   <div class="col">
   <h3>Map of Food Module in Progress</h3>
-    <img src="/public/fitwrench/fw_dev_map_sep20/food.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw_dev_map_sep20/food.png" alt="image" class="img-thumbnail" loading="lazy">
     
   </div>
 </div>
@@ -101,24 +101,24 @@ tags:
   <p>With onboarding complete we get into the core of the app.</p>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw15.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw15.png" alt="image" class="img-thumbnail" loading="lazy">
     Food Dash
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw13.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw13.png" alt="image" class="img-thumbnail" loading="lazy">
     Food Library
   </div>
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw14.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw14.png" alt="image" class="img-thumbnail" loading="lazy">
     Add Food to Journal
   </div>
 
 
 
   <div class="col-4">
-    <img src="/public/fitwrench/fw16.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw16.png" alt="image" class="img-thumbnail" loading="lazy">
     Food Settings
   </div>
 
@@ -128,7 +128,7 @@ tags:
 <h2>Water Module</h2>
   <div class="col">
   <h3>Map of Water Module</h3>
-    <img src="/public/fitwrench/fw_dev_map_sep20/water.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw_dev_map_sep20/water.png" alt="image" class="img-thumbnail" loading="lazy">
     
   </div>
 </div>
@@ -137,7 +137,7 @@ tags:
 <h2>Results Module</h2>
   <div class="col">
   <h3>Map of Results Module</h3>
-    <img src="/public/fitwrench/fw_dev_map_sep20/suit.png" alt="image" class="img-thumbnail">
+    <img src="/public/fitwrench/fw_dev_map_sep20/suit.png" alt="image" class="img-thumbnail" loading="lazy">
     
   </div>
 </div>
@@ -152,7 +152,7 @@ tags:
 
   <div class="col">
     <h3>Map of Results Module</h3>
-      <img src="/public/fitwrench/movements.png" alt="image" class="img-thumbnail">
+      <img src="/public/fitwrench/movements.png" alt="image" class="img-thumbnail" loading="lazy">
       
     </div>
 </div>

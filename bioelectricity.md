@@ -6,7 +6,7 @@ layout: post
 <p>Working on it</p>
 
 <a href="https://sphericalwave.gumroad.com/l/xxfoyx">
-    <img src="public/bioElectricityBook1.webp" alt="" class="img-fluid rounded w-25">
+    <img src="public/bioElectricityBook1.webp" alt="" class="img-fluid rounded w-25" loading="lazy">
 </a>
 
 

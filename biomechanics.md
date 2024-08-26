@@ -8,7 +8,7 @@ layout: page
 <p>The suit is the most impressive feat of engineering. Learn about strength ratios, tensegrity, </p>
 
 <a href="https://sphericalwave.gumroad.com/l/xxfoyx">
-    <img src="public/bioMechanicsBook1.webp" alt="" class="img-fluid rounded w-25">
+    <img src="public/bioMechanicsBook1.webp" alt="" class="img-fluid rounded w-25" loading="lazy">
 </a>
 
 
