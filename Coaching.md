@@ -8,7 +8,7 @@ layout: post
 <p>i charge $400 a month for weekly checkins where we review the week and setup the next one</p>
 
 <!-- <a href="https://sphericalwave.gumroad.com/l/xxfoyx"> -->
-<img src="public/coaching.webp" alt="" class="img-fluid rounded w-25">
+<img src="public/coaching.webp" alt="" class="img-fluid rounded w-25" loading="lazy">
 <!-- </a> -->
 
 

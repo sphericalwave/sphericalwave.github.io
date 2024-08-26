@@ -9,7 +9,9 @@ layout: page
     <h2>Psyop Yourself for Success</h2>
 
 <div class="d-flex justify-content-center my-3">
-    <img src="public/psyop-for-success.webp" class="img-fluid rounded blue-shadow-hover w-50">
+    <img src="public/psyop-for-success.webp" 
+        class="img-fluid rounded blue-shadow-hover w-50"
+        loading="lazy">
 </div>
     <!-- <form class="my-3"> -->
         <div class="input-group justify-content-center">

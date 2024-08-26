@@ -18,23 +18,23 @@ permalink: whitebelt
 <div class="row">
 
     <div class="col-lg-4 col-md-6 col-sm-12">
-        <img src="/public/jits/white/fitplus_group.jpeg" alt="image" class="img-thumbnail">
+        <img src="/public/jits/white/fitplus_group.jpeg" alt="image" class="img-thumbnail" loading="lazy">
     </div>
 
         <div class="col-lg-4 col-md-6 col-sm-12">
-        <img src="/public/jits/white/in_house_tournament.jpeg" alt="image" class="img-thumbnail">
+        <img src="/public/jits/white/in_house_tournament.jpeg" alt="image" class="img-thumbnail" loading="lazy">
     </div>
 
         <div class="col-lg-4 col-md-6 col-sm-12">
-        <img src="/public/jits/white/promo_to_blue.JPG" alt="image" class="img-thumbnail">
+        <img src="/public/jits/white/promo_to_blue.JPG" alt="image" class="img-thumbnail" loading="lazy">
     </div>
 
         <div class="col-lg-4 col-md-6 col-sm-12">
-        <img src="/public/jits/white/promotion_wagney.JPG" alt="image" class="img-thumbnail">
+        <img src="/public/jits/white/promotion_wagney.JPG" alt="image" class="img-thumbnail" loading="lazy">
     </div>
 
     <div class="col-lg-4 col-md-6 col-sm-12">
-        <img src="/public/jits/white/whitebelt.JPG" alt="image" class="img-thumbnail">
+        <img src="/public/jits/white/whitebelt.JPG" alt="image" class="img-thumbnail" loading="lazy">
     </div>
 
 
