@@ -14,7 +14,7 @@ tags:
     <li>A pinch of salt (optional)</li>
 </ul>
 
-<h4>Instructions:</h4>
+<h4>Instructions</h4>
 <ol>
     <li><strong>Rinse the Buckwheat:</strong> Start by rinsing the buckwheat groats under cold water to remove any dust or debris.</li>
     <li><strong>Add Ingredients to the Pressure Cooker:</strong> Place the rinsed buckwheat, water (or broth), and salt (if using) into the pressure cooker.</li>
@@ -28,7 +28,7 @@ tags:
     <li><strong>Fluff and Serve:</strong> Once the pressure has fully released, open the lid, and fluff the buckwheat with a fork. It's now ready to serve!</li>
 </ol>
 
-<h4>Tips:</h4>
+<h4>Tips</h4>
 <ul>
     <li><strong>Consistency:</strong> If you prefer a softer texture, increase the cooking time to 5 minutes. For a firmer texture, reduce the time slightly.</li>
     <li><strong>Flavor Enhancements:</strong> You can add herbs, spices, or a knob of butter after cooking to enhance the flavor of the buckwheat.</li>
