@@ -5,6 +5,8 @@ title: Home
 
 {% include leadMagnet.html %}
 
+{% include survey.html %}
+
 <!-- offers -->
 <div class="row">
 

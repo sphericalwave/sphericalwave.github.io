@@ -1,0 +1,53 @@
+<div id="surveyOverlay"></div>
+<div id="surveyPopup">
+    <h3>Quick Survey</h3>
+    <form id="surveyForm">
+        <label for="question1">What is your favorite color?</label><br>
+        <input type="text" id="question1" name="question1" required><br><br>
+
+        <label for="question2">How often do you visit our site?</label><br>
+        <input type="text" id="question2" name="question2" required><br><br>
+
+        <label for="question3">Any suggestions for improvement?</label><br>
+        <input type="text" id="question3" name="question3"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+    })();
+</script>
+
+<script>
+    // Show the popup after 5 seconds
+    window.onload = function() {
+        setTimeout(function() {
+            document.getElementById('surveyOverlay').style.display = 'block';
+            document.getElementById('surveyPopup').style.display = 'block';
+        }, 5000);
+    };
+
+    // Handle form submission
+    document.getElementById('surveyForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        const formData = {
+            question1: document.getElementById('question1').value,
+            question2: document.getElementById('question2').value,
+            question3: document.getElementById('question3').value,
+        };
+
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+            .then(function(response) {
+                alert('Thank you for your feedback!');
+                document.getElementById('surveyOverlay').style.display = 'none';
+                document.getElementById('surveyPopup').style.display = 'none';
+            }, function(error) {
+                alert('Oops! Something went wrong.');
+            });
+    });
+</script>
