@@ -123,9 +123,6 @@ title: Home
     <p>Explore Jiujitsu, Engineering, Philosophy, the Suit & more</p>
   </div>
 
-
-
-
 </div>
 
 {% include recentPosts.html %}
