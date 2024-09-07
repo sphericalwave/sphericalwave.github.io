@@ -1,4 +1,4 @@
-#surveyPopup {
+.surveyPopup {
   display: none;
   position: fixed;
   top: 50%;
@@ -8,25 +8,34 @@
   background-color: #fff;
   border: 1px solid #ccc;
   padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1060;
 }
 
-#surveyPopup h3 {
+.surveyPopup h3 {
   margin-top: 0;
 }
 
-#surveyPopup input[type="text"] {
+.surveyPopup input[type="text"] {
   width: 100%;
   margin-bottom: 10px;
 }
 
-#surveyPopup button {
+.surveyPopup button {
   padding: 10px 15px;
   margin-top: 10px;
+  background-color: #007bff; /* Example button background color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-#surveyOverlay {
+.surveyPopup button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+.surveyOverlay {
   display: none;
   position: fixed;
   top: 0;
@@ -34,5 +43,5 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 1050; /* Updated z-index for modal hierarchy */
 }
