@@ -11,6 +11,7 @@ tags:
 
 <img src="/public/rickson_breathing.png" alt="Local Image" style="height: 30vh;">
 
+{%include video.html url="https://www.youtube.com/embed/I6v1VnVlkZE?si=qAbQ_3NDV7ijx5ED" %}
 
 Rickson Gracie's breathing technique, often referred to as "Diaphragmatic Breathing" or "Ginnastica Natural," is a core element of his physical and mental training. The technique integrates breath control, mindfulness, and body mechanics, designed to enhance performance in martial arts and overall well-being. Gracie emphasizes the importance of controlling breathing, not just for physical endurance but for mental clarity and relaxation, especially under pressure.
 
