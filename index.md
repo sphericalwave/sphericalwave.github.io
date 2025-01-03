@@ -18,6 +18,7 @@ title: Home
 
 
 {% comment %}
+
 {% include recentPosts.html %}
 {% endcomment %}
 
@@ -32,3 +33,4 @@ title: Home
 {% include about.html %}
 
 <hr class="blue1">
+
