@@ -6,13 +6,3 @@ permalink: blog/index.html
 
 <h1>Posts</h1>
 <!-- {% include share_buttons.html %} -->
-<hr class="blue1 mb-3 mt-1">
-
-<div class="row g-2">
-  {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-  {% for post in sorted_posts %}
-  <div class="col-lg-3 col-6 d-flex">
-    {% include postCard.html %}
-  </div>
-  {% endfor %}
-</div>
