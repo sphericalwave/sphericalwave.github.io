@@ -4,7 +4,6 @@ title: Home
 ---
 
 {% comment %}
-<!-- {% include leadMagnet.html %} -->
 <!-- {% include survey.html %} -->
 <!-- {% include offers.html %} -->
 {% endcomment %}
