@@ -4,7 +4,7 @@
     aspect-ratio: 3 / 2; /* Maintain consistent aspect ratio */
     object-fit: cover; /* Ensure image fills space without distortion */
     object-position: center; /* Center the image */
-    background-color: #f0f0f0; /* Placeholder background while loading */
+    //background-color: #f0f0f0; /* Placeholder background while loading */
 }
 
 /* Adjust for mobile screens */
@@ -17,7 +17,7 @@
 /* Ensure card maintains structure */
 .card-custom {
     background-color: #000;
-    color: #fff;
+    //color: #fff;
     border: 0.12rem solid $swBlue;
     min-height: 400px; /* Minimum height to prevent collapse */
     display: flex;
@@ -37,7 +37,7 @@
 .card-custom .card-header,
 .card-custom .btn {
     background-color: $swBlue;
-    color: #fff;
+    //color: #fff;
 }
 
 .card-custom .card-header {

@@ -3,9 +3,9 @@ layout: page
 title: Home
 ---
 <div class="col-12 text-center mt-4">
-  <h5>The Blog</h5>
-  <h2>Think Global, Act Local</h2>
-  <p>Explore Jiujitsu, Engineering, Philosophy, the Suit & more</p>
+  <h5>Engineering Portfolio</h5>
+  <h2>Precision in Every Circuit</h2>
+  <p>Explore Aaron's work</p>
 </div>
 
 
