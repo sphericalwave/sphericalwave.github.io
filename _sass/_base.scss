@@ -103,12 +103,6 @@ hr.blue1 {
     }
   }
 
-  p {
-    margin: 0.5rem 0; /* Adjust this value to decrease the space */
-    /* or */
-    //margin-top: 0.5rem; /* Alternatively, adjust this value */
-}
-
 .blue-shadow-hover:hover {
   box-shadow: 0 0 10px 5px $swBlue;
 }
