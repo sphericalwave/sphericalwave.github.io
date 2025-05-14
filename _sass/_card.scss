@@ -1,52 +1,57 @@
-/* CSS for .card-img-top */
 .card-img-top {
-    object-fit: cover;
-    object-position: center;
-    height: calc(33.33vh - 2rem);
-    /* 1/3 of viewport height minus padding */
+    width: 100%; /* Ensure image fills container width */
+    height: 200px; /* Fixed height to reserve space; adjust based on design */
+    aspect-ratio: 3 / 2; /* Maintain consistent aspect ratio */
+    object-fit: cover; /* Ensure image fills space without distortion */
+    object-position: center; /* Center the image */
+    background-color: #f0f0f0; /* Placeholder background while loading */
 }
 
-/* Adjust padding for mobile spacing */
+/* Adjust for mobile screens */
 @media (max-width: 576px) {
     .card-img-top {
-        height: calc(33.33vh - 1rem);
-        /* Adjusted for smaller screens */
+        height: 150px; /* Slightly smaller for mobile; adjust as needed */
     }
 }
 
+/* Ensure card maintains structure */
 .card-custom {
     background-color: #000;
-    /* Black background */
     color: #fff;
-    /* White text */
     border: 0.12rem solid $swBlue;
-    /* Royal blue border */
+    min-height: 400px; /* Minimum height to prevent collapse */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Prevent content overflow */
 }
 
+/* Ensure card body grows to fill space */
+.card-body {
+    flex-grow: 1;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Other styles remain unchanged */
 .card-custom .card-header,
 .card-custom .btn {
     background-color: $swBlue;
-    /* Royal blue background for header and button */
     color: #fff;
-    /* White text */
 }
 
 .card-custom .card-header {
     border-bottom: 2px solid $swBlue;
-    /* Royal blue border for header */
 }
 
 .card-custom .btn:hover {
     background-color: $swBlue;
-    /* Darker royal blue for hover effect */
     border-color: #27408b;
 }
 
 .card .card-title {
     margin-bottom: 0;
-    /* Override the default margin-bottom */
     margin-top: 0;
-    /* Override the default margin-bottom */
 }
 
 .card-text {
@@ -55,38 +60,26 @@
     color: $gray-2;
 }
 
-.card .card-body {
-    padding: 0.5rem;
-}
-
-//btn used in post card
-.custom-btn-blue {
-    background-color: #007bff;
-    /* Bootstrap's primary blue color */
-    color: #fff;
-    /* White text */
-    border-color: #007bff;
-    /* Matching border color */
-    font-size: 0.8rem;
-    padding: 0.3rem;
-}
-
-.custom-btn-blue:hover {
-    background-color: #0056b3;
-    /* Darker shade of blue on hover */
-    border-color: #0056b3;
-}
-
 .card .underline-text {
     text-decoration: underline;
     color: white;
     font-size: 0.7rem;
 }
 
+.custom-btn-blue {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    font-size: 0.8rem;
+    padding: 0.3rem;
+}
+
+.custom-btn-blue:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
 
 .share-buttons {
-    // display: flex;
-    // justify-content: flex-start;
     gap: 0.5rem;
 }
 

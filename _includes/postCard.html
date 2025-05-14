@@ -1,28 +1,28 @@
-<!-- card for diplaying blog posts -->
 <div class="card card-custom blue-shadow-hover">
-
   {% if post.image %}
-  <a href="{{post.url}}">
-    <img src="{{ post.image }}" class="card-img-top" alt="{{ post.title }}" loading="lazy">
+  <a href="{{ post.url }}">
+    <img 
+      src="{{ post.image }}" 
+      class="card-img-top" 
+      alt="{{ post.title }}" 
+      loading="lazy" 
+      width="300" 
+      height="200" 
+    >
   </a>
   {% endif %}
 
   <div class="card-body">
-
     <div class="d-flex flex-column">
-      <a href="{{post.url}}">
+      <a href="{{ post.url }}">
         <h6 class="card-title">{{ post.title }}</h6>
-        
       </a>
       <small>{{ post.date | date: "%B %d, %Y" }}</small>
 
-      {% include tagCloud.html%}
+      {% include tagCloud.html %}
 
       <p class="card-text">{{ post.excerpt | strip_html | truncate: 123 }}</p>
-      <a href="{{post.url}}" class="underline-text">Read Full Post</a>
-
+      <a href="{{ post.url }}" class="underline-text">Read Full Post</a>
     </div>
-
   </div>
-
 </div>

@@ -1,4 +1,3 @@
-repository:	     sphericalwave/sphericalwave.github.io
 # Permalinks
 #permalink:           /:year/:month/:day/:title/
 permalink: /:categories/:title 
@@ -6,8 +5,8 @@ permalink: /:categories/:title
 # https://github.com/arturomoncadatorres/arturomoncadatorres.github.io/blob/main/_config.yml
 
 # Setup
-title:               Spherical Wave
-url:                 https://sphericalwave.com
+title:               Aaron A McGrath
+url:                 https://aaronamcgrath.com
 paginate:            3
 paginate_path:    "/blog/page:num/"
 baseurl:             ""
@@ -24,7 +23,7 @@ sass:
 author:
   name:              Aaron Anthony
 #  url:               https://twitter.com/mecid
-  email:             aaron@sphericalwave.com
+
 
 # Gems
 plugins:
