@@ -4,7 +4,7 @@ title: Home
 description: "Aaron Anthony — engineer, mathematician, and Brazilian jiu-jitsu black belt building tools that change how people think. Writing on biomechanics, jiu-jitsu, philosophy, and breakthrough energy."
 ---
 
-<div class="row align-items-center my-5">
+<div class="row align-items-center my-5 sw-enter">
 
   <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
     <img src="/public/aaron_sun_profile.png" alt="Aaron Anthony"
@@ -25,7 +25,7 @@ description: "Aaron Anthony — engineer, mathematician, and Brazilian jiu-jitsu
 
 <hr class="blue1 mb-4 mt-1">
 
-<div class="row my-5">
+<div class="row my-5 sw-enter-2">
   <div class="col-12 col-lg-10 mx-auto text-center">
 
     <blockquote class="blockquote">
