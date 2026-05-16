@@ -7,11 +7,14 @@ permalink: /:categories/:title
 
 # Setup
 title:               Spherical Wave
+description:         "Aaron Anthony — electrical engineer and mathematician, AJJ black belt, builder of behavior-change tools. Writing on biomechanics, jiu-jitsu, philosophy, and breakthrough energy."
 url:                 https://sphericalwave.com
+logo:                /public/great-wave.png
+image:               /public/great-wave.png
 paginate:            9
 paginate_path:    "/blog/page:num/"
 baseurl:             ""
-analytics_id:        
+analytics_id:        G-P9ZE6V8GK7
 
 # Assets
 #
@@ -33,6 +36,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed     #generate atom feed, don't know what that is
   - jekyll-paginate
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /public/great-wave.png
 
 collections:
   projects:
