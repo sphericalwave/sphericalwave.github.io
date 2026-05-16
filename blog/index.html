@@ -1,8 +1,43 @@
 ---
 layout: default
-title: "Posts"
-permalink: blog/index.html
+title: "Writing"
 ---
 
-<h1>Posts</h1>
-<!-- {% include share_buttons.html %} -->
+<div class="col-12 text-center my-4">
+  <h1>Writing</h1>
+  <p class="mb-0">Engineering, biomechanics, jiu-jitsu, philosophy — ideas, pressure-tested.</p>
+</div>
+
+<hr class="blue1 mb-3 mt-1">
+
+<div class="row g-2 mb-3">
+  {% for post in paginator.posts %}
+    <div class="col-12 col-md-6 col-lg-4 d-flex">
+      {% include postCard.html %}
+    </div>
+  {% endfor %}
+</div>
+
+{% if paginator.total_pages > 1 %}
+<nav aria-label="Posts pagination" class="my-4">
+  <ul class="pagination justify-content-center">
+    {% if paginator.previous_page %}
+      <li class="page-item"><a class="page-link" href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">&larr; Newer</span></li>
+    {% endif %}
+
+    <li class="page-item disabled"><span class="page-link">Page {{ paginator.page }} of {{ paginator.total_pages }}</span></li>
+
+    {% if paginator.next_page %}
+      <li class="page-item"><a class="page-link" href="{{ paginator.next_page_path | relative_url }}">Older &rarr;</a></li>
+    {% else %}
+      <li class="page-item disabled"><span class="page-link">Older &rarr;</span></li>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
+
+<div class="col-12 text-center my-3">
+  <a href="{{ site.baseurl }}/tags" class="btn custom-btn-blue">Browse by theme</a>
+</div>
