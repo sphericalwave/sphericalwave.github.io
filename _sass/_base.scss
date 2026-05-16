@@ -116,3 +116,42 @@ hr.blue1 {
 .white-shadow-hover:hover {
   box-shadow: 0 0 10px 5px $gray-1;
 }
+
+// --- ui-ux-pro-max: motion + interaction polish ---
+a,
+button,
+.btn,
+.card,
+.nav-link,
+img {
+  transition: color .2s ease, background-color .2s ease,
+    box-shadow .2s ease, transform .2s ease;
+}
+
+button,
+.btn,
+a {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid $link-color;
+  outline-offset: 2px;
+}
+
+@keyframes sw-fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sw-enter   { animation: sw-fade-up .6s ease both; }
+.sw-enter-2 { animation: sw-fade-up .6s ease .12s both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
