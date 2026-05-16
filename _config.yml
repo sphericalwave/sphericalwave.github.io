@@ -34,5 +34,9 @@ plugins:
   - jekyll-feed     #generate atom feed, don't know what that is
   - jekyll-paginate
 
+collections:
+  projects:
+    output: false
+
 tag_page_layout: tag_page
 tag_page_dir: tag
