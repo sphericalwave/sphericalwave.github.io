@@ -1,10 +1,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="keywords"
-    content="swift ios development apple watch iphone ipad swiftui macos uikit dev wwdc tutorial guide redux tea state container"
-  />
 
   {% seo %}
 
@@ -27,84 +23,14 @@
   <script
     src="https://kit.fontawesome.com/1b735903d0.js"
     crossorigin="anonymous"
+    defer
   ></script>
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
-
-
-  <script>
-    //load TrackerJS...moosend.com
-    !(function (t, n, e, o, a) {
-      function d(t) {
-        var n = ~~(Date.now() / 3e5),
-          o = document.createElement(e);
-        (o.async = !0), (o.src = t + "?ts=" + n);
-        var a = document.getElementsByTagName(e)[0];
-        a.parentNode.insertBefore(o, a);
-      }
-      (t.MooTrackerObject = a),
-        (t[a] =
-          t[a] ||
-          function () {
-            return t[a].q
-              ? void t[a].q.push(arguments)
-              : void (t[a].q = [arguments]);
-          }),
-        window.attachEvent
-          ? window.attachEvent("onload", d.bind(this, o))
-          : window.addEventListener("load", d.bind(this, o), !1);
-    })(
-      window,
-      document,
-      "script",
-      "//cdn.stat-track.com/statics/moosend-tracking.min.js",
-      "mootrack"
-    );
-    //tracker has to be initialized otherwise it will generate warnings and wont sendtracking events
-    mootrack("init", "21cb0024-f56b-42d6-b642-7e1e17d941a5");
-
-    // track a view of the current page
-    mootrack("trackPageView");
-  </script>
-
-  
-  <script>
-    // pop up subscribe
-    if (!window.mootrack) {
-      !(function (t, n, e, o, a) {
-        function d(t) {
-          var n = ~~(Date.now() / 3e5),
-            o = document.createElement(e);
-          (o.async = !0), (o.src = t + "?ts=" + n);
-          var a = document.getElementsByTagName(e)[0];
-          a.parentNode.insertBefore(o, a);
-        }
-        (t.MooTrackerObject = a),
-          (t[a] =
-            t[a] ||
-            function () {
-              return t[a].q
-                ? void t[a].q.push(arguments)
-                : void (t[a].q = [arguments]);
-            }),
-          window.attachEvent
-            ? window.attachEvent("onload", d.bind(this, o))
-            : window.addEventListener("load", d.bind(this, o), !1);
-      })(
-        window,
-        document,
-        "script",
-        "https://cdn.stat-track.com/statics/moosend-tracking.min.js",
-        "mootrack"
-      );
-    }
-    mootrack("loadForm", "bcda03a9ac284fde92ac139b86df0ea0");
-  </script>
-
+  {% if site.analytics_id %}
   <!-- Google tag (gtag.js) -->
   <script
     async
-    src="https://www.googletagmanager.com/gtag/js?id=G-P9ZE6V8GK7"
+    src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics_id }}"
   ></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -112,14 +38,11 @@
       dataLayer.push(arguments);
     }
     gtag("js", new Date());
-
-    gtag("config", "G-P9ZE6V8GK7");
+    gtag("config", "{{ site.analytics_id }}");
   </script>
+  {% endif %}
 
-  <script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-
+  {% if page.layout == "post" %}
   <script type="text/javascript">
     MathJax = {
       tex: {
@@ -128,6 +51,9 @@
       }
     };
   </script>
-  
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  {% endif %}
 
 </head>
