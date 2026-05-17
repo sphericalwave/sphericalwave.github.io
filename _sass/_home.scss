@@ -1,0 +1,284 @@
+// Home — Stitch "Tech-Minimalist / Kinetic Precision" treatment.
+// Ported from the SphericalWave Stitch design (project 15669745624596895356).
+// Everything is scoped under .sw-home so it never leaks into other pages.
+
+.sw-home {
+  // Design tokens (from the Stitch design system).
+  --sw-surface: #111318;
+  --sw-surface-lowest: #0c0e12;
+  --sw-surface-container: #1e2024;
+  --sw-on-surface: #e2e2e8;
+  --sw-on-surface-variant: #c3c6d6;
+  --sw-primary: #b4c5ff;          // accent text / borders
+  --sw-primary-container: #1e56d0; // filled button
+  --sw-on-primary-container: #cfd9ff;
+  --sw-outline: #434654;
+
+  --sw-font-display: 'Sora', 'Space Grotesk', sans-serif;
+  --sw-font-body: 'Inter', 'Archivo', sans-serif;
+  --sw-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  font-family: var(--sw-font-body);
+  color: var(--sw-on-surface);
+
+  // --- shared atoms ---------------------------------------------------------
+
+  &__label {
+    font-family: var(--sw-font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--sw-primary);
+  }
+
+  &__glass {
+    backdrop-filter: blur(20px);
+    background: rgba(10, 10, 11, 0.6);
+    border: 1px solid rgba(180, 197, 255, 0.12);
+    border-radius: 8px;
+  }
+
+  &__wave-line {
+    height: 1px;
+    border: 0;
+    width: 100%;
+    background: linear-gradient(90deg, transparent 0%, var(--sw-primary-container) 50%, transparent 100%);
+    opacity: 0.6;
+    margin: 2.5rem 0;
+  }
+
+  // --- hero -----------------------------------------------------------------
+
+  &__hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: clamp(2.5rem, 6vw, 5rem) 1.5rem;
+    text-align: center;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(30, 86, 208, 0.18) 0%, transparent 65%),
+      var(--sw-surface-container);
+    border: 1px solid rgba(180, 197, 255, 0.08);
+  }
+
+  &__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(180, 197, 255, 0.2);
+    border-radius: 999px;
+    background: rgba(10, 10, 11, 0.5);
+
+    .sw-home__dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--sw-primary-container);
+      box-shadow: 0 0 8px 2px rgba(30, 86, 208, 0.6);
+    }
+  }
+
+  &__avatar {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1.5rem;
+    display: block;
+    border: 1px solid rgba(180, 197, 255, 0.2);
+    box-shadow: 0 0 40px rgba(30, 86, 208, 0.25);
+  }
+
+  &__title {
+    font-family: var(--sw-font-display);
+    font-weight: 600;
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+    margin: 0 0 0.75rem;
+    color: var(--sw-on-surface);
+    text-shadow: 0 0 24px rgba(180, 197, 255, 0.25);
+  }
+
+  &__subtitle {
+    font-family: var(--sw-font-mono);
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sw-primary);
+    margin: 0 0 1.5rem;
+  }
+
+  &__lead {
+    font-family: var(--sw-font-body);
+    font-size: clamp(16px, 2.2vw, 18px);
+    line-height: 1.7;
+    color: var(--sw-on-surface-variant);
+    max-width: 38rem;
+    margin: 0 auto 2rem;
+  }
+
+  // --- CTAs (use <a>; avoid global button/.btn !important overrides) --------
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  &__btn {
+    font-family: var(--sw-font-mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color .25s ease, box-shadow .25s ease, color .25s ease;
+
+    &--primary {
+      background: var(--sw-primary-container);
+      color: var(--sw-on-primary-container);
+      border: 1px solid transparent;
+
+      &:hover {
+        color: #fff;
+        box-shadow: 0 0 22px rgba(30, 86, 208, 0.45);
+      }
+    }
+
+    &--ghost {
+      background: transparent;
+      color: var(--sw-primary);
+      border: 1px solid rgba(180, 197, 255, 0.4);
+
+      &:hover {
+        color: var(--sw-primary);
+        background: rgba(180, 197, 255, 0.08);
+      }
+    }
+  }
+
+  // --- bento ---------------------------------------------------------------
+
+  &__bento {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 2.5rem 0;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  &__panel {
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+
+    &--accent { border-left: 4px solid rgba(30, 86, 208, 0.6); }
+
+    &--center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 0.5rem;
+    }
+  }
+
+  &__quote {
+    margin: 0 0 1rem;
+    p {
+      font-family: var(--sw-font-display);
+      font-size: clamp(18px, 2.6vw, 24px);
+      line-height: 1.5;
+      color: var(--sw-on-surface);
+    }
+    footer {
+      font-family: var(--sw-font-mono);
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sw-primary);
+      margin-top: 0.75rem;
+    }
+  }
+
+  &__panel-title {
+    font-family: var(--sw-font-display);
+    font-weight: 500;
+    font-size: clamp(22px, 3vw, 32px);
+    color: var(--sw-on-surface);
+    margin: 0.5rem 0 1rem;
+  }
+
+  p { color: var(--sw-on-surface-variant); }
+
+  // newsletter mini-form
+  &__form {
+    display: flex;
+    margin-top: 1.5rem;
+    border: 1px solid var(--sw-outline);
+    background: var(--sw-surface-lowest);
+    border-radius: 4px;
+    overflow: hidden;
+
+    &:focus-within { border-color: rgba(180, 197, 255, 0.6); }
+
+    input {
+      flex: 1 1 auto;
+      background: transparent;
+      border: 0;
+      padding: 0 1rem;
+      color: var(--sw-on-surface);
+      font-family: var(--sw-font-mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+
+      &::placeholder { color: rgba(195, 198, 214, 0.4); }
+      &:focus { outline: none; }
+    }
+
+    // beat the global `button { ... !important }` rule from _base.scss
+    button.sw-home__submit {
+      background-color: var(--sw-surface-container) !important;
+      color: var(--sw-on-surface) !important;
+      border: 0 !important;
+      padding: 0.9rem 1.4rem !important;
+      font-family: var(--sw-font-mono) !important;
+      font-size: 12px !important;
+      letter-spacing: 0.12em !important;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--sw-primary-container) !important;
+        color: #fff !important;
+      }
+    }
+  }
+
+  // links inside the home content
+  a:not(.sw-home__btn) {
+    color: var(--sw-primary);
+    &:hover { color: #fff; }
+  }
+
+  // kinetic ornament — three thin dissipating lines
+  &__ornament {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.25;
+    margin-top: 2.5rem;
+
+    span { height: 1px; background: var(--sw-primary-container); }
+    .sw-home__orn-grow { flex: 1 1 auto; }
+    .sw-home__orn-mid  { width: 48px; }
+  }
+}
