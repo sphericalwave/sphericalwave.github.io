@@ -40,7 +40,7 @@ description: "Apps and engineering by Aaron Anthony — tools to optimize the su
 <div class="col-12 text-center my-4">
   <p class="mb-2">Open to engineering work and contracts — software, hardware, or both.</p>
   <a href="mailto:aaron@sphericalwave.com" class="btn custom-btn-blue me-2 mb-2">Work with me</a>
-  <a href="https://newsletter.sphericalwave.com" class="btn custom-btn-blue mb-2">Newsletter</a>
+  <a href="{{ site.baseurl }}/#newsletter" class="btn custom-btn-blue mb-2">Newsletter</a>
 </div>
 
 <hr class="blue1 mb-3 mt-1">
