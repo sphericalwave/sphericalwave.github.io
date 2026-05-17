@@ -249,4 +249,53 @@
     .sw-home__orn-grow { flex: 1 1 auto; }
     .sw-home__orn-mid  { width: 48px; }
   }
+
+  // services / feature card grid
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 2.5rem 0;
+
+    @media (min-width: 600px) { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 960px) { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  &__card {
+    padding: clamp(1.5rem, 3vw, 2rem);
+
+    h3 {
+      font-family: var(--sw-font-display);
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--sw-on-surface);
+      margin: 0.75rem 0 0.5rem;
+    }
+    p { margin: 0; }
+  }
+
+  // closing call-to-action band
+  &__cta-band {
+    text-align: center;
+    padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
+    border-radius: 12px;
+    margin: 2.5rem 0;
+    background:
+      radial-gradient(circle at 50% 50%, rgba(30, 86, 208, 0.15) 0%, transparent 70%),
+      var(--sw-surface-container);
+    border: 1px solid rgba(180, 197, 255, 0.08);
+
+    h2 {
+      font-family: var(--sw-font-display);
+      font-weight: 600;
+      font-size: clamp(28px, 4vw, 44px);
+      color: var(--sw-on-surface);
+      margin: 0 0 0.75rem;
+    }
+    p {
+      color: var(--sw-on-surface-variant);
+      margin: 0 auto 1.5rem;
+      max-width: 34rem;
+    }
+  }
 }

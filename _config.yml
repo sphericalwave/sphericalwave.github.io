@@ -7,14 +7,36 @@ permalink: /:categories/:title
 
 # Setup
 title:               Spherical Wave
-description:         "Aaron Anthony — electrical engineer and mathematician, AJJ black belt, builder of behavior-change tools. Writing on biomechanics, jiu-jitsu, philosophy, and breakthrough energy."
+description:         "Spherical Wave is a digital consulting agency. We build websites that bring in customers and the business systems to run on — accounting, project management, expense & tax reporting, and SEO."
 url:                 https://sphericalwave.com
 logo:                /public/great-wave.png
 image:               /public/great-wave.png
-paginate:            9
-paginate_path:    "/blog/page:num/"
 baseurl:             ""
 analytics_id:        G-P9ZE6V8GK7
+
+# Legacy personal content — HIDDEN, not deleted (repurpose later).
+# Reverse by removing entries here + the posts `published: false` default.
+# Jekyll defaults are re-listed so Gemfile/vendor stay excluded too.
+exclude:
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - _design
+  - blog
+  - tag
+  - archive.html
+  - tags.md
+  - work.md
+  - Coaching.md
+  - store1.md
+  - psyop.md
+  - bioelectricity.md
+  - biomechanics.md
+  - update_tags.py
 
 # Assets
 #
@@ -25,23 +47,28 @@ sass:
 
 # About/contact
 author:
-  name:              Aaron Anthony
+  name:              Spherical Wave
 #  url:               https://twitter.com/mecid
-  email:             aaron@sphericalwave.com
+  email:             hello@sphericalwave.com
 
 # Gems
 plugins:
   - jekyll-avatar #don't think i need
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed     #generate atom feed, don't know what that is
-  - jekyll-paginate
+  - jekyll-feed     # kept; feed empty while posts unpublished, link removed from head
 
 defaults:
   - scope:
       path: ""
     values:
       image: /public/great-wave.png
+  # Hide all legacy posts without editing 41 files (reversible: delete this).
+  - scope:
+      path: ""
+      type: posts
+    values:
+      published: false
 
 collections:
   projects:
