@@ -20,7 +20,7 @@ description: "Aaron Anthony — engineer, mathematician, and Brazilian jiu-jitsu
     <p class="sw-home__lead">I build tools that change how people think — and pressure-test the ideas on the mats.</p>
 
     <div class="sw-home__cta">
-      <a href="https://newsletter.sphericalwave.com" class="sw-home__btn sw-home__btn--primary">Get the newsletter</a>
+      <a href="/#newsletter" class="sw-home__btn sw-home__btn--primary">Get the newsletter</a>
       <a href="/blog" class="sw-home__btn sw-home__btn--ghost">Read the writing</a>
       <a href="/about" class="sw-home__btn sw-home__btn--ghost">About / work with me</a>
     </div>
@@ -46,14 +46,11 @@ description: "Aaron Anthony — engineer, mathematician, and Brazilian jiu-jitsu
       <p>The discipline behind it comes from electrical engineering and mathematics, driven by a long obsession with breakthrough energy technology and physics. The proving ground is jiu-jitsu: ideas only count if they survive resistance.</p>
     </div>
 
-    <div class="sw-home__glass sw-home__panel sw-home__panel--center">
+    <div class="sw-home__glass sw-home__panel sw-home__panel--center" id="newsletter">
       <span class="sw-home__label">Signal</span>
-      <p class="sw-home__panel-title">Join the frequency</p>
-      <p>Engineering deep-dives, jiu-jitsu, and early access — straight to your inbox.</p>
-      <form class="sw-home__form" action="https://newsletter.sphericalwave.com" method="get">
-        <input type="email" name="email" placeholder="ENTER_EMAIL_ADDRESS" aria-label="Email address">
-        <button type="submit" class="sw-home__submit" aria-label="Subscribe">→</button>
-      </form>
+      <p class="sw-home__panel-title">Newsletter</p>
+      <p>Coming soon — engineering deep-dives, jiu-jitsu, and early access.</p>
+      <span class="sw-home__label sw-home__soon">Coming soon</span>
     </div>
 
   </div>

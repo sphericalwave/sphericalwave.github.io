@@ -220,47 +220,15 @@
 
   p { color: var(--sw-on-surface-variant); }
 
-  // newsletter mini-form
-  &__form {
-    display: flex;
-    margin-top: 1.5rem;
-    border: 1px solid var(--sw-outline);
-    background: var(--sw-surface-lowest);
-    border-radius: 4px;
-    overflow: hidden;
-
-    &:focus-within { border-color: rgba(180, 197, 255, 0.6); }
-
-    input {
-      flex: 1 1 auto;
-      background: transparent;
-      border: 0;
-      padding: 0 1rem;
-      color: var(--sw-on-surface);
-      font-family: var(--sw-font-mono);
-      font-size: 12px;
-      letter-spacing: 0.08em;
-
-      &::placeholder { color: rgba(195, 198, 214, 0.4); }
-      &:focus { outline: none; }
-    }
-
-    // beat the global `button { ... !important }` rule from _base.scss
-    button.sw-home__submit {
-      background-color: var(--sw-surface-container) !important;
-      color: var(--sw-on-surface) !important;
-      border: 0 !important;
-      padding: 0.9rem 1.4rem !important;
-      font-family: var(--sw-font-mono) !important;
-      font-size: 12px !important;
-      letter-spacing: 0.12em !important;
-      cursor: pointer;
-
-      &:hover {
-        background-color: var(--sw-primary-container) !important;
-        color: #fff !important;
-      }
-    }
+  // newsletter — parked; "coming soon" chip (form removed)
+  &__soon {
+    display: inline-block;
+    margin-top: 1.25rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px dashed rgba(180, 197, 255, 0.3);
+    border-radius: 999px;
+    color: var(--sw-on-surface-variant);
+    opacity: 0.7;
   }
 
   // links inside the home content
