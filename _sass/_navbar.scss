@@ -3,15 +3,23 @@
     background-color: $swBlue;
     padding: 0;
   }
-  
+
   .navbar-custom .navbar-nav {
-    align-items: flex-start; /* Aligns nav-items to the top */
-    height: 100px; /* Set a specific height for the navbar */
+    align-items: center;
+    @media (min-width: 992px) {
+      height: 100px;
+    }
   }
-  
+
+  .navbar-custom .navbar-collapse {
+    @media (max-width: 991.98px) {
+      padding-bottom: 1rem;
+    }
+  }
+
   .navbar-custom .nav-item {
     display: flex;
-    align-items: flex-start; /* Ensure nav-items align to the top */
+    align-items: center;
   }
   
   .navbar-custom .navbar-brand {
