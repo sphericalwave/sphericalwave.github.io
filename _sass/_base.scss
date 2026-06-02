@@ -15,6 +15,20 @@ html {
 body {
   color: lightgray;
   background-color: $body-bg;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(92vw, 900px);
+    aspect-ratio: 1;
+    background: url('/public/SphericalWaveC60.png') center / contain no-repeat;
+    opacity: 0.06;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 a {
