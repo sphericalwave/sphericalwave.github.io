@@ -16,8 +16,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
 
-          <li class="nav-item">
-            <a href="{{ site.baseurl }}/services/" class="nav-link">Services</a>
+          <li class="nav-item dropdown">
+            <a href="{{ site.baseurl }}/services/" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="{{ site.baseurl }}/websites/">Websites &amp; SEO</a></li>
+              <li><a class="dropdown-item" href="{{ site.baseurl }}/apps/">iOS Apps &amp; Surveys</a></li>
+              <li><a class="dropdown-item" href="{{ site.baseurl }}/accounting/">Accounting &amp; Invoicing</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="{{ site.baseurl }}/tamarack/">Tamarack — Project Software</a></li>
+            </ul>
           </li>
 
           <li class="nav-item">
