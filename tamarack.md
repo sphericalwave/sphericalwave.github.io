@@ -2,7 +2,7 @@
 layout: page
 title: Tamarack — Project Management for Small Teams
 permalink: /tamarack/
-description: "Tamarack is project management software built by Spherical Wave for small businesses — tasks, clients, and deadlines in one place, without the enterprise bloat."
+description: "Tamarack is project management software built by sphericalWave for small businesses — tasks, clients, and deadlines in one place, without the enterprise bloat."
 ---
 
 <div class="sw-home">
@@ -13,7 +13,7 @@ description: "Tamarack is project management software built by Spherical Wave fo
       <span class="sw-home__label">Tamarack</span>
     </span>
     <h1 class="sw-home__title">Project management built for small teams.</h1>
-    <p class="sw-home__lead">One place for tasks, clients, and deadlines. No enterprise bloat. No per-seat pricing that punishes growth. Built by Spherical Wave for the businesses we work with.</p>
+    <p class="sw-home__lead">One place for tasks, clients, and deadlines. No enterprise bloat. No per-seat pricing that punishes growth. Built by sphericalWave for the businesses we work with.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Request early access</a>
       <a href="/services/" class="sw-home__btn sw-home__btn--ghost">All services</a>
@@ -80,7 +80,7 @@ description: "Tamarack is project management software built by Spherical Wave fo
   <div class="sw-home__bento sw-enter-2">
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Built by</span>
-      <p class="sw-home__panel-title">Spherical Wave</p>
+      <p class="sw-home__panel-title">sphericalWave</p>
       <p>Tamarack is built and maintained by the same team that sets up your accounting, builds your website, and ships your iOS app — so it integrates with everything, not just itself.</p>
     </div>
     <div class="sw-home__glass sw-home__panel sw-home__panel--accent">

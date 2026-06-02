@@ -2,7 +2,7 @@
 layout: page
 title: Websites That Sell — Design & SEO
 permalink: /websites/
-description: "Spherical Wave builds conversion-focused websites and integrated SEO for small businesses — more leads from the traffic you already have."
+description: "sphericalWave builds conversion-focused websites and integrated SEO for small businesses — more leads from the traffic you already have."
 ---
 
 <div class="sw-home">

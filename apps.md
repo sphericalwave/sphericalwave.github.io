@@ -2,7 +2,7 @@
 layout: page
 title: Custom iOS Apps & Customer Surveys
 permalink: /apps/
-description: "Spherical Wave builds native iOS apps and embedded customer surveys for small businesses — concept to App Store."
+description: "sphericalWave builds native iOS apps and embedded customer surveys for small businesses — concept to App Store."
 ---
 
 <div class="sw-home">

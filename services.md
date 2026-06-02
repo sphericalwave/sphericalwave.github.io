@@ -2,7 +2,7 @@
 layout: page
 title: Services
 permalink: /services/
-description: "What Spherical Wave builds: customer-getting websites, accounting systems, project management, expense & tax reporting, and SEO."
+description: "What sphericalWave builds: customer-getting websites, accounting systems, project management, expense & tax reporting, and SEO."
 ---
 
 <div class="sw-home">

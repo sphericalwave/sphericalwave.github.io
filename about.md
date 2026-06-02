@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-description: "Spherical Wave is a digital consulting agency that builds customer-getting websites and the business systems behind them."
+description: "sphericalWave is a digital consulting agency that builds customer-getting websites and the business systems behind them."
 ---
 
 <div class="sw-home">
@@ -12,7 +12,7 @@ description: "Spherical Wave is a digital consulting agency that builds customer
       <span class="sw-home__dot"></span>
       <span class="sw-home__label">About</span>
     </span>
-    <h1 class="sw-home__title">Spherical Wave</h1>
+    <h1 class="sw-home__title">sphericalWave</h1>
     <p class="sw-home__lead">A digital consulting agency for small companies that want a website that brings in customers — and the systems to handle them once it does.</p>
   </section>
 

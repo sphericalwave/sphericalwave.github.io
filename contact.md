@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
-description: "Book a call with Spherical Wave or email us about your website and business systems."
+description: "Book a call with sphericalWave or email us about your website and business systems."
 ---
 
 <div class="sw-home">

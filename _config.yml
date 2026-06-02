@@ -6,8 +6,8 @@ permalink: /:categories/:title
 # https://github.com/arturomoncadatorres/arturomoncadatorres.github.io/blob/main/_config.yml
 
 # Setup
-title:               Spherical Wave
-description:         "Spherical Wave is a digital consulting agency. We build websites that bring in customers and the business systems to run on — accounting, project management, expense & tax reporting, and SEO."
+title:               sphericalWave
+description:         "sphericalWave is a digital consulting agency. We build websites that bring in customers and the business systems to run on — accounting, project management, expense & tax reporting, and SEO."
 url:                 https://sphericalwave.com
 logo:                /public/great-wave.png
 image:               /public/great-wave.png
@@ -47,7 +47,7 @@ sass:
 
 # About/contact
 author:
-  name:              Spherical Wave
+  name:              sphericalWave
 #  url:               https://twitter.com/mecid
   email:             hello@sphericalwave.com
 

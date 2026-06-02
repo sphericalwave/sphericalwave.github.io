@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Spherical Wave — Digital Consulting
-description: "Spherical Wave builds websites that bring in customers and the business systems to run on — accounting, project management, expense & tax reporting, and SEO."
+title: sphericalWave — Digital Consulting
+description: "sphericalWave builds websites that bring in customers and the business systems to run on — accounting, project management, expense & tax reporting, and SEO."
 ---
 
 <div class="sw-home">

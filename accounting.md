@@ -2,7 +2,7 @@
 layout: page
 title: Accounting & Invoicing — QuickBooks Integration
 permalink: /accounting/
-description: "Spherical Wave sets up accounting and invoicing systems integrated with QuickBooks API — clean books, automated billing, no more shoebox."
+description: "sphericalWave sets up accounting and invoicing systems integrated with QuickBooks API — clean books, automated billing, no more shoebox."
 ---
 
 <div class="sw-home">
