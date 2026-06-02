@@ -37,8 +37,7 @@ description: "Tamarack is project management software built by sphericalWave for
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Early Access</span>
       <p class="sw-home__panel-title">Join the waitlist</p>
-      <p>Tamarack is in active development. Book a call to get early access and shape the product.</p>
-      <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Request access</a>
+      <p>Tamarack is in active development. Early access customers shape the product.</p>
     </div>
   </div>
 

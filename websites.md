@@ -38,7 +38,7 @@ description: "sphericalWave builds conversion-focused websites and integrated SE
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Start here</span>
       <p class="sw-home__panel-title">See what's possible</p>
-      <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
     </div>
   </div>
 

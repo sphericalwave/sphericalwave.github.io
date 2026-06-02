@@ -38,7 +38,7 @@ description: "sphericalWave sets up accounting and invoicing systems integrated 
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Start here</span>
       <p class="sw-home__panel-title">Clean up the books</p>
-      <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
     </div>
   </div>
 
@@ -72,6 +72,21 @@ description: "sphericalWave sets up accounting and invoicing systems integrated 
       <span class="sw-home__label">Tax</span>
       <h3>Tax time becomes a non-event</h3>
       <p>Expense categorization and reports your accountant can file from. No shoebox, no scrambling.</p>
+    </div>
+  </div>
+
+  <hr class="sw-home__wave-line">
+
+  <div class="sw-home__bento sw-enter-2">
+    <div class="sw-home__glass sw-home__panel sw-home__panel--accent">
+      <span class="sw-home__label">See it in action</span>
+      <p class="sw-home__panel-title">Tamarack — invoicing, accounting, time &amp; expense tracking for small businesses.</p>
+      <p>Tamarack is our own project management software with invoicing, time tracking, and expense reporting built in — connected to QuickBooks. A working example of everything on this page.</p>
+      <a href="/tamarack/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;display:inline-block;">See Tamarack →</a>
+    </div>
+    <div class="sw-home__glass sw-home__panel sw-home__panel--center">
+      <span class="sw-home__label">Built by sphericalWave</span>
+      <p class="sw-home__panel-title">Used by the businesses we work with.</p>
     </div>
   </div>
 
