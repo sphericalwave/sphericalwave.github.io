@@ -7,7 +7,7 @@ permalink: /:categories/:title
 
 # Setup
 title:               sphericalWave
-description:         "sphericalWave is a digital consulting agency. We build websites that bring in customers and the business systems to run on — accounting, project management, expense & tax reporting, and SEO."
+description:         "sphericalWave builds digital systems for small businesses, and FitWrench — tools for jiu-jitsu hobbyists used on the mat by a black belt."
 url:                 https://sphericalwave.com
 logo:                /public/great-wave.png
 image:               /public/great-wave.png
