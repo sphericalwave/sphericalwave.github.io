@@ -42,9 +42,10 @@ description: "sphericalWave builds native iOS apps for small businesses and inde
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/mindheist/assets/logo.png" alt="MindHeist logo" width="40" height="40" style="border-radius: 8px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">mindHeist</span>
       <h3>Mental performance</h3>
-      <p>Not on the App Store yet. <a href="/mindheist/">Product page</a></p>
+      <p>Spaced repetition for the subconscious. Not on the App Store yet. <a href="/mindheist/">Product page</a></p>
     </div>
 
     <div class="sw-home__glass sw-home__card">
