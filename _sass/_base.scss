@@ -6,6 +6,8 @@ html {
   font-family: $root-font-family;
   font-size: $root-font-size;
   line-height: $root-line-height;
+  background-color: $body-bg;
+  color-scheme: dark;
 
   @media (min-width: $large-breakpoint) {
     font-size: $large-font-size;
@@ -13,6 +15,7 @@ html {
 }
 
 body {
+  margin: 0;
   color: lightgray;
   background-color: $body-bg;
 

@@ -25,6 +25,8 @@ description: "House of Wolverines — training footage playlist."
 
   <div id="wolverines-grid" class="row g-4 mb-4"></div>
 
+  <p id="wolverines-error" class="sw-home__label text-center" style="display:none;"></p>
+
   <div class="text-center mb-4">
     <button id="wolverines-load-more" class="btn btn-outline-light" style="display:none;">Load more</button>
   </div>
@@ -41,6 +43,17 @@ description: "House of Wolverines — training footage playlist."
   var statusEl = document.getElementById("wolverines-status");
   var gridEl = document.getElementById("wolverines-grid");
   var loadMoreBtn = document.getElementById("wolverines-load-more");
+  var errorEl = document.getElementById("wolverines-error");
+
+  function showError(err) {
+    var plain = ((err && err.message) || "").replace(/<[^>]*>/g, "");
+    var msg = /quota/i.test(plain)
+      ? "This page has hit YouTube's daily API limit for now — please check back later."
+      : "Couldn't load videos right now. Please try refreshing in a bit.";
+    if (statusEl) { statusEl.remove(); statusEl = null; }
+    errorEl.textContent = msg;
+    errorEl.style.display = "";
+  }
 
   var nextPageToken = null;
 
@@ -200,7 +213,7 @@ description: "House of Wolverines — training footage playlist."
         loadMoreBtn.style.display = nextPageToken ? "" : "none";
       })
       .catch(function (err) {
-        if (statusEl) statusEl.textContent = "Couldn't load the playlist: " + err.message;
+        showError(err);
         loadMoreBtn.style.display = "none";
       });
   }
