@@ -25,6 +25,10 @@ description: "House of Wolverines — training footage playlist."
 
   <div id="wolverines-grid" class="row g-4 mb-4"></div>
 
+  <div class="text-center mb-4">
+    <button id="wolverines-load-more" class="btn btn-outline-light" style="display:none;">Load more</button>
+  </div>
+
 </div>
 
 <script>
@@ -36,8 +40,15 @@ description: "House of Wolverines — training footage playlist."
 
   var statusEl = document.getElementById("wolverines-status");
   var gridEl = document.getElementById("wolverines-grid");
+  var loadMoreBtn = document.getElementById("wolverines-load-more");
 
-  function fetchPage(pageToken, items) {
+  var nextPageToken = null;
+
+  // Fetches ONE page (up to 50 items) instead of the whole playlist, so a
+  // typical visit costs ~2 API calls (one playlistItems.list + one
+  // videos.list) instead of ~80 for the full 1985-video playlist. More
+  // pages are only fetched if the visitor clicks "Load more".
+  function fetchPage(pageToken) {
     var url = API_BASE + "?part=snippet&maxResults=50&playlistId=" + encodeURIComponent(PLAYLIST_ID) +
       "&key=" + encodeURIComponent(API_KEY) +
       (pageToken ? "&pageToken=" + encodeURIComponent(pageToken) : "");
@@ -53,26 +64,22 @@ description: "House of Wolverines — training footage playlist."
         return res.json();
       })
       .then(function (data) {
-        var newItems = items.concat(
-          (data.items || [])
-            .filter(function (item) {
-              return item.snippet && item.snippet.resourceId && item.snippet.resourceId.videoId;
-            })
-            .map(function (item) {
-              var thumbs = item.snippet.thumbnails || {};
-              var thumb = thumbs.medium || thumbs.default || thumbs.high || {};
-              return {
-                videoId: item.snippet.resourceId.videoId,
-                title: item.snippet.title,
-                position: item.snippet.position,
-                thumbnail: thumb.url
-              };
-            })
-        );
-        if (data.nextPageToken) {
-          return fetchPage(data.nextPageToken, newItems);
-        }
-        return newItems;
+        var items = (data.items || [])
+          .filter(function (item) {
+            return item.snippet && item.snippet.resourceId && item.snippet.resourceId.videoId;
+          })
+          .map(function (item) {
+            var thumbs = item.snippet.thumbnails || {};
+            var thumb = thumbs.medium || thumbs.default || thumbs.high || {};
+            return {
+              videoId: item.snippet.resourceId.videoId,
+              title: item.snippet.title,
+              position: item.snippet.position,
+              thumbnail: thumb.url
+            };
+          });
+        nextPageToken = data.nextPageToken || null;
+        return items;
       });
   }
 
@@ -108,43 +115,38 @@ description: "House of Wolverines — training footage playlist."
     return n.toLocaleString() + (n === 1 ? " view" : " views");
   }
 
-  // Fetches video details (duration/date) in chunks of 50, patching each
-  // card's placeholders in place as each chunk resolves — doesn't block
-  // the initial thumbnail render.
+  // One page is at most 50 videos, so a single videos.list call (no
+  // chunking) covers it. Patches each card's placeholders in place once
+  // it resolves — doesn't block the initial thumbnail render.
   function loadDetails(videos, elsById) {
-    var chunks = [];
-    for (var i = 0; i < videos.length; i += 50) {
-      chunks.push(videos.slice(i, i + 50).map(function (v) { return v.videoId; }));
-    }
-
-    chunks.forEach(function (ids) {
-      var url = VIDEOS_API + "?part=contentDetails,recordingDetails,snippet,statistics&id=" +
-        ids.map(encodeURIComponent).join(",") + "&key=" + encodeURIComponent(API_KEY);
-      fetch(url).then(function (res) { return res.json(); }).then(function (data) {
-        (data.items || []).forEach(function (item) {
-          var els = elsById[item.id];
-          if (!els) return;
-          var duration = formatDuration(item.contentDetails && item.contentDetails.duration);
-          var date = formatDate((item.recordingDetails && item.recordingDetails.recordingDate) ||
-            (item.snippet && item.snippet.publishedAt));
-          var views = formatViews(item.statistics && item.statistics.viewCount);
-          if (duration) els.durationEl.textContent = duration;
-          if (date) els.dateEl.textContent = date;
-          if (views) els.viewsEl.textContent = views;
-        });
-      }).catch(function () { /* duration/date/views are non-essential; ignore */ });
-    });
+    if (videos.length === 0) return;
+    var ids = videos.map(function (v) { return v.videoId; });
+    var url = VIDEOS_API + "?part=contentDetails,recordingDetails,snippet,statistics&id=" +
+      ids.map(encodeURIComponent).join(",") + "&key=" + encodeURIComponent(API_KEY);
+    fetch(url).then(function (res) { return res.json(); }).then(function (data) {
+      (data.items || []).forEach(function (item) {
+        var els = elsById[item.id];
+        if (!els) return;
+        var duration = formatDuration(item.contentDetails && item.contentDetails.duration);
+        var date = formatDate((item.recordingDetails && item.recordingDetails.recordingDate) ||
+          (item.snippet && item.snippet.publishedAt));
+        var views = formatViews(item.statistics && item.statistics.viewCount);
+        if (duration) els.durationEl.textContent = duration;
+        if (date) els.dateEl.textContent = date;
+        if (views) els.viewsEl.textContent = views;
+      });
+    }).catch(function () { /* duration/date/views are non-essential; ignore */ });
   }
 
   function render(videos) {
-    videos.sort(function (a, b) { return a.position - b.position; });
-
-    if (videos.length === 0) {
-      statusEl.textContent = "No videos found in this playlist.";
-      return;
+    if (statusEl) {
+      if (videos.length === 0) {
+        statusEl.textContent = "No videos found in this playlist.";
+        return;
+      }
+      statusEl.remove();
+      statusEl = null;
     }
-
-    statusEl.remove();
 
     var elsById = {};
 
@@ -187,11 +189,24 @@ description: "House of Wolverines — training footage playlist."
     loadDetails(videos, elsById);
   }
 
-  fetchPage(null, [])
-    .then(render)
-    .catch(function (err) {
-      statusEl.textContent = "Couldn't load the playlist: " + err.message;
-    });
+  function loadNextPage() {
+    loadMoreBtn.disabled = true;
+    loadMoreBtn.textContent = "Loading…";
+    fetchPage(nextPageToken)
+      .then(function (videos) {
+        render(videos);
+        loadMoreBtn.textContent = "Load more";
+        loadMoreBtn.disabled = false;
+        loadMoreBtn.style.display = nextPageToken ? "" : "none";
+      })
+      .catch(function (err) {
+        if (statusEl) statusEl.textContent = "Couldn't load the playlist: " + err.message;
+        loadMoreBtn.style.display = "none";
+      });
+  }
+
+  loadMoreBtn.addEventListener("click", loadNextPage);
+  loadNextPage();
 })();
 </script>
 
@@ -202,14 +217,18 @@ description: "House of Wolverines — training footage playlist."
   }
   .wolverine-loading {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
+    gap: 1rem;
+    min-height: 40vh;
     margin: 1.5rem 0;
+    text-align: center;
   }
   .wolverine-spinner {
-    width: 18px;
-    height: 18px;
-    border: 2px solid rgba(180, 197, 255, 0.25);
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(180, 197, 255, 0.25);
     border-top-color: var(--sw-primary, #b4c5ff);
     border-radius: 50%;
     animation: wolverine-spin 0.8s linear infinite;
@@ -264,5 +283,13 @@ description: "House of Wolverines — training footage playlist."
     padding: 1px 5px;
     border-radius: 3px;
     pointer-events: none;
+  }
+  /* scoped to this page's own footer only — every Jekyll page is a
+     separate static document, so this never touches other pages' footers */
+  footer h5 {
+    font-size: 1.1rem !important;
+    font-family: 'Archivo', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif !important;
+    font-weight: 500 !important;
+    text-transform: lowercase;
   }
 </style>
