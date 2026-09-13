@@ -3,6 +3,7 @@ layout: page
 title: Tamarack — Project Management for Small Teams
 permalink: /tamarack/
 description: "Tamarack is project management software built by sphericalWave for small businesses — tasks, clients, and deadlines in one place, without the enterprise bloat."
+sitemap: false
 ---
 
 <div class="sw-home">

@@ -30,6 +30,12 @@ description: "sphericalWave builds native iOS apps for small businesses and inde
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card">
+      <span class="sw-home__label">visualize</span>
+      <h3>Be Still and Know</h3>
+      <p>Personal visualization practice. Not on the App Store yet. <a href="/visualize/">Product page</a></p>
+    </div>
+
+    <div class="sw-home__glass sw-home__card">
       <span class="sw-home__label">fitwrench</span>
       <h3>Fitness programming</h3>
       <p>Coming soon.</p>
@@ -38,7 +44,7 @@ description: "sphericalWave builds native iOS apps for small businesses and inde
     <div class="sw-home__glass sw-home__card">
       <span class="sw-home__label">mindHeist</span>
       <h3>Mental performance</h3>
-      <p>Coming soon.</p>
+      <p>Not on the App Store yet. <a href="/mindheist/">Product page</a></p>
     </div>
 
     <div class="sw-home__glass sw-home__card">
