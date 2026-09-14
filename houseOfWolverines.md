@@ -165,12 +165,14 @@ description: "House of Wolverines — training footage playlist."
 
       col.innerHTML =
         '<div class="h-100">' +
-          '<a class="video-container wolverine-thumb" href="https://youtu.be/' + encodeURIComponent(video.videoId) +
+          '<a class="wolverine-thumb" href="https://youtu.be/' + encodeURIComponent(video.videoId) +
             '" target="_blank" rel="noopener">' +
-            '<span class="wolverine-skeleton"></span>' +
-            '<img alt="' + escapeHtml(video.title) + '" loading="lazy" ' +
-              'style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:0.6rem;opacity:0;transition:opacity .3s ease;">' +
-            '<span class="wolverine-duration"></span>' +
+            '<div class="video-container wolverine-thumb-frame">' +
+              '<span class="wolverine-skeleton"></span>' +
+              '<img alt="' + escapeHtml(video.title) + '" loading="lazy" ' +
+                'style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:0.6rem;opacity:0;transition:opacity .3s ease;">' +
+              '<span class="wolverine-duration"></span>' +
+            '</div>' +
           '</a>' +
           '<h3 class="wolverine-title mt-3">' + escapeHtml(video.title) + '</h3>' +
           '<div class="wolverine-meta">' +
@@ -258,7 +260,26 @@ description: "House of Wolverines — training footage playlist."
     align-items: center;
     gap: 0.75rem;
   }
-  .wolverine-thumb { cursor: pointer; display: block; }
+  /* Glow lives on the <a>, not .video-container: that class is
+     overflow:hidden + height:0 (padding-bottom 16:9 hack), which
+     clips box-shadow — especially in Safari. */
+  .wolverine-thumb {
+    display: block;
+    cursor: pointer;
+    border-radius: 0.6rem;
+    transition: box-shadow .25s ease;
+  }
+  .wolverine-thumb-frame {
+    display: block;
+    margin: 0;
+    border-radius: 0.6rem;
+  }
+  .wolverine-thumb:hover,
+  .wolverine-thumb:focus-visible {
+    box-shadow: 0 0 10px 5px #1C57C9;
+    position: relative;
+    z-index: 1;
+  }
   .wolverine-skeleton {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -273,13 +294,6 @@ description: "House of Wolverines — training footage playlist."
   @keyframes wolverine-shimmer {
     0% { background-position: 100% 50%; }
     100% { background-position: 0 50%; }
-  }
-  .wolverine-thumb {
-    transition: box-shadow .25s ease;
-  }
-  .wolverine-thumb:hover,
-  .wolverine-thumb:focus-visible {
-    box-shadow: 0 0 0 2px var(--sw-primary, #b4c5ff), 0 0 24px rgba(30, 86, 208, 0.6);
   }
   .wolverine-duration {
     position: absolute;
