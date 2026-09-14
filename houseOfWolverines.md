@@ -13,7 +13,6 @@ description: "House of Wolverines — training footage playlist."
       <span class="sw-home__label">Playlist</span>
     </span>
     <h1 class="sw-home__title">House of Wolverines</h1>
-    <p class="sw-home__label mb-0">What happens in training, stays in training. Test that principle and lose access.</p>
   </section>
 
   <hr class="sw-home__wave-line">
