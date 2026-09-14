@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breathe — O2 trainer, Wim Hof, square breathing, CO₂ tables</title>
+  <meta name="description" content="Breathe is an iPhone log for O2Trainer-style breather work, Wim Hof (Breath of Fire), square breathing, and CO₂ tables. Each practice has a pacer and its own history chart.">
+  <meta property="og:title" content="Breathe">
+  <meta property="og:description" content="Four practices. One log. O2 breather work, Wim Hof, square breathing, and CO₂ tables.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sphericalwave.github.io/breathe/">
+  <meta property="og:image" content="https://sphericalwave.github.io/breathe/assets/icon.png">
+  <meta name="theme-color" content="#193BE8">
+  <link rel="icon" href="./assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=Martian+Mono:wght@400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css?v=5">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-nav">
+    <div class="wrap">
+      <a class="brand" href="./">
+        <img src="./assets/logo.png" width="32" height="32" alt="">
+        <span>Breathe</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#practices">Practices</a></li>
+        <li><a href="./privacy.html">Privacy</a></li>
+        <li><a href="./support.html">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="kicker">iOS</p>
+          <h1>Four practices.<br>One log.</h1>
+          <p class="lede">Breathe tracks O2Trainer-style breather work, Wim Hof (Breath of Fire), square breathing, and CO₂ tables. Each one has a pacer. Each one keeps its own history.</p>
+        </div>
+        <article class="pacer" data-pacer aria-label="Practice pacer">
+          <div class="pacer-tabs" role="tablist" aria-label="Practice">
+            <button type="button" role="tab" data-protocol="box" aria-selected="true">Box</button>
+            <button type="button" role="tab" data-protocol="fire" aria-selected="false">Fire</button>
+            <button type="button" role="tab" data-protocol="co2" aria-selected="false">CO₂</button>
+            <button type="button" role="tab" data-protocol="breather" aria-selected="false">O2</button>
+          </div>
+          <div class="pacer-stage">
+            <svg class="pacer-svg" data-shape viewBox="0 0 200 200" aria-hidden="true">
+              <polygon class="pacer-ring" data-ring points="37.8,37.8 162.2,37.8 162.2,162.2 37.8,162.2"></polygon>
+              <polygon class="pacer-fill" data-fill points="60.1,60.1 139.9,60.1 139.9,139.9 60.1,139.9"></polygon>
+            </svg>
+            <svg class="pacer-circle" data-circle viewBox="0 0 200 200" hidden aria-hidden="true">
+              <circle class="pacer-ring" cx="100" cy="100" r="88"></circle>
+              <circle class="pacer-circle-fill" data-circle-fill cx="100" cy="100" r="88"></circle>
+            </svg>
+            <div class="pacer-digits" data-digits hidden>
+              <p class="big" data-big>1:30</p>
+              <p class="sub" data-sub>Round 3 of 8</p>
+            </div>
+            <p class="pacer-count" data-count>1</p>
+          </div>
+          <p class="pacer-label" data-label>Inhale</p>
+          <p class="pacer-meta" data-meta>4s · square</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="practices" id="practices">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">The four</p>
+          <h2>A tab per practice. A chart for what that practice actually measures.</h2>
+          <p>Open the tab, tap +, run it, save. History is per protocol — mixing a 35-second CO₂ hold into a Wim Hof max would make both numbers useless, so they stay apart.</p>
+        </div>
+        <div class="practice-grid">
+          <article class="practice">
+            <h3>Breather</h3>
+            <p class="aka">O2Trainer work</p>
+            <p>You breathe against a resistance cap and tap each rep. Thirty reps is the calibration: over 4.5 minutes, drop the cap; under 3 minutes, go higher. The pace chart shades that band.</p>
+            <p>Basic, Exercise 1, Exercise 2, and Exhale. Cap 1–14 mm. History charts the cap you used.</p>
+          </article>
+          <article class="practice">
+            <h3>Breath of Fire</h3>
+            <p class="aka">Wim Hof</p>
+            <p>A round is paced breaths, then an exhale hold you end yourself, then a timed inhale hold. Set breaths per round, cycle length, inhale hold, and how many rounds.</p>
+            <p>History charts your best hold.</p>
+          </article>
+          <article class="practice">
+            <h3>Box Breathing</h3>
+            <p class="aka">Square breathing</p>
+            <p>Four equal sides — inhale, hold, exhale, hold. The interval is 3–15 seconds and applies live, mid-cycle. At 4 seconds the pacer is a square; at 5 it is a pentagon.</p>
+            <p>History charts duration.</p>
+          </article>
+          <article class="practice">
+            <h3>CO₂ Table</h3>
+            <p class="aka">CO₂ tolerance</p>
+            <p>Rest is untimed tidal breathing — no pacer. Then a hold at about 40–50% of a comfortable max. After each hold you rate discomfort 1–10.</p>
+            <p>Change one thing at a time: shift the rest ladder, or add five seconds to the hold. Not both. History charts rounds completed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-block" id="table">
+      <div class="wrap">
+        <p class="kicker">Default table</p>
+        <h2>Rest walks down. The hold stays put.</h2>
+        <p class="table-lede">Eight rounds. Rest from 2:00 to 0:15 in 15-second steps. Hold 35 seconds. You can edit every row.</p>
+        <table class="ladder">
+          <thead>
+            <tr>
+              <th class="round">Round</th>
+              <th>Rest</th>
+              <th>Hold</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="round">1</td><td>2:00</td><td>35s</td></tr>
+            <tr><td class="round">2</td><td>1:45</td><td>35s</td></tr>
+            <tr><td class="round">3</td><td>1:30</td><td>35s</td></tr>
+            <tr><td class="round">4</td><td>1:15</td><td>35s</td></tr>
+            <tr><td class="round">5</td><td>1:00</td><td>35s</td></tr>
+            <tr><td class="round">6</td><td>0:45</td><td>35s</td></tr>
+            <tr><td class="round">7</td><td>0:30</td><td>35s</td></tr>
+            <tr><td class="round">8</td><td>0:15</td><td>35s</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="use" id="use">
+      <div class="wrap">
+        <p class="kicker">How you use it</p>
+        <h2>Tab, start, stop, chart.</h2>
+        <div class="use-grid">
+          <article class="step">
+            <span class="n">01</span>
+            <h3>Open the tab</h3>
+            <p>Breather, Breath of Fire, Box, or CO₂ Table. The list is that practice’s history.</p>
+          </article>
+          <article class="step">
+            <span class="n">02</span>
+            <h3>Tap +</h3>
+            <p>The workout opens in a sheet. Breather counts taps. The others run a pacer.</p>
+          </article>
+          <article class="step">
+            <span class="n">03</span>
+            <h3>Stop when you are done</h3>
+            <p>Notes are optional. A running workout that leaves the sheet sits in a mini player.</p>
+          </article>
+          <article class="step">
+            <span class="n">04</span>
+            <h3>Read the chart that belongs</h3>
+            <p>Cap, best hold, duration, or rounds — whichever number that practice actually produces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="traits">
+      <div class="wrap">
+        <p class="kicker">On the phone</p>
+        <h2>Cues under the music. Data stays put.</h2>
+        <div class="trait-grid">
+          <article class="trait">
+            <h3>Mixes with other audio</h3>
+            <p>Breath tones, phase voice, and a 15-second hold tick sit on top of whatever is already playing. A boost slider keeps the cue audible without ducking the bed. Box and the CO₂ table can sound at once through one engine.</p>
+          </article>
+          <article class="trait">
+            <h3>Box under a CO₂ hold</h3>
+            <p>The CO₂ screen embeds Box Breathing. During the table’s exhale hold, Box pauses itself and comes back on the next inhale, so the two pacers do not fight.</p>
+          </article>
+          <article class="trait">
+            <h3>Optional heart rate</h3>
+            <p>A BLE chest strap (Polar H10 and anything else on the standard Heart Rate Service) shows live bpm on the practice screens. An Apple Watch companion can stream HealthKit heart rate. Samples stay in the session on the phone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="platforms">
+      <div class="wrap">
+        <div class="panel">
+          <h2>iPhone, iOS 17.6+.</h2>
+          <p>Portrait. Optional Apple Watch for heart rate. Sessions, notes, and HR samples live in Core Data on the device — no account, no iCloud, no Breathe server. Not on the App Store yet.</p>
+          <div class="pills">
+            <span>iOS 17.6+</span>
+            <span>Portrait</span>
+            <span>On-device log</span>
+            <span>Mixes with audio</span>
+            <span>Optional BLE HR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <span>Breathe</span>
+      <nav>
+        <a href="#practices">Practices</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./support.html">Support</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="./js/main.js?v=2"></script>
+</body>
+</html>

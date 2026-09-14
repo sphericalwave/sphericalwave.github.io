@@ -30,9 +30,10 @@ description: "sphericalWave builds native iOS apps for small businesses and inde
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/visualize/assets/logo.png" alt="Be Still and Know logo" width="40" height="40" style="border-radius: 8px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">visualize</span>
       <h3>Be Still and Know</h3>
-      <p>Personal visualization practice. Not on the App Store yet. <a href="/visualize/">Product page</a></p>
+      <p>Visualization scripts, your voice, a spoken countdown vigil. Not on the App Store yet. <a href="/visualize/">Product page</a></p>
     </div>
 
     <div class="sw-home__glass sw-home__card">
@@ -48,6 +49,22 @@ description: "sphericalWave builds native iOS apps for small businesses and inde
       <p>Spaced repetition for the subconscious. Not on the App Store yet. <a href="/mindheist/">Product page</a></p>
     </div>
 
+    <div class="sw-home__glass sw-home__card">
+      <img src="/breathe/assets/logo.png" alt="Breathe logo" width="40" height="40" style="border-radius: 8px; margin-bottom: 0.5rem;">
+      <span class="sw-home__label">breathe</span>
+      <h3>Breathwork</h3>
+      <p>O2 breather work, Wim Hof, square breathing, and CO&#8322; tables — one log. Not on the App Store yet. <a href="/breathe/">Product page</a></p>
+    </div>
+
+    <div class="sw-home__glass sw-home__card">
+      <span class="sw-home__label">nutrition</span>
+      <h3>Nutrition tracking</h3>
+      <p>Coming soon.</p>
+    </div>
+
+    {% comment %}
+    Hidden, not deleted — reversible by uncommenting. Removed from the
+    apps grid per request.
     <div class="sw-home__glass sw-home__card">
       <span class="sw-home__label">wealth</span>
       <h3>Personal finance</h3>
@@ -71,6 +88,7 @@ description: "sphericalWave builds native iOS apps for small businesses and inde
       <h3>Progressive yoga</h3>
       <p>Coming soon.</p>
     </div>
+    {% endcomment %}
 
   </div>
 
