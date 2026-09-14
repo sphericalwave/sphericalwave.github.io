@@ -8,11 +8,8 @@ description: "House of Wolverines — training footage playlist."
 <div class="sw-home">
 
   <section class="sw-home__hero wolverine-hero sw-enter">
-    <span class="sw-home__chip">
-      <span class="sw-home__dot"></span>
-      <span class="sw-home__label">Playlist</span>
-    </span>
     <h1 class="sw-home__title">House of Wolverines</h1>
+    <p class="sw-home__label mb-0">What happens in training, stays in training.</p>
   </section>
 
   <hr class="sw-home__wave-line">
