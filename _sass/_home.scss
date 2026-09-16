@@ -274,6 +274,40 @@
     p { margin: 0; }
   }
 
+  &__pick {
+    display: flex;
+    flex-direction: column;
+
+    .sw-home__btn { margin-top: auto; align-self: flex-start; }
+  }
+
+  &__pick-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 1.15rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    background: #ecece8;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__disclose {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--sw-on-surface-variant);
+    max-width: 36rem;
+    margin: 0 auto;
+    opacity: 0.85;
+  }
+
   // closing call-to-action band
   &__cta-band {
     text-align: center;

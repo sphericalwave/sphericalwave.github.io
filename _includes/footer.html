@@ -1,64 +1,117 @@
-<!-- <hr class="blue1"> -->
+<footer class="site-footer mb-2">
 
-<footer class="mb-3">
-
-  <div class="row g-2">
-
-    <div class="col-12 text-center">
-
-      <nav class="footer-social" aria-label="Social">
-        <a
-          href="https://www.youtube.com/@sphericalwave"
-          class="social-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="YouTube"
-          title="YouTube"
-        >
-          <i class="fab fa-youtube" aria-hidden="true"></i>
-        </a>
-        <a
-          href="https://x.com/sphericalwave"
-          class="social-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="X"
-          title="X"
-        >
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.739L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
-          </svg>
-        </a>
-        <a
-          href="https://www.instagram.com/sphericalwave9"
-          class="social-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          title="Instagram"
-        >
-          <i class="fab fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a
-          href="https://github.com/sphericalwave"
-          class="social-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
-          title="GitHub"
-        >
-          <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-      </nav>
-
-      <h5 style="color: #1C57C9; font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem;">
-        sphericalWave
-        <i class="far fa-copyright"></i>
-        {{ site.time | date: '%Y' }}
-      </h5>
-
+  <div class="row">
+    <div class="col-md-6 col-lg-5">
+      <form class="site-footer__subscribe" id="footer-subscribe" action="https://newsletter.sphericalwave.com/create" method="post" target="_blank" novalidate>
+        <p class="site-footer__title">Subscribe to our newsletter</p>
+        <p class="site-footer__lede">Occasional notes — sites, systems, and the gear I actually use.</p>
+        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+          <label for="footer-email" class="visually-hidden">Email address</label>
+          <input
+            id="footer-email"
+            name="email"
+            type="email"
+            class="form-control"
+            placeholder="Email address"
+            autocomplete="email"
+            required
+          >
+          <input type="hidden" name="sent_from_orchid" value="true">
+          <input type="hidden" name="double_opt" value="false">
+          <button class="btn btn-primary site-footer__btn" type="submit">Subscribe</button>
+        </div>
+        <p class="site-footer__status" id="footer-subscribe-status" hidden></p>
+      </form>
     </div>
+  </div>
 
+  <div class="site-footer__bar d-flex flex-column flex-sm-row justify-content-between align-items-center">
+    <p class="site-footer__copy mb-1 mb-sm-0">© {{ site.time | date: '%Y' }} sphericalwave</p>
+    <nav class="footer-social" aria-label="Social">
+      <a
+        href="https://www.youtube.com/@sphericalwave"
+        class="social-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube"
+        title="YouTube"
+      >
+        <i class="fab fa-youtube" aria-hidden="true"></i>
+      </a>
+      <a
+        href="https://x.com/sphericalwave"
+        class="social-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="X"
+        title="X"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.739L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+        </svg>
+      </a>
+      <a
+        href="https://www.instagram.com/sphericalwave9"
+        class="social-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+        title="Instagram"
+      >
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a
+        href="https://github.com/sphericalwave"
+        class="social-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        title="GitHub"
+      >
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+    </nav>
   </div>
 
 </footer>
+
+<script>
+(function () {
+  var form = document.getElementById("footer-subscribe");
+  if (!form) return;
+  var status = document.getElementById("footer-subscribe-status");
+  var email = document.getElementById("footer-email");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (!email.checkValidity()) {
+      email.reportValidity();
+      return;
+    }
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    fetch("https://newsletter.sphericalwave.com/create", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        email: email.value.trim(),
+        sent_from_orchid: "true",
+        double_opt: "false"
+      }),
+      mode: "cors",
+      credentials: "omit"
+    }).then(function (res) {
+      if (res.ok) {
+        status.hidden = false;
+        status.textContent = "You're on the list.";
+        form.querySelector(".d-flex").hidden = true;
+      } else {
+        window.open("https://newsletter.sphericalwave.com", "_blank", "noopener");
+      }
+    }).catch(function () {
+      window.open("https://newsletter.sphericalwave.com", "_blank", "noopener");
+    }).finally(function () {
+      btn.disabled = false;
+    });
+  });
+})();
+</script>

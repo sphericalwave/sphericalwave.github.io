@@ -1,5 +1,4 @@
 .social-link {
-  // margin-right: 0.3rem;
   color: $gray-3;
 
   &:hover,
@@ -13,21 +12,81 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
+  gap: 0.25rem;
 
   .social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2.75rem;
-    height: 2.75rem;
-    font-size: 1.35rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
 
     svg {
       width: 1.05em;
       height: 1.05em;
       display: block;
     }
+  }
+}
+
+.site-footer {
+  &__title {
+    margin: 0 0 0.35rem;
+    font-family: $heading-font-family;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #e2e2e8;
+  }
+
+  &__lede {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    color: $gray-3;
+  }
+
+  &__copy {
+    margin: 0;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: $gray-3;
+  }
+
+  &__bar {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin-top: 0.85rem;
+    padding-top: 0.65rem;
+  }
+
+  &__status {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    color: $swBlue;
+  }
+
+  .form-control {
+    background: #1e2024;
+    border-color: #434654;
+    color: #e2e2e8;
+
+    &::placeholder {
+      color: $gray-3;
+    }
+
+    &:focus {
+      background: #1e2024;
+      border-color: $swBlue;
+      color: #e2e2e8;
+      box-shadow: 0 0 0 0.2rem rgba(28, 87, 201, 0.25);
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 }
