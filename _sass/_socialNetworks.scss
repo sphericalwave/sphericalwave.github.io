@@ -2,8 +2,32 @@
   // margin-right: 0.3rem;
   color: $gray-3;
 
-  &:hover {
-    color: $swBlue; /* Optional: Change icon color on hover */
-    //text-shadow: 0 0 3px $gray-1;
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: $swBlue;
+  }
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.35rem;
+
+    svg {
+      width: 1.05em;
+      height: 1.05em;
+      display: block;
+    }
   }
 }
