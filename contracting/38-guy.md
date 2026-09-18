@@ -25,7 +25,7 @@ description: "Cedar front porch and steps at 38 Guy — modeled in CAD and built
   <div class="sw-home__grid sw-enter-2" data-lightbox>
 
     <article class="sw-home__glass sw-home__card sw-home__pick">
-      <div class="sw-home__pick-media">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
         <img src="/public/contracting/38-guy-before.jpg" alt="38 Guy before the build, with the old concrete front steps" width="1600" height="1600" loading="lazy">
       </div>
       <span class="sw-home__label">Before</span>
@@ -34,12 +34,12 @@ description: "Cedar front porch and steps at 38 Guy — modeled in CAD and built
     </article>
 
     <article class="sw-home__glass sw-home__card sw-home__pick">
-      <div class="sw-home__pick-media">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
         <img src="/public/contracting/38-guy.jpg" alt="Finished front porch and steps at 38 Guy" loading="lazy">
       </div>
       <span class="sw-home__label">Finished</span>
       <h3>The result</h3>
-      <p>The completed job.</p>
+      <p>Cedar steps, landing, and railings, done.</p>
     </article>
 
     <article class="sw-home__glass sw-home__card sw-home__pick">

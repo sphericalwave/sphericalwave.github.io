@@ -2,7 +2,7 @@
 layout: page
 title: Contracting
 permalink: /contracting/
-description: "Stonework run like an engineering project — CAD-modeled and scheduled on a critical-path Gantt chart by a freelance electrical engineer. Completed patios and steps; book a call or request a quote."
+description: "Decks, steps, and patios run like an engineering project — CAD-modeled and scheduled on a critical-path Gantt chart by a freelance electrical engineer. Completed patios and steps; book a call or request a quote."
 ---
 
 <div class="sw-home">
@@ -12,8 +12,8 @@ description: "Stonework run like an engineering project — CAD-modeled and sche
       <span class="sw-home__dot"></span>
       <span class="sw-home__label">Contracting</span>
     </span>
-    <h1 class="sw-home__title">Stonework, run like an engineering project</h1>
-    <p class="sw-home__lead">I'm a freelance electrical engineer. Before a stone moves, your job is modeled in CAD and scheduled on a critical-path Gantt chart — so you see the finished result and the finish date up front.</p>
+    <h1 class="sw-home__title">Built like an engineering project</h1>
+    <p class="sw-home__lead">I'm a freelance electrical engineer. Before a shovel hits the ground, your job is modeled in CAD and scheduled on a critical-path Gantt chart — so you see the finished result and the finish date up front.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
       <a href="#quote" class="sw-home__btn sw-home__btn--ghost">Get a quote</a>
@@ -42,10 +42,10 @@ description: "Stonework run like an engineering project — CAD-modeled and sche
 
   <hr class="sw-home__wave-line">
 
-  <div class="sw-home__grid sw-enter-2">
+  <div class="sw-home__grid sw-home__grid--2 sw-enter-2">
 
     <article class="sw-home__glass sw-home__card sw-home__pick">
-      <a class="sw-home__pick-media" href="/contracting/38-guy/">
+      <a class="sw-home__pick-media sw-home__pick-media--photo" href="/contracting/38-guy/">
         <img src="/public/contracting/38-guy.jpg" alt="Front porch and steps at 38 Guy" loading="lazy">
       </a>
       <span class="sw-home__label">38 Guy</span>
@@ -55,7 +55,7 @@ description: "Stonework run like an engineering project — CAD-modeled and sche
     </article>
 
     <article class="sw-home__glass sw-home__card sw-home__pick">
-      <a class="sw-home__pick-media" href="/contracting/9-wheatstone/">
+      <a class="sw-home__pick-media sw-home__pick-media--photo" href="/contracting/9-wheatstone/">
         <img src="/public/contracting/9-wheatstone.jpg" alt="Stone patio at 9 Wheatstone" loading="lazy">
       </a>
       <span class="sw-home__label">9 Wheatstone</span>

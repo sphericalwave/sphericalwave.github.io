@@ -25,7 +25,7 @@
 
   &__label {
     font-family: var(--sw-font-mono);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -131,8 +131,10 @@
   }
 
   &__btn {
+    display: inline-block; // keeps the box whole when long labels wrap on phones
+    max-width: 100%;
     font-family: var(--sw-font-mono);
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -259,6 +261,9 @@
 
     @media (min-width: 600px) { grid-template-columns: repeat(2, 1fr); }
     @media (min-width: 960px) { grid-template-columns: repeat(3, 1fr); }
+
+    // Two-up at every width above phone (contracting job cards)
+    &--2 { @media (min-width: 960px) { grid-template-columns: repeat(2, 1fr); } }
   }
 
   &__card {
@@ -297,6 +302,14 @@
       height: 100%;
       object-fit: contain;
     }
+  }
+
+  // Photos fill the frame; the grey mat is for product shots and CAD renders
+  &__pick-media--photo {
+    padding: 0;
+    background: var(--sw-surface-container);
+
+    img { object-fit: cover; }
   }
 
   &__disclose {
@@ -419,4 +432,20 @@
   }
 
   strong { color: var(--sw-on-surface); }
+}
+
+// Dark form fields in CTA bands (contracting quote, merch waitlist)
+.sw-home__cta-band .form-control {
+  background: var(--sw-surface-container);
+  border-color: var(--sw-outline);
+  color: var(--sw-on-surface);
+
+  &::placeholder { color: var(--sw-on-surface-variant); opacity: 0.6; }
+
+  &:focus {
+    background: var(--sw-surface-container);
+    border-color: var(--sw-primary-container);
+    color: var(--sw-on-surface);
+    box-shadow: 0 0 0 0.2rem rgba(30, 86, 208, 0.25);
+  }
 }

@@ -25,7 +25,7 @@ description: "Stone patio at 9 Wheatstone — modeled in CAD and built by a free
   <div class="sw-home__grid sw-enter-2" data-lightbox>
 
     <article class="sw-home__glass sw-home__card sw-home__pick">
-      <div class="sw-home__pick-media">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
         <img src="/public/contracting/9-wheatstone-before.jpg" alt="Gravel pad under the deck at 9 Wheatstone before the patio, with pavers stacked on pallets" width="886" height="886" loading="lazy">
       </div>
       <span class="sw-home__label">Before</span>
@@ -34,7 +34,7 @@ description: "Stone patio at 9 Wheatstone — modeled in CAD and built by a free
     </article>
 
     <article class="sw-home__glass sw-home__card sw-home__pick">
-      <div class="sw-home__pick-media">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
         <img src="/public/contracting/9-wheatstone.jpg" alt="Finished stone patio at 9 Wheatstone" loading="lazy">
       </div>
       <span class="sw-home__label">Finished</span>
