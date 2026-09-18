@@ -1,0 +1,46 @@
+<dialog class="sw-lightbox" id="sw-lightbox" aria-label="Image viewer">
+  <figure class="sw-lightbox__figure">
+    <button class="sw-lightbox__close" type="button" aria-label="Close">&times;</button>
+    <img class="sw-lightbox__img" src="" alt="">
+    <figcaption class="sw-lightbox__caption">
+      <strong class="sw-lightbox__title"></strong>
+      <span class="sw-lightbox__text"></span>
+    </figcaption>
+  </figure>
+</dialog>
+
+<script>
+(function () {
+  var box = document.getElementById("sw-lightbox");
+  if (!box || !box.showModal) return;
+  var img = box.querySelector(".sw-lightbox__img");
+  var title = box.querySelector(".sw-lightbox__title");
+  var text = box.querySelector(".sw-lightbox__text");
+
+  function open(media) {
+    var src = media.querySelector("img");
+    var card = media.closest("article");
+    var h = card && card.querySelector("h3");
+    var p = card && card.querySelector("p");
+    img.src = src.currentSrc || src.src;
+    img.alt = src.alt;
+    title.textContent = h ? h.textContent : "";
+    text.textContent = p ? p.textContent : "";
+    box.showModal();
+  }
+
+  document.querySelectorAll("[data-lightbox] .sw-home__pick-media").forEach(function (media) {
+    media.setAttribute("role", "button");
+    media.setAttribute("tabindex", "0");
+    media.setAttribute("aria-label", "View larger: " + media.querySelector("img").alt);
+    media.addEventListener("click", function () { open(media); });
+    media.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(media); }
+    });
+  });
+
+  box.querySelector(".sw-lightbox__close").addEventListener("click", function () { box.close(); });
+  // Tap outside the picture (on the backdrop) closes it.
+  box.addEventListener("click", function (e) { if (e.target === box) box.close(); });
+})();
+</script>

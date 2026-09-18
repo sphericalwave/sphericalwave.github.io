@@ -333,3 +333,90 @@
     }
   }
 }
+
+// Image viewer for job pages (_includes/lightbox.html)
+[data-lightbox] .sw-home__pick-media { cursor: zoom-in; }
+
+.sw-lightbox {
+  width: fit-content;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+
+  &::backdrop { background: rgba(0, 0, 0, 0.8); }
+
+  // Shrinks to the picture's width so the caption wraps under it
+  &__figure {
+    position: relative;
+    width: min-content;
+    margin: 0;
+    border: 2px solid var(--sw-primary-container);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--sw-surface-lowest);
+  }
+
+  &__img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(92vw, 1100px);
+    max-height: 75vh;
+  }
+
+  &__caption {
+    padding: 0.85rem 1.1rem 1rem;
+    background: rgba(12, 14, 18, 0.72);
+    backdrop-filter: blur(8px);
+    color: var(--sw-on-surface);
+    font-family: var(--sw-font-body);
+    line-height: 1.5;
+  }
+
+  &__title {
+    display: block;
+    font-family: var(--sw-font-display);
+    font-size: 18px;
+    margin-bottom: 0.25rem;
+  }
+
+  &__text { color: var(--sw-on-surface-variant); }
+
+  &__close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(12, 14, 18, 0.72);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+  }
+}
+
+// Numbered process list on job pages
+.sw-steps {
+  margin: 0.5rem 0 0;
+  padding-left: 1.5rem;
+
+  li {
+    padding: 0.4rem 0;
+    color: var(--sw-on-surface-variant);
+    line-height: 1.5;
+  }
+
+  li::marker {
+    color: var(--sw-primary);
+    font-family: var(--sw-font-mono);
+  }
+
+  strong { color: var(--sw-on-surface); }
+}
