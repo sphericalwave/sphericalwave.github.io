@@ -54,7 +54,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    padding: clamp(2.5rem, 6vw, 5rem) 1.5rem;
+    padding: clamp(2rem, 4vw, 3.5rem) 1.5rem;
     text-align: center;
     background:
       radial-gradient(circle at 50% 40%, rgba(30, 86, 208, 0.18) 0%, transparent 65%),
@@ -119,6 +119,41 @@
     color: var(--sw-on-surface-variant);
     max-width: 38rem;
     margin: 0 auto 2rem;
+  }
+
+  // Inner pages: compact, left-aligned header in a short box.
+  // The homepage keeps the big centred hero via &__hero--statement.
+  &__hero:not(&__hero--statement) {
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(1.25rem, 3vw, 2rem);
+    text-align: left;
+
+    .sw-home__chip {
+      padding: 0;
+      margin-bottom: 0.75rem;
+      border: 0;
+      background: none;
+    }
+
+    .sw-home__title {
+      font-size: clamp(30px, 4.5vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      text-shadow: none;
+    }
+
+    .sw-home__subtitle { margin-bottom: 1rem; }
+
+    .sw-home__lead {
+      font-size: 17px;
+      max-width: 40rem;
+      margin: 0 0 1.25rem;
+    }
+
+    .sw-home__cta { justify-content: flex-start; }
+
+    .sw-home__disclose { margin: 0; }
+
+    .sw-home__ornament { display: none; }
   }
 
   // --- CTAs (use <a>; avoid global button/.btn !important overrides) --------
@@ -324,7 +359,7 @@
   // closing call-to-action band
   &__cta-band {
     text-align: center;
-    padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
+    padding: clamp(1.5rem, 3.5vw, 2.5rem) 1.5rem;
     border-radius: 12px;
     margin: 2.5rem 0;
     background:

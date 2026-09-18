@@ -6,7 +6,7 @@ description: "sphericalWave builds websites that bring in customers and the busi
 
 <div class="sw-home">
 
-  <section class="sw-home__hero sw-enter">
+  <section class="sw-home__hero sw-home__hero--statement sw-enter">
     <span class="sw-home__chip">
       <span class="sw-home__dot"></span>
       <span class="sw-home__label">Digital Consulting</span>
