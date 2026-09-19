@@ -3,6 +3,7 @@ layout: page
 title: House of Wolverines
 permalink: /houseOfWolverines
 description: "House of Wolverines — training footage playlist."
+image: /public/wolverines/comic.jpg
 ---
 
 <div class="sw-home">
