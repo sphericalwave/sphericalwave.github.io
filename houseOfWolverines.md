@@ -8,8 +8,21 @@ description: "House of Wolverines — training footage playlist."
 <div class="sw-home">
 
   <section class="sw-home__hero wolverine-hero sw-enter">
-    <h1 class="sw-home__title">House of Wolverines</h1>
-    <p class="sw-home__label mb-0">What happens in training, stays in training.</p>
+    <div>
+      <h1 class="sw-home__title">House of Wolverines</h1>
+      <p class="sw-home__label mb-0">What happens in training, stays in training.</p>
+    </div>
+    <div class="wolverine-hero__pics" data-lightbox>
+      <div class="sw-home__pick-media wolverine-hero__pic">
+        <img src="/public/wolverines/comic.jpg" alt="Wolverine, comic art" loading="eager">
+      </div>
+      <div class="sw-home__pick-media wolverine-hero__pic">
+        <img src="/public/wolverines/crouch.jpg" alt="A wolverine crouched low, teeth bared" loading="eager">
+      </div>
+      <div class="sw-home__pick-media wolverine-hero__pic">
+        <img src="/public/wolverines/standing.jpg" alt="A wolverine standing up in a river, claws out" loading="eager">
+      </div>
+    </div>
   </section>
 
   <hr class="sw-home__wave-line">
@@ -225,6 +238,35 @@ description: "House of Wolverines — training footage playlist."
   .sw-home__hero.wolverine-hero {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+  .wolverine-hero__pics {
+    display: flex;
+    gap: 0.75rem;
+  }
+  .sw-home__pick-media.wolverine-hero__pic {
+    width: 112px;
+    aspect-ratio: 1;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    background: none;
+    border: 1px solid rgba(180, 197, 255, 0.15);
+    transition: border-color .2s ease, transform .2s ease;
+  }
+  .sw-home__pick-media.wolverine-hero__pic img { object-fit: cover; }
+  .sw-home__pick-media.wolverine-hero__pic:hover,
+  .sw-home__pick-media.wolverine-hero__pic:focus-visible {
+    border-color: var(--sw-primary-container, #1e56d0);
+    transform: translateY(-2px);
+  }
+  @media (max-width: 575px) {
+    .wolverine-hero__pics { width: 100%; }
+    .sw-home__pick-media.wolverine-hero__pic { flex: 1; width: auto; }
   }
   .wolverine-loading {
     display: flex;
@@ -316,3 +358,5 @@ description: "House of Wolverines — training footage playlist."
     text-transform: lowercase;
   }
 </style>
+
+{% include lightbox.html %}

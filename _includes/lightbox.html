@@ -26,6 +26,8 @@
     img.alt = src.alt;
     title.textContent = h ? h.textContent : "";
     text.textContent = p ? p.textContent : "";
+    // Pictures outside a card (e.g. header thumbnails) have no caption
+    box.querySelector(".sw-lightbox__caption").hidden = !h && !p;
     box.showModal();
   }
 
