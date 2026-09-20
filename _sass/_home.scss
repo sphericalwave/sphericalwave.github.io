@@ -500,6 +500,41 @@
   }
 }
 
+// Size picker, injected by the Fourthwall integration
+.sw-merch__variants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 1rem;
+}
+
+.sw-merch__size {
+  min-width: 46px;
+  min-height: 44px;              // stays a comfortable tap target on a phone
+  padding: 0 0.7rem;
+  border-radius: 6px;
+  font-family: var(--sw-font-mono);
+  font-size: 0.78rem;
+  cursor: pointer;
+  // beat the global `button { ... !important }` rule in _base.scss
+  background-color: transparent !important;
+  border: 1px solid rgba(180, 197, 255, 0.28) !important;
+  color: var(--sw-on-surface-variant) !important;
+
+  &:hover {
+    background-color: rgba(180, 197, 255, 0.08) !important;
+    color: var(--sw-on-surface) !important;
+  }
+
+  &[aria-pressed="true"] {
+    background-color: var(--sw-primary-container) !important;
+    border-color: var(--sw-primary-container) !important;
+    color: #fff !important;
+  }
+}
+
+.sw-merch__buy { align-self: flex-start; margin-top: auto; }
+
 // Numbered process list on job pages
 .sw-steps {
   margin: 0.5rem 0 0;

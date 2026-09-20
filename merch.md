@@ -31,7 +31,7 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
 
   <div class="sw-home__grid sw-enter-2">
 
-    <div class="sw-home__glass sw-home__card sw-home__pick">
+    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="c60-tee">
       <span class="sw-home__label">01 · Tee</span>
       <h3>Organic cotton tee</h3>
       <div class="sw-merch__shots">
@@ -39,15 +39,16 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
         <img src="/public/merch/c60-tee-back.png" width="900" height="760" loading="lazy" alt="C60 tee, back — large buckyball">
       </div>
       <p class="mb-2">Stanley/Stella heavyweight, 100% organic cotton. Black first, blue next.</p>
-      <p class="mb-3"><strong>$58 CAD</strong></p>
+      <p class="mb-3" data-price><strong>$58 CAD</strong></p>
+      <div class="sw-merch__variants" data-variants hidden></div>
       {% if store != "" %}
-      <a href="{{ store }}/products/c60-tee" class="sw-home__btn sw-home__btn--ghost" rel="noopener">Buy</a>
+      <a href="{{ store }}/products/c60-tee" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
       {% else %}
-      <span class="sw-home__soon">Opening soon</span>
+      <span class="sw-home__soon" data-cta>Opening soon</span>
       {% endif %}
     </div>
 
-    <div class="sw-home__glass sw-home__card sw-home__pick">
+    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="c60-zip-hoodie">
       <span class="sw-home__label">02 · Hoodie</span>
       <h3>Zip hoodie</h3>
       <div class="sw-merch__shots">
@@ -55,15 +56,16 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
         <img src="/public/merch/c60-hoodie-back.png" width="900" height="760" loading="lazy" alt="C60 zip hoodie, back — large buckyball">
       </div>
       <p class="mb-2">Brushed organic fleece, full zip, side pockets. Black first, blue next.</p>
-      <p class="mb-3"><strong>$118 CAD</strong></p>
+      <p class="mb-3" data-price><strong>$118 CAD</strong></p>
+      <div class="sw-merch__variants" data-variants hidden></div>
       {% if store != "" %}
-      <a href="{{ store }}/products/c60-zip-hoodie" class="sw-home__btn sw-home__btn--ghost" rel="noopener">Buy</a>
+      <a href="{{ store }}/products/c60-zip-hoodie" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
       {% else %}
-      <span class="sw-home__soon">Opening soon</span>
+      <span class="sw-home__soon" data-cta>Opening soon</span>
       {% endif %}
     </div>
 
-    <div class="sw-home__glass sw-home__card sw-home__pick">
+    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="c60-rashguard">
       <span class="sw-home__label">03 · Rashguard</span>
       <h3>Long-sleeve rashguard</h3>
       <div class="sw-merch__shots">
@@ -71,11 +73,12 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
         <img src="/public/merch/c60-rashguard-back.png" width="900" height="760" loading="lazy" alt="C60 rashguard, back — large buckyball">
       </div>
       <p class="mb-2">All-over print, flatlock seams, navy. Good for training and warm-ups — it is not a competition-spec grappling rashguard, and I won't pretend otherwise.</p>
-      <p class="mb-3"><strong>$78 CAD</strong></p>
+      <p class="mb-3" data-price><strong>$78 CAD</strong></p>
+      <div class="sw-merch__variants" data-variants hidden></div>
       {% if store != "" %}
-      <a href="{{ store }}/products/c60-rashguard" class="sw-home__btn sw-home__btn--ghost" rel="noopener">Buy</a>
+      <a href="{{ store }}/products/c60-rashguard" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
       {% else %}
-      <span class="sw-home__soon">Opening soon</span>
+      <span class="sw-home__soon" data-cta>Opening soon</span>
       {% endif %}
     </div>
 
@@ -128,3 +131,5 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
   {% endif %}
 
 </div>
+
+{% include merch-store.html %}

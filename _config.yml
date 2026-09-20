@@ -20,6 +20,13 @@ analytics_id:        G-P9ZE6V8GK7
 # every Buy button at once.
 store_url:           ""
 
+# Fourthwall Storefront API. Empty = /merch/ keeps its static cards.
+# Token: Fourthwall admin -> Settings -> For Developers (starts ptkn_).
+# It is a PUBLIC read-only catalogue token; checkout happens on Fourthwall.
+fourthwall_token:      ""
+fourthwall_collection: "all"
+fourthwall_currency:   "CAD"
+
 # Legacy personal content — HIDDEN, not deleted (repurpose later).
 # Reverse by removing entries here + the posts `published: false` default.
 # Jekyll defaults are re-listed so Gemfile/vendor stay excluded too.

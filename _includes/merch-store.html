@@ -1,0 +1,129 @@
+{%- comment -%}
+Fourthwall Storefront API, progressive enhancement.
+
+The page already renders complete product cards from merch.md. This script
+upgrades them in place with live prices, sizes and stock, and turns each card's
+status chip into a Buy button that goes straight to Fourthwall's checkout.
+
+If the token is unset, the request fails, or a product is missing from the
+collection, the static card is left exactly as it was — so a bad API day costs
+the live prices, not the page.
+
+The storefront token is public by design (Fourthwall calls it ptkn_...); it only
+reads published catalogue data. Payment happens on Fourthwall's checkout, never
+here.
+{%- endcomment -%}
+
+{%- assign shop = site.store_url | default: "" -%}
+{%- assign token = site.fourthwall_token | default: "" -%}
+{%- if shop != "" and token != "" -%}
+<script>
+(function () {
+  var SHOP = {{ shop | jsonify }};
+  var TOKEN = {{ token | jsonify }};
+  var COLLECTION = {{ site.fourthwall_collection | default: "all" | jsonify }};
+  var CURRENCY = {{ site.fourthwall_currency | default: "CAD" | jsonify }};
+  var API = "https://storefront-api.fourthwall.com/v1";
+
+  var cards = {};
+  document.querySelectorAll("[data-product]").forEach(function (el) {
+    cards[el.getAttribute("data-product")] = el;
+  });
+  if (!Object.keys(cards).length) return;
+
+  function money(p) {
+    if (!p || typeof p.value !== "number") return null;
+    try {
+      return new Intl.NumberFormat("en-CA", {
+        style: "currency", currency: p.currency || CURRENCY, maximumFractionDigits: 0
+      }).format(p.value) + " " + (p.currency || CURRENCY);
+    } catch (e) {
+      return "$" + Math.round(p.value) + " " + (p.currency || CURRENCY);
+    }
+  }
+
+  function inStock(v) {
+    return !v.stock || v.stock.type === "UNLIMITED" ||
+           (typeof v.stock.inStock === "number" && v.stock.inStock > 0);
+  }
+
+  function checkoutUrl(variantId) {
+    return SHOP.replace(/\/$/, "") + "/cart/checkout?products=" +
+      encodeURIComponent(variantId) + ":1&currency=" + encodeURIComponent(CURRENCY);
+  }
+
+  function upgrade(card, product) {
+    var variants = (product.variants || []).filter(inStock);
+    if (!variants.length) return;                 // sold out: leave the static card
+
+    var slot = card.querySelector("[data-variants]");
+    var priceEl = card.querySelector("[data-price]");
+    // whichever static CTA the page rendered — the chip, or the link to
+    // the product page — is what the live Buy button replaces. Appending
+    // instead would leave two "Buy" links pointing at different places.
+    var cta = card.querySelector("[data-cta]");
+    var selected = variants[0];
+
+    var buy = document.createElement("a");
+    buy.className = "sw-home__btn sw-home__btn--primary sw-merch__buy";
+    buy.textContent = "Buy";
+    buy.rel = "noopener";
+
+    function paint() {
+      var m = money(selected.unitPrice);
+      if (m && priceEl) priceEl.innerHTML = "<strong>" + m + "</strong>";
+      if (buy) buy.href = checkoutUrl(selected.id);
+      slot.querySelectorAll("button").forEach(function (b) {
+        var on = b.getAttribute("data-variant") === selected.id;
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
+
+    // size picker — only worth showing when there is a real choice
+    var sizes = variants.filter(function (v) { return v.attributes && v.attributes.size; });
+    if (sizes.length > 1) {
+      slot.hidden = false;
+      slot.setAttribute("role", "group");
+      slot.setAttribute("aria-label", "Size");
+      sizes.forEach(function (v) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "sw-merch__size";
+        b.textContent = v.attributes.size.name;
+        b.setAttribute("data-variant", v.id);
+        b.setAttribute("aria-pressed", "false");
+        b.addEventListener("click", function () { selected = v; paint(); });
+        slot.appendChild(b);
+      });
+    }
+
+    if (cta) cta.replaceWith(buy); else card.appendChild(buy);
+
+    paint();
+    card.setAttribute("data-live", "true");
+  }
+
+  var url = API + "/collections/" + encodeURIComponent(COLLECTION) +
+            "/products?storefront_token=" + encodeURIComponent(TOKEN) +
+            "&currency=" + encodeURIComponent(CURRENCY) + "&size=60";
+
+  fetch(url, { headers: { "Accept": "application/json" } })
+    .then(function (r) {
+      if (!r.ok) throw new Error("storefront " + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      (data.results || []).forEach(function (p) {
+        var card = cards[p.slug];
+        if (!card) return;
+        if (p.state && p.state.type === "SOLD_OUT") return;
+        upgrade(card, p);
+      });
+    })
+    .catch(function (e) {
+      // static cards stand; the store link in the CTA band still works
+      if (window.console) console.warn("Fourthwall storefront unavailable:", e.message);
+    });
+})();
+</script>
+{%- endif -%}
