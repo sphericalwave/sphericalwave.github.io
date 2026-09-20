@@ -1,0 +1,93 @@
+<dialog class="sw-modal" id="sw-quote" aria-labelledby="sw-quote-title">
+  <div class="sw-modal__panel">
+    <button class="sw-modal__close" type="button" aria-label="Close" data-quote-close>
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+        <path d="M5 5 L19 19 M19 5 L5 19" fill="none" stroke="currentColor"
+              stroke-width="2.4" stroke-linecap="round"/>
+      </svg>
+    </button>
+
+    <h2 class="sw-modal__title" id="sw-quote-title">Get a quote</h2>
+    <p class="sw-modal__lead">Tell me about the job. I'll get back to you by email.</p>
+
+    <form class="sw-modal__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="sw-modal__fields">
+        <div class="mb-3">
+          <label class="form-label" for="q-name">Name</label>
+          <input class="form-control" type="text" id="q-name" name="name" autocomplete="name" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="q-email">Email</label>
+          <input class="form-control" type="email" id="q-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="q-phone">Phone (optional)</label>
+          <input class="form-control" type="tel" id="q-phone" name="phone" autocomplete="tel">
+        </div>
+        <div class="mb-0">
+          <label class="form-label" for="q-project">What do you need built?</label>
+          <textarea class="form-control" id="q-project" name="project" rows="6" placeholder="Patio, steps, walkway — rough size and timing" required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Contracting quote">
+      </div>
+      <div class="sw-modal__actions">
+        <button type="submit" class="sw-home__btn sw-home__btn--primary sw-modal__submit">Send request</button>
+      </div>
+    </form>
+    <!-- TODO: replace Formspree YOUR_FORM_ID — create a free form at formspree.io pointing to hello@sphericalwave.com -->
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var box = document.getElementById("sw-quote");
+  // Without <dialog> support the "Get a quote" button just anchors to the
+  // band, where the mailto link beside it is the fallback.
+  if (!box || !box.showModal) return;
+
+  var opener = null;
+
+  function open(trigger) {
+    if (box.open) return;
+    opener = trigger || null;
+    box.showModal();
+    // Skip the close button and land on the first thing to fill in.
+    var first = box.querySelector("#q-name");
+    if (first) first.focus();
+  }
+
+  function close() {
+    if (box.open) box.close();
+  }
+
+  // Anything pointing at #quote opens the dialog instead of jumping.
+  document.querySelectorAll('a[href$="#quote"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      open(a);
+    });
+  });
+
+  box.querySelectorAll("[data-quote-close]").forEach(function (b) {
+    b.addEventListener("click", close);
+  });
+
+  // Tap the backdrop (outside the panel) to close — same as the lightbox.
+  box.addEventListener("click", function (e) { if (e.target === box) close(); });
+
+  // Esc closes natively; return focus where it came from either way.
+  box.addEventListener("close", function () {
+    if (opener && document.contains(opener)) opener.focus();
+    opener = null;
+  });
+
+  // Arriving from another page at /contracting/#quote should open it. The
+  // hashchange case covers back/forward and any same-document jump to #quote,
+  // where this script does not re-run.
+  function openIfHashed() {
+    if (window.location.hash === "#quote") open(null);
+  }
+  window.addEventListener("hashchange", openIfHashed);
+  openIfHashed();
+})();
+</script>

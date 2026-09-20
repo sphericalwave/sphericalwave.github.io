@@ -106,34 +106,12 @@ description: "Decks, steps, and patios run like an engineering project — CAD-m
   <section id="quote" class="sw-home__cta-band sw-enter-2">
     <h2>Get a quote</h2>
     <p>Tell me about the job. I'll get back to you by email.</p>
-
-    <form class="my-4 text-start mx-auto" style="max-width:32rem" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="mb-3">
-        <label class="form-label" for="q-name">Name</label>
-        <input class="form-control" type="text" id="q-name" name="name" autocomplete="name" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="q-email">Email</label>
-        <input class="form-control" type="email" id="q-email" name="email" autocomplete="email" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="q-phone">Phone (optional)</label>
-        <input class="form-control" type="tel" id="q-phone" name="phone" autocomplete="tel">
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="q-address">Job address (optional)</label>
-        <input class="form-control" type="text" id="q-address" name="address" autocomplete="street-address">
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="q-project">What do you need built?</label>
-        <textarea class="form-control" id="q-project" name="project" rows="4" placeholder="Patio, steps, walkway — rough size and timing" required></textarea>
-      </div>
-      <input type="hidden" name="_subject" value="Contracting quote">
-      <button type="submit" class="sw-home__btn sw-home__btn--primary">Send request</button>
-    </form>
-
-    <p class="mb-0"><a href="mailto:hello@sphericalwave.com?subject=Contracting%20quote" class="sw-home__btn sw-home__btn--ghost">Or email hello@sphericalwave.com</a></p>
-    <!-- TODO: replace Formspree YOUR_FORM_ID — create a free form at formspree.io pointing to hello@sphericalwave.com -->
+    <div class="sw-home__cta">
+      <a href="#quote" class="sw-home__btn sw-home__btn--primary">Get a quote</a>
+      <a href="mailto:hello@sphericalwave.com?subject=Contracting%20quote" class="sw-home__btn sw-home__btn--ghost">Or email hello@sphericalwave.com</a>
+    </div>
   </section>
 
 </div>
+
+{% include quote-modal.html %}

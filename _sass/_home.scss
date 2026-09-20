@@ -2,8 +2,13 @@
 // Ported from the SphericalWave Stitch design (project 15669745624596895356).
 // Everything is scoped under .sw-home so it never leaks into other pages.
 
-.sw-home {
-  // Design tokens (from the Stitch design system).
+// Design tokens (from the Stitch design system). The dialogs are included
+// after the .sw-home wrapper closes, so they are named here as well —
+// otherwise they inherit none of these. Only the tokens are shared; the
+// component rules below stay scoped to .sw-home.
+.sw-home,
+.sw-lightbox,
+.sw-modal {
   --sw-surface: #111318;
   --sw-surface-lowest: #0c0e12;
   --sw-surface-container: #1e2024;
@@ -17,7 +22,9 @@
   --sw-font-display: 'Sora', 'Space Grotesk', sans-serif;
   --sw-font-body: 'Inter', 'Archivo', sans-serif;
   --sw-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
 
+.sw-home {
   font-family: var(--sw-font-body);
   color: var(--sw-on-surface);
 
@@ -495,8 +502,124 @@
   strong { color: var(--sw-on-surface); }
 }
 
-// Dark form fields in CTA bands (contracting quote, merch waitlist)
-.sw-home__cta-band .form-control {
+// Quote dialog — same shell as .sw-lightbox, sized for a form instead of a photo
+.sw-modal {
+  width: fit-content;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+
+  &::backdrop { background: rgba(0, 0, 0, 0.8); }
+
+  &__panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(92vw, 34rem);
+    max-height: 92vh;
+    overflow: hidden; // the fields scroll, not the whole panel
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    border: 2px solid var(--sw-primary-container);
+    border-radius: 14px;
+    background: var(--sw-surface-container);
+    // sits outside .sw-home, so it sets its own type and colour
+    font-family: var(--sw-font-body);
+    color: var(--sw-on-surface);
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .form-label {
+    margin-bottom: 0.35rem;
+    color: var(--sw-on-surface);
+  }
+
+  // The job description is the one answer worth writing at length: it grows
+  // into whatever height the dialog has spare, with a floor so it always
+  // reads as a paragraph box rather than a one-line input.
+  textarea.form-control {
+    flex: 1 1 auto;
+    min-height: 5rem;
+    resize: vertical;
+  }
+
+  &__title {
+    font-family: var(--sw-font-display);
+    font-weight: 600;
+    font-size: clamp(26px, 4vw, 34px);
+    // room so the heading never runs under the close button
+    padding-right: 3rem;
+    margin: 0 0 0.5rem;
+  }
+
+  &__lead {
+    color: var(--sw-on-surface-variant);
+    margin: 0 0 1.5rem;
+  }
+
+  // The form is taller than a laptop viewport, so the fields scroll inside it
+  // while the submit stays put — the primary action never scrolls away.
+  &__form {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    margin: 0;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    // room so a focus ring is never clipped by the scroll edge
+    padding: 2px 2px 0;
+    margin: -2px -2px 0;
+
+    // the last group holds the textarea and takes whatever height is left
+    > div:last-of-type {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+      min-height: 0;
+    }
+  }
+
+  &__actions {
+    flex: none;
+    padding-top: 1.25rem;
+  }
+
+  &__submit { width: 100%; }
+
+  &__close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    // flex centring + an SVG cross: a "×" glyph sits off-centre in a circle
+    // because its ink box is not its font box
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--sw-primary-container);
+    color: #fff;
+    cursor: pointer;
+
+    &:hover { background: color-mix(in srgb, var(--sw-primary-container) 82%, #fff); }
+  }
+}
+
+// Dark form fields in CTA bands (merch waitlist) and in the quote dialog
+.sw-home__cta-band .form-control,
+.sw-modal .form-control {
   background: var(--sw-surface-container);
   border-color: var(--sw-outline);
   color: var(--sw-on-surface);
@@ -509,6 +632,14 @@
     color: var(--sw-on-surface);
     box-shadow: 0 0 0 0.2rem rgba(30, 86, 208, 0.25);
   }
+}
+
+// The dialog panel is already surface-container, so its fields drop a step
+// to stay legible as fields rather than melting into the panel.
+.sw-modal .form-control {
+  background: var(--sw-surface-lowest);
+
+  &:focus { background: var(--sw-surface-lowest); }
 }
 
 // Section intro under an h2 — left-aligned, unlike the centred hero lead
