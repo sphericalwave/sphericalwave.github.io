@@ -1,7 +1,7 @@
 ---
 layout: page
 title: sphericalWave — Aaron, engineer and builder
-description: "Websites that bring in customers, the accounting and project systems behind them, iOS apps, and decks and patios — built by Aaron, a freelance electrical engineer."
+description: "Websites that bring in customers, the business intelligence behind them, iOS apps, and decks and patios — built by Aaron, a freelance electrical engineer."
 ---
 
 <div class="sw-home">
@@ -13,7 +13,7 @@ description: "Websites that bring in customers, the accounting and project syste
     </span>
 
     <h1 class="sw-home__title">I build the things a small business runs on.</h1>
-    <p class="sw-home__lead">A website that brings in customers, the accounting and project systems behind it, iOS apps — and, in the summer, decks and patios. I'm a freelance electrical engineer. Everything gets modeled before it gets built.</p>
+    <p class="sw-home__lead">A website that brings in customers, the business intelligence behind it, iOS apps — and, in the summer, decks and patios. I'm a freelance electrical engineer. Everything gets modeled before it gets built.</p>
 
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
@@ -38,9 +38,9 @@ description: "Websites that bring in customers, the accounting and project syste
     </article>
     <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">02</span>
-      <h3>Accounting &amp; project systems</h3>
-      <p class="mb-3">QuickBooks integrations, invoicing that goes out on time, and Tamarack — my own project management tool for small teams.</p>
-      <a href="/accounting/" class="sw-home__btn sw-home__btn--ghost">Accounting</a>
+      <h3>Business intelligence</h3>
+      <p class="mb-3">QuickBooks integrations, invoicing that goes out on time, clean books — and reporting that tells you which work actually pays.</p>
+      <a href="/business-intelligence/" class="sw-home__btn sw-home__btn--ghost">Business intelligence</a>
     </article>
     <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">03</span>

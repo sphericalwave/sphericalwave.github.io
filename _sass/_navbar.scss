@@ -41,20 +41,6 @@
     font-weight: 500;
     color: white;
     line-height: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0.1rem;
-  }
-
-  &__sub {
-    font-size: 0.65rem;
-    font-weight: 400;
-    letter-spacing: 0.12em;
-    text-transform: lowercase;
-    color: rgba(255,255,255,0.6);
-    line-height: 1;
   }
 }
   

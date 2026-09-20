@@ -2,7 +2,7 @@
 layout: page
 title: Services
 permalink: /services/
-description: "What Aaron builds: websites and SEO, accounting and project systems on QuickBooks, native iOS apps, and decks, steps, and patios."
+description: "What Aaron builds: websites and SEO, business intelligence on QuickBooks, native iOS apps, and decks, steps, and patios."
 ---
 
 <div class="sw-home">
@@ -28,12 +28,12 @@ description: "What Aaron builds: websites and SEO, accounting and project system
       <a href="/websites/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Websites &amp; SEO →</a>
     </div>
     <div class="sw-home__glass sw-home__panel">
-      <span class="sw-home__label">02 / Accounting &amp; projects</span>
-      <p class="sw-home__panel-title">Books and projects that run themselves</p>
-      <p><strong>Problem:</strong> books that are always behind, invoices that go out late, and work tracked across heads, email, and chat.</p>
-      <p><strong>What I build:</strong> QuickBooks integrations — bank feeds, automated invoicing, a clean monthly close — and Tamarack, my own project management tool with invoicing built in.</p>
-      <p><strong>Outcome:</strong> numbers you can make decisions on, and nothing slipping.</p>
-      <a href="/accounting/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Accounting →</a>
+      <span class="sw-home__label">02 / Business intelligence</span>
+      <p class="sw-home__panel-title">Numbers you can decide from</p>
+      <p><strong>Problem:</strong> books that are always behind, invoices that go out late, and no clear read on which work is actually making money.</p>
+      <p><strong>What I build:</strong> QuickBooks integrations — bank feeds, automated invoicing, a clean monthly close — and reporting on top that answers the questions you actually ask.</p>
+      <p><strong>Outcome:</strong> numbers you can make decisions on, without chasing anyone.</p>
+      <a href="/business-intelligence/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Business intelligence →</a>
     </div>
     <div class="sw-home__glass sw-home__panel">
       <span class="sw-home__label">03 / iOS apps</span>

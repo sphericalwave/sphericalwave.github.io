@@ -485,6 +485,9 @@
   }
 }
 
+// Section intro under an h2 — left-aligned, unlike the centred hero lead
+.sw-home h2 + .sw-home__lead { margin-left: 0; }
+
 // Square photo frames (About page cards)
 .sw-home__grid--square .sw-home__pick-media { aspect-ratio: 1; }
 

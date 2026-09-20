@@ -92,7 +92,7 @@ description: "Decks, steps, and patios run like an engineering project — CAD-m
     <div class="sw-home__glass sw-home__panel sw-home__panel--accent">
       <span class="sw-home__label">Who's building it</span>
       <p class="sw-home__panel-title">Engineer first, contractor second</p>
-      <p>Most of my work is software for small businesses — websites, accounting, and project systems. I'm also a jiu-jitsu black belt and build apps for BJJ athletes. Contracting gets the same treatment: plan it properly, then execute.</p>
+      <p>Most of my work is software for small businesses — websites, business intelligence, and custom apps. I'm also a jiu-jitsu black belt and build apps for BJJ athletes. Contracting gets the same treatment: plan it properly, then execute.</p>
     </div>
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">The other work</span>
