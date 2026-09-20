@@ -595,6 +595,59 @@
 
   &__submit { width: 100%; }
 
+  // _base.scss sets `button { background-color: $swBlue !important }` on every
+  // button, and greys it on hover — which strips the ghost variant and makes a
+  // primary CTA look disabled mid-hover. Re-assert both variants here only, so
+  // the global rule keeps applying everywhere else.
+  .sw-home__btn--primary {
+    background-color: var(--sw-primary-container) !important;
+    border-color: var(--sw-primary-container) !important;
+    color: #fff !important;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--sw-primary-container) 86%, #fff) !important;
+      color: #fff !important;
+    }
+  }
+
+  .sw-home__btn--ghost {
+    background-color: transparent !important;
+    border-color: rgba(180, 197, 255, 0.4) !important;
+    color: var(--sw-primary) !important;
+
+    &:hover {
+      background-color: rgba(180, 197, 255, 0.08) !important;
+      color: var(--sw-primary) !important;
+    }
+  }
+
+  // confirmation shown after the mail is composed
+  &__done {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+
+    p { margin: 0 0 0.75rem; }
+  }
+
+  &__done-title {
+    font-family: var(--sw-font-display);
+    font-size: 1.25rem;
+    color: var(--sw-on-surface);
+    outline: none;
+  }
+
+  &__done-note {
+    font-size: 0.9rem;
+    color: var(--sw-on-surface-variant);
+  }
+
+  &__done-copy {
+    font-family: var(--sw-font-mono);
+    font-size: 0.8rem;
+    resize: vertical;
+  }
+
   &__close {
     position: absolute;
     top: 0.6rem;
@@ -609,11 +662,14 @@
     padding: 0;
     border: 0;
     border-radius: 50%;
-    background: var(--sw-primary-container);
-    color: #fff;
     cursor: pointer;
+    // !important to beat the global `button` rule in _base.scss
+    background-color: var(--sw-primary-container) !important;
+    color: #fff !important;
 
-    &:hover { background: color-mix(in srgb, var(--sw-primary-container) 82%, #fff); }
+    &:hover {
+      background-color: color-mix(in srgb, var(--sw-primary-container) 82%, #fff) !important;
+    }
   }
 }
 

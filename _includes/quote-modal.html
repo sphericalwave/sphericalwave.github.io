@@ -8,9 +8,14 @@
     </button>
 
     <h2 class="sw-modal__title" id="sw-quote-title">Get a quote</h2>
-    <p class="sw-modal__lead">Tell me about the job. I'll get back to you by email.</p>
+    <p class="sw-modal__lead">Tell me about the job. This opens an email to me with your answers filled in — you send it, and I reply there.</p>
 
-    <form class="sw-modal__form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <!-- No form backend: submitting composes a mail to hello@sphericalwave.com.
+         The action is the no-JS fallback; the script below builds a properly
+         encoded mailto and then shows a confirmation with a manual link, so a
+         browser with no mail client set up still has a way through. -->
+    <form class="sw-modal__form" id="sw-quote-form"
+          action="mailto:hello@sphericalwave.com" method="post" enctype="text/plain">
       <div class="sw-modal__fields">
         <div class="mb-3">
           <label class="form-label" for="q-name">Name</label>
@@ -28,13 +33,21 @@
           <label class="form-label" for="q-project">What do you need built?</label>
           <textarea class="form-control" id="q-project" name="project" rows="6" placeholder="Patio, steps, walkway — rough size and timing" required></textarea>
         </div>
-        <input type="hidden" name="_subject" value="Contracting quote">
       </div>
       <div class="sw-modal__actions">
-        <button type="submit" class="sw-home__btn sw-home__btn--primary sw-modal__submit">Send request</button>
+        <button type="submit" class="sw-home__btn sw-home__btn--primary sw-modal__submit">Compose email</button>
       </div>
     </form>
-    <!-- TODO: replace Formspree YOUR_FORM_ID — create a free form at formspree.io pointing to hello@sphericalwave.com -->
+
+    <div class="sw-modal__done" id="sw-quote-done" hidden>
+      <p class="sw-modal__done-title" tabindex="-1">Your email app should be open.</p>
+      <p>Check it over and hit send — it goes to <strong>hello@sphericalwave.com</strong>. I reply by email.</p>
+      <p class="sw-modal__done-note">Nothing opened? <a href="#" data-quote-retry>Open it again</a>, or copy the message below into your own email.</p>
+      <textarea class="form-control sw-modal__done-copy" id="sw-quote-copy" readonly rows="7" aria-label="Your message, to copy"></textarea>
+      <div class="sw-modal__actions">
+        <button type="button" class="sw-home__btn sw-home__btn--ghost sw-modal__submit" data-quote-copy>Copy message</button>
+      </div>
+    </div>
   </div>
 </dialog>
 
@@ -46,10 +59,22 @@
   if (!box || !box.showModal) return;
 
   var opener = null;
+  var form = document.getElementById("sw-quote-form");
+  var done = document.getElementById("sw-quote-done");
+  var copy = document.getElementById("sw-quote-copy");
+  var INBOX = "hello@sphericalwave.com";
+  var lead = box.querySelector(".sw-modal__lead");
+  var lastHref = "";
 
   function open(trigger) {
     if (box.open) return;
     opener = trigger || null;
+    // Reopening after a send starts over at the form, not the confirmation.
+    if (form && done && !done.hidden) {
+      done.hidden = true;
+      form.hidden = false;
+      lead.hidden = false;
+    }
     box.showModal();
     // Skip the close button and land on the first thing to fill in.
     var first = box.querySelector("#q-name");
@@ -58,6 +83,68 @@
 
   function close() {
     if (box.open) box.close();
+  }
+
+  function val(sel) {
+    var el = form.querySelector(sel);
+    return el ? el.value.trim() : "";
+  }
+
+  // Build the message once so the mailto and the copy box cannot disagree.
+  function compose() {
+    var name = val("#q-name");
+    var lines = [
+      "Name: " + name,
+      "Email: " + val("#q-email")
+    ];
+    var phone = val("#q-phone");
+    if (phone) lines.push("Phone: " + phone);
+    lines.push("", "What do you need built?", val("#q-project"));
+    return {
+      subject: "Contracting quote" + (name ? " — " + name : ""),
+      body: lines.join("\n")
+    };
+  }
+
+  function mailtoHref(msg) {
+    return "mailto:" + INBOX +
+      "?subject=" + encodeURIComponent(msg.subject) +
+      "&body=" + encodeURIComponent(msg.body);
+  }
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (typeof form.reportValidity === "function" && !form.reportValidity()) return;
+
+      var msg = compose();
+      lastHref = mailtoHref(msg);
+      window.location.href = lastHref;
+
+      copy.value = "To: " + INBOX + "\nSubject: " + msg.subject + "\n\n" + msg.body;
+      form.hidden = true;
+      done.hidden = false;
+      // the "tell me about the job" instruction is stale once it is composed
+      lead.hidden = true;
+      done.querySelector(".sw-modal__done-title").focus();
+    });
+  }
+
+  if (done) {
+    done.querySelector("[data-quote-retry]").addEventListener("click", function (e) {
+      e.preventDefault();
+      if (lastHref) window.location.href = lastHref;
+    });
+
+    done.querySelector("[data-quote-copy]").addEventListener("click", function (btn) {
+      var b = btn.currentTarget;
+      function ok() { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy message"; }, 2000); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(copy.value).then(ok, function () { copy.select(); });
+      } else {
+        copy.select();
+      }
+    });
   }
 
   // Anything pointing at #quote opens the dialog instead of jumping.
