@@ -14,6 +14,12 @@ image:               /public/great-wave.png
 baseurl:             ""
 analytics_id:        G-P9ZE6V8GK7
 
+# Merch storefront (Fourthwall). Empty until the store is live — /merch/
+# shows "opening soon" instead of linking to a store that does not exist.
+# Set to e.g. https://store.sphericalwave.com (no trailing slash) to switch on
+# every Buy button at once.
+store_url:           ""
+
 # Legacy personal content — HIDDEN, not deleted (repurpose later).
 # Reverse by removing entries here + the posts `published: false` default.
 # Jekyll defaults are re-listed so Gemfile/vendor stay excluded too.

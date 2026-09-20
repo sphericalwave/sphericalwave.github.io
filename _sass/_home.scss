@@ -483,6 +483,23 @@
   }
 }
 
+// Merch product cards: front and back shown side by side
+.sw-merch__shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin: 0 0 0.9rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    background: var(--sw-surface-lowest);
+    border: 1px solid rgba(180, 197, 255, 0.08);
+  }
+}
+
 // Numbered process list on job pages
 .sw-steps {
   margin: 0.5rem 0 0;
