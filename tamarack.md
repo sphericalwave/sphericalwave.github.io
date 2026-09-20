@@ -14,7 +14,7 @@ sitemap: false
       <span class="sw-home__label">Tamarack</span>
     </span>
     <h1 class="sw-home__title">Project management built for small teams.</h1>
-    <p class="sw-home__lead">One place for tasks, clients, and deadlines. No enterprise bloat. No per-seat pricing that punishes growth. Built by sphericalWave for the businesses we work with.</p>
+    <p class="sw-home__lead">One place for tasks, clients, and deadlines. No enterprise bloat. No per-seat pricing that punishes growth. Built by me, for the small businesses I work with.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Request early access</a>
       <a href="/services/" class="sw-home__btn sw-home__btn--ghost">All services</a>
@@ -87,7 +87,7 @@ sitemap: false
       <span class="sw-home__label">Integration</span>
       <p class="sw-home__panel-title">Connects to your whole stack.</p>
       <p>QuickBooks for invoicing, Stripe for payments, your website's contact form for new leads. Tamarack is the nerve center — everything talks to everything else.</p>
-      <p>Need a custom integration? That's what we do.</p>
+      <p>Need a custom integration? That's what I do.</p>
     </div>
   </div>
 
@@ -98,7 +98,7 @@ sitemap: false
     <p>Tamarack is in active development. Early access customers shape the product. Get in now.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Request early access</a>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </section>
 

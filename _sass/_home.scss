@@ -484,3 +484,33 @@
     box-shadow: 0 0 0 0.2rem rgba(30, 86, 208, 0.25);
   }
 }
+
+// Square photo frames (About page cards)
+.sw-home__grid--square .sw-home__pick-media { aspect-ratio: 1; }
+
+// Homepage photo panel: image fills the box, label sits over the bottom edge
+.sw-home__panel--photo {
+  position: relative;
+  padding: 0;
+  min-height: 260px;
+  overflow: hidden;
+  text-decoration: none;
+
+  img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .sw-home__label {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    background: rgba(12, 14, 18, 0.72);
+    backdrop-filter: blur(8px);
+  }
+}

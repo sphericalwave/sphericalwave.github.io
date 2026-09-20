@@ -36,7 +36,7 @@ description: "sphericalWave builds embedded customer surveys for small businesse
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Start here</span>
       <p class="sw-home__panel-title">Scope your survey</p>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </div>
 
@@ -44,10 +44,10 @@ description: "sphericalWave builds embedded customer surveys for small businesse
 
   <section class="sw-home__cta-band sw-enter-2">
     <h2>Know what your customers actually think.</h2>
-    <p>We build the survey, wire up the data, and hand you something you can act on.</p>
+    <p>I build the survey, wire up the data, and hand you something you can act on.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </section>
 

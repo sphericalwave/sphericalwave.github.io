@@ -62,6 +62,17 @@
     padding-top: 0.65rem;
   }
 
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+
+    a { color: $gray-3; }
+    a:hover { color: $swBlue; }
+  }
+
   &__status {
     margin: 0.6rem 0 0;
     font-size: 0.85rem;

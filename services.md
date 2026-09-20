@@ -2,7 +2,7 @@
 layout: page
 title: Services
 permalink: /services/
-description: "What sphericalWave builds: customer-getting websites, accounting systems, project management, expense & tax reporting, and SEO."
+description: "What Aaron builds: websites and SEO, accounting and project systems on QuickBooks, native iOS apps, and decks, steps, and patios."
 ---
 
 <div class="sw-home">
@@ -12,71 +12,55 @@ description: "What sphericalWave builds: customer-getting websites, accounting s
       <span class="sw-home__dot"></span>
       <span class="sw-home__label">Services</span>
     </span>
-    <h1 class="sw-home__title">What we build</h1>
-    <p class="sw-home__lead">Five services that compound: a site that brings customers in, and the systems that keep the business running once they do.</p>
+    <h1 class="sw-home__title">What I do</h1>
+    <p class="sw-home__lead">Four things. Each one gets modeled before it gets built, and you see the price up front.</p>
   </section>
 
   <hr class="sw-home__wave-line">
 
-  <div class="sw-home__bento sw-enter-2">
-    <div class="sw-home__glass sw-home__panel sw-home__panel--accent">
-      <span class="sw-home__label">01 / Websites & SEO</span>
-      <p class="sw-home__panel-title">Customer-getting websites & sales funnels</p>
-      <p><strong>Problem:</strong> a site that looks fine but doesn't generate leads.</p>
-      <p><strong>What we build:</strong> a fast, modern site with clear messaging, conversion paths, sales funnels, and SEO — designed around the action you want visitors to take.</p>
-      <p><strong>Outcome:</strong> more qualified inquiries from the traffic you already have.</p>
-      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;display:inline-block;">See the full offer →</a>
-    </div>
-    <div class="sw-home__glass sw-home__panel sw-home__panel--center">
-      <span class="sw-home__label">Start here</span>
-      <p class="sw-home__panel-title">Book a call</p>
-      <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
-    </div>
-  </div>
-
-  <div class="sw-home__grid sw-enter-2">
+  <div class="sw-home__grid sw-home__grid--2 sw-enter-2">
     <div class="sw-home__glass sw-home__panel">
-      <span class="sw-home__label">02 / Accounting</span>
-      <p class="sw-home__panel-title">Accounting &amp; invoicing</p>
-      <p><strong>Problem:</strong> books that are always behind and invoices that go out late.</p>
-      <p><strong>What we build:</strong> accounting and invoicing systems integrated with QuickBooks API — automated bank feeds, invoice generation, and a clean monthly close.</p>
-      <p><strong>Outcome:</strong> numbers you can make decisions on. Invoices that go out on time.</p>
-      <a href="/accounting/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;display:inline-block;">See the full offer →</a>
+      <span class="sw-home__label">01 / Websites &amp; SEO</span>
+      <p class="sw-home__panel-title">Sites that bring in customers</p>
+      <p><strong>Problem:</strong> a site that looks fine but doesn't generate leads, and doesn't show up for the searches that matter.</p>
+      <p><strong>What I build:</strong> a fast, modern site designed around the action you want visitors to take — plus the technical SEO and content that gets the right people to it.</p>
+      <p><strong>Outcome:</strong> more qualified inquiries from the traffic you already have, and more of it over time.</p>
+      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Websites &amp; SEO →</a>
     </div>
     <div class="sw-home__glass sw-home__panel">
-      <span class="sw-home__label">03 / Projects</span>
-      <p class="sw-home__panel-title">Project management — Tamarack</p>
-      <p><strong>Problem:</strong> work tracked across heads, email, and chat.</p>
-      <p><strong>What we build:</strong> Tamarack — our own project management software built for small teams. Tasks, clients, deadlines, and QuickBooks invoicing in one place.</p>
-      <p><strong>Outcome:</strong> nothing slips, and capacity is visible at a glance.</p>
-      <a href="/tamarack/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;display:inline-block;">Meet Tamarack →</a>
+      <span class="sw-home__label">02 / Accounting &amp; projects</span>
+      <p class="sw-home__panel-title">Books and projects that run themselves</p>
+      <p><strong>Problem:</strong> books that are always behind, invoices that go out late, and work tracked across heads, email, and chat.</p>
+      <p><strong>What I build:</strong> QuickBooks integrations — bank feeds, automated invoicing, a clean monthly close — and Tamarack, my own project management tool with invoicing built in.</p>
+      <p><strong>Outcome:</strong> numbers you can make decisions on, and nothing slipping.</p>
+      <a href="/accounting/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Accounting →</a>
     </div>
     <div class="sw-home__glass sw-home__panel">
-      <span class="sw-home__label">04 / iOS Apps</span>
-      <p class="sw-home__panel-title">Custom iOS apps &amp; surveys</p>
-      <p><strong>Problem:</strong> off-the-shelf apps don't fit your workflow or your brand.</p>
-      <p><strong>What we build:</strong> native Swift apps tailored to how your business operates — with embedded customer surveys that feed real data back into your workflow.</p>
-      <p><strong>Outcome:</strong> an app customers use, and feedback you can act on.</p>
-      <a href="/apps/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;display:inline-block;">See the full offer →</a>
+      <span class="sw-home__label">03 / iOS apps</span>
+      <p class="sw-home__panel-title">Native apps, built in Swift</p>
+      <p><strong>Problem:</strong> off-the-shelf apps don't fit how your business actually works.</p>
+      <p><strong>What I build:</strong> SwiftUI apps tailored to your workflow, including embedded customer surveys that feed real data back to you. I also ship my own apps for athletes.</p>
+      <p><strong>Outcome:</strong> an app people use, and feedback you can act on.</p>
+      <a href="/apps/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Apps →</a>
     </div>
     <div class="sw-home__glass sw-home__panel">
-      <span class="sw-home__label">05 / SEO</span>
-      <p class="sw-home__panel-title">SEO</p>
-      <p><strong>Problem:</strong> the right customers can't find you.</p>
-      <p><strong>What we build:</strong> technical fixes, site structure, and content targeting the searches that convert.</p>
-      <p><strong>Outcome:</strong> compounding organic traffic that pays for itself.</p>
-      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;display:inline-block;">See websites &amp; SEO →</a>
+      <span class="sw-home__label">04 / Contracting</span>
+      <p class="sw-home__panel-title">Decks, steps &amp; patios</p>
+      <p><strong>Problem:</strong> you want it built properly, and you want to know what it'll look like and cost before anyone digs.</p>
+      <p><strong>What I build:</strong> the job modeled in CAD, materials counted from the model, then built by the person who designed it. A cedar front porch and a paver patio so far.</p>
+      <p><strong>Outcome:</strong> no surprises, and a build that matches the drawing.</p>
+      <a href="/contracting/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Contracting →</a>
     </div>
   </div>
 
   <hr class="sw-home__wave-line">
 
   <section class="sw-home__cta-band sw-enter-2">
-    <h2>Tell us the bottleneck.</h2>
-    <p>One call, no pitch. We map the fix and what it takes to ship it.</p>
+    <h2>Not sure which one you need?</h2>
+    <p>Describe the problem. I'll tell you what I'd do, and if it isn't me, who to call instead.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </section>
 

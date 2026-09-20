@@ -1,7 +1,7 @@
 ---
 layout: page
-title: sphericalWave — Digital Consulting
-description: "sphericalWave builds websites that bring in customers and the business systems to run on — accounting, project management, expense & tax reporting, and SEO."
+title: sphericalWave — Aaron, engineer and builder
+description: "Websites that bring in customers, the accounting and project systems behind them, iOS apps, and decks and patios — built by Aaron, a freelance electrical engineer."
 ---
 
 <div class="sw-home">
@@ -9,15 +9,15 @@ description: "sphericalWave builds websites that bring in customers and the busi
   <section class="sw-home__hero sw-home__hero--statement sw-enter">
     <span class="sw-home__chip">
       <span class="sw-home__dot"></span>
-      <span class="sw-home__label">Digital Consulting</span>
+      <span class="sw-home__label">Aaron · Engineer &amp; builder</span>
     </span>
 
-    <h1 class="sw-home__title">Websites that bring customers. Systems that run the business.</h1>
-    <p class="sw-home__lead">We design and build the digital backbone for small companies — a site that converts, plus the accounting, project, expense, tax, and SEO systems behind it.</p>
+    <h1 class="sw-home__title">I build the things a small business runs on.</h1>
+    <p class="sw-home__lead">A website that brings in customers, the accounting and project systems behind it, iOS apps — and, in the summer, decks and patios. I'm a freelance electrical engineer. Everything gets modeled before it gets built.</p>
 
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
-      <a href="/services/" class="sw-home__btn sw-home__btn--ghost">See services</a>
+      <a href="/services/" class="sw-home__btn sw-home__btn--ghost">What I do</a>
     </div>
 
     <div class="sw-home__ornament" aria-hidden="true">
@@ -29,47 +29,56 @@ description: "sphericalWave builds websites that bring in customers and the busi
 
   <hr class="sw-home__wave-line">
 
-  <div class="sw-home__grid sw-enter-2">
-    <div class="sw-home__glass sw-home__card">
+  <div class="sw-home__grid sw-home__grid--2 sw-enter-2">
+    <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">01</span>
-      <h3>Customer-getting websites</h3>
-      <p>Fast, modern sites built to convert visitors into leads and sales.</p>
-    </div>
-    <div class="sw-home__glass sw-home__card">
+      <h3>Websites &amp; SEO</h3>
+      <p class="mb-3">Fast, modern sites built around the one thing you want a visitor to do — and the SEO that gets the right people there.</p>
+      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost">Websites</a>
+    </article>
+    <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">02</span>
-      <h3>Accounting systems</h3>
-      <p>Bookkeeping and financial workflows set up so the numbers stay clean.</p>
-    </div>
-    <div class="sw-home__glass sw-home__card">
+      <h3>Accounting &amp; project systems</h3>
+      <p class="mb-3">QuickBooks integrations, invoicing that goes out on time, and Tamarack — my own project management tool for small teams.</p>
+      <a href="/accounting/" class="sw-home__btn sw-home__btn--ghost">Accounting</a>
+    </article>
+    <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">03</span>
-      <h3>Project management</h3>
-      <p>Systems that keep work, clients, and deadlines visible and on track.</p>
-    </div>
-    <div class="sw-home__glass sw-home__card">
+      <h3>iOS apps</h3>
+      <p class="mb-3">Native Swift apps for client businesses, plus my own — breathwork, visualization, and mental performance tools for athletes.</p>
+      <a href="/apps/" class="sw-home__btn sw-home__btn--ghost">Apps</a>
+    </article>
+    <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">04</span>
-      <h3>Expense &amp; tax reporting</h3>
-      <p>Automated expense capture and reporting that makes tax time boring.</p>
+      <h3>Decks, steps &amp; patios</h3>
+      <p class="mb-3">Modeled in CAD, priced from the model, built by me. A cedar porch and a paver patio so far.</p>
+      <a href="/contracting/" class="sw-home__btn sw-home__btn--ghost">Contracting</a>
+    </article>
+  </div>
+
+  <hr class="sw-home__wave-line">
+
+  <div class="sw-home__bento sw-enter-2">
+    <div class="sw-home__glass sw-home__panel sw-home__panel--accent">
+      <span class="sw-home__label">How I work</span>
+      <p class="sw-home__panel-title">Model it, agree on it, build exactly that.</p>
+      <p>A wireframe for a site, a spreadsheet for the books, a CAD drawing for a porch. You see the finished thing and the price before anything is made. One person, low overhead — you pay for the work.</p>
+      <a href="/about/" class="sw-home__btn sw-home__btn--ghost">About me</a>
     </div>
-    <div class="sw-home__glass sw-home__card">
-      <span class="sw-home__label">05</span>
-      <h3>SEO</h3>
-      <p>Technical and content SEO so the right customers actually find you.</p>
-    </div>
-    <div class="sw-home__glass sw-home__card sw-home__panel--center">
-      <span class="sw-home__label">Start</span>
-      <p class="sw-home__panel-title">Not sure where to start?</p>
-      <a href="/services/" class="sw-home__btn sw-home__btn--ghost">Explore all services</a>
-    </div>
+    <a class="sw-home__glass sw-home__panel sw-home__panel--center sw-home__panel--photo" href="/contracting/38-guy/">
+      <img src="/public/contracting/38-guy.jpg" alt="Cedar front porch and steps at 38 Guy, finished" loading="lazy">
+      <span class="sw-home__label">Latest build · 38 Guy</span>
+    </a>
   </div>
 
   <hr class="sw-home__wave-line">
 
   <section class="sw-home__cta-band sw-enter-2">
-    <h2>Let's build your backbone.</h2>
-    <p>Tell us where the bottleneck is. We'll map the fix and what it takes.</p>
+    <h2>Tell me what's broken.</h2>
+    <p>One call. I'll tell you what I'd do, and roughly what it costs.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </section>
 

@@ -32,13 +32,13 @@ description: "sphericalWave builds conversion-focused websites and integrated SE
       <span class="sw-home__label">Websites That Sell</span>
       <p class="sw-home__panel-title">Designed around the action you want visitors to take.</p>
       <p><strong>Problem:</strong> your site looks fine but doesn't generate leads — visitors arrive and leave without doing anything.</p>
-      <p><strong>What we build:</strong> clear messaging, conversion paths, fast load times, and tracking set up from day one. Every page has a job.</p>
+      <p><strong>What I build:</strong> clear messaging, conversion paths, fast load times, and tracking set up from day one. Every page has a job.</p>
       <p><strong>Outcome:</strong> more qualified inquiries from the traffic you already have.</p>
     </div>
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Start here</span>
       <p class="sw-home__panel-title">See what's possible</p>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </div>
 
@@ -52,7 +52,7 @@ description: "sphericalWave builds conversion-focused websites and integrated SE
       <span class="sw-home__label">Sales Funnels</span>
       <p class="sw-home__panel-title">Turn browsers into buyers — automatically.</p>
       <p><strong>Problem:</strong> traffic arrives but leaves without converting. There's no system moving people toward a decision.</p>
-      <p><strong>What we build:</strong> end-to-end funnels — landing pages, lead magnets, email sequences, and checkout flows — tuned to your offer and audience.</p>
+      <p><strong>What I build:</strong> end-to-end funnels — landing pages, lead magnets, email sequences, and checkout flows — tuned to your offer and audience.</p>
       <p><strong>Outcome:</strong> a predictable path from stranger to customer that runs while you're not watching.</p>
     </div>
   </div>
@@ -94,10 +94,10 @@ description: "sphericalWave builds conversion-focused websites and integrated SE
 
   <section class="sw-home__cta-band sw-enter-2">
     <h2>More leads from the traffic you already have.</h2>
-    <p>One call. We audit your current site and tell you exactly where it's losing people.</p>
+    <p>One call. I'll look at your current site and tell you exactly where it's losing people.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </section>
 

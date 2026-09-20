@@ -13,7 +13,7 @@ description: "sphericalWave builds native iOS apps for small businesses and inde
       <span class="sw-home__label">iOS Apps</span>
     </span>
     <h1 class="sw-home__title">Native apps, built in Swift.</h1>
-    <p class="sw-home__lead">SwiftUI from concept to App Store — for client businesses and our own products.</p>
+    <p class="sw-home__lead">SwiftUI from concept to App Store — for client businesses and my own products.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
       <a href="/services/" class="sw-home__btn sw-home__btn--ghost">All services</a>
@@ -96,10 +96,10 @@ description: "sphericalWave builds native iOS apps for small businesses and inde
 
   <section class="sw-home__cta-band sw-enter-2">
     <h2>Need a custom app?</h2>
-    <p>Tell us what it needs to do. We'll scope the build and show you what it takes.</p>
+    <p>Tell me what it needs to do. I'll scope the build and show you what it takes.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </section>
 

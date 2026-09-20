@@ -32,13 +32,13 @@ description: "sphericalWave sets up accounting and invoicing systems integrated 
       <span class="sw-home__label">QuickBooks API Integration</span>
       <p class="sw-home__panel-title">Your business tools, talking to each other.</p>
       <p><strong>Problem:</strong> invoices live in one place, payments in another, and your books are always two weeks behind.</p>
-      <p><strong>What we build:</strong> custom QuickBooks integrations that pull from your CRM, project tools, and payment processor — so invoices generate automatically, payments post instantly, and the ledger is always current.</p>
+      <p><strong>What I build:</strong> custom QuickBooks integrations that pull from your CRM, project tools, and payment processor — so invoices generate automatically, payments post instantly, and the ledger is always current.</p>
       <p><strong>Outcome:</strong> books you can trust. Invoices that go out without chasing anyone.</p>
     </div>
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Start here</span>
       <p class="sw-home__panel-title">Clean up the books</p>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </div>
 
@@ -81,12 +81,12 @@ description: "sphericalWave sets up accounting and invoicing systems integrated 
     <div class="sw-home__glass sw-home__panel sw-home__panel--accent">
       <span class="sw-home__label">See it in action</span>
       <p class="sw-home__panel-title">Tamarack — invoicing, accounting, time &amp; expense tracking for small businesses.</p>
-      <p>Tamarack is our own project management software with invoicing, time tracking, and expense reporting built in — connected to QuickBooks. A working example of everything on this page.</p>
+      <p>Tamarack is my own project management software with invoicing, time tracking, and expense reporting built in — connected to QuickBooks. A working example of everything on this page.</p>
       <a href="/tamarack/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;display:inline-block;">See Tamarack →</a>
     </div>
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Built by sphericalWave</span>
-      <p class="sw-home__panel-title">Used by the businesses we work with.</p>
+      <p class="sw-home__panel-title">Built and used by me, daily.</p>
     </div>
   </div>
 
@@ -94,10 +94,10 @@ description: "sphericalWave sets up accounting and invoicing systems integrated 
 
   <section class="sw-home__cta-band sw-enter-2">
     <h2>Numbers you can make decisions on.</h2>
-    <p>One call. We map your current workflow, find the gaps, and show you what a clean system looks like.</p>
+    <p>One call. I'll map your current workflow, find the gaps, and show you what a clean system looks like.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
-      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email us</a>
+      <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
     </div>
   </section>
 
