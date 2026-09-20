@@ -27,16 +27,13 @@ description: "Native iOS apps built in Swift — mental practice, the FitWrench 
 
   <hr class="sw-home__wave-line">
 
-  <!-- TODO: each app gets its own site, hosted from that app's GitHub repo.
-       Replace the "Site coming" notes and link the cards once those are live. -->
-
   <h2 class="mb-2">Mental</h2>
   <p class="sw-home__lead mb-4">Attention, visualization, and the habits underneath them.</p>
 
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card">
-      <img src="/visualize/assets/logo.png" alt="Be Still and Know logo" width="40" height="40" style="border-radius: 8px; margin-bottom: 0.5rem;">
+      <img src="/public/appicons/visualize.png" alt="Be Still and Know icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">visualize</span>
       <h3>Be Still and Know</h3>
       <p class="mb-3">Visualization scripts in your own voice, with a spoken countdown vigil.</p>
@@ -44,7 +41,7 @@ description: "Native iOS apps built in Swift — mental practice, the FitWrench 
     </div>
 
     <div class="sw-home__glass sw-home__card">
-      <img src="/mindheist/assets/logo.png" alt="MindHeist logo" width="40" height="40" style="border-radius: 8px; margin-bottom: 0.5rem;">
+      <img src="/public/appicons/mindheist.png" alt="MindHeist icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">mindHeist</span>
       <h3>MindHeist</h3>
       <p class="mb-3">Spaced repetition for the subconscious.</p>
@@ -52,21 +49,27 @@ description: "Native iOS apps built in Swift — mental practice, the FitWrench 
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/mantra.png" alt="mantra icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">mantra</span>
       <h3>mantra</h3>
-      <p>Daily mantra repetitions — one number and one comment a day, with enough charting to see whether the practice is real. Site coming.</p>
+      <p>Daily mantra repetitions — one number and one comment a day, with enough charting to see whether the practice is real.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/meditate.png" alt="meditate icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">meditate</span>
       <h3>meditate</h3>
-      <p>Sitting practice and session logging. In development.</p>
+      <p>Sitting practice and session logging.</p>
+      <span class="sw-home__soon">In development</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/lofty.png" alt="lofty icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">lofty</span>
       <h3>lofty</h3>
-      <p>Goals and the thinking behind them. In development.</p>
+      <p>Goals and the thinking behind them.</p>
+      <span class="sw-home__soon">In development</span>
     </div>
 
   </div>
@@ -79,55 +82,71 @@ description: "Native iOS apps built in Swift — mental practice, the FitWrench 
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/fitwrench.png" alt="FitWrench icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">fitwrench</span>
       <h3>FitWrench</h3>
-      <p>Fitness programming and nutrition tracking — the hub of the suite. Site coming.</p>
+      <p>Fitness programming and nutrition tracking — the hub of the suite.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/torque.png" alt="torque icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">torque</span>
       <h3>torque</h3>
-      <p>Bodyweight skill progressions, rated set logging, and structural balance assessment. The flagship the shared frameworks came out of. Site coming.</p>
+      <p>Bodyweight skill progressions, rated set logging, and structural balance assessment. The flagship the shared frameworks came out of.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/groundwork.png" alt="groundWerk icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">groundwork</span>
       <h3>groundWerk</h3>
-      <p>Progressive yoga and bodyweight skills, with a live on-device skeleton overlay to watch your form. Site coming.</p>
+      <p>Progressive yoga and bodyweight skills, with a live on-device skeleton overlay to watch your form.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/kettlebell.png" alt="kettlebell icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">kettlebell</span>
       <h3>kettlebell</h3>
-      <p>Skill-progression training scoped to one bell: depth-based families, audio-cued sets, weight tracking. Site coming.</p>
+      <p>Skill-progression training scoped to one bell: depth-based families, audio-cued sets, weight tracking.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/rings.png" alt="rings icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">rings</span>
       <h3>rings</h3>
-      <p>The same progression engine for gymnastic rings, with ring-height tracking. Site coming.</p>
+      <p>The same progression engine for gymnastic rings, with ring-height tracking.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/splits.png" alt="splits icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">splits</span>
       <h3>splits</h3>
-      <p>Flexibility progressions toward the splits, with camera-based form checking. Site coming.</p>
+      <p>Flexibility progressions toward the splits, with camera-based form checking.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/clubs.png" alt="Clubbell Torque icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">clubs</span>
       <h3>Clubbell Torque</h3>
-      <p>Models the mechanical load of a clubbell from its dimensions — the torque your wrist fights, and how it changes as you choke up or down the handle. Site coming.</p>
+      <p>Models the mechanical load of a clubbell from its dimensions — the torque your wrist fights, and how it changes as you choke up or down the handle.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/mfr.png" alt="MFR icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">MFR</span>
       <h3>MFR</h3>
-      <p>Timed myofascial release. Two minutes a side, then a 1–5 discomfort rating while the sensation is still fresh. Site coming.</p>
+      <p>Timed myofascial release. Two minutes a side, then a 1–5 discomfort rating while the sensation is still fresh.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
-      <img src="/breathe/assets/logo.png" alt="Breathe logo" width="40" height="40" style="border-radius: 8px; margin-bottom: 0.5rem;">
+      <img src="/public/appicons/breathe.png" alt="Breathe icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">breathe</span>
       <h3>breathe</h3>
       <p class="mb-3">O2 breather work, Wim Hof, square breathing, and CO&#8322; tables — one log.</p>
@@ -150,21 +169,27 @@ description: "Native iOS apps built in Swift — mental practice, the FitWrench 
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/flow.png" alt="flow icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">flow</span>
       <h3>flow</h3>
-      <p>Heart-rate based sparring training for jiu-jitsu, MMA, and kickboxing — rounds paced by what your heart is actually doing. Site coming.</p>
+      <p>Heart-rate based sparring training for jiu-jitsu, MMA, and kickboxing — rounds paced by what your heart is actually doing.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/jits.png" alt="Technique review icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">Jiu-jitsu</span>
       <h3>Technique review</h3>
-      <p>Spaced repetition for jiu-jitsu: review technique on a schedule, stay focused on a small set of moves, and track the stats that come out of rolling. Site coming.</p>
+      <p>Spaced repetition for jiu-jitsu: review technique on a schedule, stay focused on a small set of moves, and track the stats that come out of rolling.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/striking.png" alt="Striking icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">Striking</span>
       <h3>Striking</h3>
-      <p>The same idea for striking: review technique, work a focused set of moves, and track stats. Site coming.</p>
+      <p>The same idea for striking: review technique, work a focused set of moves, and track stats.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
   </div>
@@ -177,15 +202,19 @@ description: "Native iOS apps built in Swift — mental practice, the FitWrench 
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/wealth.png" alt="wealth icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">wealth</span>
       <h3>wealth</h3>
-      <p>Personal finances: accounts, reconciliation, and a picture of net worth over time. Site coming.</p>
+      <p>Personal finances: accounts, reconciliation, and a picture of net worth over time.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/invest.png" alt="invest icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">invest</span>
       <h3>invest</h3>
-      <p>Investing signals — indicators scored onto a common scale and combined into one view instead of a dozen tabs. Site coming.</p>
+      <p>Investing signals — indicators scored onto a common scale and combined into one view instead of a dozen tabs.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
   </div>
@@ -198,27 +227,35 @@ description: "Native iOS apps built in Swift — mental practice, the FitWrench 
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/piano.png" alt="piano icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">piano</span>
       <h3>piano</h3>
-      <p>Falling-notes practice for iOS and macOS. Open a MIDI file, play along on a MIDI keyboard, with wait mode, looping, slow-down, per-hand practice and fingering. Site coming.</p>
+      <p>Falling-notes practice for iOS and macOS. Open a MIDI file, play along on a MIDI keyboard, with wait mode, looping, slow-down, per-hand practice and fingering.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/listen.png" alt="listen icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">listen</span>
       <h3>listen</h3>
-      <p>Ear training. In development.</p>
+      <p>Ear training.</p>
+      <span class="sw-home__soon">In development</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/guitar.png" alt="GuitarOS icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">guitar</span>
       <h3>GuitarOS</h3>
-      <p>Fretboard and practice tools for guitar. In development.</p>
+      <p>Fretboard and practice tools for guitar.</p>
+      <span class="sw-home__soon">In development</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/voice.png" alt="voice icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">voice</span>
       <h3>voice</h3>
-      <p>Singing practice — pitch and range tracking. In development.</p>
+      <p>Singing practice — pitch and range tracking.</p>
+      <span class="sw-home__soon">In development</span>
     </div>
 
   </div>
@@ -231,21 +268,27 @@ description: "Native iOS apps built in Swift — mental practice, the FitWrench 
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/focus.png" alt="focus icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">focus</span>
       <h3>focus</h3>
-      <p>Attention training. Site coming.</p>
+      <p>Attention training.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/swgantt.png" alt="swGantt icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">swGantt</span>
       <h3>swGantt</h3>
-      <p>A macOS portfolio planner: every project on one scrollable timeline, with a resource lane underneath showing where committed work exceeds capacity. Built to answer "what am I over-committed on this week?" Site coming.</p>
+      <p>A macOS portfolio planner: every project on one scrollable timeline, with a resource lane underneath showing where committed work exceeds capacity. Built to answer "what am I over-committed on this week?"</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
     <div class="sw-home__glass sw-home__card">
+      <img src="/public/appicons/mindmap.png" alt="mindMap icon" width="40" height="40" style="border-radius: 9px; margin-bottom: 0.5rem;">
       <span class="sw-home__label">mindMap</span>
       <h3>mindMap</h3>
-      <p>Mapping ideas and how they connect. Site coming.</p>
+      <p>Mapping ideas and how they connect.</p>
+      <span class="sw-home__soon">Coming soon</span>
     </div>
 
   </div>
