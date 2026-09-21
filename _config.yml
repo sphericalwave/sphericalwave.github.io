@@ -23,7 +23,16 @@ store_url:           ""
 # Fourthwall Storefront API. Empty = /merch/ keeps its static cards.
 # Token: Fourthwall admin -> Settings -> For Developers (starts ptkn_).
 # It is a PUBLIC read-only catalogue token; checkout happens on Fourthwall.
+# Injected at deploy from the FOURTHWALL_TOKEN repo secret — see
+# .github/workflows/pages.yml. Left empty here so nothing token-shaped is ever
+# committed. Empty means /merch/ serves its static cards, which is a safe
+# degradation, not a breakage.
 fourthwall_token:      ""
+
+# Checkout host. store.sphericalwave.com is not serving yet (Fourthwall is
+# still provisioning it), so checkout points at the Fourthwall address until
+# it is. Swap this over once `curl -I https://store.sphericalwave.com` is 200.
+fourthwall_shop:       "https://sphericalwave-shop.fourthwall.com"
 fourthwall_collection: "all"
 fourthwall_currency:   "CAD"
 

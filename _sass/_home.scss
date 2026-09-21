@@ -500,12 +500,40 @@
   }
 }
 
-// Size picker, injected by the Fourthwall integration
+// Colour + size pickers, injected by the Fourthwall integration
 .sw-merch__variants {
+  margin: 0 0 1rem;
+}
+
+.sw-merch__row {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin: 0 0 1rem;
+
+  & + & { margin-top: 8px; }
+}
+
+.sw-merch__swatch {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--swatch) !important;
+  // a ring rather than a border, so the colour itself is never clipped
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 0 0 2px transparent;
+  transition: box-shadow 0.15s ease;
+
+  &[aria-pressed="true"] {
+    box-shadow: 0 0 0 2px var(--sw-primary);
+  }
+}
+
+// once real photography loads, the frames stop being letterboxed mockups
+.sw-merch__shots--live img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
 }
 
 .sw-merch__size {

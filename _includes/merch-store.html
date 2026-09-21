@@ -1,20 +1,20 @@
 {%- comment -%}
 Fourthwall Storefront API, progressive enhancement.
 
-The page already renders complete product cards from merch.md. This script
-upgrades them in place with live prices, sizes and stock, and turns each card's
-status chip into a Buy button that goes straight to Fourthwall's checkout.
+merch.md already renders complete product cards. This script upgrades the ones
+it finds in the live catalogue: real photos, colour and size pickers, the price
+for the exact variant chosen, and a Buy button that goes straight to
+Fourthwall's hosted checkout.
 
-If the token is unset, the request fails, or a product is missing from the
-collection, the static card is left exactly as it was — so a bad API day costs
-the live prices, not the page.
+Anything it cannot upgrade is left alone — unset token, failed request, product
+missing from the collection, everything out of stock. A bad API day costs the
+live data, not the page.
 
-The storefront token is public by design (Fourthwall calls it ptkn_...); it only
-reads published catalogue data. Payment happens on Fourthwall's checkout, never
-here.
+The storefront token is public and read-only by design (ptkn_...). Payment
+happens on Fourthwall's checkout, never here.
 {%- endcomment -%}
 
-{%- assign shop = site.store_url | default: "" -%}
+{%- assign shop = site.fourthwall_shop | default: site.store_url | default: "" -%}
 {%- assign token = site.fourthwall_token | default: "" -%}
 {%- if shop != "" and token != "" -%}
 <script>
@@ -33,12 +33,14 @@ here.
 
   function money(p) {
     if (!p || typeof p.value !== "number") return null;
+    var whole = p.value % 1 === 0;
     try {
       return new Intl.NumberFormat("en-CA", {
-        style: "currency", currency: p.currency || CURRENCY, maximumFractionDigits: 0
+        style: "currency", currency: p.currency || CURRENCY,
+        minimumFractionDigits: whole ? 0 : 2, maximumFractionDigits: whole ? 0 : 2
       }).format(p.value) + " " + (p.currency || CURRENCY);
     } catch (e) {
-      return "$" + Math.round(p.value) + " " + (p.currency || CURRENCY);
+      return "$" + p.value.toFixed(whole ? 0 : 2) + " " + (p.currency || CURRENCY);
     }
   }
 
@@ -47,59 +49,138 @@ here.
            (typeof v.stock.inStock === "number" && v.stock.inStock > 0);
   }
 
-  function checkoutUrl(variantId) {
+  function attr(v, key) {
+    var a = v.attributes || {};
+    return a[key] && a[key].name ? a[key].name : null;
+  }
+
+  function checkoutUrl(id) {
     return SHOP.replace(/\/$/, "") + "/cart/checkout?products=" +
-      encodeURIComponent(variantId) + ":1&currency=" + encodeURIComponent(CURRENCY);
+      encodeURIComponent(id) + ":1&currency=" + encodeURIComponent(CURRENCY);
+  }
+
+  function button(label, cls) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = cls;
+    b.setAttribute("aria-pressed", "false");
+    if (label) b.textContent = label;
+    return b;
   }
 
   function upgrade(card, product) {
     var variants = (product.variants || []).filter(inStock);
-    if (!variants.length) return;                 // sold out: leave the static card
+    if (!variants.length) return;
+
+    // colour first, then the sizes available in that colour — a flat list of
+    // every variant would repeat "S" once per colour and mean nothing
+    var colours = [];
+    variants.forEach(function (v) {
+      var c = attr(v, "color");
+      if (c && colours.indexOf(c) === -1) colours.push(c);
+    });
+
+    var swatchOf = {};
+    variants.forEach(function (v) {
+      var a = v.attributes || {};
+      if (a.color && a.color.name && !swatchOf[a.color.name]) swatchOf[a.color.name] = a.color.swatch;
+    });
+
+    var colour = colours.length ? colours[0] : null;
+    var selected = null;
 
     var slot = card.querySelector("[data-variants]");
     var priceEl = card.querySelector("[data-price]");
-    // whichever static CTA the page rendered — the chip, or the link to
-    // the product page — is what the live Buy button replaces. Appending
-    // instead would leave two "Buy" links pointing at different places.
+    var shots = card.querySelector(".sw-merch__shots");
     var cta = card.querySelector("[data-cta]");
-    var selected = variants[0];
 
     var buy = document.createElement("a");
     buy.className = "sw-home__btn sw-home__btn--primary sw-merch__buy";
     buy.textContent = "Buy";
     buy.rel = "noopener";
 
-    function paint() {
-      var m = money(selected.unitPrice);
+    slot.innerHTML = "";
+    slot.hidden = false;
+
+    var colourRow = document.createElement("div");
+    colourRow.className = "sw-merch__row";
+    var sizeRow = document.createElement("div");
+    sizeRow.className = "sw-merch__row";
+    if (colours.length > 1) slot.appendChild(colourRow);
+    slot.appendChild(sizeRow);
+
+    function sizesFor(c) {
+      return variants.filter(function (v) { return !c || attr(v, "color") === c; });
+    }
+
+    function paintImages() {
+      if (!shots || !selected) return;
+      var imgs = (selected.images && selected.images.length ? selected.images : product.images) || [];
+      if (imgs.length < 1) return;
+      var slots = shots.querySelectorAll("img");
+      for (var i = 0; i < slots.length; i++) {
+        var src = imgs[Math.min(i, imgs.length - 1)];
+        if (!src || !src.url) continue;
+        slots[i].src = src.url;
+        slots[i].removeAttribute("width");
+        slots[i].removeAttribute("height");
+        slots[i].alt = product.name + (colour ? " — " + colour : "");
+      }
+      shots.classList.add("sw-merch__shots--live");
+    }
+
+    function paintPrice() {
+      var m = selected && money(selected.unitPrice);
       if (m && priceEl) priceEl.innerHTML = "<strong>" + m + "</strong>";
-      if (buy) buy.href = checkoutUrl(selected.id);
-      slot.querySelectorAll("button").forEach(function (b) {
-        var on = b.getAttribute("data-variant") === selected.id;
-        b.setAttribute("aria-pressed", on ? "true" : "false");
-      });
+      if (selected) buy.href = checkoutUrl(selected.id);
     }
 
-    // size picker — only worth showing when there is a real choice
-    var sizes = variants.filter(function (v) { return v.attributes && v.attributes.size; });
-    if (sizes.length > 1) {
-      slot.hidden = false;
-      slot.setAttribute("role", "group");
-      slot.setAttribute("aria-label", "Size");
-      sizes.forEach(function (v) {
-        var b = document.createElement("button");
-        b.type = "button";
-        b.className = "sw-merch__size";
-        b.textContent = v.attributes.size.name;
-        b.setAttribute("data-variant", v.id);
-        b.setAttribute("aria-pressed", "false");
-        b.addEventListener("click", function () { selected = v; paint(); });
-        slot.appendChild(b);
-      });
+    function buildSizes() {
+      sizeRow.innerHTML = "";
+      var list = sizesFor(colour);
+      selected = list[0];
+      if (list.length > 1 && attr(list[0], "size")) {
+        sizeRow.setAttribute("role", "group");
+        sizeRow.setAttribute("aria-label", "Size");
+        list.forEach(function (v) {
+          var b = button(attr(v, "size") || v.name, "sw-merch__size");
+          b.addEventListener("click", function () {
+            selected = v;
+            sizeRow.querySelectorAll("button").forEach(function (o) {
+              o.setAttribute("aria-pressed", o === b ? "true" : "false");
+            });
+            paintPrice();
+          });
+          sizeRow.appendChild(b);
+        });
+        sizeRow.firstChild.setAttribute("aria-pressed", "true");
+      }
+      paintPrice();
+      paintImages();
     }
 
+    if (colours.length > 1) {
+      colourRow.setAttribute("role", "group");
+      colourRow.setAttribute("aria-label", "Colour");
+      colours.forEach(function (c) {
+        var b = button("", "sw-merch__swatch");
+        b.style.setProperty("--swatch", swatchOf[c] || "#333");
+        b.title = c;
+        b.setAttribute("aria-label", c);
+        b.addEventListener("click", function () {
+          colour = c;
+          colourRow.querySelectorAll("button").forEach(function (o) {
+            o.setAttribute("aria-pressed", o === b ? "true" : "false");
+          });
+          buildSizes();
+        });
+        colourRow.appendChild(b);
+      });
+      colourRow.firstChild.setAttribute("aria-pressed", "true");
+    }
+
+    buildSizes();
     if (cta) cta.replaceWith(buy); else card.appendChild(buy);
-
-    paint();
     card.setAttribute("data-live", "true");
   }
 
@@ -117,11 +198,11 @@ here.
         var card = cards[p.slug];
         if (!card) return;
         if (p.state && p.state.type === "SOLD_OUT") return;
-        upgrade(card, p);
+        try { upgrade(card, p); }
+        catch (e) { if (window.console) console.warn("merch card", p.slug, e); }
       });
     })
     .catch(function (e) {
-      // static cards stand; the store link in the CTA band still works
       if (window.console) console.warn("Fourthwall storefront unavailable:", e.message);
     });
 })();

@@ -31,15 +31,15 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
 
   <div class="sw-home__grid sw-enter-2">
 
-    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="c60-tee">
+    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="truncated-icosahedron">
       <span class="sw-home__label">01 · Tee</span>
       <h3>Organic cotton tee</h3>
       <div class="sw-merch__shots">
-        <img src="/public/merch/c60-tee-front.png" width="900" height="760" loading="lazy" alt="C60 tee, front — small mark on the left chest">
-        <img src="/public/merch/c60-tee-back.png" width="900" height="760" loading="lazy" alt="C60 tee, back — large buckyball">
+        <img src="/public/merch/fw-tee-front.jpg" width="675" height="900" loading="lazy" alt="C60 tee, front — small mark on the left chest">
+        <img src="/public/merch/fw-tee-back.jpg" width="675" height="900" loading="lazy" alt="C60 tee, back — large buckyball">
       </div>
-      <p class="mb-2">Stanley/Stella heavyweight, 100% organic cotton. Black first, blue next.</p>
-      <p class="mb-3" data-price><strong>$58 CAD</strong></p>
+      <p class="mb-2">Heavyweight organic cotton. Black, anthracite, or dark heather grey.</p>
+      <p class="mb-3" data-price><strong>$47 CAD</strong></p>
       <div class="sw-merch__variants" data-variants hidden></div>
       {% if store != "" %}
       <a href="{{ store }}/products/c60-tee" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
@@ -65,15 +65,15 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
       {% endif %}
     </div>
 
-    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="c60-rashguard">
+    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="superfluid-jiujitsu">
       <span class="sw-home__label">03 · Rashguard</span>
-      <h3>Long-sleeve rashguard</h3>
+      <h3>Superfluid jiujitsu</h3>
       <div class="sw-merch__shots">
-        <img src="/public/merch/c60-rashguard-front.png" width="900" height="760" loading="lazy" alt="C60 rashguard, front — small mark on the left chest">
-        <img src="/public/merch/c60-rashguard-back.png" width="900" height="760" loading="lazy" alt="C60 rashguard, back — large buckyball">
+        <img src="/public/merch/fw-rashguard-front.jpg" width="900" height="900" loading="lazy" alt="Superfluid jiujitsu rashguard, front">
+        <img src="/public/merch/fw-rashguard-back.jpg" width="900" height="900" loading="lazy" alt="Superfluid jiujitsu rashguard, back">
       </div>
-      <p class="mb-2">All-over print, flatlock seams, navy. Good for training and warm-ups — it is not a competition-spec grappling rashguard, and I won't pretend otherwise.</p>
-      <p class="mb-3" data-price><strong>$78 CAD</strong></p>
+      <p class="mb-2">All-over sublimated print, navy fade, C60 front and back. Good for training and warm-ups — it is not a competition-spec grappling rashguard, and I won't pretend otherwise.</p>
+      <p class="mb-3" data-price><strong>$54 CAD</strong></p>
       <div class="sw-merch__variants" data-variants hidden></div>
       {% if store != "" %}
       <a href="{{ store }}/products/c60-rashguard" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
