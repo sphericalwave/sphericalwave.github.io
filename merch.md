@@ -2,29 +2,27 @@
 layout: page
 title: Merch
 permalink: /merch/
-image: /public/merch/c60-tee-back.png
-description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve rashguard. Printed on demand, one at a time, no minimum order."
+image: /public/merch/fw-tee-back.jpg
+description: "Three designs on shirts, a hoodie and a rashguard. Printed one at a time when you order."
 ---
 
-{% assign store = site.store_url | default: "" %}
+{%- comment -%}
+Names, taglines and prices here mirror the Fourthwall catalogue exactly, and
+merch-store.html overwrites them with live data on load. Do not describe a
+garment beyond what the shop says — every invented spec is something that can
+end up contradicting the product someone actually receives.
+{%- endcomment -%}
+{% assign store = site.fourthwall_shop | default: "" %}
 
 <div class="sw-home">
 
   <section class="sw-home__hero sw-enter">
     <span class="sw-home__chip">
       <span class="sw-home__dot"></span>
-      <span class="sw-home__label">{% if store != "" %}Made to order{% else %}Store opening{% endif %}</span>
+      <span class="sw-home__label">Made to order</span>
     </span>
-    <h1 class="sw-home__title">C60 Merch</h1>
-    <p class="sw-home__lead">The buckyball, large on the back and small on the left chest. Printed one at a time when you order — no batch to sell through, no size I guessed wrong about, nothing sitting in a box in my basement.</p>
-    <div class="sw-home__cta">
-      {% if store != "" %}
-      <a href="{{ store }}" class="sw-home__btn sw-home__btn--primary" rel="noopener">Shop the store</a>
-      {% else %}
-      <a href="#notify" class="sw-home__btn sw-home__btn--primary">Tell me when it opens</a>
-      {% endif %}
-      <a href="#how" class="sw-home__btn sw-home__btn--ghost">How it's made</a>
-    </div>
+    <h1 class="sw-home__title">Merch</h1>
+    <p class="sw-home__lead">Three designs. Each one printed when you order it — nothing stocked, so no size runs out and nothing gets dumped.</p>
   </section>
 
   <hr class="sw-home__wave-line">
@@ -32,51 +30,48 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
   <div class="sw-home__grid sw-enter-2">
 
     <div class="sw-home__glass sw-home__card sw-home__pick" data-product="truncated-icosahedron">
-      <span class="sw-home__label">01 · Tee</span>
-      <h3>Organic cotton tee</h3>
+      <h3>truncated icosahedron</h3>
       <div class="sw-merch__shots">
-        <img src="/public/merch/fw-tee-front.jpg" width="675" height="900" loading="lazy" alt="C60 tee, front — small mark on the left chest">
-        <img src="/public/merch/fw-tee-back.jpg" width="675" height="900" loading="lazy" alt="C60 tee, back — large buckyball">
+        <img src="/public/merch/fw-tee-front.jpg" width="675" height="900" loading="lazy" alt="truncated icosahedron tee, front">
+        <img src="/public/merch/fw-tee-back.jpg" width="675" height="900" loading="lazy" alt="truncated icosahedron tee, back">
       </div>
-      <p class="mb-2">Heavyweight organic cotton. Black, anthracite, or dark heather grey.</p>
+      <p class="mb-2">think global act local</p>
       <p class="mb-3" data-price><strong>$47 CAD</strong></p>
       <div class="sw-merch__variants" data-variants hidden></div>
       {% if store != "" %}
-      <a href="{{ store }}/products/c60-tee" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
+      <a href="{{ store }}/products/truncated-icosahedron" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
       {% else %}
       <span class="sw-home__soon" data-cta>Opening soon</span>
       {% endif %}
     </div>
 
-    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="c60-zip-hoodie">
-      <span class="sw-home__label">02 · Hoodie</span>
-      <h3>Zip hoodie</h3>
+    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="they-think-im-hiding-in-the-shadows">
+      <h3>they think im hiding in the shadows</h3>
       <div class="sw-merch__shots">
-        <img src="/public/merch/c60-hoodie-front.png" width="900" height="760" loading="lazy" alt="C60 zip hoodie, front — small mark on the left chest">
-        <img src="/public/merch/c60-hoodie-back.png" width="900" height="760" loading="lazy" alt="C60 zip hoodie, back — large buckyball">
+        <img src="/public/merch/fw-hoodie-front.jpg" width="675" height="900" loading="lazy" alt="Hoodie, front">
+        <img src="/public/merch/fw-hoodie-back.jpg" width="675" height="900" loading="lazy" alt="Hoodie, back">
       </div>
-      <p class="mb-2">Brushed organic fleece, full zip, side pockets. Black first, blue next.</p>
-      <p class="mb-3" data-price><strong>$118 CAD</strong></p>
+      <p class="mb-2">but i am the shadows</p>
+      <p class="mb-3" data-price><strong>$71 CAD</strong></p>
       <div class="sw-merch__variants" data-variants hidden></div>
       {% if store != "" %}
-      <a href="{{ store }}/products/c60-zip-hoodie" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
+      <a href="{{ store }}/products/they-think-im-hiding-in-the-shadows" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
       {% else %}
       <span class="sw-home__soon" data-cta>Opening soon</span>
       {% endif %}
     </div>
 
     <div class="sw-home__glass sw-home__card sw-home__pick" data-product="superfluid-jiujitsu">
-      <span class="sw-home__label">03 · Rashguard</span>
-      <h3>Superfluid jiujitsu</h3>
+      <h3>superfluid jiujitsu</h3>
       <div class="sw-merch__shots">
-        <img src="/public/merch/fw-rashguard-front.jpg" width="900" height="900" loading="lazy" alt="Superfluid jiujitsu rashguard, front">
-        <img src="/public/merch/fw-rashguard-back.jpg" width="900" height="900" loading="lazy" alt="Superfluid jiujitsu rashguard, back">
+        <img src="/public/merch/fw-rashguard-front.jpg" width="900" height="900" loading="lazy" alt="superfluid jiujitsu rashguard, front">
+        <img src="/public/merch/fw-rashguard-back.jpg" width="900" height="900" loading="lazy" alt="superfluid jiujitsu rashguard, back">
       </div>
-      <p class="mb-2">All-over sublimated print, navy fade, C60 front and back. Good for training and warm-ups — it is not a competition-spec grappling rashguard, and I won't pretend otherwise.</p>
+      <p class="mb-2">suit up!</p>
       <p class="mb-3" data-price><strong>$54 CAD</strong></p>
       <div class="sw-merch__variants" data-variants hidden></div>
       {% if store != "" %}
-      <a href="{{ store }}/products/c60-rashguard" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
+      <a href="{{ store }}/products/superfluid-jiujitsu" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
       {% else %}
       <span class="sw-home__soon" data-cta>Opening soon</span>
       {% endif %}
@@ -84,51 +79,20 @@ description: "C60 merch — organic cotton tee, zip hoodie, and a long-sleeve ra
 
   </div>
 
-  <p class="sw-home__lead" style="font-size: 0.9rem; opacity: 0.7; margin-top: 1rem;">
-    Product images are design mockups of the real print placement. They get replaced with photographs of the actual garments once the first ones are printed.
-  </p>
-
   <hr class="sw-home__wave-line">
-
-  <h2 class="mb-2" id="how">How it's made</h2>
-  <p class="sw-home__lead mb-4">I used to plan this as a specialty run — hemp blend, cut only once a waitlist covered the minimum. That meant nothing shipped. Print-on-demand ships.</p>
 
   <div class="sw-home__bento sw-enter-2">
     <div class="sw-home__glass sw-home__panel sw-home__panel--accent">
-      <span class="sw-home__label">The trade I made</span>
-      <p class="sw-home__panel-title">Organic cotton instead of hemp</p>
-      <p>Hemp blanks are not available print-on-demand at any quality I would put my name on, so the tee is Stanley/Stella organic cotton — a genuinely good blank, printed with water-based ink, and you can buy one today instead of joining a list.</p>
-      <p>If there is ever enough demand for a real hemp run, I'll do that as a separate limited drop rather than hold up everything else.</p>
-    </div>
-    <div class="sw-home__glass sw-home__panel">
       <span class="sw-home__label">Order to door</span>
       <p class="sw-home__panel-title">Made after you buy</p>
-      <p>Each piece is printed and shipped by the fulfiller when the order comes in — usually 2–5 business days to make, then normal post. Nothing is stocked, so no size runs out and no leftovers get dumped.</p>
-      <p>Sizing, returns and shipping are handled at checkout in the store.</p>
+      <p>Each piece is printed and shipped once the order comes in — a few days to make, then normal post. Sizing, shipping and returns are handled at checkout.</p>
+    </div>
+    <div class="sw-home__glass sw-home__panel">
+      <span class="sw-home__label">Questions</span>
+      <p class="sw-home__panel-title">Just ask</p>
+      <p>Sizing, a colour that isn't listed, or one of these designs on something else — <a href="mailto:hello@sphericalwave.com?subject=Merch">email me</a>.</p>
     </div>
   </div>
-
-  <hr class="sw-home__wave-line">
-
-  {% if store != "" %}
-  <section class="sw-home__cta-band sw-enter-2">
-    <h2>Pick one up</h2>
-    <p>Tee, hoodie, rashguard. Printed when you order.</p>
-    <div class="sw-home__cta">
-      <a href="{{ store }}" class="sw-home__btn sw-home__btn--primary" rel="noopener">Shop the store</a>
-      <a href="mailto:hello@sphericalwave.com?subject=C60%20Merch" class="sw-home__btn sw-home__btn--ghost">Ask me something</a>
-    </div>
-  </section>
-  {% else %}
-  <section class="sw-home__cta-band sw-enter-2" id="notify">
-    <h2>Not open yet</h2>
-    <p>The store is being set up. Email me and I'll tell you the day it opens — or say which piece and size you want and I'll make sure it exists.</p>
-    <div class="sw-home__cta">
-      <a href="mailto:hello@sphericalwave.com?subject=C60%20Merch%20%E2%80%94%20tell%20me%20when%20it%20opens&amp;body=Which%20piece%3A%20%0ASize%3A%20%0A" class="sw-home__btn sw-home__btn--primary">Tell me when it opens</a>
-      <a href="/apps/" class="sw-home__btn sw-home__btn--ghost">See the apps instead</a>
-    </div>
-  </section>
-  {% endif %}
 
 </div>
 
