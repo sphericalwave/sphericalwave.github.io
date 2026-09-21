@@ -2,7 +2,7 @@
 layout: page
 title: Services
 permalink: /services/
-description: "What Aaron builds: websites and SEO, business intelligence on QuickBooks, native iOS apps, and decks, steps, and patios."
+description: "What Aaron builds: customer acquisition through websites, SEO and funnels, business intelligence on QuickBooks, native iOS apps, and decks, steps, and patios."
 ---
 
 <div class="sw-home">
@@ -20,12 +20,12 @@ description: "What Aaron builds: websites and SEO, business intelligence on Quic
 
   <div class="sw-home__grid sw-home__grid--2 sw-enter-2">
     <div class="sw-home__glass sw-home__panel">
-      <span class="sw-home__label">01 / Websites &amp; SEO</span>
-      <p class="sw-home__panel-title">Sites that bring in customers</p>
+      <span class="sw-home__label">01 / Customer acquisition</span>
+      <p class="sw-home__panel-title">More of the right people, getting in touch</p>
       <p><strong>Problem:</strong> a site that looks fine but doesn't generate leads, and doesn't show up for the searches that matter.</p>
-      <p><strong>What I build:</strong> a fast, modern site designed around the action you want visitors to take — plus the technical SEO and content that gets the right people to it.</p>
-      <p><strong>Outcome:</strong> more qualified inquiries from the traffic you already have, and more of it over time.</p>
-      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Websites &amp; SEO →</a>
+      <p><strong>What I build:</strong> a fast site designed around the action you want visitors to take, the technical SEO and content that gets the right people to it, and the funnel that moves them toward a decision.</p>
+      <p><strong>Outcome:</strong> more customers from the traffic you already have, and more of that traffic over time.</p>
+      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Customer acquisition →</a>
     </div>
     <div class="sw-home__glass sw-home__panel">
       <span class="sw-home__label">02 / Business intelligence</span>
@@ -49,7 +49,7 @@ description: "What Aaron builds: websites and SEO, business intelligence on Quic
       <p><strong>Problem:</strong> you want it built properly, and you want to know what it'll look like and cost before anyone digs.</p>
       <p><strong>What I build:</strong> the job modeled in CAD, materials counted from the model, then built by the person who designed it. A cedar front porch and a paver patio so far.</p>
       <p><strong>Outcome:</strong> no surprises, and a build that matches the drawing.</p>
-      <a href="/contracting/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Contracting →</a>
+      <a href="/design-build/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Design &amp; Build →</a>
     </div>
   </div>
 

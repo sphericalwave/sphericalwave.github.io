@@ -32,9 +32,9 @@ description: "Websites that bring in customers, the business intelligence behind
   <div class="sw-home__grid sw-home__grid--2 sw-enter-2">
     <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">01</span>
-      <h3>Websites &amp; SEO</h3>
-      <p class="mb-3">Fast, modern sites built around the one thing you want a visitor to do — and the SEO that gets the right people there.</p>
-      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost">Websites</a>
+      <h3>Customer acquisition</h3>
+      <p class="mb-3">Websites, SEO, and sales funnels built as one system — so the right people find you, and the ones who land get in touch.</p>
+      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost">Customer acquisition</a>
     </article>
     <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">02</span>
@@ -52,7 +52,7 @@ description: "Websites that bring in customers, the business intelligence behind
       <span class="sw-home__label">04</span>
       <h3>Decks, steps &amp; patios</h3>
       <p class="mb-3">Modeled in CAD, priced from the model, built by me. A cedar porch and a paver patio so far.</p>
-      <a href="/contracting/" class="sw-home__btn sw-home__btn--ghost">Contracting</a>
+      <a href="/design-build/" class="sw-home__btn sw-home__btn--ghost">Design &amp; Build</a>
     </article>
   </div>
 
@@ -65,7 +65,7 @@ description: "Websites that bring in customers, the business intelligence behind
       <p>A wireframe for a site, a spreadsheet for the books, a CAD drawing for a porch. You see the finished thing and the price before anything is made. One person, low overhead — you pay for the work.</p>
       <a href="/about/" class="sw-home__btn sw-home__btn--ghost">About me</a>
     </div>
-    <a class="sw-home__glass sw-home__panel sw-home__panel--center sw-home__panel--photo" href="/contracting/38-guy/">
+    <a class="sw-home__glass sw-home__panel sw-home__panel--center sw-home__panel--photo" href="/design-build/38-guy/">
       <img src="/public/contracting/38-guy.jpg" alt="Cedar front porch and steps at 38 Guy, finished" loading="lazy">
       <span class="sw-home__label">Latest build · 38 Guy</span>
     </a>

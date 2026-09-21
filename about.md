@@ -66,7 +66,7 @@ image: /public/aaron/2023-12-12 small_headshot.JPG
     <div class="sw-home__glass sw-home__panel sw-home__panel--center">
       <span class="sw-home__label">Proof</span>
       <p class="sw-home__panel-title">See the work</p>
-      <a href="/contracting/" class="sw-home__btn sw-home__btn--ghost">Builds</a>
+      <a href="/design-build/" class="sw-home__btn sw-home__btn--ghost">Builds</a>
       <a href="/apps/" class="sw-home__btn sw-home__btn--ghost">Apps</a>
       <a href="/websites/" class="sw-home__btn sw-home__btn--ghost">Websites</a>
     </div>

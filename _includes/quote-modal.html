@@ -101,7 +101,7 @@
     if (phone) lines.push("Phone: " + phone);
     lines.push("", "What do you need built?", val("#q-project"));
     return {
-      subject: "Contracting quote" + (name ? " — " + name : ""),
+      subject: "Design & Build quote" + (name ? " — " + name : ""),
       body: lines.join("\n")
     };
   }
@@ -168,7 +168,7 @@
     opener = null;
   });
 
-  // Arriving from another page at /contracting/#quote should open it. The
+  // Arriving from another page at /design-build/#quote should open it. The
   // hashchange case covers back/forward and any same-document jump to #quote,
   // where this script does not re-run.
   function openIfHashed() {

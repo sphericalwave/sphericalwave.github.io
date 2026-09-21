@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Front porch & steps — 38 Guy
-permalink: /contracting/38-guy/
+permalink: /design-build/38-guy/
 description: "Cedar front porch and steps at 38 Guy — modeled in CAD and built by a freelance electrical engineer."
 ---
 
@@ -15,8 +15,8 @@ description: "Cedar front porch and steps at 38 Guy — modeled in CAD and built
     <h1 class="sw-home__title">Front porch &amp; steps</h1>
     <p class="sw-home__lead">A cedar front porch and steps, replacing the old concrete stoop. Cedar holds up outside — and it smells great.</p>
     <div class="sw-home__cta">
-      <a href="/contracting/#quote" class="sw-home__btn sw-home__btn--primary">Get a quote</a>
-      <a href="/contracting/" class="sw-home__btn sw-home__btn--ghost">All jobs</a>
+      <a href="/design-build/#quote" class="sw-home__btn sw-home__btn--primary">Get a quote</a>
+      <a href="/design-build/" class="sw-home__btn sw-home__btn--ghost">All jobs</a>
     </div>
   </section>
 
