@@ -1,0 +1,89 @@
+name: Deploy site
+
+# Replaces GitHub's built-in branch build so the Fourthwall storefront token
+# can be injected from a repo secret at deploy time instead of living in
+# _config.yml. The token is public by design — it is read-only catalogue access
+# and ends up in the served HTML either way — but keeping it out of the
+# repository stops secret scanning flagging it as Shopify credentials, which is
+# what it looks like to a pattern matcher.
+#
+# Requires, once:
+#   - Settings -> Secrets and variables -> Actions -> New secret
+#       FOURTHWALL_TOKEN = ptkn_...
+#   - Settings -> Pages -> Source: GitHub Actions
+#
+# Without the secret the build still succeeds and /merch/ falls back to its
+# static cards, so a missing secret costs live prices, not the site.
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.4'
+          bundler-cache: false
+
+      - name: Install gems
+        run: bundle install --jobs 4 --retry 3
+
+      - uses: actions/configure-pages@v5
+
+      - name: Inject storefront token
+        env:
+          FOURTHWALL_TOKEN: ${{ secrets.FOURTHWALL_TOKEN }}
+        run: |
+          # A second config file rather than rewriting _config.yml: Jekyll gives
+          # the last --config precedence, so this overrides the empty default
+          # without any in-place editing that could corrupt the real file.
+          if [ -n "$FOURTHWALL_TOKEN" ]; then
+            printf 'fourthwall_token: "%s"\n' "$FOURTHWALL_TOKEN" > _config.ci.yml
+            echo "storefront token injected"
+          else
+            : > _config.ci.yml
+            echo "::warning::FOURTHWALL_TOKEN not set — /merch/ will serve static cards"
+          fi
+
+      - name: Build
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --config _config.yml,_config.ci.yml
+
+      - name: Check the build looks sane
+        run: |
+          test -f _site/index.html || { echo "no index.html"; exit 1; }
+          test -f _site/merch/index.html || { echo "no merch page"; exit 1; }
+          # the custom domain dies silently without this
+          grep -qx 'sphericalwave.com' _site/CNAME || { echo "CNAME missing or wrong"; exit 1; }
+          echo "ok"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
