@@ -42,6 +42,63 @@
     color: white;
     line-height: 1;
   }
+
+  // the C60 sits on top of the expanding rings
+  &__mark {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+
+    img { position: relative; z-index: 1; }
+  }
+
+  // from assets/sphericalwave-rings.svg. Scoped here rather than left in the
+  // file's own <style>, where `circle {}` would apply to every inlined SVG.
+  &__rings {
+    // wider than the mark so rings are still growing as they leave the logo
+    --sw-ring-period: 6s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 210%;
+    height: 210%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+    overflow: visible;
+
+    circle {
+      // fixed light blue: the nav is always $swBlue, so the file's
+      // prefers-color-scheme choice would be wrong half the time
+      stroke: rgba(180, 208, 240, 0.55);
+      stroke-width: 1.5;
+      fill: none;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: sw-brand-expand var(--sw-ring-period) linear infinite;
+    }
+
+    // negative delays so the first frame is already a full field of rings
+    circle:nth-child(1) { animation-delay: calc(var(--sw-ring-period) * -0 / 6); }
+    circle:nth-child(2) { animation-delay: calc(var(--sw-ring-period) * -1 / 6); }
+    circle:nth-child(3) { animation-delay: calc(var(--sw-ring-period) * -2 / 6); }
+    circle:nth-child(4) { animation-delay: calc(var(--sw-ring-period) * -3 / 6); }
+    circle:nth-child(5) { animation-delay: calc(var(--sw-ring-period) * -4 / 6); }
+    circle:nth-child(6) { animation-delay: calc(var(--sw-ring-period) * -5 / 6); }
+  }
+}
+
+@keyframes sw-brand-expand {
+  0%   { transform: scale(0.02); opacity: 0; }
+  8%   { opacity: 1; }
+  100% { transform: scale(1);    opacity: 0; }
+}
+
+// rings hold as a static field rather than pulsing behind the logo
+@media (prefers-reduced-motion: reduce) {
+  .sw-brand__rings circle { animation-play-state: paused; }
 }
   
   

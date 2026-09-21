@@ -5,7 +5,25 @@
     <div class="container">
   
       <a class="navbar-brand sw-brand" href="{{ site.baseurl }}/">
-        <img src="/public/SphericalWaveC60-nav.png" alt="sphericalWave" class="white-shadow-hover" loading="eager" decoding="async">
+        <span class="sw-brand__mark">
+          {%- comment -%}
+            assets/sphericalwave-rings.svg, inlined and scoped. Inlining lets the
+            ring colour be set for the blue nav rather than the visitor's OS
+            theme, which is what the file's own media query keys off. Its styles
+            are moved to _navbar.scss under .sw-brand__rings — left inline, its
+            bare `circle {}` rule would hit every SVG on the page. The C2PA
+            metadata is dropped too: 7.7 KB of the file's 9.6 KB, on every page.
+          {%- endcomment -%}
+          <svg class="sw-brand__rings" viewBox="0 0 400 400" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="200" cy="200" r="198" vector-effect="non-scaling-stroke"/>
+            <circle cx="200" cy="200" r="198" vector-effect="non-scaling-stroke"/>
+            <circle cx="200" cy="200" r="198" vector-effect="non-scaling-stroke"/>
+            <circle cx="200" cy="200" r="198" vector-effect="non-scaling-stroke"/>
+            <circle cx="200" cy="200" r="198" vector-effect="non-scaling-stroke"/>
+            <circle cx="200" cy="200" r="198" vector-effect="non-scaling-stroke"/>
+          </svg>
+          <img src="/public/SphericalWaveC60-nav.png" alt="sphericalWave" class="white-shadow-hover" loading="eager" decoding="async">
+        </span>
         <span class="sw-brand__name">sphericalwave</span>
       </a>
     
