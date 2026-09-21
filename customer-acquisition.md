@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Customer Acquisition — Websites, SEO & Sales Funnels
-permalink: /websites/
+permalink: /customer-acquisition/
 description: "Websites, SEO, and sales funnels built as one system — so the right people find you, and the ones who land get in touch."
 ---
 

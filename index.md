@@ -34,7 +34,7 @@ description: "Websites that bring in customers, the business intelligence behind
       <span class="sw-home__label">01</span>
       <h3>Customer acquisition</h3>
       <p class="mb-3">Websites, SEO, and sales funnels built as one system — so the right people find you, and the ones who land get in touch.</p>
-      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost">Customer acquisition</a>
+      <a href="/customer-acquisition/" class="sw-home__btn sw-home__btn--ghost">Customer acquisition</a>
     </article>
     <article class="sw-home__glass sw-home__card sw-home__pick">
       <span class="sw-home__label">02</span>

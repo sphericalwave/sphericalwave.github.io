@@ -25,7 +25,7 @@ description: "What Aaron builds: customer acquisition through websites, SEO and 
       <p><strong>Problem:</strong> a site that looks fine but doesn't generate leads, and doesn't show up for the searches that matter.</p>
       <p><strong>What I build:</strong> a fast site designed around the action you want visitors to take, the technical SEO and content that gets the right people to it, and the funnel that moves them toward a decision.</p>
       <p><strong>Outcome:</strong> more customers from the traffic you already have, and more of that traffic over time.</p>
-      <a href="/websites/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Customer acquisition →</a>
+      <a href="/customer-acquisition/" class="sw-home__btn sw-home__btn--ghost" style="margin-top:1rem;">Customer acquisition →</a>
     </div>
     <div class="sw-home__glass sw-home__panel">
       <span class="sw-home__label">02 / Business intelligence</span>
