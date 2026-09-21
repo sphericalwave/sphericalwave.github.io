@@ -38,11 +38,7 @@ end up contradicting the product someone actually receives.
       <p class="mb-2">think global act local</p>
       <p class="mb-3" data-price><strong>$47 CAD</strong></p>
       <div class="sw-merch__variants" data-variants hidden></div>
-      {% if store != "" %}
       <a href="{{ store }}/products/truncated-icosahedron" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
-      {% else %}
-      <span class="sw-home__soon" data-cta>Opening soon</span>
-      {% endif %}
     </div>
 
     <div class="sw-home__glass sw-home__card sw-home__pick" data-product="they-think-im-hiding-in-the-shadows">
@@ -54,11 +50,7 @@ end up contradicting the product someone actually receives.
       <p class="mb-2">but i am the shadows</p>
       <p class="mb-3" data-price><strong>$71 CAD</strong></p>
       <div class="sw-merch__variants" data-variants hidden></div>
-      {% if store != "" %}
       <a href="{{ store }}/products/they-think-im-hiding-in-the-shadows" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
-      {% else %}
-      <span class="sw-home__soon" data-cta>Opening soon</span>
-      {% endif %}
     </div>
 
     <div class="sw-home__glass sw-home__card sw-home__pick" data-product="superfluid-jiujitsu">
@@ -70,11 +62,7 @@ end up contradicting the product someone actually receives.
       <p class="mb-2">suit up!</p>
       <p class="mb-3" data-price><strong>$54 CAD</strong></p>
       <div class="sw-merch__variants" data-variants hidden></div>
-      {% if store != "" %}
       <a href="{{ store }}/products/superfluid-jiujitsu" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
-      {% else %}
-      <span class="sw-home__soon" data-cta>Opening soon</span>
-      {% endif %}
     </div>
 
   </div>

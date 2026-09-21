@@ -1,17 +1,26 @@
 {%- comment -%}
-Fourthwall Storefront API, progressive enhancement.
+Fourthwall Storefront API, progressive enhancement, with a client-side cart.
 
-merch.md already renders complete product cards. This script upgrades the ones
-it finds in the live catalogue: real photos, colour and size pickers, the price
-for the exact variant chosen, and a Buy button that goes straight to
-Fourthwall's hosted checkout.
+merch.md ships complete product cards. This upgrades the ones present in the
+live catalogue: real photos, colour and size pickers, the price for the exact
+variant, and an Add to cart button.
 
-Anything it cannot upgrade is left alone — unset token, failed request, product
-missing from the collection, everything out of stock. A bad API day costs the
-live data, not the page.
+The cart is a list of variant ids in localStorage. Fourthwall's checkout accepts
+several variants in one URL —
 
-The storefront token is public and read-only by design (ptkn_...). Payment
-happens on Fourthwall's checkout, never here.
+    /cart/checkout?products=<id>:<qty>,<id>:<qty>&currency=CAD
+
+— so checking out is just building that link. No cart API, no backend, and
+nothing to keep in sync. Before this, each Buy button opened a checkout holding
+only its own item, so a second click replaced the first and anyone wanting two
+things paid shipping twice.
+
+Anything not upgradable is left alone: no token, failed request, product absent
+from the collection, everything out of stock. Without JavaScript each card still
+links to its product page on the shop.
+
+The storefront token is public and read-only by design. Payment happens on
+Fourthwall's checkout, never here.
 {%- endcomment -%}
 
 {%- assign shop = site.fourthwall_shop | default: site.store_url | default: "" -%}
@@ -24,6 +33,7 @@ happens on Fourthwall's checkout, never here.
   var COLLECTION = {{ site.fourthwall_collection | default: "all" | jsonify }};
   var CURRENCY = {{ site.fourthwall_currency | default: "CAD" | jsonify }};
   var API = "https://storefront-api.fourthwall.com/v1";
+  var KEY = "sw-merch-cart";
 
   var cards = {};
   document.querySelectorAll("[data-product]").forEach(function (el) {
@@ -31,39 +41,110 @@ happens on Fourthwall's checkout, never here.
   });
   if (!Object.keys(cards).length) return;
 
-  function money(p) {
-    if (!p || typeof p.value !== "number") return null;
-    var whole = p.value % 1 === 0;
+  // ---- cart state ---------------------------------------------------------
+  // localStorage can throw in private mode or with site data blocked, and it is
+  // per-browser anyway, so the cart is always treated as best-effort.
+  function load() {
     try {
-      return new Intl.NumberFormat("en-CA", {
-        style: "currency", currency: p.currency || CURRENCY,
-        minimumFractionDigits: whole ? 0 : 2, maximumFractionDigits: whole ? 0 : 2
-      }).format(p.value) + " " + (p.currency || CURRENCY);
-    } catch (e) {
-      return "$" + p.value.toFixed(whole ? 0 : 2) + " " + (p.currency || CURRENCY);
-    }
+      var v = JSON.parse(localStorage.getItem(KEY) || "[]");
+      return Array.isArray(v) ? v.filter(function (i) { return i && i.id; }) : [];
+    } catch (e) { return []; }
+  }
+  function save(c) {
+    try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
   }
 
+  var cart = load();
+
+  function add(item) {
+    var found = null;
+    cart.forEach(function (i) { if (i.id === item.id) found = i; });
+    if (found) found.qty += 1; else cart.push({
+      id: item.id, qty: 1, name: item.name, label: item.label,
+      price: item.price, currency: item.currency
+    });
+    save(cart); renderBar();
+  }
+  function setQty(id, qty) {
+    cart = cart.filter(function (i) { return !(i.id === id && qty <= 0); });
+    cart.forEach(function (i) { if (i.id === id) i.qty = qty; });
+    save(cart); renderBar();
+  }
+
+  function money(v, cur) {
+    try {
+      return new Intl.NumberFormat("en-CA", {
+        style: "currency", currency: cur || CURRENCY
+      }).format(v);
+    } catch (e) { return "$" + v.toFixed(2); }
+  }
+
+  function checkoutUrl() {
+    var parts = cart.map(function (i) {
+      return encodeURIComponent(i.id) + ":" + i.qty;
+    });
+    return SHOP.replace(/\/$/, "") + "/cart/checkout?products=" + parts.join(",") +
+      "&currency=" + encodeURIComponent(CURRENCY);
+  }
+
+  // ---- checkout bar -------------------------------------------------------
+  var bar = null;
+  function buildBar() {
+    bar = document.createElement("div");
+    bar.className = "sw-cart";
+    bar.setAttribute("role", "region");
+    bar.setAttribute("aria-label", "Cart");
+    bar.innerHTML =
+      '<div class="sw-cart__inner">' +
+        '<ul class="sw-cart__items"></ul>' +
+        '<div class="sw-cart__end">' +
+          '<p class="sw-cart__total"></p>' +
+          '<a class="sw-home__btn sw-home__btn--primary sw-cart__go" rel="noopener">Checkout</a>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(bar);
+  }
+
+  function renderBar() {
+    if (!bar) buildBar();
+    if (!cart.length) { bar.hidden = true; document.body.classList.remove("sw-has-cart"); return; }
+    bar.hidden = false;
+    document.body.classList.add("sw-has-cart");
+
+    var list = bar.querySelector(".sw-cart__items");
+    list.innerHTML = "";
+    var total = 0, count = 0, cur = CURRENCY;
+    cart.forEach(function (i) {
+      total += (i.price || 0) * i.qty; count += i.qty; cur = i.currency || cur;
+      var li = document.createElement("li");
+      li.className = "sw-cart__item";
+      var txt = document.createElement("span");
+      txt.textContent = (i.qty > 1 ? i.qty + "× " : "") + i.name + (i.label ? " · " + i.label : "");
+      var rm = document.createElement("button");
+      rm.type = "button"; rm.className = "sw-cart__rm";
+      rm.setAttribute("aria-label", "Remove " + i.name);
+      rm.textContent = "×";
+      rm.addEventListener("click", function () { setQty(i.id, 0); });
+      li.appendChild(txt); li.appendChild(rm);
+      list.appendChild(li);
+    });
+    bar.querySelector(".sw-cart__total").textContent =
+      count + (count === 1 ? " item · " : " items · ") + money(total, cur);
+    bar.querySelector(".sw-cart__go").href = checkoutUrl();
+  }
+
+  // ---- product cards ------------------------------------------------------
   function inStock(v) {
     return !v.stock || v.stock.type === "UNLIMITED" ||
            (typeof v.stock.inStock === "number" && v.stock.inStock > 0);
   }
-
-  function attr(v, key) {
+  function attr(v, k) {
     var a = v.attributes || {};
-    return a[key] && a[key].name ? a[key].name : null;
+    return a[k] && a[k].name ? a[k].name : null;
   }
-
-  function checkoutUrl(id) {
-    return SHOP.replace(/\/$/, "") + "/cart/checkout?products=" +
-      encodeURIComponent(id) + ":1&currency=" + encodeURIComponent(CURRENCY);
-  }
-
   function button(label, cls) {
     var b = document.createElement("button");
-    b.type = "button";
-    b.className = cls;
-    b.setAttribute("aria-pressed", "false");
+    b.type = "button"; b.className = cls; b.setAttribute("aria-pressed", "false");
     if (label) b.textContent = label;
     return b;
   }
@@ -72,14 +153,11 @@ happens on Fourthwall's checkout, never here.
     var variants = (product.variants || []).filter(inStock);
     if (!variants.length) return;
 
-    // colour first, then the sizes available in that colour — a flat list of
-    // every variant would repeat "S" once per colour and mean nothing
     var colours = [];
     variants.forEach(function (v) {
       var c = attr(v, "color");
       if (c && colours.indexOf(c) === -1) colours.push(c);
     });
-
     var swatchOf = {};
     variants.forEach(function (v) {
       var a = v.attributes || {};
@@ -88,56 +166,49 @@ happens on Fourthwall's checkout, never here.
 
     var colour = colours.length ? colours[0] : null;
     var selected = null;
-
     var slot = card.querySelector("[data-variants]");
     var priceEl = card.querySelector("[data-price]");
-    var shots = card.querySelector(".sw-merch__shots");
     var cta = card.querySelector("[data-cta]");
 
-    var buy = document.createElement("a");
-    buy.className = "sw-home__btn sw-home__btn--primary sw-merch__buy";
-    buy.textContent = "Buy";
-    buy.rel = "noopener";
+    var addBtn = document.createElement("button");
+    addBtn.type = "button";
+    addBtn.className = "sw-home__btn sw-home__btn--primary sw-merch__buy";
+    addBtn.textContent = "Add to cart";
 
-    slot.innerHTML = "";
-    slot.hidden = false;
-
-    var colourRow = document.createElement("div");
-    colourRow.className = "sw-merch__row";
-    var sizeRow = document.createElement("div");
-    sizeRow.className = "sw-merch__row";
+    slot.innerHTML = ""; slot.hidden = false;
+    var colourRow = document.createElement("div"); colourRow.className = "sw-merch__row";
+    var sizeRow = document.createElement("div"); sizeRow.className = "sw-merch__row";
     if (colours.length > 1) slot.appendChild(colourRow);
     slot.appendChild(sizeRow);
 
-    function sizesFor(c) {
-      return variants.filter(function (v) { return !c || attr(v, "color") === c; });
-    }
+    function shots() { return card.querySelector(".sw-merch__shots"); }
 
     function paintImages() {
-      if (!shots || !selected) return;
+      var box = shots(); if (!box || !selected) return;
       var imgs = (selected.images && selected.images.length ? selected.images : product.images) || [];
-      if (imgs.length < 1) return;
-      var slots = shots.querySelectorAll("img");
+      if (!imgs.length) return;
+      var slots = box.querySelectorAll("img");
       for (var i = 0; i < slots.length; i++) {
         var src = imgs[Math.min(i, imgs.length - 1)];
         if (!src || !src.url) continue;
         slots[i].src = src.url;
-        slots[i].removeAttribute("width");
-        slots[i].removeAttribute("height");
+        slots[i].removeAttribute("width"); slots[i].removeAttribute("height");
         slots[i].alt = product.name + (colour ? " — " + colour : "");
       }
-      shots.classList.add("sw-merch__shots--live");
+      box.classList.add("sw-merch__shots--live");
     }
 
     function paintPrice() {
-      var m = selected && money(selected.unitPrice);
-      if (m && priceEl) priceEl.innerHTML = "<strong>" + m + "</strong>";
-      if (selected) buy.href = checkoutUrl(selected.id);
+      if (!selected) return;
+      var p = selected.unitPrice || {};
+      if (priceEl && typeof p.value === "number") {
+        priceEl.innerHTML = "<strong>" + money(p.value, p.currency) + "</strong>";
+      }
     }
 
     function buildSizes() {
       sizeRow.innerHTML = "";
-      var list = sizesFor(colour);
+      var list = variants.filter(function (v) { return !colour || attr(v, "color") === colour; });
       selected = list[0];
       if (list.length > 1 && attr(list[0], "size")) {
         sizeRow.setAttribute("role", "group");
@@ -155,8 +226,7 @@ happens on Fourthwall's checkout, never here.
         });
         sizeRow.firstChild.setAttribute("aria-pressed", "true");
       }
-      paintPrice();
-      paintImages();
+      paintPrice(); paintImages();
     }
 
     if (colours.length > 1) {
@@ -165,8 +235,7 @@ happens on Fourthwall's checkout, never here.
       colours.forEach(function (c) {
         var b = button("", "sw-merch__swatch");
         b.style.setProperty("--swatch", swatchOf[c] || "#333");
-        b.title = c;
-        b.setAttribute("aria-label", c);
+        b.title = c; b.setAttribute("aria-label", c);
         b.addEventListener("click", function () {
           colour = c;
           colourRow.querySelectorAll("button").forEach(function (o) {
@@ -179,8 +248,21 @@ happens on Fourthwall's checkout, never here.
       colourRow.firstChild.setAttribute("aria-pressed", "true");
     }
 
+    addBtn.addEventListener("click", function () {
+      if (!selected) return;
+      var bits = [attr(selected, "color"), attr(selected, "size")].filter(Boolean);
+      add({
+        id: selected.id, name: product.name, label: bits.join(", "),
+        price: (selected.unitPrice || {}).value || 0,
+        currency: (selected.unitPrice || {}).currency || CURRENCY
+      });
+      // the bar is below the fold on a phone, so the button confirms for itself
+      addBtn.textContent = "Added";
+      setTimeout(function () { addBtn.textContent = "Add to cart"; }, 1400);
+    });
+
     buildSizes();
-    if (cta) cta.replaceWith(buy); else card.appendChild(buy);
+    if (cta) cta.replaceWith(addBtn); else card.appendChild(addBtn);
     card.setAttribute("data-live", "true");
   }
 
@@ -194,13 +276,25 @@ happens on Fourthwall's checkout, never here.
       return r.json();
     })
     .then(function (data) {
+      var live = {};
       (data.results || []).forEach(function (p) {
         var card = cards[p.slug];
         if (!card) return;
         if (p.state && p.state.type === "SOLD_OUT") return;
+        live[p.slug] = true;
         try { upgrade(card, p); }
         catch (e) { if (window.console) console.warn("merch card", p.slug, e); }
       });
+      // drop anything stale: a variant pulled from the shop must not sit in a
+      // cart forever, or checkout fails on an id the catalogue no longer has
+      var ids = {};
+      (data.results || []).forEach(function (p) {
+        (p.variants || []).forEach(function (v) { ids[v.id] = true; });
+      });
+      var before = cart.length;
+      cart = cart.filter(function (i) { return ids[i.id]; });
+      if (cart.length !== before) save(cart);
+      renderBar();
     })
     .catch(function (e) {
       if (window.console) console.warn("Fourthwall storefront unavailable:", e.message);

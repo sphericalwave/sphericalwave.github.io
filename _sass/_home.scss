@@ -8,7 +8,8 @@
 // component rules below stay scoped to .sw-home.
 .sw-home,
 .sw-lightbox,
-.sw-modal {
+.sw-modal,
+.sw-cart {
   --sw-surface: #111318;
   --sw-surface-lowest: #0c0e12;
   --sw-surface-container: #1e2024;
@@ -562,6 +563,106 @@
 }
 
 .sw-merch__buy { align-self: flex-start; margin-top: auto; }
+
+// Checkout bar — appears only once something is in the cart
+.sw-cart {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  background: color-mix(in srgb, #0c0e12 92%, transparent);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(180, 197, 255, 0.18);
+  padding: 0.85rem 1rem calc(0.85rem + env(safe-area-inset-bottom));
+  font-family: var(--sw-font-body);
+  color: var(--sw-on-surface);
+
+  &[hidden] { display: none; }
+
+  &__inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 1.25rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.35rem 0.3rem 0.7rem;
+    border: 1px solid rgba(180, 197, 255, 0.2);
+    border-radius: 999px;
+    font-size: 0.82rem;
+    color: var(--sw-on-surface-variant);
+  }
+
+  &__rm {
+    width: 26px;
+    height: 26px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    // beat the global `button { ... !important }` rule in _base.scss
+    background-color: transparent !important;
+    border: 0 !important;
+    color: var(--sw-on-surface-variant) !important;
+
+    &:hover { color: #fff !important; background-color: rgba(255, 255, 255, 0.1) !important; }
+  }
+
+  &__end {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+  }
+
+  &__total {
+    margin: 0;
+    font-family: var(--sw-font-mono);
+    font-size: 0.8rem;
+    color: var(--sw-on-surface-variant);
+    white-space: nowrap;
+  }
+
+  &__go {
+    white-space: nowrap;
+    // outside .sw-home, so state the fill rather than relying on inheritance
+    background-color: var(--sw-primary-container);
+    color: #fff;
+
+    &:hover { background-color: color-mix(in srgb, var(--sw-primary-container) 86%, #fff); color: #fff; }
+  }
+
+  @media (max-width: 620px) {
+    &__inner { flex-direction: column; align-items: stretch; }
+    &__end { margin-left: 0; justify-content: space-between; }
+    &__go { flex: 1; text-align: center; }
+  }
+}
+
+// so the bar never covers the last row of the page
+body.sw-has-cart { padding-bottom: 6.5rem; }
 
 // Numbered process list on job pages
 .sw-steps {
