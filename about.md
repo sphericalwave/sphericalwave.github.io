@@ -2,7 +2,7 @@
 layout: page
 title: About Aaron
 permalink: /about/
-description: "sphericalWave is Aaron — a freelance electrical engineer who builds websites and business systems for small companies, iOS apps for jiu-jitsu athletes, and the occasional deck."
+description: "sphericalWave is Aaron — a freelance electrical engineer and digital artist who builds websites and business systems for small companies, iOS apps for jiu-jitsu athletes, and the occasional deck."
 image: /public/aaron/2023-12-12 small_headshot.JPG
 ---
 
@@ -14,7 +14,7 @@ image: /public/aaron/2023-12-12 small_headshot.JPG
       <span class="sw-home__label">About</span>
     </span>
     <h1 class="sw-home__title">I'm Aaron.</h1>
-    <p class="sw-home__lead">sphericalWave is one person. I'm a freelance electrical engineer. I build websites and the business systems behind them for small companies, iOS apps for jiu-jitsu athletes, and — when the weather's good — decks, steps, and patios.</p>
+    <p class="sw-home__lead">sphericalWave is one person. I'm a freelance electrical engineer and digital artist. I build websites and the business systems behind them for small companies, iOS apps for jiu-jitsu athletes, the artwork that goes on all of it, and — when the weather's good — decks, steps, and patios.</p>
     <div class="sw-home__cta">
       <a href="https://cal.com/sphericalwave" class="sw-home__btn sw-home__btn--primary" rel="noopener">Book a call</a>
       <a href="mailto:hello@sphericalwave.com" class="sw-home__btn sw-home__btn--ghost">Email me</a>
@@ -41,6 +41,15 @@ image: /public/aaron/2023-12-12 small_headshot.JPG
       <span class="sw-home__label">Black belt</span>
       <h3>The mats</h3>
       <p>Jiu-jitsu black belt. Most of my apps started as fixes for the problems I watch beginner and intermediate players struggle with.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
+        <img src="/public/aaron/art-c60.jpg" alt="The C60 buckyball mark — geometry drawn as line art" width="960" height="960" loading="lazy">
+      </div>
+      <span class="sw-home__label">Digital artist</span>
+      <h3>The canvas</h3>
+      <p>I draw the geometry I keep thinking about — buckyballs, wave forms, things with a structure underneath. It ends up as the marks on this site, the app icons, and the designs on the merch.</p>
     </article>
 
     <article class="sw-home__glass sw-home__card sw-home__pick">
