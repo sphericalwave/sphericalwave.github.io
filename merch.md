@@ -3,7 +3,7 @@ layout: page
 title: Merch
 permalink: /merch/
 image: /public/merch/fw-tee-back.jpg
-description: "Three designs on shirts, a hoodie and a rashguard. Printed one at a time when you order."
+description: "C60 designs on a tee, a hoodie and a jiu-jitsu rashguard."
 ---
 
 {%- comment -%}
@@ -19,10 +19,10 @@ end up contradicting the product someone actually receives.
   <section class="sw-home__hero sw-enter">
     <span class="sw-home__chip">
       <span class="sw-home__dot"></span>
-      <span class="sw-home__label">Made to order</span>
+      <span class="sw-home__label">Three designs</span>
     </span>
     <h1 class="sw-home__title">Merch</h1>
-    <p class="sw-home__lead">Three designs. Each one printed when you order it — nothing stocked, so no size runs out and nothing gets dumped.</p>
+    <p class="sw-home__lead">The buckyball I keep drawing, on a tee, a hoodie, and a rashguard for the mat.</p>
   </section>
 
   <hr class="sw-home__wave-line">
@@ -83,9 +83,9 @@ end up contradicting the product someone actually receives.
 
   <div class="sw-home__bento sw-enter-2">
     <div class="sw-home__glass sw-home__panel sw-home__panel--accent">
-      <span class="sw-home__label">Order to door</span>
-      <p class="sw-home__panel-title">Made after you buy</p>
-      <p>Each piece is printed and shipped once the order comes in — a few days to make, then normal post. Sizing, shipping and returns are handled at checkout.</p>
+      <span class="sw-home__label">Shipping</span>
+      <p class="sw-home__panel-title">Handled at checkout</p>
+      <p>Size charts, shipping options and returns are all on the checkout page, which shows the total before you pay.</p>
     </div>
     <div class="sw-home__glass sw-home__panel">
       <span class="sw-home__label">Questions</span>
