@@ -22,25 +22,13 @@ end up contradicting the product someone actually receives.
       <span class="sw-home__label">Three designs</span>
     </span>
     <h1 class="sw-home__title">Merch</h1>
-    <p class="sw-home__lead">The buckyball I keep drawing, on a tee, a hoodie, and a rashguard for the mat.</p>
+    <p class="sw-home__lead">The buckyball I keep drawing, on a hoodie and a rashguard for the mat.</p>
   </section>
 
   <hr class="sw-home__wave-line">
 
   <h2 class="mb-2" data-group-head="apparel">Wear</h2>
   <div class="sw-home__grid sw-enter-2" data-group="apparel">
-
-    <div class="sw-home__glass sw-home__card sw-home__pick" data-product="truncated-icosahedron">
-      <h3>truncated icosahedron</h3>
-      <div class="sw-merch__shots">
-        <img src="/public/merch/fw-tee-front.jpg" width="675" height="900" loading="lazy" alt="truncated icosahedron tee, front">
-        <img src="/public/merch/fw-tee-back.jpg" width="675" height="900" loading="lazy" alt="truncated icosahedron tee, back">
-      </div>
-      <p class="mb-2">think global act local</p>
-      <p class="mb-3" data-price><strong>$47 CAD</strong></p>
-      <div class="sw-merch__variants" data-variants hidden></div>
-      <a href="{{ store }}/products/truncated-icosahedron" class="sw-home__btn sw-home__btn--ghost" data-cta rel="noopener">Buy</a>
-    </div>
 
     <div class="sw-home__glass sw-home__card sw-home__pick" data-product="they-think-im-hiding-in-the-shadows">
       <h3>they think im hiding in the shadows</h3>
@@ -70,8 +58,9 @@ end up contradicting the product someone actually receives.
 
   {%- comment -%}
     Anything public in the catalogue that is not one of the cards above gets
-    built here by merch-store.html. The three below stay hand-written so a
-    failed request still leaves a page that sells something.
+    built here by merch-store.html. The two below stay hand-written so a
+    failed request still leaves a page that sells something. A card whose
+    slug is not in the shop's collection is removed on load.
   {%- endcomment -%}
   <h2 class="mb-2" data-group-head="other" hidden>Everything else</h2>
   <div class="sw-home__grid sw-enter-2" data-group="other" hidden></div>

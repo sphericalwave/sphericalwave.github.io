@@ -414,24 +414,24 @@ Fourthwall's checkout, never here.
         try { upgrade(card, p); }
         catch (e) { if (window.console) console.warn("merch card", p.slug, e); }
       });
-      // The collection endpoint returns an inconsistent subset — with five
-      // products and size=60 it still comes back missing one or two, and which
-      // ones varies per request. Any hand-written card the collection skipped
-      // is fetched by slug, which is reliable, so a real product is never left
-      // showing a stale static price.
-      var missing = Object.keys(cards).filter(function (s) { return !live[s]; });
-      missing.forEach(function (slug) {
-        fetch(API + "/products/" + encodeURIComponent(slug) +
-              "?storefront_token=" + encodeURIComponent(TOKEN) +
-              "&currency=" + encodeURIComponent(CURRENCY))
-          .then(function (r) { return r.ok ? r.json() : null; })
-          .then(function (p) {
-            if (!p || !p.slug) return;
-            if (p.state && p.state.type === "SOLD_OUT") return;
-            try { upgrade(cards[slug], p); renderBar(); }
-            catch (e) { if (window.console) console.warn("merch retry", slug, e); }
-          })
-          .catch(function () {});
+      // The collection is the only thing that decides what is on sale. A
+      // product can be access: PUBLIC — still buyable by direct link — and
+      // deliberately kept out of the shop; fetching a hand-written card by
+      // slug would put it back on the page. So any card the collection did
+      // not return is removed. This only runs on a successful response, so a
+      // failed request still leaves the static cards selling.
+      Object.keys(cards).forEach(function (slug) {
+        if (live[slug]) return;
+        cards[slug].remove();
+        delete cards[slug];
+      });
+      // a group whose last card just went is a bare heading
+      ["apparel", "other"].forEach(function (g) {
+        var grid = document.querySelector('[data-group="' + g + '"]');
+        var head = document.querySelector('[data-group-head="' + g + '"]');
+        var empty = !grid || !grid.children.length;
+        if (grid) grid.hidden = empty;
+        if (head) head.hidden = empty;
       });
 
       // drop anything stale: a variant pulled from the shop must not sit in a
