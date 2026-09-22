@@ -37,10 +37,17 @@
   gap: 0.5rem;
 
   &__name {
-    font-size: 1.55rem;
-    font-weight: 500;
+    // Caveat, after the original sticker lettering. It is a handwriting face
+    // with a small x-height, so it needs more size than a sans to read at the
+    // same optical weight.
+    font-family: 'Caveat', 'Bradley Hand', cursive;
+    font-size: 2.25rem;
+    font-weight: 600;
     color: white;
     line-height: 1;
+    // handwriting faces carry their own side bearings; nudge back to the mark
+    letter-spacing: 0.005em;
+    padding-bottom: 0.08em;   // optical centring against the C60
   }
 
   // the C60 sits on top of the expanding rings
