@@ -564,6 +564,35 @@
 
 .sw-merch__buy { align-self: flex-start; margin-top: auto; }
 
+// names the selected colour: two near-black swatches are otherwise a guess
+.sw-merch__chosen {
+  margin: 0.15rem 0 0.4rem;
+  font-family: var(--sw-font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: var(--sw-on-surface-variant);
+}
+
+// used instead of a button row when a product has many or long options
+.sw-merch__select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 2.2rem 0 0.7rem;
+  border-radius: 6px;
+  font-family: var(--sw-font-mono);
+  font-size: 0.8rem;
+  background-color: var(--sw-surface-lowest);
+  border: 1px solid rgba(180, 197, 255, 0.28);
+  color: var(--sw-on-surface);
+
+  &:focus {
+    border-color: var(--sw-primary-container);
+    box-shadow: 0 0 0 0.2rem rgba(30, 86, 208, 0.25);
+  }
+
+  option { background: var(--sw-surface-container); color: var(--sw-on-surface); }
+}
+
 // Checkout bar — appears only once something is in the cart
 .sw-cart {
   position: fixed;

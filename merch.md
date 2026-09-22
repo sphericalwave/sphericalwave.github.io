@@ -27,7 +27,8 @@ end up contradicting the product someone actually receives.
 
   <hr class="sw-home__wave-line">
 
-  <div class="sw-home__grid sw-enter-2">
+  <h2 class="mb-2" data-group-head="apparel">Wear</h2>
+  <div class="sw-home__grid sw-enter-2" data-group="apparel">
 
     <div class="sw-home__glass sw-home__card sw-home__pick" data-product="truncated-icosahedron">
       <h3>truncated icosahedron</h3>
@@ -66,6 +67,14 @@ end up contradicting the product someone actually receives.
     </div>
 
   </div>
+
+  {%- comment -%}
+    Anything public in the catalogue that is not one of the cards above gets
+    built here by merch-store.html. The three below stay hand-written so a
+    failed request still leaves a page that sells something.
+  {%- endcomment -%}
+  <h2 class="mb-2" data-group-head="other" hidden>Everything else</h2>
+  <div class="sw-home__grid sw-enter-2" data-group="other" hidden></div>
 
   <hr class="sw-home__wave-line">
 

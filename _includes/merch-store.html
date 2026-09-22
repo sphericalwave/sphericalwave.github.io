@@ -149,6 +149,85 @@ Fourthwall's checkout, never here.
     return b;
   }
 
+  // Apparel is whatever comes in garment sizes. A phone case lists iPhone
+  // models in the same `size` slot, so the test is the vocabulary, not the
+  // field — and a product with no sizes at all is not clothing either.
+  var GARMENT = /^(XXS|XS|S|M|L|XL|[2-5]XL|XXL|XXXL|ONE SIZE)$/i;
+  function group(product) {
+    var sizes = (product.variants || [])
+      .map(function (v) { return attr(v, "size"); })
+      .filter(Boolean);
+    if (!sizes.length) return "other";
+    var hits = sizes.filter(function (s) { return GARMENT.test(s.trim()); }).length;
+    return hits / sizes.length > 0.6 ? "apparel" : "other";
+  }
+
+  function tagline(product) {
+    // the shop's own one-liner, tags stripped; blank for most products
+    var d = (product.description || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+    return d.length > 90 ? d.slice(0, 88) + "\u2026" : d;
+  }
+
+  // Builds a card matching the hand-written ones in merch.md, so upgrade()
+  // can treat it identically.
+  function buildCard(product) {
+    var card = document.createElement("div");
+    card.className = "sw-home__glass sw-home__card sw-home__pick";
+    card.setAttribute("data-product", product.slug);
+
+    var h = document.createElement("h3");
+    h.textContent = product.name;
+    card.appendChild(h);
+
+    var shots = document.createElement("div");
+    shots.className = "sw-merch__shots";
+    for (var i = 0; i < 2; i++) {
+      var img = document.createElement("img");
+      var src = (product.images || [])[i] || (product.images || [])[0];
+      if (src && src.url) { img.src = src.url; img.alt = product.name; }
+      img.loading = "lazy";
+      shots.appendChild(img);
+    }
+    shots.classList.add("sw-merch__shots--live");
+    card.appendChild(shots);
+
+    var tag = tagline(product);
+    if (tag) {
+      var pt = document.createElement("p");
+      pt.className = "mb-2";
+      pt.textContent = tag;
+      card.appendChild(pt);
+    }
+
+    var price = document.createElement("p");
+    price.className = "mb-3";
+    price.setAttribute("data-price", "");
+    card.appendChild(price);
+
+    var slot = document.createElement("div");
+    slot.className = "sw-merch__variants";
+    slot.setAttribute("data-variants", "");
+    slot.hidden = true;
+    card.appendChild(slot);
+
+    var cta = document.createElement("a");
+    cta.className = "sw-home__btn sw-home__btn--ghost";
+    cta.setAttribute("data-cta", "");
+    cta.rel = "noopener";
+    cta.href = SHOP.replace(/\/$/, "") + "/products/" + encodeURIComponent(product.slug);
+    cta.textContent = "Buy";
+    card.appendChild(cta);
+
+    var g = group(product);
+    var grid = document.querySelector('[data-group="' + g + '"]');
+    if (!grid) return null;
+    grid.appendChild(card);
+    grid.hidden = false;
+    var head = document.querySelector('[data-group-head="' + g + '"]');
+    if (head) head.hidden = false;
+    return card;
+  }
+
   function upgrade(card, product) {
     var variants = (product.variants || []).filter(inStock);
     if (!variants.length) return;
@@ -206,35 +285,84 @@ Fourthwall's checkout, never here.
       }
     }
 
+    var colourName = document.createElement("p");
+    colourName.className = "sw-merch__chosen";
+
     function buildSizes() {
       sizeRow.innerHTML = "";
+      if (colour) { colourName.textContent = colour; colourName.hidden = false; }
+      else colourName.hidden = true;
       var list = variants.filter(function (v) { return !colour || attr(v, "color") === colour; });
       selected = list[0];
       if (list.length > 1 && attr(list[0], "size")) {
-        sizeRow.setAttribute("role", "group");
-        sizeRow.setAttribute("aria-label", "Size");
-        list.forEach(function (v) {
-          var b = button(attr(v, "size") || v.name, "sw-merch__size");
-          b.addEventListener("click", function () {
-            selected = v;
-            sizeRow.querySelectorAll("button").forEach(function (o) {
-              o.setAttribute("aria-pressed", o === b ? "true" : "false");
-            });
+        var labels = list.map(function (v) { return attr(v, "size") || v.name; });
+        var longest = Math.max.apply(null, labels.map(function (s) { return s.length; }));
+        // 29 iPhone models as buttons is a wall a metre high; past a handful of
+        // options, or once labels stop being S/M/L short, a select is kinder
+        if (list.length > 8 || longest > 5) {
+          var sel = document.createElement("select");
+          sel.className = "sw-merch__select form-select";
+          sel.setAttribute("aria-label", "Option");
+          list.forEach(function (v, i) {
+            var o = document.createElement("option");
+            o.value = String(i);
+            o.textContent = labels[i];
+            sel.appendChild(o);
+          });
+          sel.addEventListener("change", function () {
+            selected = list[parseInt(sel.value, 10)] || list[0];
             paintPrice();
           });
-          sizeRow.appendChild(b);
-        });
-        sizeRow.firstChild.setAttribute("aria-pressed", "true");
+          sizeRow.appendChild(sel);
+        } else {
+          sizeRow.setAttribute("role", "group");
+          sizeRow.setAttribute("aria-label", "Size");
+          list.forEach(function (v) {
+            var b = button(attr(v, "size") || v.name, "sw-merch__size");
+            b.addEventListener("click", function () {
+              selected = v;
+              sizeRow.querySelectorAll("button").forEach(function (o) {
+                o.setAttribute("aria-pressed", o === b ? "true" : "false");
+              });
+              paintPrice();
+            });
+            sizeRow.appendChild(b);
+          });
+          sizeRow.firstChild.setAttribute("aria-pressed", "true");
+        }
       }
       paintPrice(); paintImages();
     }
 
     if (colours.length > 1) {
+      slot.insertBefore(colourName, sizeRow);
       colourRow.setAttribute("role", "group");
       colourRow.setAttribute("aria-label", "Colour");
+      // Glossy #ffffff vs Matte #fffffa are "distinct" hexes and identical to
+      // the eye, so finishes fall back to named buttons. The tolerance has to
+      // stay low: French Navy #020718 and Black #020202 are only 22 apart and
+      // are genuinely different garments, so anything stricter loses real
+      // colours. The selected name is shown below either way.
+      function rgb(hex) {
+        var h = (hex || "").replace("#", "");
+        if (h.length === 3) h = h[0]+h[0]+h[1]+h[1]+h[2]+h[2];
+        if (h.length !== 6) return null;
+        return [0, 2, 4].map(function (i) { return parseInt(h.substr(i, 2), 16); });
+      }
+      var swatchesMeaningful = colours.length > 1;
+      for (var i = 0; i < colours.length && swatchesMeaningful; i++) {
+        for (var j = i + 1; j < colours.length; j++) {
+          var a = rgb(swatchOf[colours[i]]), bb = rgb(swatchOf[colours[j]]);
+          if (!a || !bb) { swatchesMeaningful = false; break; }
+          var far = Math.max(Math.abs(a[0]-bb[0]), Math.abs(a[1]-bb[1]), Math.abs(a[2]-bb[2]));
+          if (far < 12) { swatchesMeaningful = false; break; }
+        }
+      }
       colours.forEach(function (c) {
-        var b = button("", "sw-merch__swatch");
-        b.style.setProperty("--swatch", swatchOf[c] || "#333");
+        var b = swatchesMeaningful
+          ? button("", "sw-merch__swatch")
+          : button(c, "sw-merch__size");
+        if (swatchesMeaningful) b.style.setProperty("--swatch", swatchOf[c] || "#333");
         b.title = c; b.setAttribute("aria-label", c);
         b.addEventListener("click", function () {
           colour = c;
@@ -278,13 +406,34 @@ Fourthwall's checkout, never here.
     .then(function (data) {
       var live = {};
       (data.results || []).forEach(function (p) {
-        var card = cards[p.slug];
-        if (!card) return;
         if (p.state && p.state.type === "SOLD_OUT") return;
+        if (p.access && p.access.type !== "PUBLIC") return;
+        var card = cards[p.slug] || buildCard(p);
+        if (!card) return;
         live[p.slug] = true;
         try { upgrade(card, p); }
         catch (e) { if (window.console) console.warn("merch card", p.slug, e); }
       });
+      // The collection endpoint returns an inconsistent subset — with five
+      // products and size=60 it still comes back missing one or two, and which
+      // ones varies per request. Any hand-written card the collection skipped
+      // is fetched by slug, which is reliable, so a real product is never left
+      // showing a stale static price.
+      var missing = Object.keys(cards).filter(function (s) { return !live[s]; });
+      missing.forEach(function (slug) {
+        fetch(API + "/products/" + encodeURIComponent(slug) +
+              "?storefront_token=" + encodeURIComponent(TOKEN) +
+              "&currency=" + encodeURIComponent(CURRENCY))
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (p) {
+            if (!p || !p.slug) return;
+            if (p.state && p.state.type === "SOLD_OUT") return;
+            try { upgrade(cards[slug], p); renderBar(); }
+            catch (e) { if (window.console) console.warn("merch retry", slug, e); }
+          })
+          .catch(function () {});
+      });
+
       // drop anything stale: a variant pulled from the shop must not sit in a
       // cart forever, or checkout fails on an id the catalogue no longer has
       var ids = {};
