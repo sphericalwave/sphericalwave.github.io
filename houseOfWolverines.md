@@ -9,19 +9,55 @@ image: /public/wolverines/comic.jpg
 <div class="sw-home">
 
   <section class="sw-home__hero wolverine-hero sw-enter">
-    <div>
+    <div class="wolverine-hero__copy">
       <h1 class="sw-home__title">House of Wolverines</h1>
-      <p class="sw-home__label mb-0">What happens in training, stays in training.</p>
+      <p class="sw-home__label mb-0" id="wolverine-saying">what happens in training, stays in training.</p>
+      {%- comment -%}
+        Inline and right after the element on purpose: it runs while the parser
+        is still here, so the line is swapped before the first paint. Deferred,
+        it would flash the fallback. The markup keeps a real line so a visitor
+        without JS gets one too.
+      {%- endcomment -%}
+      <script>
+      (function () {
+        var sayings = [
+          "what happens in training, stays in training.",
+          "take em down, pass their dangerous legs, progress through the hierarchy of pins",
+          "if you're not failing, you're not progressing",
+          "position before submission.",
+          "don't get punked by your ego",
+          "just tap",
+          "quitters never win",
+          "slow is smooth. smooth is fast.",
+          "pressure is a technique.",
+          "if you're comfortable, you're not learning.",
+          "the only bad round is the one you skipped.",
+          "roll with the people who beat you.",
+          "technique beats strength, until strength learns technique.",
+          "win or you learn",
+          "safety first",
+          "got tapped out? good. got beat? good. you learned.",
+          "less is more",
+          "strength and honor",
+          "what we do i life echoes in eternity",
+          "how you do one thing is how you do everything",
+          "what goes around, comes around",
+          "scroll up"
+        ];
+        var el = document.getElementById("wolverine-saying");
+        if (el) el.textContent = sayings[Math.floor(Math.random() * sayings.length)];
+      })();
+      </script>
     </div>
     <div class="wolverine-hero__pics" data-lightbox>
       <div class="sw-home__pick-media wolverine-hero__pic">
         <img src="/public/wolverines/comic.jpg" alt="Wolverine, comic art" loading="eager">
       </div>
       <div class="sw-home__pick-media wolverine-hero__pic">
-        <img src="/public/wolverines/crouch.jpg" alt="A wolverine crouched low, teeth bared" loading="eager">
+        <img src="/public/wolverines/batcave.jpg" alt="Batman brooding in the cave while Alfred brings coffee" loading="eager">
       </div>
-      <div class="sw-home__pick-media wolverine-hero__pic">
-        <img src="/public/wolverines/standing.jpg" alt="A wolverine standing up in a river, claws out" loading="eager">
+      <div class="sw-home__pick-media wolverine-hero__pic wolverine-hero__pic--bottom">
+        <img src="/public/wolverines/ironman.jpg" alt="Iron Man, armour shot through, still standing" loading="eager">
       </div>
     </div>
   </section>
@@ -245,12 +281,21 @@ image: /public/wolverines/comic.jpg
     justify-content: space-between;
     gap: 1.25rem;
   }
+  /* The saying varies in length every load. Without these two rules the
+     longest one grows the text column past the row and wraps the thumbnails
+     onto a second line, so the hero changes height depending on which line
+     came up. Let the copy shrink and wrap instead; the pics keep their size. */
+  .wolverine-hero__copy {
+    flex: 1 1 20rem;
+    min-width: 0;
+  }
   .wolverine-hero__pics {
     display: flex;
     gap: 0.75rem;
+    flex: 0 0 auto;
   }
   .sw-home__pick-media.wolverine-hero__pic {
-    width: 112px;
+    width: 160px;
     aspect-ratio: 1;
     margin: 0;
     padding: 0;
@@ -259,7 +304,16 @@ image: /public/wolverines/comic.jpg
     border: 1px solid rgba(180, 197, 255, 0.15);
     transition: border-color .2s ease, transform .2s ease;
   }
-  .sw-home__pick-media.wolverine-hero__pic img { object-fit: cover; }
+  /* square crop taken off the top edge — these are all faces and claws, and
+     centring the crop cut the heads off */
+  .sw-home__pick-media.wolverine-hero__pic img {
+    object-fit: cover;
+    object-position: top center;
+  }
+  /* per-image override: a tall figure reads better cropped up from the feet */
+  .sw-home__pick-media.wolverine-hero__pic--bottom img {
+    object-position: bottom center;
+  }
   .sw-home__pick-media.wolverine-hero__pic:hover,
   .sw-home__pick-media.wolverine-hero__pic:focus-visible {
     border-color: var(--sw-primary-container, #1e56d0);
