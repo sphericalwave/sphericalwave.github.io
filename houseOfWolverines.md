@@ -57,6 +57,8 @@ image: /public/wolverines/comic.jpg
           "if you make yourself more than just a man, if you devote yourself to an ideal, and if they cant stop you, then you become something else entirely",
           "base, posture, structure",
           "frames and levers",
+          "ninja understand invisibility is a matter of patience and agility",
+          "all warfare is based on deception",
           "scroll up"
         ];
         var el = document.getElementById("wolverine-saying");
