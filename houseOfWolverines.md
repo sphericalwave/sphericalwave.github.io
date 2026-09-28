@@ -42,6 +42,10 @@ image: /public/wolverines/comic.jpg
           "what we do i life echoes in eternity",
           "how you do one thing is how you do everything",
           "what goes around, comes around",
+          "you are caught everything is wrong",
+          "i am a shark the ground is my ocean 🦈",
+          "be like water my friend 🌊",
+          "i have the power ⚔️",
           "scroll up"
         ];
         var el = document.getElementById("wolverine-saying");
