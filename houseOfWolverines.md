@@ -46,6 +46,15 @@ image: /public/wolverines/comic.jpg
           "i am a shark the ground is my ocean 🦈",
           "be like water my friend 🌊",
           "i have the power ⚔️",
+          "just let me bang bro",
+          "i cant let you get close",
+          "dont make me ankle pick you",
+          "this is number 1 bullshit",
+          "im not impressed with your performance",
+          "conceive, believe, acheive. shut the fuck up",
+          "who the fuck is that guy?",
+          "to be the best you gotta beat the best and the beat is blessed",
+          "if you make yourself more than just a man, if you devote yourself to an ideal, and if they cant stop you, then you become something else entirely",
           "scroll up"
         ];
         var el = document.getElementById("wolverine-saying");
