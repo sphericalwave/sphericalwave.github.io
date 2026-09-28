@@ -55,6 +55,8 @@ image: /public/wolverines/comic.jpg
           "who the fuck is that guy?",
           "to be the best you gotta beat the best and the beat is blessed",
           "if you make yourself more than just a man, if you devote yourself to an ideal, and if they cant stop you, then you become something else entirely",
+          "base, posture, structure",
+          "frames and levers",
           "scroll up"
         ];
         var el = document.getElementById("wolverine-saying");
