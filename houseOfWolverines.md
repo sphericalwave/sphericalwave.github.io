@@ -191,6 +191,58 @@ image: /public/wolverines/comic.jpg
     return n.toLocaleString() + (n === 1 ? " view" : " views");
   }
 
+  // YouTube reports a block as contentDetails.regionRestriction, which is
+  // absolute data about the video rather than about the person looking at
+  // it, so deciding whether it matters needs the viewer's own country.
+  // There is no API for that, and an IP lookup would mean shipping visitor
+  // addresses to a third party for a cosmetic badge. The locale's region
+  // subtag is the honest approximation: right when the browser is set to
+  // en-CA or ru-RU, absent when it is plain "en".
+  function viewerRegion() {
+    var langs = (navigator.languages && navigator.languages.length)
+      ? navigator.languages : [navigator.language];
+    for (var i = 0; i < langs.length; i++) {
+      var m = /[-_]([A-Za-z]{2})$/.exec(langs[i] || "");
+      if (m) return m[1].toUpperCase();
+    }
+    return null;
+  }
+  var REGION = viewerRegion();
+
+  // Of 200 videos sampled, 39 carry a `blocked` list and 3 an `allowed`
+  // one. Nearly all the blocked lists name one or two countries — Russia
+  // and Belarus — which is noise for almost every visitor. Two videos are
+  // blocked in 249 countries, which is every country YouTube ships to:
+  // those are dead for everyone and are the ones worth shouting about.
+  function blockStatus(restriction) {
+    if (!restriction) return null;
+    var blocked = restriction.blocked || [];
+    var allowed = restriction.allowed || [];
+
+    if (blocked.length) {
+      // a near-total blocklist needs no geography to be certain about
+      if (blocked.length >= 200) return { everywhere: true };
+      if (REGION && blocked.indexOf(REGION) !== -1) return { everywhere: false };
+      return null;
+    }
+    if (restriction.allowed) {
+      if (!allowed.length) return { everywhere: true };
+      // unknown region stays silent rather than accusing a working video
+      if (REGION && allowed.indexOf(REGION) === -1) return { everywhere: false };
+    }
+    return null;
+  }
+
+  function markBlocked(els, status) {
+    els.cardEl.classList.add("is-blocked");
+    els.badgeEl.hidden = false;
+    els.noteEl.hidden = false;
+    els.noteEl.textContent = status.everywhere
+      ? "YouTube has blocked this one everywhere — the link will not play."
+      : "YouTube blocks this one in your country — the link will not play.";
+    els.linkEl.setAttribute("aria-label", els.title + " — blocked by YouTube");
+  }
+
   // One page is at most 50 videos, so a single videos.list call (no
   // chunking) covers it. Patches each card's placeholders in place once
   // it resolves — doesn't block the initial thumbnail render.
@@ -210,6 +262,9 @@ image: /public/wolverines/comic.jpg
         if (duration) els.durationEl.textContent = duration;
         if (date) els.dateEl.textContent = date;
         if (views) els.viewsEl.textContent = views;
+
+        var status = blockStatus(item.contentDetails && item.contentDetails.regionRestriction);
+        if (status) markBlocked(els, status);
       });
     }).catch(function () { /* duration/date/views are non-essential; ignore */ });
   }
@@ -231,7 +286,7 @@ image: /public/wolverines/comic.jpg
       col.className = "col-12 col-sm-6 col-lg-4";
 
       col.innerHTML =
-        '<div class="h-100">' +
+        '<div class="h-100 wolverine-card">' +
           '<a class="wolverine-thumb" href="https://youtu.be/' + encodeURIComponent(video.videoId) +
             '" target="_blank" rel="noopener">' +
             '<div class="video-container wolverine-thumb-frame">' +
@@ -239,9 +294,11 @@ image: /public/wolverines/comic.jpg
               '<img alt="' + escapeHtml(video.title) + '" loading="lazy" ' +
                 'style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;border-radius:0.6rem;opacity:0;transition:opacity .3s ease;">' +
               '<span class="wolverine-duration"></span>' +
+              '<span class="wolverine-blocked" hidden>Blocked</span>' +
             '</div>' +
           '</a>' +
           '<h3 class="wolverine-title mt-3">' + escapeHtml(video.title) + '</h3>' +
+          '<p class="wolverine-blocked-note" hidden></p>' +
           '<div class="wolverine-meta">' +
             '<span class="sw-home__label wolverine-date"></span>' +
             '<span class="sw-home__label wolverine-views"></span>' +
@@ -258,7 +315,12 @@ image: /public/wolverines/comic.jpg
       elsById[video.videoId] = {
         durationEl: col.querySelector(".wolverine-duration"),
         dateEl: col.querySelector(".wolverine-date"),
-        viewsEl: col.querySelector(".wolverine-views")
+        viewsEl: col.querySelector(".wolverine-views"),
+        cardEl: col.querySelector(".wolverine-card"),
+        linkEl: col.querySelector(".wolverine-thumb"),
+        badgeEl: col.querySelector(".wolverine-blocked"),
+        noteEl: col.querySelector(".wolverine-blocked-note"),
+        title: video.title
       };
 
       gridEl.appendChild(col);
@@ -421,6 +483,41 @@ image: /public/wolverines/comic.jpg
     border-radius: 3px;
     pointer-events: none;
   }
+  /* A blocked video still gets its card and its link — the point is that
+     you can tell before clicking, not that it disappears. The thumbnail
+     goes grey and dim so the row reads as dead at a glance, and the badge
+     and note say why. Colour is not carrying the message on its own. */
+  .wolverine-blocked {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background: #B3261E;
+    color: #fff;
+    font-size: 0.7rem;
+    font-family: var(--sw-font-mono, monospace);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: 3px;
+    pointer-events: none;
+  }
+  .wolverine-card.is-blocked .wolverine-thumb-frame img {
+    filter: grayscale(1) brightness(0.45);
+  }
+  .wolverine-card.is-blocked .wolverine-title {
+    color: rgba(180, 197, 255, 0.55);
+  }
+  /* the hover glow reads as "this works" — blocked cards get a flat red */
+  .wolverine-card.is-blocked .wolverine-thumb:hover,
+  .wolverine-card.is-blocked .wolverine-thumb:focus-visible {
+    box-shadow: 0 0 10px 5px rgba(179, 38, 30, 0.75);
+  }
+  .wolverine-blocked-note {
+    margin: 0 0 0.35rem;
+    font-size: 0.8rem;
+    color: #E79A94;
+  }
+
   /* scoped to this page's own footer only — every Jekyll page is a
      separate static document, so this never touches other pages' footers */
   footer h5 {
