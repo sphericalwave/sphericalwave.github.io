@@ -53,7 +53,7 @@ image: /public/wolverines/comic.jpg
           "im not impressed with your performance",
           "conceive, believe, acheive. shut the fuck up",
           "who the fuck is that guy?",
-          "to be the best you gotta beat the best and the beat is blessed",
+          "to be the best you gotta beat the best and the best is blessed",
           "if you make yourself more than just a man, if you devote yourself to an ideal, and if they cant stop you, then you become something else entirely",
           "base, posture, structure",
           "frames and levers",
