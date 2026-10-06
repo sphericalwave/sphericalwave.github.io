@@ -17,11 +17,8 @@
   var title = box.querySelector(".sw-lightbox__title");
   var text = box.querySelector(".sw-lightbox__text");
 
-  function open(media) {
-    var src = media.querySelector("img");
-    var card = media.closest("article");
+  function show(src, card, p) {
     var h = card && card.querySelector("h3");
-    var p = card && card.querySelector("p");
     img.src = src.currentSrc || src.src;
     img.alt = src.alt;
     title.textContent = h ? h.textContent : "";
@@ -29,6 +26,11 @@
     // Pictures outside a card (e.g. header thumbnails) have no caption
     box.querySelector(".sw-lightbox__caption").hidden = !h && !p;
     box.showModal();
+  }
+
+  function open(media) {
+    var card = media.closest("article");
+    show(media.querySelector("img"), card, card && card.querySelector("p"));
   }
 
   document.querySelectorAll("[data-lightbox] .sw-home__pick-media").forEach(function (media) {
@@ -39,6 +41,41 @@
     media.addEventListener("keydown", function (e) {
       if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(media); }
     });
+  });
+
+  // Merch photos (merch.md). The cards are built and their photos swapped by
+  // merch-store.html after the page loads, so clicks are delegated and new
+  // photos are made keyboard-reachable as they appear. Opening reads the
+  // photo's current src, so it always shows the colour that is selected.
+  var SHOT = "[data-lightbox] .sw-merch__shots img";
+  function arm() {
+    document.querySelectorAll(SHOT).forEach(function (el) {
+      if (el.hasAttribute("tabindex")) return;
+      el.setAttribute("role", "button");
+      el.setAttribute("tabindex", "0");
+    });
+  }
+  function openShot(el) {
+    if (!el.currentSrc && !el.getAttribute("src")) return;
+    var card = el.closest(".sw-home__pick");
+    var colour = card && card.querySelector(".sw-merch__chosen:not([hidden])");
+    show(el, card, colour && colour.textContent ? colour : card && card.querySelector("p"));
+  }
+  arm();
+  if (window.MutationObserver) {
+    var watch = new MutationObserver(arm);
+    document.querySelectorAll("[data-lightbox]").forEach(function (root) {
+      watch.observe(root, { childList: true, subtree: true });
+    });
+  }
+  document.addEventListener("click", function (e) {
+    var el = e.target.closest && e.target.closest(SHOT);
+    if (el) openShot(el);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    var el = e.target.closest && e.target.closest(SHOT);
+    if (el) { e.preventDefault(); openShot(el); }
   });
 
   box.querySelector(".sw-lightbox__close").addEventListener("click", function () { box.close(); });
