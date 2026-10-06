@@ -14,7 +14,7 @@ end up contradicting the product someone actually receives.
 {%- endcomment -%}
 {% assign store = site.fourthwall_shop | default: "" %}
 
-<div class="sw-home">
+<div class="sw-home" data-lightbox>
 
   <section class="sw-home__hero sw-enter">
     <span class="sw-home__chip">
@@ -82,4 +82,5 @@ end up contradicting the product someone actually receives.
 
 </div>
 
+{% include lightbox.html %}
 {% include merch-store.html %}
