@@ -13,7 +13,7 @@ description: "Stone patio at 9 Wheatstone — modeled in CAD and built by a free
       <span class="sw-home__label">9 Wheatstone</span>
     </span>
     <h1 class="sw-home__title">Stone patio</h1>
-    <p class="sw-home__lead">A stone patio, laid start to finish.</p>
+    <p class="sw-home__lead">A paver patio under the deck — a three-colour pattern, a curved walkway, and a porch step, every brick placed in CAD before it was placed on site.</p>
     <div class="sw-home__cta">
       <a href="/design-build/#quote" class="sw-home__btn sw-home__btn--primary">Get a quote</a>
       <a href="/design-build/" class="sw-home__btn sw-home__btn--ghost">All jobs</a>
@@ -50,6 +50,186 @@ description: "Stone patio at 9 Wheatstone — modeled in CAD and built by a free
       <h3>CAD model</h3>
       <p>Patio, landing, and path modeled in Onshape — with a bill of materials pulled straight from the model.</p>
       <a href="https://cad.onshape.com/documents/476e3261bbe119e4c58e7b21/w/5f229f893c5068fe7364dc2e/e/711cdfaadec5405106ba18ea" class="sw-home__btn sw-home__btn--ghost mt-3" target="_blank" rel="noopener noreferrer">Open the 3D model</a>
+    </article>
+
+  </div>
+
+  <hr class="sw-home__wave-line">
+
+  <h2 class="mb-2">From sketch to model</h2>
+  <p class="sw-home__lead mb-4">Three months of design, in order — pattern, levels, steps, and every cut worked out on screen first. Tap a drawing to see it full size.</p>
+
+  <div class="sw-home__grid sw-enter-2" data-lightbox>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-client-sketch.jpg" alt="Hand-drawn sketch of a paver pattern and border" width="1400" height="1400" loading="lazy">
+      </div>
+      <span class="sw-home__label">May 23 · Brief</span>
+      <h3>The client's sketch</h3>
+      <p>The pattern idea, drawn on paper — where the design started.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-v3.jpg" alt="Drawing of the first patio layout with a brick count table" width="1800" height="1391" loading="lazy">
+      </div>
+      <span class="sw-home__label">May 25 · Layout</span>
+      <h3>First layout</h3>
+      <p>The pattern laid out brick by brick, with a count of each colour pulled from the model.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-pinwheel.jpg" alt="Drawing of a pinwheel paver pattern with a detail view" width="1800" height="1165" loading="lazy">
+      </div>
+      <span class="sw-home__label">May 26 · Pattern</span>
+      <h3>Pinwheel pattern</h3>
+      <p>Trying a pinwheel pattern, with a detail of how it fits around the step.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-landing.jpg" alt="Render of the patio against the house with a landing and walkway" width="1600" height="1166" loading="lazy">
+      </div>
+      <span class="sw-home__label">Jun 1 · Context</span>
+      <h3>Adding the landing</h3>
+      <p>The patio modeled against the house, with a landing and the start of the walkway.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-border.jpg" alt="Plan view of the patio border and curved walkway" width="1600" height="1032" loading="lazy">
+      </div>
+      <span class="sw-home__label">Jun 25 · Border</span>
+      <h3>Border and walkway</h3>
+      <p>A border course with rounded corners, and the walkway curving off to the side.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-dims.jpg" alt="Dimensioned plan of the full three-colour patio pattern" width="1800" height="1391" loading="lazy">
+      </div>
+      <span class="sw-home__label">Jun 29 · Drawing</span>
+      <h3>Dimensioned plan</h3>
+      <p>The full pattern in three colours, dimensioned for layout on site.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-base.jpg" alt="Dimensioned plan of the excavation and gravel base" width="1800" height="1391" loading="lazy">
+      </div>
+      <span class="sw-home__label">Jul 7 · Base</span>
+      <h3>Base plan</h3>
+      <p>The dig and gravel base outlined and dimensioned off the deck posts.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-steps.jpg" alt="Render with the porch step and small step highlighted" width="1600" height="942" loading="lazy">
+      </div>
+      <span class="sw-home__label">Jul 22 · Steps</span>
+      <h3>Checking the steps</h3>
+      <p>A 7.5&quot; porch step and a small step the height of one brick — both checked in the model.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-curve.jpg" alt="Close-up render of edge bricks fanned around the curved walkway" width="1600" height="1343" loading="lazy">
+      </div>
+      <span class="sw-home__label">Jul 24 · Detail</span>
+      <h3>Curved walkway</h3>
+      <p>Edge bricks fanned around the curve, sitting on the base below.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-path.jpg" alt="Plan of every cut brick on the curved walkway" width="1541" height="1600" loading="lazy">
+      </div>
+      <span class="sw-home__label">Aug 25 · Cuts</span>
+      <h3>Cutting the path</h3>
+      <p>Every cut brick on the walkway drawn before the saw came out.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media">
+        <img src="/public/contracting/9-wheatstone-plan.jpg" alt="Top view of the final patio model" width="1600" height="1200" loading="lazy">
+      </div>
+      <span class="sw-home__label">Final</span>
+      <h3>Final plan</h3>
+      <p>Main patio, border, curved walkway, and porch step — the model the build followed.</p>
+    </article>
+
+  </div>
+
+  <hr class="sw-home__wave-line">
+
+  <h2 class="mb-2">On site</h2>
+  <p class="sw-home__lead mb-4">Laser, string lines, and the drawing on a clipboard — the model, carried onto the gravel.</p>
+
+  <div class="sw-home__grid sw-enter-2" data-lightbox>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
+        <img src="/public/contracting/9-wheatstone-laser.jpg" alt="Cross-line laser level in its case on a paver" width="1400" height="1400" loading="lazy">
+      </div>
+      <span class="sw-home__label">Setup</span>
+      <h3>Laser level</h3>
+      <p>A self-levelling line laser sets grade across the whole site.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
+        <img src="/public/contracting/9-wheatstone-height.jpg" alt="Tape measure against a paver with a green laser line across it" width="1400" height="1400" loading="lazy">
+      </div>
+      <span class="sw-home__label">Grade</span>
+      <h3>Setting the height</h3>
+      <p>Laser line on a test paver to set the finished height along the house.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
+        <img src="/public/contracting/9-wheatstone-lines.jpg" alt="Compacted gravel base with string lines and a level" width="1600" height="900" loading="lazy">
+      </div>
+      <span class="sw-home__label">Base</span>
+      <h3>String matrix</h3>
+      <p>Compacted base with a grid of string lines and a straightedge.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
+        <img src="/public/contracting/9-wheatstone-drawing.jpg" alt="Printed patio pattern drawing clipped to a board on the job" width="1600" height="900" loading="lazy">
+      </div>
+      <span class="sw-home__label">Layout</span>
+      <h3>Drawing on the job</h3>
+      <p>The printed pattern beside the work, checked row by row.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
+        <img src="/public/contracting/9-wheatstone-matrix.jpg" alt="First rows of pavers laid along the house wall" width="1600" height="900" loading="lazy">
+      </div>
+      <span class="sw-home__label">Laying</span>
+      <h3>First rows</h3>
+      <p>Pavers laid along the house, each row landing on its string line.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
+        <img src="/public/contracting/9-wheatstone-laying.jpg" alt="Pavers spreading across the base under the string grid" width="1600" height="900" loading="lazy">
+      </div>
+      <span class="sw-home__label">Laying</span>
+      <h3>Working outward</h3>
+      <p>The pattern working out from the house across the grid.</p>
+    </article>
+
+    <article class="sw-home__glass sw-home__card sw-home__pick">
+      <div class="sw-home__pick-media sw-home__pick-media--photo">
+        <img src="/public/contracting/9-wheatstone-progress.jpg" alt="Large area of pavers laid under the deck" width="1600" height="900" loading="lazy">
+      </div>
+      <span class="sw-home__label">Laying</span>
+      <h3>Filling in</h3>
+      <p>The main field filling in, row by row.</p>
     </article>
 
   </div>
