@@ -60,7 +60,7 @@ description: "Design and build under one contract — CAD drawings, engineered p
       </a>
       <span class="sw-home__label">9 Wheatstone</span>
       <h3>Stone patio</h3>
-      <p class="mb-3">A stone patio, laid start to finish.</p>
+      <p class="mb-3">A paver patio, curved walkway, and porch step — designed brick by brick in CAD.</p>
       <a href="/design-build/9-wheatstone/" class="sw-home__btn sw-home__btn--ghost">See the job</a>
     </article>
 
