@@ -59,6 +59,7 @@ image: /public/wolverines/comic.jpg
           "frames and levers",
           "ninja understand invisibility is a matter of patience and agility",
           "all warfare is based on deception",
+          "bow to your sensei",
           "scroll up"
         ];
         var el = document.getElementById("wolverine-saying");
