@@ -185,13 +185,6 @@ image: /public/wolverines/comic.jpg
     return d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
   }
 
-  function formatViews(count) {
-    if (count === undefined || count === null) return "";
-    var n = parseInt(count, 10);
-    if (isNaN(n)) return "";
-    return n.toLocaleString() + (n === 1 ? " view" : " views");
-  }
-
   // YouTube reports a block as contentDetails.regionRestriction, which is
   // absolute data about the video rather than about the person looking at
   // it, so deciding whether it matters needs the viewer's own country.
@@ -250,7 +243,7 @@ image: /public/wolverines/comic.jpg
   function loadDetails(videos, elsById) {
     if (videos.length === 0) return;
     var ids = videos.map(function (v) { return v.videoId; });
-    var url = VIDEOS_API + "?part=contentDetails,recordingDetails,snippet,statistics&id=" +
+    var url = VIDEOS_API + "?part=contentDetails,recordingDetails,snippet&id=" +
       ids.map(encodeURIComponent).join(",") + "&key=" + encodeURIComponent(API_KEY);
     fetch(url).then(function (res) { return res.json(); }).then(function (data) {
       (data.items || []).forEach(function (item) {
@@ -259,15 +252,13 @@ image: /public/wolverines/comic.jpg
         var duration = formatDuration(item.contentDetails && item.contentDetails.duration);
         var date = formatDate((item.recordingDetails && item.recordingDetails.recordingDate) ||
           (item.snippet && item.snippet.publishedAt));
-        var views = formatViews(item.statistics && item.statistics.viewCount);
         if (duration) els.durationEl.textContent = duration;
         if (date) els.dateEl.textContent = date;
-        if (views) els.viewsEl.textContent = views;
 
         var status = blockStatus(item.contentDetails && item.contentDetails.regionRestriction);
         if (status) markBlocked(els, status);
       });
-    }).catch(function () { /* duration/date/views are non-essential; ignore */ });
+    }).catch(function () { /* duration/date are non-essential; ignore */ });
   }
 
   function render(videos) {
@@ -302,7 +293,6 @@ image: /public/wolverines/comic.jpg
           '<p class="wolverine-blocked-note" hidden></p>' +
           '<div class="wolverine-meta">' +
             '<span class="sw-home__label wolverine-date"></span>' +
-            '<span class="sw-home__label wolverine-views"></span>' +
           '</div>' +
         '</div>';
 
@@ -316,7 +306,6 @@ image: /public/wolverines/comic.jpg
       elsById[video.videoId] = {
         durationEl: col.querySelector(".wolverine-duration"),
         dateEl: col.querySelector(".wolverine-date"),
-        viewsEl: col.querySelector(".wolverine-views"),
         cardEl: col.querySelector(".wolverine-card"),
         linkEl: col.querySelector(".wolverine-thumb"),
         badgeEl: col.querySelector(".wolverine-blocked"),
