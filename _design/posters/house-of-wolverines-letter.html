@@ -175,51 +175,47 @@
   /* --- overlay ------------------------------------------------------------- */
   .overlay {
     position: absolute;
-    left: 0.55in; right: 0.55in;
-    top: 4.15in; bottom: 0.3in;
-    padding: 0.32in 0.36in;
-    display: flex;
-    flex-direction: column;
+    left: 0.45in; right: 0.45in;
+    bottom: 0.3in;
+    padding: 0.3in 0.34in;
     border-radius: 14px;
-    background: rgba(8, 9, 12, 0.93);
+    background: rgba(8, 9, 12, 0.94);
     border: 2px solid rgba(180, 197, 255, 0.35);
   }
-  .overlay .label { font-size: 15pt; }
   .headline {
     font-family: var(--sw-font-display);
     font-weight: 700;
-    font-size: 38pt;
+    font-size: 34pt;
     line-height: 1.05;
     letter-spacing: -0.01em;
-    margin: 0.08in 0 0.2in;
+    margin: 0 0 0.22in;
     color: #fff;
   }
   .headline em { font-style: normal; color: var(--sw-primary); }
-  .body {
-    display: flex;
-    gap: 0.3in;
-    align-items: flex-end;
-    margin-top: auto;
+  .body { display: flex; gap: 0.3in; align-items: center; }
+  .bullets {
+    flex: 1 1 auto;
+    list-style: none;
+    margin: 0; padding: 0;
   }
-  .copy { flex: 1 1 auto; }
-  .copy p {
-    font-size: 16pt;
-    line-height: 1.35;
-    color: var(--sw-on-surface);
-    margin: 0 0 0.14in;
-  }
-  .speed {
-    display: inline-block;
-    margin-top: 0.1in;
-    padding: 0.08in 0.16in;
-    border-radius: 999px;
-    background: var(--sw-primary-container);
-    color: #fff;
-    font-family: var(--sw-font-body);
+  .bullets li {
+    position: relative;
+    padding-left: 0.32in;
+    margin: 0 0 0.16in;
+    font-size: 19pt;
     font-weight: 600;
-    font-size: 16pt;
     white-space: nowrap;
+    line-height: 1.2;
+    color: var(--sw-on-surface);
   }
+  .bullets li::before {
+    content: "";
+    position: absolute; left: 0; top: 0.12in;
+    width: 0.13in; height: 0.13in;
+    border-radius: 50%;
+    background: var(--sw-primary-container);
+  }
+  .bullets li:last-child { margin-bottom: 0; color: var(--sw-primary); }
   .qr { flex: 0 0 auto; text-align: center; }
   .qr svg {
     display: block;
@@ -228,7 +224,7 @@
     border-radius: 6px;
   }
   .qr__url {
-    margin-top: 0.1in;
+    margin-top: 0.08in;
     font-family: var(--sw-font-mono);
     font-weight: 700;
     font-size: 14pt;
@@ -291,15 +287,14 @@
     </div>
 
     <section class="overlay">
-      <p class="label">The observer effect</p>
       <h2 class="headline">What happens in training <em>stays in training.</em></h2>
       <div class="body">
-        <div class="copy">
-          <p>Being filmed changes how people roll.</p>
-          <p>This footage is for the people in the room. Unlisted. No highlights, no posting.</p>
-          <p>Know it stays here, and you train honestly.</p>
-          <span class="speed">Watch it at 2× speed — encouraged.</span>
-        </div>
+        <ul class="bullets">
+          <li>Video is digital mindfulness</li>
+          <li>Roll → record → review</li>
+          <li>Unlisted. Room only.</li>
+          <li>2× speed encouraged</li>
+        </ul>
         <div class="qr">
           <svg role="img" aria-label="QR code: https://sphericalwave.com/houseOfWolverines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" class="segno"><path fill="#fff" d="M0 0h41v41h-41z"/><path class="qrline" stroke="#000" d="M4 4.5h7m1 0h3m1 0h1m2 0h1m1 0h3m1 0h1m1 0h1m2 0h7m-33 1h1m5 0h1m4 0h2m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m2 0h2m2 0h1m1 0h4m1 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h2m1 0h2m2 0h1m5 0h1m3 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m3 0h2m4 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m1 0h1m4 0h3m3 0h1m2 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-17 1h1m1 0h1m2 0h2m-22 1h7m4 0h1m1 0h4m4 0h2m3 0h2m3 0h1m-33 1h1m4 0h1m2 0h2m2 0h2m1 0h1m2 0h4m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h1m1 0h3m1 0h5m2 0h1m4 0h1m2 0h2m2 0h1m2 0h1m1 0h1m-29 1h4m1 0h2m1 0h1m2 0h4m2 0h4m2 0h1m2 0h4m-30 1h2m2 0h1m2 0h2m3 0h1m3 0h1m3 0h1m1 0h2m1 0h3m1 0h2m-29 1h1m2 0h2m3 0h2m2 0h2m3 0h3m5 0h1m1 0h2m-31 1h1m1 0h1m1 0h1m2 0h1m1 0h2m1 0h2m4 0h1m4 0h2m1 0h2m1 0h1m-31 1h2m1 0h2m4 0h1m2 0h2m1 0h1m2 0h1m1 0h3m1 0h3m1 0h2m-31 1h2m2 0h1m1 0h2m2 0h2m2 0h1m2 0h1m2 0h1m1 0h4m1 0h2m3 0h1m-33 1h2m2 0h2m2 0h4m1 0h9m1 0h1m1 0h3m1 0h2m1 0h1m-33 1h1m2 0h4m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m3 0h5m1 0h2m-31 1h2m1 0h1m2 0h4m2 0h2m2 0h2m2 0h1m2 0h9m-33 1h1m1 0h2m2 0h3m1 0h1m1 0h2m1 0h2m3 0h1m1 0h4m2 0h2m1 0h2m-33 1h2m1 0h1m4 0h3m1 0h1m1 0h1m4 0h3m1 0h1m2 0h1m5 0h1m-33 1h1m3 0h3m1 0h2m1 0h1m2 0h4m2 0h2m8 0h2m-32 1h1m3 0h1m2 0h1m2 0h2m1 0h1m2 0h2m2 0h4m1 0h2m2 0h4m-33 1h1m1 0h2m1 0h3m1 0h1m1 0h2m9 0h1m1 0h5m3 0h1m-25 1h3m1 0h1m1 0h1m1 0h1m1 0h3m3 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h2m3 0h1m1 0h4m1 0h2m1 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h4m1 0h1m2 0h9m3 0h5m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m3 0h1m1 0h6m-30 1h1m1 0h3m1 0h1m1 0h2m1 0h3m2 0h2m1 0h2m3 0h2m2 0h2m2 0h1m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h2m2 0h1m1 0h1m2 0h2m1 0h4m1 0h1m-30 1h1m5 0h1m1 0h1m1 0h3m1 0h4m1 0h3m1 0h3m2 0h3m-31 1h7m4 0h2m3 0h2m1 0h2m1 0h3m1 0h2m1 0h1m1 0h1"/></svg>
           <div class="qr__url">sphericalwave.com/<br>houseOfWolverines</div>
