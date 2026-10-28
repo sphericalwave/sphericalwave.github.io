@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>House of Wolverines Poster</title>
+<!--
+  US Letter portrait poster for /houseOfWolverines.
+  Background: the page as it renders (navbar, hero, first 12 playlist cards,
+  thumbnails saved in wolverine-thumbs/ from i.ytimg.com on 2026-10-28).
+  QR: segno, version 4, error correction Q, 4-module quiet zone, inlined SVG.
+  Render (from this folder, CHROME = Google Chrome binary):
+    "$CHROME" --headless=new --no-pdf-header-footer --virtual-time-budget=8000 \
+      --print-to-pdf=house-of-wolverines-letter.pdf "file://$PWD/house-of-wolverines-letter.html"
+    "$CHROME" --headless=new --hide-scrollbars --virtual-time-budget=8000 \
+      --window-size=816,1056 --force-device-scale-factor=3.125 \
+      --screenshot=house-of-wolverines-letter.png "file://$PWD/house-of-wolverines-letter.html"
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+  /* site tokens, from _sass/_home.scss + _variables.scss */
+  :root {
+    --sw-blue: #1C57C9;
+    --body-bg: #111;
+    --sw-surface-container: #1e2024;
+    --sw-on-surface: #e2e2e8;
+    --sw-on-surface-variant: #c3c6d6;
+    --sw-primary: #b4c5ff;
+    --sw-primary-container: #1e56d0;
+    --sw-font-display: 'Sora', 'Space Grotesk', sans-serif;
+    --sw-font-body: 'Inter', 'Archivo', sans-serif;
+    --sw-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  @page { size: 8.5in 11in; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body { background: var(--body-bg); }
+
+  .sheet {
+    position: relative;
+    width: 8.5in;
+    height: 11in;
+    padding: 0.25in;          /* print-safe margin */
+    overflow: hidden;
+    background: var(--body-bg);
+    color: var(--sw-on-surface);
+    font-family: var(--sw-font-body);
+  }
+  .page {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--body-bg);
+  }
+
+  /* --- navbar ------------------------------------------------------------ */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 0.95in;
+    padding: 0 0.3in;
+    background: var(--sw-blue);
+  }
+  .brand { display: flex; align-items: center; gap: 0.12in; }
+  .brand__mark { position: relative; width: 0.72in; height: 0.72in; }
+  .brand__mark img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: contain; }
+  .brand__rings {
+    position: absolute; top: 50%; left: 50%;
+    width: 210%; height: 210%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+  }
+  .brand__rings circle { stroke: rgba(180, 208, 240, 0.55); stroke-width: 1.5; fill: none; }
+  .brand__name {
+    font-family: 'Caveat', 'Bradley Hand', cursive;
+    font-size: 34pt;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+  }
+  .nav__links {
+    display: flex; gap: 0.22in;
+    font-family: var(--sw-font-body);
+    font-size: 14pt;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  /* --- hero ---------------------------------------------------------------- */
+  .content { padding: 0.25in 0.3in 0; }
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.2in;
+    padding: 0.22in 0.25in;
+    border-radius: 12px;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(30, 86, 208, 0.18) 0%, transparent 65%),
+      var(--sw-surface-container);
+    border: 1px solid rgba(180, 197, 255, 0.08);
+  }
+  .hero__title {
+    font-family: var(--sw-font-display);
+    font-weight: 600;
+    font-size: 30pt;
+    line-height: 1.1;
+    margin: 0 0 0.08in;
+  }
+  .label {
+    font-family: var(--sw-font-mono);
+    font-size: 14pt;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sw-primary);
+    margin: 0;
+  }
+  .hero__pics { display: flex; gap: 0.1in; flex: 0 0 auto; }
+  .hero__pic {
+    width: 0.95in; height: 0.95in;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(180, 197, 255, 0.15);
+  }
+  .hero__pic img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+  .hero__pic--bottom img { object-position: bottom center; }
+
+  .wave-line {
+    height: 1px; border: 0; margin: 0.22in 0;
+    background: linear-gradient(90deg, transparent 0%, var(--sw-primary-container) 50%, transparent 100%);
+    opacity: 0.6;
+  }
+
+  /* --- video grid ---------------------------------------------------------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.2in 0.18in;
+  }
+  .thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    background: #1b1d22;
+  }
+  .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .duration {
+    position: absolute; right: 5px; bottom: 5px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-family: var(--sw-font-mono);
+    font-size: 14pt;
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+  .card__title {
+    font-family: var(--sw-font-display);
+    font-weight: 500;
+    font-size: 14pt;
+    line-height: 1.25;
+    margin: 0.07in 0 0.02in;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .card .label { font-size: 14pt; letter-spacing: 0.06em; }
+
+  /* --- overlay ------------------------------------------------------------- */
+  .overlay {
+    position: absolute;
+    left: 0.55in; right: 0.55in;
+    top: 4.15in; bottom: 0.3in;
+    padding: 0.32in 0.36in;
+    display: flex;
+    flex-direction: column;
+    border-radius: 14px;
+    background: rgba(8, 9, 12, 0.93);
+    border: 2px solid rgba(180, 197, 255, 0.35);
+  }
+  .overlay .label { font-size: 15pt; }
+  .headline {
+    font-family: var(--sw-font-display);
+    font-weight: 700;
+    font-size: 38pt;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0.08in 0 0.2in;
+    color: #fff;
+  }
+  .headline em { font-style: normal; color: var(--sw-primary); }
+  .body {
+    display: flex;
+    gap: 0.3in;
+    align-items: flex-end;
+    margin-top: auto;
+  }
+  .copy { flex: 1 1 auto; }
+  .copy p {
+    font-size: 16pt;
+    line-height: 1.35;
+    color: var(--sw-on-surface);
+    margin: 0 0 0.14in;
+  }
+  .speed {
+    display: inline-block;
+    margin-top: 0.1in;
+    padding: 0.08in 0.16in;
+    border-radius: 999px;
+    background: var(--sw-primary-container);
+    color: #fff;
+    font-family: var(--sw-font-body);
+    font-weight: 600;
+    font-size: 16pt;
+    white-space: nowrap;
+  }
+  .qr { flex: 0 0 auto; text-align: center; }
+  .qr svg {
+    display: block;
+    width: 2.2in; height: 2.2in;   /* 41 modules incl. 4-module quiet zone */
+    shape-rendering: crispEdges;
+    border-radius: 6px;
+  }
+  .qr__url {
+    margin-top: 0.1in;
+    font-family: var(--sw-font-mono);
+    font-weight: 700;
+    font-size: 14pt;
+    color: #fff;
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="page">
+
+    <nav class="nav">
+      <div class="brand">
+        <span class="brand__mark">
+          <svg class="brand__rings" viewBox="0 0 400 400" aria-hidden="true">
+            <circle cx="200" cy="200" r="60"/>
+            <circle cx="200" cy="200" r="100"/>
+            <circle cx="200" cy="200" r="140"/>
+            <circle cx="200" cy="200" r="180"/>
+          </svg>
+          <img src="../../public/SphericalWaveC60-nav.png" alt="">
+        </span>
+        <span class="brand__name">sphericalwave</span>
+      </div>
+      <div class="nav__links"><span>Services</span><span>About</span><span>Contact</span><span>Merch</span></div>
+    </nav>
+
+    <div class="content">
+      <section class="hero">
+        <div>
+          <h1 class="hero__title">House of Wolverines</h1>
+          <p class="label">what happens in training, stays in training.</p>
+        </div>
+        <div class="hero__pics">
+          <div class="hero__pic"><img src="../../public/wolverines/comic.jpg" alt=""></div>
+          <div class="hero__pic"><img src="../../public/wolverines/batcave.jpg" alt=""></div>
+          <div class="hero__pic hero__pic--bottom"><img src="../../public/wolverines/ironman.jpg" alt=""></div>
+        </div>
+      </section>
+
+      <hr class="wave-line">
+
+      <div class="grid">
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/RoUhSPZsNYk.jpg" alt=""><span class="duration">12:14</span></div><h3 class="card__title">jiujitsu eat life</h3><p class="label">Oct 23, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/ZoN3HNfVT50.jpg" alt=""><span class="duration">1:17:25</span></div><h3 class="card__title">Batman using real Brazillian Jiu-jitsu for the first time</h3><p class="label">Oct 24, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/4hNJVFJxEFE.jpg" alt=""><span class="duration">7:35</span></div><h3 class="card__title">punching the air</h3><p class="label">Oct 20, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/iUnDZI18NRs.jpg" alt=""><span class="duration">4:27</span></div><h3 class="card__title">Kill Bill: Volume 1 (2003) - Hattori Hanzo</h3><p class="label">Jun 21, 2015</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/zcUgyf7XXvI.jpg" alt=""><span class="duration">1:20:21</span></div><h3 class="card__title">strike 3</h3><p class="label">Oct 19, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/BqsHDcvBW10.jpg" alt=""><span class="duration">4:44</span></div><h3 class="card__title">I Was Wrong About Half Guard (and Dagestan)</h3><p class="label">Nov 9, 2018</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/iyLIy-kvHyI.jpg" alt=""><span class="duration">1:11:07</span></div><h3 class="card__title">Elon and Rogan on the flying tesla Roadster</h3><p class="label">Oct 16, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/YyVH6KQ68xQ.jpg" alt=""><span class="duration">1:21:18</span></div><h3 class="card__title">Closed Guard to K-Guard and back50</h3><p class="label">Oct 12, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/WQjscDiOJ1k.jpg" alt=""><span class="duration">1:08:00</span></div><h3 class="card__title">Thai Grant · Part 1</h3><p class="label">Oct 7, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/TkN6tB_N0Sg.jpg" alt=""><span class="duration">28:42</span></div><h3 class="card__title">My Favorite way to isolate arms from the back!</h3><p class="label">Oct 3, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/4fIcrcFJLUg.jpg" alt=""><span class="duration">1:08:08</span></div><h3 class="card__title">grappler gets whomped</h3><p class="label">Oct 2, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/3Bk76NP6uQU.jpg" alt=""><span class="duration">52:10</span></div><h3 class="card__title">the leg lock, back attack nexus</h3><p class="label">Sep 27, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/C3fxudvU-UU.jpg" alt=""><span class="duration">1:03:57</span></div><h3 class="card__title">SLOPCORE: ESCAPE VELOCITY</h3><p class="label">Sep 25, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/QEBCT-Lsh-A.jpg" alt=""><span class="duration">1:10:06</span></div><h3 class="card__title">Batman Becomes the Villain</h3><p class="label">Sep 30, 2026</p></div>
+        <div class="card"><div class="thumb"><img src="wolverine-thumbs/JXIycMFZql0.jpg" alt=""><span class="duration">1:47</span></div><h3 class="card__title">Once You Understand This About Self-Image</h3><p class="label">May 23, 2012</p></div>
+      </div>
+    </div>
+
+    <section class="overlay">
+      <p class="label">The observer effect</p>
+      <h2 class="headline">What happens in training <em>stays in training.</em></h2>
+      <div class="body">
+        <div class="copy">
+          <p>Being filmed changes how people roll.</p>
+          <p>This footage is for the people in the room. Unlisted. No highlights, no posting.</p>
+          <p>Know it stays here, and you train honestly.</p>
+          <span class="speed">Watch it at 2× speed — encouraged.</span>
+        </div>
+        <div class="qr">
+          <svg role="img" aria-label="QR code: https://sphericalwave.com/houseOfWolverines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 41" class="segno"><path fill="#fff" d="M0 0h41v41h-41z"/><path class="qrline" stroke="#000" d="M4 4.5h7m1 0h3m1 0h1m2 0h1m1 0h3m1 0h1m1 0h1m2 0h7m-33 1h1m5 0h1m4 0h2m1 0h2m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m2 0h2m2 0h1m1 0h4m1 0h2m1 0h2m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m2 0h2m1 0h2m2 0h1m5 0h1m3 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h2m3 0h2m4 0h1m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m1 0h1m1 0h1m4 0h3m3 0h1m2 0h1m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-17 1h1m1 0h1m2 0h2m-22 1h7m4 0h1m1 0h4m4 0h2m3 0h2m3 0h1m-33 1h1m4 0h1m2 0h2m2 0h2m1 0h1m2 0h4m1 0h1m2 0h2m1 0h2m1 0h1m-33 1h1m1 0h3m1 0h5m2 0h1m4 0h1m2 0h2m2 0h1m2 0h1m1 0h1m-29 1h4m1 0h2m1 0h1m2 0h4m2 0h4m2 0h1m2 0h4m-30 1h2m2 0h1m2 0h2m3 0h1m3 0h1m3 0h1m1 0h2m1 0h3m1 0h2m-29 1h1m2 0h2m3 0h2m2 0h2m3 0h3m5 0h1m1 0h2m-31 1h1m1 0h1m1 0h1m2 0h1m1 0h2m1 0h2m4 0h1m4 0h2m1 0h2m1 0h1m-31 1h2m1 0h2m4 0h1m2 0h2m1 0h1m2 0h1m1 0h3m1 0h3m1 0h2m-31 1h2m2 0h1m1 0h2m2 0h2m2 0h1m2 0h1m2 0h1m1 0h4m1 0h2m3 0h1m-33 1h2m2 0h2m2 0h4m1 0h9m1 0h1m1 0h3m1 0h2m1 0h1m-33 1h1m2 0h4m1 0h3m1 0h1m1 0h1m1 0h3m1 0h1m3 0h5m1 0h2m-31 1h2m1 0h1m2 0h4m2 0h2m2 0h2m2 0h1m2 0h9m-33 1h1m1 0h2m2 0h3m1 0h1m1 0h2m1 0h2m3 0h1m1 0h4m2 0h2m1 0h2m-33 1h2m1 0h1m4 0h3m1 0h1m1 0h1m4 0h3m1 0h1m2 0h1m5 0h1m-33 1h1m3 0h3m1 0h2m1 0h1m2 0h4m2 0h2m8 0h2m-32 1h1m3 0h1m2 0h1m2 0h2m1 0h1m2 0h2m2 0h4m1 0h2m2 0h4m-33 1h1m1 0h2m1 0h3m1 0h1m1 0h2m9 0h1m1 0h5m3 0h1m-25 1h3m1 0h1m1 0h1m1 0h1m1 0h3m3 0h1m3 0h1m1 0h1m1 0h1m-33 1h7m1 0h2m3 0h1m1 0h4m1 0h2m1 0h2m1 0h1m1 0h1m1 0h2m-32 1h1m5 0h1m1 0h4m1 0h1m2 0h9m3 0h5m-33 1h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m3 0h1m1 0h6m-30 1h1m1 0h3m1 0h1m1 0h2m1 0h3m2 0h2m1 0h2m3 0h2m2 0h2m2 0h1m-33 1h1m1 0h3m1 0h1m1 0h3m1 0h2m2 0h1m1 0h1m2 0h2m1 0h4m1 0h1m-30 1h1m5 0h1m1 0h1m1 0h3m1 0h4m1 0h3m1 0h3m2 0h3m-31 1h7m4 0h2m3 0h2m1 0h2m1 0h3m1 0h2m1 0h1m1 0h1"/></svg>
+          <div class="qr__url">sphericalwave.com/<br>houseOfWolverines</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+</body>
+</html>
