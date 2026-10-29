@@ -252,6 +252,20 @@ image: /public/wolverines/comic.jpg
         var duration = formatDuration(item.contentDetails && item.contentDetails.duration);
         var date = formatDate((item.recordingDetails && item.recordingDetails.recordingDate) ||
           (item.snippet && item.snippet.publishedAt));
+        // playlistItems can serve a stale "Deleted video" stub with no
+        // thumbnail for a video that is alive and public; videos.list is
+        // the source of truth, so the card takes its title and thumbnail.
+        var snippet = item.snippet || {};
+        if (snippet.title && snippet.title !== els.title) {
+          els.title = snippet.title;
+          els.titleEl.textContent = snippet.title;
+          els.imgEl.alt = snippet.title;
+        }
+        if (!els.hasThumb) {
+          var thumbs = snippet.thumbnails || {};
+          var thumb = thumbs.medium || thumbs.default || thumbs.high;
+          if (thumb) els.imgEl.src = thumb.url;
+        }
         if (duration) els.durationEl.textContent = duration;
         if (date) els.dateEl.textContent = date;
 
@@ -301,7 +315,7 @@ image: /public/wolverines/comic.jpg
         img.style.opacity = "1";
         img.previousElementSibling.remove(); // skeleton
       });
-      img.src = video.thumbnail;
+      if (video.thumbnail) img.src = video.thumbnail;
 
       elsById[video.videoId] = {
         durationEl: col.querySelector(".wolverine-duration"),
@@ -310,6 +324,9 @@ image: /public/wolverines/comic.jpg
         linkEl: col.querySelector(".wolverine-thumb"),
         badgeEl: col.querySelector(".wolverine-blocked"),
         noteEl: col.querySelector(".wolverine-blocked-note"),
+        titleEl: col.querySelector(".wolverine-title"),
+        imgEl: img,
+        hasThumb: !!video.thumbnail,
         title: video.title
       };
 
