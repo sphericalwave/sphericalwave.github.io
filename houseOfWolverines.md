@@ -125,8 +125,14 @@ image: /public/wolverines/comic.jpg
   // typical visit costs ~2 API calls (one playlistItems.list + one
   // videos.list) instead of ~80 for the full 1985-video playlist. More
   // pages are only fetched if the visitor clicks "Load more".
+  //
+  // Unlisted videos stay on the page (the daily unlist job moves nearly the
+  // whole playlist to unlisted); private, deleted and otherwise unavailable
+  // ones never render. videos.list is the source of truth: it returns
+  // nothing for a private or deleted video, so cards are only built for the
+  // ids it confirms.
   function fetchPage(pageToken) {
-    var url = API_BASE + "?part=snippet&maxResults=50&playlistId=" + encodeURIComponent(PLAYLIST_ID) +
+    var url = API_BASE + "?part=snippet,status&maxResults=50&playlistId=" + encodeURIComponent(PLAYLIST_ID) +
       "&key=" + encodeURIComponent(API_KEY) +
       (pageToken ? "&pageToken=" + encodeURIComponent(pageToken) : "");
 
@@ -143,7 +149,9 @@ image: /public/wolverines/comic.jpg
       .then(function (data) {
         var items = (data.items || [])
           .filter(function (item) {
-            return item.snippet && item.snippet.resourceId && item.snippet.resourceId.videoId;
+            if (!(item.snippet && item.snippet.resourceId && item.snippet.resourceId.videoId)) return false;
+            var privacy = item.status && item.status.privacyStatus;
+            return privacy !== "private" && item.snippet.title !== "Private video";
           })
           .map(function (item) {
             var thumbs = item.snippet.thumbnails || {};
@@ -156,8 +164,50 @@ image: /public/wolverines/comic.jpg
             };
           });
         nextPageToken = data.nextPageToken || null;
-        return items;
+        return fetchDetails(items);
       });
+  }
+
+  var SHOWN_PRIVACY = { "public": true, "unlisted": true };
+  var DEAD_UPLOAD = { "deleted": true, "failed": true, "rejected": true };
+
+  // One page is at most 50 videos, so a single videos.list call (no
+  // chunking) covers it. Keeps only the videos it returns as public or
+  // unlisted and not deleted/failed/rejected, each carrying its details.
+  function fetchDetails(videos) {
+    if (videos.length === 0) return videos;
+    var ids = videos.map(function (v) { return v.videoId; });
+    var url = VIDEOS_API + "?part=contentDetails,recordingDetails,snippet,status&id=" +
+      ids.map(encodeURIComponent).join(",") + "&key=" + encodeURIComponent(API_KEY);
+    return fetch(url)
+      .then(function (res) {
+        if (!res.ok) throw new Error(res.statusText);
+        return res.json();
+      })
+      .then(function (data) {
+        var byId = {};
+        (data.items || []).forEach(function (item) { byId[item.id] = item; });
+        return videos.filter(function (video) {
+          var item = byId[video.videoId];
+          var status = (item && item.status) || {};
+          if (!item || !SHOWN_PRIVACY[status.privacyStatus] || DEAD_UPLOAD[status.uploadStatus]) return false;
+          video.details = item;
+          return true;
+        });
+      })
+      // Without videos.list the playlist stub is all there is, so drop the
+      // ones that look dead rather than render blank cards.
+      .catch(function () { return videos.filter(isShowable); });
+  }
+
+  // Defensive render-side check: a card needs a real title and a thumbnail
+  // from somewhere.
+  function isShowable(video) {
+    var snippet = (video.details && video.details.snippet) || {};
+    var thumbs = snippet.thumbnails || {};
+    var title = snippet.title || video.title;
+    var thumb = video.thumbnail || (thumbs.medium || thumbs.default || thumbs.high || {}).url;
+    return !!title && title !== "Private video" && title !== "Deleted video" && !!thumb;
   }
 
   function escapeHtml(str) {
@@ -237,45 +287,34 @@ image: /public/wolverines/comic.jpg
     els.linkEl.setAttribute("aria-label", els.title + " — blocked by YouTube");
   }
 
-  // One page is at most 50 videos, so a single videos.list call (no
-  // chunking) covers it. Patches each card's placeholders in place once
-  // it resolves — doesn't block the initial thumbnail render.
-  function loadDetails(videos, elsById) {
-    if (videos.length === 0) return;
-    var ids = videos.map(function (v) { return v.videoId; });
-    var url = VIDEOS_API + "?part=contentDetails,recordingDetails,snippet&id=" +
-      ids.map(encodeURIComponent).join(",") + "&key=" + encodeURIComponent(API_KEY);
-    fetch(url).then(function (res) { return res.json(); }).then(function (data) {
-      (data.items || []).forEach(function (item) {
-        var els = elsById[item.id];
-        if (!els) return;
-        var duration = formatDuration(item.contentDetails && item.contentDetails.duration);
-        var date = formatDate((item.recordingDetails && item.recordingDetails.recordingDate) ||
-          (item.snippet && item.snippet.publishedAt));
-        // playlistItems can serve a stale "Deleted video" stub with no
-        // thumbnail for a video that is alive and public; videos.list is
-        // the source of truth, so the card takes its title and thumbnail.
-        var snippet = item.snippet || {};
-        if (snippet.title && snippet.title !== els.title) {
-          els.title = snippet.title;
-          els.titleEl.textContent = snippet.title;
-          els.imgEl.alt = snippet.title;
-        }
-        if (!els.hasThumb) {
-          var thumbs = snippet.thumbnails || {};
-          var thumb = thumbs.medium || thumbs.default || thumbs.high;
-          if (thumb) els.imgEl.src = thumb.url;
-        }
-        if (duration) els.durationEl.textContent = duration;
-        if (date) els.dateEl.textContent = date;
+  // Fills a card from its videos.list item.
+  function applyDetails(item, els) {
+    var duration = formatDuration(item.contentDetails && item.contentDetails.duration);
+    var date = formatDate((item.recordingDetails && item.recordingDetails.recordingDate) ||
+      (item.snippet && item.snippet.publishedAt));
+    // playlistItems can serve a stale "Deleted video" stub with no
+    // thumbnail for a video that is alive and public; videos.list is
+    // the source of truth, so the card takes its title and thumbnail.
+    var snippet = item.snippet || {};
+    if (snippet.title && snippet.title !== els.title) {
+      els.title = snippet.title;
+      els.titleEl.textContent = snippet.title;
+      els.imgEl.alt = snippet.title;
+    }
+    if (!els.hasThumb) {
+      var thumbs = snippet.thumbnails || {};
+      var thumb = thumbs.medium || thumbs.default || thumbs.high;
+      if (thumb) els.imgEl.src = thumb.url;
+    }
+    if (duration) els.durationEl.textContent = duration;
+    if (date) els.dateEl.textContent = date;
 
-        var status = blockStatus(item.contentDetails && item.contentDetails.regionRestriction);
-        if (status) markBlocked(els, status);
-      });
-    }).catch(function () { /* duration/date are non-essential; ignore */ });
+    var status = blockStatus(item.contentDetails && item.contentDetails.regionRestriction);
+    if (status) markBlocked(els, status);
   }
 
   function render(videos) {
+    videos = videos.filter(isShowable);
     if (statusEl) {
       if (videos.length === 0) {
         statusEl.textContent = "No videos found in this playlist.";
@@ -284,8 +323,6 @@ image: /public/wolverines/comic.jpg
       statusEl.remove();
       statusEl = null;
     }
-
-    var elsById = {};
 
     videos.forEach(function (video) {
       var col = document.createElement("div");
@@ -317,7 +354,7 @@ image: /public/wolverines/comic.jpg
       });
       if (video.thumbnail) img.src = video.thumbnail;
 
-      elsById[video.videoId] = {
+      var els = {
         durationEl: col.querySelector(".wolverine-duration"),
         dateEl: col.querySelector(".wolverine-date"),
         cardEl: col.querySelector(".wolverine-card"),
@@ -329,11 +366,10 @@ image: /public/wolverines/comic.jpg
         hasThumb: !!video.thumbnail,
         title: video.title
       };
+      if (video.details) applyDetails(video.details, els);
 
       gridEl.appendChild(col);
     });
-
-    loadDetails(videos, elsById);
   }
 
   function loadNextPage() {
